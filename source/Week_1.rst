@@ -50,8 +50,12 @@ Windows organises files into drives. Drives are usually physical drives, but can
 the root drive where Windows actually lives, along with your programs (apps) and your data and files.
 
 Exercise: Why C:? What's wrong with A? Google and find out.
+.. note::
+    :class: dropdown
 
+    A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
 
+More text
 
 
 Software licences
