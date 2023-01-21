@@ -51,11 +51,99 @@ the root drive where Windows actually lives, along with your programs (apps) and
 
 Exercise: Why C:? What's wrong with A? Google and find out.
 .. note::
-    :class: dropdown
+   :class: dropdown
 
-    A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
+   A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
 
-More text
+From the drive, folders are seperated with a '\' symbol. Software is generally installed
+in ``C:\Program Files`` (or ``C:\Program Files (x86)`` for older software). Your documents are
+in a *magic* folder called ``Documents``. It's possible to get this to point to network drives or 
+to your local hard drive. However, a *standard* Windows 11 machine will have this pointing to 
+``C:\Users\*Username*\``. Likwise for, ``Downloads``, ``Music``, ``Desktop``, ``Pictures``, etc.
+
+Why do we care? When writing code, we often need to know exactly where a file is; it's not enough to know
+it's in ``Documents``; we need a full path (see later).
+
+Linux
+^^^^^
+
+Linux organises things around the root drive, which is access via ``/`` (note the direction of the slash compared 
+to Windows - yes, they use the opposite direction). In root you then find a bunch of standard directories, ``\etc``, ``\bin``
+``\var``, etc. This contain the system files. One directory is called ``\home``. This is where user files live. Within 
+``\home`` there is a directory with your username. Within there are your images, music, etc.
+
+Unlike Windows, drives can be mounted anywhere in the file structure and this is generally transparent to the user. So for example
+``\home`` can be mounted onto a completely seperate physical hard drive to the rest of the folders. The same applies to *any*
+folder. Temporary drives will be mounted into ``\media`` or ``\mnt``. Note that Linux filenames are case-senstive, so ``Bob.txt`` is
+a different file to ``bob.txt``
+
+MacOS
+^^^^^
+
+Mac is very similar to Linux (it is in fact based on Unix, which Linux is too). Unlike Linux Apple added some
+standard folder names and moved a few things around compared to Linux. I'll note the differences only here.
+
+User directories live in ``\Users`` rather than ``\home``. Applications are stored ``\Applications``, but there
+are some binaries (i.e. programmes) in ``\bin``, etc.
+
+Like Linux, MacOS is case sensitive.
+
+Exercises
+^^^^^^^^^
+
+
+As we have to deal with multiple OSes, from here we will designate sections with 
+symbols.
+
+Mac only: |mac|
+
+Linux only: |linux|
+
+Windows only: |win|
+
+Mac and Linux:  |maclin|
+
+All OSes: |all|
+
+.. |mac| image:: ../images/Apple_logo.png
+   :align: middle
+   :height: 12
+
+.. |linux| image:: ../images/Linux_logo.png
+   :align: middle
+   :height: 12
+
+.. |win| image:: ../images/Windows_logo.png
+   :align: middle
+   :height: 12
+
+.. |maclin| image:: ../images/linux_mac_logo.png
+   :align: middle
+   :height: 12
+
+.. |all| image:: ../images/win_linux_mac_logo.png
+   :align: middle
+   :height: 12
+
+
+Navigating a filesystem
+-----------------------
+
+There are two ways to navigate your files; some form of graphic interface (all three common OSes have a similar tool) or the
+command line. We're going to explore using both. Before we do this, we need a few basic command line tools to move around the files.
+
+
+
+cd
+ls/dir
+
+Navigating a filesystem
+-----------------------
+
+There are two ways to navigate your files 
+
+
+
 
 
 Software licences
