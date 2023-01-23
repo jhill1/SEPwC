@@ -137,14 +137,125 @@ command line. We're going to explore using both. Before we do this, we need a fe
 cd
 ls/dir
 
-Navigating a filesystem
------------------------
+need examples and video of this
 
-There are two ways to navigate your files 
+GUI way. Need screenshots of this and video
+
+Absolute vs Relative paths
+---------------------------
+
+Most of the filepaths above are absolute paths. You start at the root of the drive (C: or /) and give the 
+all the directories until you get to the file you're after. I did however sneak in a few *relative*
+paths. These are paths that start from where you curently are (be that in the command line or running
+a programme). 
+
+Let's do an example. Here's an absolute path:
+
+/home/jon/my_exicting_project/data/very_important_data.csv
+
+This is in a directory structure like:
+
+[add image]
+
+Now let's cd into the scripts folder
+
+cd /home/jon/my_exciting_project/scripts
+
+The data (*very_important_data.csv*) is one directory up (now in my_exciting_project) and then into data.
+So relative to scripts, that's ../data/very_important_data.csv
+
+This is a really useful thing. Rather than give a full/absolute path, we can give relative paths
+to file. Imagine I had written a script that used absolute paths to data on my computer and gave that to
+you. It would not work as you're not on my computer and you are not logged in as me. You would then
+have to edit every path in the script. However, if I give relative paths, as long as the directory 
+structure is the same, the script will work. 
+
+The downside of relative paths is that you must have the same directory structure, relative to 
+the script. If you move the script elsewhere, things might break. You can, of course,
+mix and match; so pull data from an absolut path in one place and from a relative path
+in another. Finally, you can ask the user where to get data from too (or pull data
+from the internet) saving all this hassle.
+
+However, when starting to write your own script you will `hardcode` the filenames and hence
+you need to know the difference between relative and absolute paths.
+
+From source code to programme
+------------------------------
 
 
 
+More basic command line functions
+----------------------------------
 
+
+Connecting to other computers
+-----------------------------
 
 Software licences
 =================
+
+Software needs a licence which tells your users or other developers what they are allowed
+to do with it. Most software you've heard of is commercial (Word, Windows, MacOs, 
+Adobe Reader, Corel Draw, Photoshop, etc). You pay a fee and have access to the
+executable code for a year or forever, for example. Some software is free (i.e. you
+don't pay to use it) but not open (you can't see the source code, nor give it 
+to someone else). All of the conditions are laid out in the "Terms and Conditions" 
+which are displayed when you install the software (and that no-one ever reads despite
+ticking the little box to say you read them...)
+
+A lot of research software is free in all senses of the word. You don't pay and 
+you can see the source code, take it for yourself, edit it and re-release it. This
+type of software is called *open source*. Not only can you use it for free, you can also
+modify it. 
+
+There are two things in law we have to worry about: copyright and licence. Copyright
+is granted to the writer of the software (or book, or photograph, etc). If you
+create something you own the copyright. You don't have to do anything to get copyright, 
+except be the author or creator of the content. Authors generally place a copyright
+notice on the work though, so something like:
+
+Copyright lasts for 50 years and protects the author from someone stealing their work.
+This page has a simple explination of UK copyright law. [https://www.gov.uk/copyright#:~:text=You%20get%20copyright%20protection%20automatically,work%2C%20including%20illustration%20and%20photography]
+
+Separately, licences tell you what you can do with some code (or image, or text). For 
+commerical software, the lincence will tell you you cannot resell, give away, etc
+the software you have bought. Similarly, for open-source software the licence tells 
+you what you can do with the source code, including modifying and re-releasing and under
+what conditions.
+
+There are two main types of licences: copyleft and permissive. Within those are a whole
+bunch of different licences, but let's focus on the two main types first.
+
+Copyleft
+--------
+
+Copyleft licences (a pun on copyright, geddit?) mean you can take 
+source-code, modify it, but can only re-release on a similar licence. For example,
+you could not take copyleft code, create a commercial application, then sell it. 
+That would breach the licence terms. Most copyleft licneces specify the 
+source code most be available under a similar copyleft licence.
+
+Common copyleft licences are:
+
+ * GNU Public Licence (GPL)
+ * Mozilla public licence (MPL)
+ * LGPL (Lesser GPL); though this has some permissive terms too
+ * Creative Commons, Sahrealike (CC-SA)
+
+Permissive
+----------
+
+Permissive licences are much less restrictive. They impose little or no restrictions
+on what you can do if you modify code. They can either be completely open (i.e. do whatever you want!)
+or impose some restrictions, e.g. citations.
+
+Common permissive licences include:
+
+ * Apache
+ * Berkley Source Distribution (BSD)
+ * MIT
+
+
+Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use wikipedia.
+
+
