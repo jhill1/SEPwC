@@ -1,3 +1,5 @@
+.. include:: <isonum.txt>
+
 Filesystems, how a computer works and the command line
 ======================================================
 
@@ -258,4 +260,16 @@ Common permissive licences include:
 
 Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use wikipedia.
 
+
+Adding a licence to your code
+-----------------------------
+
+If you write any code that is to be used by others you should always add a 
+copyright notice and a licence. This protects you and the person using it.
+Try and get in the habit of writing both of these in your code, so something like:
+Copyright |copy| 2023 by Jon Hill. CC-BY-SA.
+
+You then include the full licence in your distribution.
+
+Exercise: find the liecence type for some popular software
 
