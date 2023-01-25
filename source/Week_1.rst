@@ -184,6 +184,86 @@ you need to know the difference between relative and absolute paths.
 From source code to programme
 ------------------------------
 
+You may have heard the term `source code` (I've probably used it already!), but what is it?
+Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
+computer can do billions of these every second (this is the clock speed). The moving of 
+gates allow the computer to add two numbers or multiple two numbers or move data around, etc.
+These are called instructions. The CPU translate these intructions into moving those gates around
+to actually do something. Ultimately, all computer code does this. It is possible to write
+computer code at this level: assembler code. Back in the day this is how you programmed computers.
+This is an example of assembler code for an x86 processor (i.e. what you probably have):
+
+.. code-block::
+   :caption: Example of x86 assembler code
+
+    .486
+    .MODEL FLAT
+    .CODE
+    PUBLIC _myFunc
+    _myFunc PROC
+      ; Subroutine Prologue
+      push ebp     ; Save the old base pointer value.
+      mov ebp, esp ; Set the new base pointer value.
+      sub esp, 4   ; Make room for one 4-byte local variable.
+      push edi     ; Save the values of registers that the function
+      push esi     ; will modify. This function uses EDI and ESI.
+      ; (no need to save EBX, EBP, or ESP)
+
+      ; Subroutine Body
+      mov eax, [ebp+8]   ; Move value of parameter 1 into EAX
+      mov esi, [ebp+12]  ; Move value of parameter 2 into ESI
+      mov edi, [ebp+16]  ; Move value of parameter 3 into EDI
+
+      mov [ebp-4], edi   ; Move EDI into the local variable
+      add [ebp-4], esi   ; Add ESI into the local variable
+      add eax, [ebp-4]   ; Add the contents of the local variable
+                         ; into EAX (final result)
+
+      ; Subroutine Epilogue 
+      pop esi      ; Recover register values
+      pop  edi
+      mov esp, ebp ; Deallocate local variables
+      pop ebp ; Restore the caller's base pointer value
+      ret
+    _myFunc ENDP
+    END
+
+Fortunately, things have moved on and we can write code in `higher level languages`. These 
+come in two broad types: `compiled` and `interpretated`. Compiled languages go through a two-step
+process to be turned into a programme. Interpreted languages do not, and can be run (executed)
+immediately
+
+Compiled languages
+^^^^^^^^^^^^^^^^^^
+
+Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
+an executable. You can then give someone else the executable and they can run the software. Most software is
+written in those kind of languages. Note the user does not need the source code.
+Languagaes like Java are also compiled but at the time of execution 
+(called Just in Time or JIT) languages. Java bridges the gap between compiled and interpreted.
+
+Interpreted languages
+^^^^^^^^^^^^^^^^^^^^^
+
+In contract interprested languages are not compiled. You execute the source code. So you can write a text file
+with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
+You therefore need another user to have the python ecutable their system to be able to run your code. The user
+must also have your source code. This is the main difference between compiled and interpreted languages. 
+Compiled languages are a lot more flexible and require the user to do less. Interpreted languages are 
+easier (don't need to compile!) but need a user to set something up ahead of time.
+
+
+The line betwen these is getting blurred all the time as you can compile Python into an executable and use C
+within a Python programme without pre-compiling. However, for most users, the distinction is clear: if you
+must compile to run, then it's a compiled language. If you don't need to do that it's interpreted. 
+Some languages are both.
+
+So what happens during compiling or interpretation? Remember that assemble code above? That's what the compiler
+does to your source code. It turns it from human readable code to those CPU instructions. Modern compilers
+are very clever and can optimise your code very well to get the most out of your computer. Interpreters do the 
+same thing but on the fly. The python exectuable (or R) is therefore turning your code into those kind of 
+instructions as it's running the code. Interpreted languages are therefore generally slower than compiled code
+as the interpreter cannot optimise as well as a seperate compiler.
 
 
 More basic command line functions
