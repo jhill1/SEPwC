@@ -193,8 +193,9 @@ to actually do something. Ultimately, all computer code does this. It is possibl
 computer code at this level: assembler code. Back in the day this is how you programmed computers.
 This is an example of assembler code for an x86 processor (i.e. what you probably have):
 
+
 .. code-block::
-   :caption: Example of x86 assembler code
+   :caption: Example of x86 assembler code [#]_
 
     .486
     .MODEL FLAT
@@ -228,6 +229,8 @@ This is an example of assembler code for an x86 processor (i.e. what you probabl
     _myFunc ENDP
     END
 
+.. [#] From: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+
 Fortunately, things have moved on and we can write code in `higher level languages`. These 
 come in two broad types: `compiled` and `interpretated`. Compiled languages go through a two-step
 process to be turned into a programme. Interpreted languages do not, and can be run (executed)
@@ -252,7 +255,6 @@ must also have your source code. This is the main difference between compiled an
 Compiled languages are a lot more flexible and require the user to do less. Interpreted languages are 
 easier (don't need to compile!) but need a user to set something up ahead of time.
 
-
 The line betwen these is getting blurred all the time as you can compile Python into an executable and use C
 within a Python programme without pre-compiling. However, for most users, the distinction is clear: if you
 must compile to run, then it's a compiled language. If you don't need to do that it's interpreted. 
@@ -269,6 +271,32 @@ as the interpreter cannot optimise as well as a seperate compiler.
 More basic command line functions
 ----------------------------------
 
+You were introduced to some basic command line functions earlier. We looked at those
+without really explaining them properly, so let's dig a little deeper into command lines.
+
+The Command Line Interface (CLI) is a powerful way of interating with a computer. Imagine
+you have a folder full of images and you want to move those that have "_final_" in their
+name somewhere else. In the GUI, this could take a while. In the command line it's a single
+command.
+
+CLIs work by running the command you type, plus the arguments you give it. Arguments can be
+mandatory or optional (and therfore called options). A typical command might look like:
+
+``cp -r my_dir my_dir2``
+
+This copies (``cp``) ``my_dir`` to ``my_dir2`` recursively ``-r``. The two 
+directory names are mandatory arguments. The ``-r`` is optional. 
+
+.. Attention::
+   Windows options are given by ``/`` like ``fc /c file1 file2``
+
+.. Attention::
+   Linux and MacOs options are given by either ``-`` or ``--``
+
+Most commands have a help option. For Windows ``/?`` is common, on MacOS and 
+Linux ``-h`` or ``--help`` is used. You can also use the help that comes with 
+the OS, so on Windows ``help copy`` will display the manual page for the ``copy``
+command. On MacOS/Linux ``man cp`` will do the same.
 
 Connecting to other computers
 -----------------------------
