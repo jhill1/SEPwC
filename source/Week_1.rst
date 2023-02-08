@@ -94,7 +94,6 @@ Like Linux, MacOS is case sensitive.
 Exercises
 ^^^^^^^^^
 
-
 As we have to deal with multiple OSes, from here we will designate sections with 
 symbols.
 
@@ -213,7 +212,6 @@ change directory command:
 
 We saw this already for Windows, but we need to give an argument (this is the directory we want to move into). 
 
-
 .. code-block::
    :caption: |all|
 
@@ -222,19 +220,20 @@ We saw this already for Windows, but we need to give an argument (this is the di
 
 Great! We can now navigate down the filesystem. What about going up a directory?
 
-GUI way. Need screenshots of this and video
+.. GUI way. Need screenshots of this and video
 
 Absolute vs Relative paths
 ---------------------------
 
-Most of the filepaths above are absolute paths. You start at the root of the drive (C: or /) and give the 
+Most of the filepaths above are absolute paths. You start at the root of the drive (``C:`` or ``/``) and give the 
 all the directories until you get to the file you're after. I did however sneak in a few *relative*
 paths. These are paths that start from where you curently are (be that in the command line or running
 a programme). 
 
 Let's do an example. Here's an absolute path:
 
-/home/jon/my_exicting_project/data/very_important_data.csv
+|maclin|
+``/home/jon/my_exicting_project/data/very_important_data.csv``
 
 This is in a directory structure like:
 
@@ -242,10 +241,11 @@ This is in a directory structure like:
 
 Now let's cd into the scripts folder
 
-cd /home/jon/my_exciting_project/scripts
+|maclin|
+``cd /home/jon/my_exciting_project/scripts``
 
-The data (*very_important_data.csv*) is one directory up (now in my_exciting_project) and then into data.
-So relative to scripts, that's ../data/very_important_data.csv
+The data (*very_important_data.csv*) is one directory up (now in ``my_exciting_project``) and then into data.
+So relative to scripts, that's ``../data/very_important_data.csv``
 
 This is a really useful thing. Rather than give a full/absolute path, we can give relative paths
 to file. Imagine I had written a script that used absolute paths to data on my computer and gave that to
@@ -363,15 +363,18 @@ command.
 CLIs work by running the command you type, plus the arguments you give it. Arguments can be
 mandatory or optional (and therfore called options). A typical command might look like:
 
+|maclin|
 ``cp -r my_dir my_dir2``
 
 This copies (``cp``) ``my_dir`` to ``my_dir2`` recursively ``-r``. The two 
 directory names are mandatory arguments. The ``-r`` is optional. 
 
 .. Attention::
+   
    Windows options are given by ``/`` like ``fc /c file1 file2``
 
 .. Attention::
+   
    Linux and MacOs options are given by either ``-`` or ``--``
 
 Most commands have a help option. For Windows ``/?`` is common, on MacOS and 
@@ -379,8 +382,34 @@ Linux ``-h`` or ``--help`` is used. You can also use the help that comes with
 the OS, so on Windows ``help copy`` will display the manual page for the ``copy``
 command. On MacOS/Linux ``man cp`` will do the same.
 
-Connecting to other computers
------------------------------
+So what are the basic commands you should know? Here's a list:
+
+|maclin|
+
+ - mv
+ - mkdir
+ - cp
+ - ls
+ - pwd
+ - rm
+ - rmdir
+
+|win|
+
+ - ren
+ - md
+ - copy
+ - dir
+ - del
+ - rmdir
+
+Exercise: practice on those commands
+
+.. Attention::
+   
+   ``rm``, ``del``, and ``rmdir`` delete files premenantly. They do *not* move the into Trash or similar. 
+
+
 
 Software licences
 =================
