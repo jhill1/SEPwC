@@ -53,6 +53,7 @@ the root drive where Windows actually lives, along with your programs (apps) and
 
 Exercise: Why C:? What's wrong with A? Google and find out.
 .. note::
+   
    :class: dropdown
 
    A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
@@ -149,14 +150,16 @@ prints the current directory.
 
 These commands will print your current directory, so something like:
 
-|maclin|
-.. code-block::
+.. code-block:: bash
+   :caption: |maclin|
+
    $ pwd
    /home/jh1889/work/teaching/SEPwC/source
 
-|win|
-.. code-clock::
-   $ cd
+.. code-block:: bat
+   :caption: |win|
+
+   > cd
    C:\Documents\jh1889\
 
 So now you know where you are on a command line. What's there? For this we need to list the directory.
@@ -169,17 +172,37 @@ The command for that is:
 ``dir``
 
 You see a list of files. Depending on the system details that might give you different colours
-for directories and files, or be monochrome.
+for directories and files, or be monochrome. The ``$`` and ``>`` symbols are prompts; do not type them!
 
-|maclin|
-.. code-block::
+.. code-block:: bash
+   :caption: |maclin|
+
    $ ls
    Assessments.rst  Expectations.rst  Week_1.rst  Week_3.rst  Week_5.rst  Week_7.rst  ytemplates
    conf.py          index.rst         Week_2.rst  Week_4.rst  Week_6.rst  ystatic
    
-|win|
-.. code-block::
-   dir
+.. code-block:: bat
+   :caption: |win|
+
+   > dir
+     Volume in drive C has no label.
+     Volume Serial Number is F204-1461
+
+     Directory of C:\Users\jh1889
+
+    31/01/2023  15:18    <DIR>          .
+    31/01/2023  15:18    <DIR>          ..
+    29/11/2022  16:52    <DIR>          .dotnet
+    21/08/2019  13:36    <DIR>          .idl
+    27/08/2020  08:13    <DIR>          .idlerc
+    24/10/2019  16:05    <DIR>          .ipython
+    25/10/2019  15:58    <DIR>          .jupyter
+    29/10/2021  09:37    <DIR>          .matplotlib
+    30/01/2023  19:16    <DIR>          .ms-ad
+    21/04/2020  12:59    <DIR>          .spss
+    21/12/2022  11:39    <DIR>          .ssh
+    31/05/2022  11:02    <DIR>          .templateengine
+    17/02/2020  16:10    <DIR>          .VirtualBox
 
 
 We can now see where you are, what's in thet directory; what about moving into a new directory? For that we use the
@@ -191,8 +214,9 @@ change directory command:
 We saw this already for Windows, but we need to give an argument (this is the directory we want to move into). 
 
 
-|all|
 .. code-block::
+   :caption: |all|
+
    cd ystatic
    ls 
 

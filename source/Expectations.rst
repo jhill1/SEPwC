@@ -62,8 +62,8 @@ the number of tests passed without errors or (foreseeable) warnings; the quality
 of your code, including comments, structure, variable naming, etc; and the 
 quality of your solution (elegance, speed, algorithmic structure, etc).
 
-You will choose one from five assessments to do. They will be made available at
-the start of the module, along with the tests to pass. I would recommend choosing
+You will choose one from five assessments to complete. The assessments will be made available at
+the start of the module, along with the tests the code has to pass. I would recommend choosing
 around week 3, which is when you will start to think about which language to 
 learn. 
 
@@ -74,5 +74,5 @@ efficient, some take time to complete. Your mark is a mix of all these elements,
 and how well you pass the tests set for each assessment. 
 
 Test passes will account for 50% of your module mark (i.e. that criteria is weighted as 50%), 
-with the other n skills making up the remainder of the 50% of the mark
+with the other skills making up the remainder of the 50% of the mark.
 
