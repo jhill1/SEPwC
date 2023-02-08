@@ -134,12 +134,69 @@ Navigating a filesystem
 There are two ways to navigate your files; some form of graphic interface (all three common OSes have a similar tool) or the
 command line. We're going to explore using both. Before we do this, we need a few basic command line tools to move around the files.
 
+The first is to list which directory you are in.
+
+|maclin|
+``pwd``
+
+which stand for "present working directory". On Windows, you use a different command:
+
+|win|
+``cd``
+
+which actually stands for "change directory" (more on that later), but without any arguments (see later)
+prints the current directory.
+
+These commands will print your current directory, so something like:
+
+|maclin|
+.. code-block::
+   $ pwd
+   /home/jh1889/work/teaching/SEPwC/source
+
+|win|
+.. code-clock::
+   $ cd
+   C:\Documents\jh1889\
+
+So now you know where you are on a command line. What's there? For this we need to list the directory.
+The command for that is:
+
+|maclin|
+``ls``
+
+|win|
+``dir``
+
+You see a list of files. Depending on the system details that might give you different colours
+for directories and files, or be monochrome.
+
+|maclin|
+.. code-block::
+   $ ls
+   Assessments.rst  Expectations.rst  Week_1.rst  Week_3.rst  Week_5.rst  Week_7.rst  ytemplates
+   conf.py          index.rst         Week_2.rst  Week_4.rst  Week_6.rst  ystatic
+   
+|win|
+.. code-block::
+   dir
 
 
-cd
-ls/dir
+We can now see where you are, what's in thet directory; what about moving into a new directory? For that we use the
+change directory command:
 
-need examples and video of this
+|all|
+``cd``
+
+We saw this already for Windows, but we need to give an argument (this is the directory we want to move into). 
+
+
+|all|
+.. code-block::
+   cd ystatic
+   ls 
+
+Great! We can now navigate down the filesystem. What about going up a directory?
 
 GUI way. Need screenshots of this and video
 
