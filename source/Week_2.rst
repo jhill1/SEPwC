@@ -120,10 +120,36 @@ always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is
 Datatypes
 ---------
 
+The variables we create can store any kind of data. In interpreted languages that can even change throughout the code. In compiled language you often have 
+to fix the kind of data up front. That kind of data is the datatype.
+
+Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), a string ("like this one"). We can also make up 
+our own datatypes! We can take the basic kinds and join them together, so for example, we can have a "list" datatype, which can contain
+a fixed number of floats, e.g. [1.1, 23.5, 12321.2343242, 582.11]. We could then make lists of lists, which we can think of as a table:
+
+1   2   3   4   5
+5   4   3   2   1
+2   4   5   6   7 
+
+We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
+objects. For now, we're going to focus on the basic datatypes and will revist this idea later on (as R and Python have 
+different names for some of them).
 
 
 Operations
 ----------
+
+Operations are how to start to manipulate data. For example:
+
+user_input = get_user_number()
+print("You gave me" user_input)
+new_value = user_input + 5
+print("You now have " new_value)
+
+So the above, if the user put in 2, the user would see
+
+You gave me 2
+You now have 7
 
 
 
