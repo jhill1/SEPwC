@@ -10,8 +10,6 @@ we can focus on the language, rather than also learning the jargon!  In this cha
 There is no fixed syntax (you can make up your own!) and it's designed for us to read. 
 
 Variable: a variable is a container where you store something. You decide what that variable is called and what you put in it.
-Most variables in interpreted languages are defined when you use them first time. In compilde language you need to decide
-up-front which variables you need. Variables can change what they store throughout the code.
 
 Constant: a bit of data that never changes throughout the code, unlike a variable.
 
@@ -20,7 +18,7 @@ Operations: an operation takes place between two things. These things could be v
 Datatype: the type of data held by a variable. A floating point number (1.342), an integer (2), a string ("silly_string"), a character ("c"), 
 or any other thing that can be defined. 
 
-Outputs: what you code spits out. A line of text onto the screen, an image, a file, a noise!
+Outputs: what you code spits out. A line of text onto the screen, an image, a file, even a noise!
 
 Inputs: what you code needs to run. This can be "hardcoded" or you can ask the user to supply it.
 
@@ -38,6 +36,8 @@ in a variable, for example).
 Defining a variable
 --------------------
 
+A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time. In compiled language you need to decide
+up-front which variables you need. Variables can change what they store throughout the code.
 
 Some examples:
 
@@ -60,14 +60,70 @@ loaded_data = load_csv_file("mega_data_set.csv")
 
 This variable contains whatever the "mega_data_set.csv" file contains.
 
+What about changing what's in a variable? Just set it:
 
+my_name = "Jon"
+print(my_name)
+my_name="Fred"
+print(my_name)
 
-Operations
-----------
+What the above code will do is set the variable "my_name" to Jon, print it to screen, then set "my_name" to Fred and print that to screen. 
+What the users sees is:
+
+Jon
+Fred
+
+All the above examples require the variable to be known up front (hardcoded). What if we don't know?
+
+filname = ask_user_for_file()
+
+Assuming the function (see below) works, filename will contain whatever the user tells us. We can then do something like:
+
+data = load_file(filename)
+
+where filename was given by the user and we then load in that file. That way nothing is hardcoded. 
+
+How do you decide a good variable name?
+.......................................
+
+A good variable name should make sense, make the code readable to a human and be clear. In the above
+I've used _ to seperate words. This is good practice. You can also use CamelCase (i.e. a captial letter to 
+seperate words). Whichever you do, be consistant!
+
+Good variables:
+
+users_name
+temperature
+input_filename
+output_filename
+chemical_data
+topography_raster
+rivers_shapefile
+max_reef_growth_rate
+
+Bad variables:
+
+x
+temp
+fi
+fo
+chemdat
+top
+rs
+mrgr
+
+The first list is clear with little doubt what that variable contains. The second list is not that helpful. Is temp temporary or temperature? chemdat might be ok, but a bit hard 
+to read. top is not helpful, topography or the top of something? x and rs could be anything! In 5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
+always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is reasonable shorthand for maximum, but others would disagree with me on that!
 
 
 Datatypes
 ---------
+
+
+
+Operations
+----------
 
 
 
