@@ -152,22 +152,240 @@ You gave me 2
 You now have 7
 
 
+Operations cover any mathematical operation (multiply, divide, subtract), but also some more
+specialist ones like "modulus" which gives you the reminder of a divsion. We can also "overload"
+operations so "add" works on multiple data types, for example:
+
+my_string = "hello"
+ending = " world"
+
+complete_string = my_string + ending
+
+Which will do what you think it does and put "hello world" into complete_string. Which 
+symbol is used depends on the language and not all languages can do this.
+
+
 
 Outputs
 -------
 
+The output is something you, the programmer decides. It might be a text file, a CSV file, a graphic, etc, etc, it
+may just be the result printed to screen.
+
+my_secret = "I'm Batman..."
+print(my_secret)
+write.file("My_Secret.txt", my_secret)
+speak(my_secret)
+
+Will output the contents of ``my_secret`` to the screen, to a file and say it. Not much of a secret now...
+
+
 Inputs
 ------
+
+Input are, unsurprisingly, the opposite of outputs. Like the outputs of a program they come in many forms.
+The simplest are the *hardcoded* inputs.
+
+my_file = "top_secret_data.csv"
+secret_data = load.csv(my_file)
+
+Here the input is the file "top_secret_data.csv", which is hardocded into the program. The program will
+read whatever is in that file so to read in different data you could a) swap the filename to something else
+or b) replace the contents of the file with your new data. 
+
+Neither is particularlly convinient to a user and would need explaining. A better solution is to ask the user
+which file to use. So how can we do this? We can use the command-line argument idea we learnt last week:
+
+command_line_arguments = get_command_line_args("--input_file", "--output_file")
+input_file = command_line_argument[input_file]
+data = load.csv(input_file)
+
+Or we could pop-up a little box, which you'll be familiar to you:
+
+input_file = ask_file_pop_up()
+data = load.csv(input_file)
 
 
 Loops
 -----
 
+A lot of time we need to repeat the same thing on bits of data. Imagine a scenario where we have a
+huge list of files we need to extract a single bit of data from each of these. We need to do the thing
+(parse and extract the files) a lot of times. To do this we can loop over the files:
+
+storage = StorageContainer
+list_of_files = ["file1.csv", "file2.csv", ..... "file3.csv"]
+
+for each file in list_of_files
+    file_contents = load.csv(file)
+    data_I_need = grab_data(file_contents)
+    put(data_I_need into storage)
+
+This is a really powerful concept and one of the main things we do when process data using code. Here's
+another example looping over cells in a raster (DEM or topography) file
+
+raster = load.raster("my_raster_file.tif")
+for each x in raster.x_direction
+    for each y in raster in raster.y_direction
+         raster[x,y] = x*y
+
+This code sets each cell in the raster to x*y where x is the number of cells in the east-west direction
+and y is the number of cells in the north-south direction. This is a bit abstract, so let's go through this
+is step-by-step.
+
+Here's our raster which contains 5 cells in the x-direction and 4 in the y-direction and contains the following
+(random) numbers:
+
+1 2 3 4
+2 2 3 4
+3 2 3 4
+4 2 3 4
+5 2 3 4
+
+The first loop therefore goes from 1 to 5, the second loop goes from 1 to 4. We can then write down what
+x and y will do for each loop:
+x = 1, y = 1
+x = 1, y = 2
+x = 1, y = 3
+x = 1, y = 4
+x = 2, y = 1
+x = 2, y = 2
+x = 2, y = 3
+x = 2, y = 4
+x = 3, y = 1
+x = 3, y = 2
+x = 3, y = 3
+x = 3, y = 4
+x = 4, y = 1
+x = 4, y = 2
+x = 4, y = 3
+x = 4, y = 4
+x = 5, y = 1
+x = 5, y = 2
+x = 5, y = 3
+x = 5, y = 4
+
+So what does the raster then contain after this loop?, we can also work that out:
+x = 1, y = 1, x*y = 1
+x = 1, y = 2, x*y = 2
+x = 1, y = 3, x*y = 3
+x = 1, y = 4, x*y = 4
+x = 2, y = 1, x*y = 2
+x = 2, y = 2, x*y = 4
+x = 2, y = 3, x*y = 6
+x = 2, y = 4, x*y = 8
+x = 3, y = 1, x*y = 3
+x = 3, y = 2, x*y = 6
+x = 3, y = 3, x*y = 9
+x = 3, y = 4, x*y = 12
+x = 4, y = 1, x*y = 4
+x = 4, y = 2, x*y = 8
+x = 4, y = 3, x*y = 12
+x = 4, y = 4, x*y = 16
+x = 5, y = 1, x*y = 5
+x = 5, y = 2, x*y = 10
+x = 5, y = 3, x*y = 15
+x = 5, y = 4, x*y = 20
+
+So our raster grid now contains.
+
+1 2 3 4
+2 4 6 8
+3 6 9 12
+4 8 12 16
+5 10 15 20
 
 Conditionals
 ------------
 
+Conditional statements run code based on a variable meeting some condition. They allow code to *brnch* and
+perform actions based on some criteria.
+
+For example, only take a square root if the number if > than 0
+
+if number > 0
+  square_root = square_root(number)
+
+This means the square root will only be calculated if our number is greater than zero. But what if it's equal to or 
+less than zero? We may need to add another condition or catch all the other possibilities, so:
+
+if number > 0
+   square_root = square_root(number)
+else
+   print("Can't take the square root of " number ". Exiting")
+   exit()
+
+Here, if the condition is not met, the program prints an error message and exits
+
+We can nest conditions too, like we did with the loops.
+
+if number > 0
+   if number < 100
+      print("Your number is > 0 and < 100)
+
+The above can also be written using logic:
+
+if number > 0 and number < 100
+   print("Your number is > 0 and < 100)
+
+You can negate conditionals too:
+
+if not number <= 0
+   square_root = square_root(number)
+
+This is *exactly* equivalent to our first example above (note the *not* and the <= which is opposite to >)
+
+In all languages you will find things like is equal to (for example ==), is less than, greater than, less than or equal to, etc.
+Most languages have some form of "or" and "and" operations. 
 
 
 Functions
 ---------
+
+Function are for bits of code you run lots or compelx code that can be wrapped up so the main code is easier to read. 
+Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is earier to read.
+
+a_list_of_numbers = [1,4,2,3,6,4]
+sorted_list = sort(a_list_of_numbers)
+print(sorted_list)
+
+Is much easier to read than:
+
+a_list_of_numbers = [1,4,2,3,6,4]
+n = length(a_list_of_numbers) 
+for i in range(n):
+   for j in range(0, n-i-1):
+      if a_list_of_numbers[j] > a_list_of_numbers[j+1] : 
+         # swap the numbers around
+            a_list_of_numbers[j], a_list_of_numbers[j+1] = a_list_of_numbers[j+1], a_list_of_numbers[j]
+print(a_list_of_numbers)
+
+The algorithm above is a bubble sort.
+Bubble Sort
+Just like the way bubbles rise from the bottom of a glass, bubble sort is a simple algorithm that sorts a list, allowing either lower or higher values to bubble up to the top. The algorithm traverses a list and compares adjacent values, swapping them if they are not in the correct order.
+
+With a worst-case complexity of O(n^2), bubble sort is very slow compared to other sorting algorithms like quicksort. The upside is that it is one of the easiest sorting algorithms to understand and code from scratch.
+
+From technical perspective, bubble sort is reasonable for sorting small-sized arrays or specially when executing sort algorithms on computers with remarkably limited memory resources.
+
+Example:
+First pass through the list:
+Starting with [4, 2, 6, 3, 9], the algorithm compares the first two elements in the array, 4 and 2. It swaps them because 2 < 4: [2, 4, 6, 3, 9]
+It compares the next two values, 4 and 6. As 4 < 6, these are already in order, and the algorithm moves on: [2, 4, 6, 3, 9]
+The next two values are also swapped because 3 < 6: [2, 4, 3, 6, 9]
+The last two values, 6 and 9, are already in order, so the algorithm does not swap them.
+Second pass through the list:
+2 < 4, so there is no need to swap positions: [2, 4, 3, 6, 9]
+The algorithm swaps the next two values because 3 < 4: [2, 3, 4, 6, 9]
+No swap as 4 < 6: [2, 3, 4, 6, 9]
+Again, 6 < 9, so no swap occurs: [2, 3, 4, 6, 9]
+The list is already sorted, but the bubble sort algorithm doesn't realize this. Rather, it needs to complete an entire pass through the list without swapping any values to know the list is sorted.
+
+Third pass through the list:
+[2, 4, 3, 6, 9] => [2, 4, 3, 6, 9]
+[2, 4, 3, 6, 9] => [2, 4, 3, 6, 9]
+[2, 4, 3, 6, 9] => [2, 4, 3, 6, 9]
+[2, 4, 3, 6, 9] => [2, 4, 3, 6, 9]
+Clearly bubble sort is far from the most efficient sorting algorithm. Still, it's simple to wrap your head around and implement yourself.
+
+
