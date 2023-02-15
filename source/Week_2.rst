@@ -6,29 +6,29 @@ Some terminology
 
 Computer programming is full of jargon. Fortunately, most of the jargon is comoon across all
 languages. The idea of this chapter is to cover those basics so that when we get to a language
-we can focus on the language, rather than also learning the jargon!  In this chapter we're going to use pseudo-code. This is code-like text that is easier to read. 
+we can focus on the language, rather than also learning the jargon!  In this chapter we're going to use pseudo-code. 
+This is code-like text that is easier to read. 
 There is no fixed syntax (you can make up your own!) and it's designed for us to read. 
 
-Variable: a variable is a container where you store something. You decide what that variable is called and what you put in it.
+**Variable**: a variable is a container where you store something. You decide what that variable is called and what you put in it.
 
-Constant: a bit of data that never changes throughout the code, unlike a variable.
+**Constant**: a bit of data that never changes throughout the code, unlike a variable.
 
-Operations: an operation takes place between two things. These things could be variables, constants (or anything else in that language). 
+**Operations**: an operation takes place between two things. These things could be variables, constants (or anything else in that language). 
 
-Datatype: the type of data held by a variable. A floating point number (1.342), an integer (2), a string ("silly_string"), a character ("c"), 
+**Datatype**: the type of data held by a variable. A floating point number (1.342), an integer (2), a string ("silly_string"), a character ("c"), 
 or any other thing that can be defined. 
 
-Outputs: what you code spits out. A line of text onto the screen, an image, a file, even a noise!
+**Outputs**: what you code spits out. A line of text onto the screen, an image, a file, even a noise!
 
-Inputs: what you code needs to run. This can be "hardcoded" or you can ask the user to supply it.
+**Inputs**: what you code needs to run. This can be "hardcoded" or you can ask the user to supply it.
 
+**Loops**: code often needs to do the same thing on a long list of data. We often use loops to do this. Loops can be nested (i.e. a loop within a loop)
 
-Loops: code often needs to do the same thing on a long list of data. We often use loops to do this. Loops can be nested (i.e. a loop within a loop)
-
-Conditionals: you often run a bit of code if a certain condition is met, for example if the variable contains a number greater than 5, do this, otherwise do that.
+**Conditionals**: you often run a bit of code if a certain condition is met, for example if the variable contains a number greater than 5, do this, otherwise do that.
 This creates a logic flow to your code and allows decisions to be made.
 
-Functions: if you find yourself doing the same few line sof code again, and again, we don't type them out repeatedly, we instead create a function which 
+**Functions**: if you find yourself doing the same few line sof code again, and again, we don't type them out repeatedly, we instead create a function which 
 we can call every time we want to run those lines. Functions take input (called arguments) and return data back to the main program (where you can store it
 in a variable, for example).
 
@@ -41,45 +41,62 @@ up-front which variables you need. Variables can change what they store througho
 
 Some examples:
 
-my_data = 1, 2, 3, 5, 19, 18
+.. code-block::
+
+   my_data = 1, 2, 3, 5, 19, 18
+   
 I've create a variable called ``my_data`` which contains a list of numbers.
 
-my_favourite_number = 7
+.. code-block::
+
+   my_favourite_number = 7
 
 This varibale contains a single number, 7.
 
+.. code-block::
 
-pi = 3.14159
+   pi = 3.14159
+
 This variable contains the number for \pi to five decimal places.
 
-name = "Jon"
+.. code-block::
+
+   name = "Jon"
 
 This variable contains text.
 
-loaded_data = load_csv_file("mega_data_set.csv")
+.. code-block::
+
+   loaded_data = load_csv_file("mega_data_set.csv")
 
 This variable contains whatever the "mega_data_set.csv" file contains.
 
 What about changing what's in a variable? Just set it:
 
-my_name = "Jon"
-print(my_name)
-my_name="Fred"
-print(my_name)
+.. code-block::
+   
+   my_name = "Jon"
+   print(my_name)
+   my_name="Fred"
+   print(my_name)
 
 What the above code will do is set the variable "my_name" to Jon, print it to screen, then set "my_name" to Fred and print that to screen. 
 What the users sees is:
 
-Jon
-Fred
+| Jon
+| Fred
 
 All the above examples require the variable to be known up front (hardcoded). What if we don't know?
 
-filname = ask_user_for_file()
+.. code-block::
+
+   filname = ask_user_for_file()
 
 Assuming the function (see below) works, filename will contain whatever the user tells us. We can then do something like:
 
-data = load_file(filename)
+.. code-block::
+
+   data = load_file(filename)
 
 where filename was given by the user and we then load in that file. That way nothing is hardcoded. 
 
@@ -92,25 +109,29 @@ seperate words). Whichever you do, be consistant!
 
 Good variables:
 
-users_name
-temperature
-input_filename
-output_filename
-chemical_data
-topography_raster
-rivers_shapefile
-max_reef_growth_rate
+.. code-block::
+   
+   users_name
+   temperature
+   input_filename
+   output_filename
+   chemical_data
+   topography_raster
+   rivers_shapefile
+   max_reef_growth_rate
 
 Bad variables:
 
-x
-temp
-fi
-fo
-chemdat
-top
-rs
-mrgr
+.. code-block::
+
+   x
+   temp
+   fi
+   fo
+   chemdat
+   top
+   rs
+   mrgr
 
 The first list is clear with little doubt what that variable contains. The second list is not that helpful. Is temp temporary or temperature? chemdat might be ok, but a bit hard 
 to read. top is not helpful, topography or the top of something? x and rs could be anything! In 5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
@@ -123,13 +144,13 @@ Datatypes
 The variables we create can store any kind of data. In interpreted languages that can even change throughout the code. In compiled language you often have 
 to fix the kind of data up front. That kind of data is the datatype.
 
-Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), a string ("like this one"). We can also make up 
+Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), a string ("like this one") a boolean (true or false). We can also make up 
 our own datatypes! We can take the basic kinds and join them together, so for example, we can have a "list" datatype, which can contain
-a fixed number of floats, e.g. [1.1, 23.5, 12321.2343242, 582.11]. We could then make lists of lists, which we can think of as a table:
+a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could then make lists of lists, which we can think of as a table:
 
-1   2   3   4   5
-5   4   3   2   1
-2   4   5   6   7 
+| 1   2   3   4   5
+| 5   4   3   2   1
+| 2   4   5   6   7 
 
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
 objects. For now, we're going to focus on the basic datatypes and will revist this idea later on (as R and Python have 
@@ -141,30 +162,33 @@ Operations
 
 Operations are how to start to manipulate data. For example:
 
-user_input = get_user_number()
-print("You gave me" user_input)
-new_value = user_input + 5
-print("You now have " new_value)
+.. code-block::
+
+   user_input = get_user_number()
+   print("You gave me" user_input)
+   new_value = user_input + 5
+   print("You now have " new_value)
 
 So the above, if the user put in 2, the user would see
 
-You gave me 2
-You now have 7
+  You gave me 2
+  You now have 7
 
 
 Operations cover any mathematical operation (multiply, divide, subtract), but also some more
 specialist ones like "modulus" which gives you the reminder of a divsion. We can also "overload"
 operations so "add" works on multiple data types, for example:
 
-my_string = "hello"
-ending = " world"
+.. code-block::
 
-complete_string = my_string + ending
+   my_string = "hello"
+   ending = " world"
+
+   complete_string = my_string + ending
+
 
 Which will do what you think it does and put "hello world" into complete_string. Which 
 symbol is used depends on the language and not all languages can do this.
-
-
 
 Outputs
 -------
@@ -172,10 +196,12 @@ Outputs
 The output is something you, the programmer decides. It might be a text file, a CSV file, a graphic, etc, etc, it
 may just be the result printed to screen.
 
-my_secret = "I'm Batman..."
-print(my_secret)
-write.file("My_Secret.txt", my_secret)
-speak(my_secret)
+.. code-block::
+   
+   my_secret = "I'm Batman..."
+   print(my_secret)
+   write.file("My_Secret.txt", my_secret)
+   speak(my_secret)
 
 Will output the contents of ``my_secret`` to the screen, to a file and say it. Not much of a secret now...
 
@@ -186,8 +212,10 @@ Inputs
 Input are, unsurprisingly, the opposite of outputs. Like the outputs of a program they come in many forms.
 The simplest are the *hardcoded* inputs.
 
-my_file = "top_secret_data.csv"
-secret_data = load.csv(my_file)
+.. code-block::
+
+   my_file = "top_secret_data.csv"
+   secret_data = load.csv(my_file)
 
 Here the input is the file "top_secret_data.csv", which is hardocded into the program. The program will
 read whatever is in that file so to read in different data you could a) swap the filename to something else
@@ -196,14 +224,18 @@ or b) replace the contents of the file with your new data.
 Neither is particularlly convinient to a user and would need explaining. A better solution is to ask the user
 which file to use. So how can we do this? We can use the command-line argument idea we learnt last week:
 
-command_line_arguments = get_command_line_args("--input_file", "--output_file")
-input_file = command_line_argument[input_file]
-data = load.csv(input_file)
+.. code-block::
+
+   command_line_arguments = get_command_line_args("--input_file", "--output_file")
+   input_file = command_line_argument[input_file]
+   data = load.csv(input_file)
 
 Or we could pop-up a little box, which you'll be familiar to you:
 
-input_file = ask_file_pop_up()
-data = load.csv(input_file)
+.. code-block::
+
+   input_file = ask_file_pop_up()
+   data = load.csv(input_file)
 
 
 Loops
@@ -213,20 +245,24 @@ A lot of time we need to repeat the same thing on bits of data. Imagine a scenar
 huge list of files we need to extract a single bit of data from each of these. We need to do the thing
 (parse and extract the files) a lot of times. To do this we can loop over the files:
 
-storage = StorageContainer
-list_of_files = ["file1.csv", "file2.csv", ..... "file3.csv"]
+.. code-block::
 
-for each file in list_of_files
-    file_contents = load.csv(file)
-    data_I_need = grab_data(file_contents)
-    put(data_I_need into storage)
+   storage = StorageContainer
+   list_of_files = ["file1.csv", "file2.csv", ..... "file3.csv"]
+
+   for each file in list_of_files
+      file_contents = load.csv(file)
+      data_I_need = grab_data(file_contents)
+      put(data_I_need into storage)
 
 This is a really powerful concept and one of the main things we do when process data using code. Here's
 another example looping over cells in a raster (DEM or topography) file
 
-raster = load.raster("my_raster_file.tif")
-for each x in raster.x_direction
-    for each y in raster in raster.y_direction
+.. code-block::
+
+   raster = load.raster("my_raster_file.tif")
+   for each x in raster.x_direction
+      for each y in raster in raster.y_direction
          raster[x,y] = x*y
 
 This code sets each cell in the raster to x*y where x is the number of cells in the east-west direction
@@ -236,64 +272,66 @@ is step-by-step.
 Here's our raster which contains 5 cells in the x-direction and 4 in the y-direction and contains the following
 (random) numbers:
 
-1 2 3 4
-2 2 3 4
-3 2 3 4
-4 2 3 4
-5 2 3 4
+| 1 2 3 4
+| 2 2 3 4
+| 3 2 3 4
+| 4 2 3 4
+| 5 2 3 4
 
 The first loop therefore goes from 1 to 5, the second loop goes from 1 to 4. We can then write down what
 x and y will do for each loop:
-x = 1, y = 1
-x = 1, y = 2
-x = 1, y = 3
-x = 1, y = 4
-x = 2, y = 1
-x = 2, y = 2
-x = 2, y = 3
-x = 2, y = 4
-x = 3, y = 1
-x = 3, y = 2
-x = 3, y = 3
-x = 3, y = 4
-x = 4, y = 1
-x = 4, y = 2
-x = 4, y = 3
-x = 4, y = 4
-x = 5, y = 1
-x = 5, y = 2
-x = 5, y = 3
-x = 5, y = 4
+
+| x = 1, y = 1
+| x = 1, y = 2
+| x = 1, y = 3
+| x = 1, y = 4
+| x = 2, y = 1
+| x = 2, y = 2
+| x = 2, y = 3
+| x = 2, y = 4
+| x = 3, y = 1
+| x = 3, y = 2
+| x = 3, y = 3
+| x = 3, y = 4
+| x = 4, y = 1
+| x = 4, y = 2
+| x = 4, y = 3
+| x = 4, y = 4
+| x = 5, y = 1
+| x = 5, y = 2
+| x = 5, y = 3
+| x = 5, y = 4
 
 So what does the raster then contain after this loop?, we can also work that out:
-x = 1, y = 1, x*y = 1
-x = 1, y = 2, x*y = 2
-x = 1, y = 3, x*y = 3
-x = 1, y = 4, x*y = 4
-x = 2, y = 1, x*y = 2
-x = 2, y = 2, x*y = 4
-x = 2, y = 3, x*y = 6
-x = 2, y = 4, x*y = 8
-x = 3, y = 1, x*y = 3
-x = 3, y = 2, x*y = 6
-x = 3, y = 3, x*y = 9
-x = 3, y = 4, x*y = 12
-x = 4, y = 1, x*y = 4
-x = 4, y = 2, x*y = 8
-x = 4, y = 3, x*y = 12
-x = 4, y = 4, x*y = 16
-x = 5, y = 1, x*y = 5
-x = 5, y = 2, x*y = 10
-x = 5, y = 3, x*y = 15
-x = 5, y = 4, x*y = 20
+
+| x = 1, y = 1, x*y = 1
+| x = 1, y = 2, x*y = 2
+| x = 1, y = 3, x*y = 3
+| x = 1, y = 4, x*y = 4
+| x = 2, y = 1, x*y = 2
+| x = 2, y = 2, x*y = 4
+| x = 2, y = 3, x*y = 6
+| x = 2, y = 4, x*y = 8
+| x = 3, y = 1, x*y = 3
+| x = 3, y = 2, x*y = 6
+| x = 3, y = 3, x*y = 9
+| x = 3, y = 4, x*y = 12
+| x = 4, y = 1, x*y = 4
+| x = 4, y = 2, x*y = 8
+| x = 4, y = 3, x*y = 12
+| x = 4, y = 4, x*y = 16
+| x = 5, y = 1, x*y = 5
+| x = 5, y = 2, x*y = 10
+| x = 5, y = 3, x*y = 15
+| x = 5, y = 4, x*y = 20
 
 So our raster grid now contains.
 
-1 2 3 4
-2 4 6 8
-3 6 9 12
-4 8 12 16
-5 10 15 20
+| 1 2 3 4
+| 2 4 6 8
+| 3 6 9 12
+| 4 8 12 16
+| 5 10 15 20
 
 Conditionals
 ------------
@@ -303,35 +341,45 @@ perform actions based on some criteria.
 
 For example, only take a square root if the number if > than 0
 
-if number > 0
-  square_root = square_root(number)
+.. code-block::
+
+   if number > 0
+     square_root = square_root(number)
 
 This means the square root will only be calculated if our number is greater than zero. But what if it's equal to or 
 less than zero? We may need to add another condition or catch all the other possibilities, so:
 
-if number > 0
-   square_root = square_root(number)
-else
-   print("Can't take the square root of " number ". Exiting")
-   exit()
+.. code-block::
+
+   if number > 0
+      square_root = square_root(number)
+   else
+      print("Can't take the square root of " number ". Exiting")
+      exit()
 
 Here, if the condition is not met, the program prints an error message and exits
 
 We can nest conditions too, like we did with the loops.
 
-if number > 0
-   if number < 100
-      print("Your number is > 0 and < 100)
+.. code-block::
+
+   if number > 0
+      if number < 100
+         print("Your number is > 0 and < 100)
 
 The above can also be written using logic:
 
-if number > 0 and number < 100
-   print("Your number is > 0 and < 100)
+.. code-block::
+
+   if number > 0 and number < 100
+      print("Your number is > 0 and < 100)
 
 You can negate conditionals too:
 
-if not number <= 0
-   square_root = square_root(number)
+.. code-block::
+
+   if not number <= 0
+      square_root = square_root(number)
 
 This is *exactly* equivalent to our first example above (note the *not* and the <= which is opposite to >)
 
@@ -345,20 +393,25 @@ Functions
 Function are for bits of code you run lots or compelx code that can be wrapped up so the main code is easier to read. 
 Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is earier to read.
 
-a_list_of_numbers = [1,4,2,3,6,4]
-sorted_list = sort(a_list_of_numbers)
-print(sorted_list)
+.. code-block::
+
+   a_list_of_numbers = [1,4,2,3,6,4]
+   sorted_list = sort(a_list_of_numbers)
+   print(sorted_list)
 
 Is much easier to read than:
 
-a_list_of_numbers = [1,4,2,3,6,4]
-n = length(a_list_of_numbers) 
-for i in range(n):
-   for j in range(0, n-i-1):
-      if a_list_of_numbers[j] > a_list_of_numbers[j+1] : 
-         # swap the numbers around
-            a_list_of_numbers[j], a_list_of_numbers[j+1] = a_list_of_numbers[j+1], a_list_of_numbers[j]
-print(a_list_of_numbers)
+.. code-block::
+
+   a_list_of_numbers = [1,4,2,3,6,4]
+   n = length(a_list_of_numbers) 
+   for i in range(n):
+      for j in range(0, n-i-1):
+         if a_list_of_numbers[j] > a_list_of_numbers[j+1] : 
+            # swap the numbers around
+               a_list_of_numbers[j], a_list_of_numbers[j+1] = a_list_of_numbers[j+1], a_list_of_numbers[j]
+   
+   print(a_list_of_numbers)
 
 The algorithm above is a bubble sort.
 Bubble Sort
