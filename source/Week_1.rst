@@ -1,7 +1,7 @@
 .. include:: <isonum.txt>
 
-Filesystems, how a computer works and the command line
-======================================================
+How a computer works
+====================
 
 Computers have been around since the 1940's. The first computers were 
 mechanical; using valves to store and process information. By the 60's and 70's they
