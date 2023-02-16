@@ -20,14 +20,14 @@ to help guide you. However, you can forge ahead, but equalyy, don't worry if you
 slip behind a little.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    How_a_computer_works
    Licences
    Code_basics
    Algorithms
-   Spreadsheet_data
+   Spreadsheets_data
    Python
    Issues
    Python2
