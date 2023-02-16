@@ -23,16 +23,15 @@ slip behind a little.
    :maxdepth: 2
    :caption: Contents:
 
-   Expectations
-   Week_1
-   Week_1.1
-   Week_2
-   Week_3
-   Week_4
-   Week_5
-   Week_6
-   Week_7
-   Assessments
+   How_a_computer_works
+   Licences
+   Code_basics
+   Algorithms
+   Spreadsheet_data
+   Python
+   Issues
+   Python2
+   Mini_courses
 
 Indices and tables
 ==================
