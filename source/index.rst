@@ -25,6 +25,7 @@ slip behind a little.
 
    Expectations
    Week_1
+   Week_1.1
    Week_2
    Week_3
    Week_4
