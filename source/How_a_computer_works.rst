@@ -1,7 +1,7 @@
 .. include:: <isonum.txt>
 
-Filesystems, how a computer works and the command line
-======================================================
+How a computer works
+====================
 
 Computers have been around since the 1940's. The first computers were 
 mechanical; using valves to store and process information. By the 60's and 70's they
@@ -52,11 +52,11 @@ Windows organises files into drives. Drives are usually physical drives, but can
 the root drive where Windows actually lives, along with your programs (apps) and your data and files.
 
 Exercise: Why C:? What's wrong with A? Google and find out.
-.. note::
-   
-   :class: dropdown
 
-   A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
+..  admonition:: Learn more
+    :class: toggle
+
+    A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
 
 From the drive, folders are seperated with a '\' symbol. Software is generally installed
 in ``C:\Program Files`` (or ``C:\Program Files (x86)`` for older software). Your documents are
@@ -94,37 +94,36 @@ Like Linux, MacOS is case sensitive.
 Exercises
 ^^^^^^^^^
 
+https://github.com/kai687/sphinxawesome-theme/issues/939
+
 As we have to deal with multiple OSes, from here we will designate sections with 
 symbols.
 
-Mac only: |mac|
+..  tip::
 
-Linux only: |linux|
+    |mac| Mac only
 
-Windows only: |win|
+    Linux only: |linux|
 
-Mac and Linux:  |maclin|
+    Windows only: |win|
 
-All OSes: |all|
+    Mac and Linux:  |maclin|
+
+    All OSes: |all|
 
 .. |mac| image:: ../images/Apple_logo.png
-   :align: middle
    :height: 12
 
 .. |linux| image:: ../images/Linux_logo.png
-   :align: middle
    :height: 12
 
 .. |win| image:: ../images/Windows_logo.png
-   :align: middle
    :height: 12
 
 .. |maclin| image:: ../images/linux_mac_logo.png
-   :align: middle
    :height: 12
 
 .. |all| image:: ../images/win_linux_mac_logo.png
-   :align: middle
    :height: 12
 
 
@@ -409,85 +408,4 @@ Exercise: practice on those commands
    
    ``rm``, ``del``, and ``rmdir`` delete files premenantly. They do *not* move the into Trash or similar. 
 
-
-
-Software licences
-=================
-
-Software needs a licence which tells your users or other developers what they are allowed
-to do with it. Most software you've heard of is commercial (Word, Windows, MacOs, 
-Adobe Reader, Corel Draw, Photoshop, etc). You pay a fee and have access to the
-executable code for a year or forever, for example. Some software is free (i.e. you
-don't pay to use it) but not open (you can't see the source code, nor give it 
-to someone else). All of the conditions are laid out in the "Terms and Conditions" 
-which are displayed when you install the software (and that no-one ever reads despite
-ticking the little box to say you read them...)
-
-A lot of research software is free in all senses of the word. You don't pay and 
-you can see the source code, take it for yourself, edit it and re-release it. This
-type of software is called *open source*. Not only can you use it for free, you can also
-modify it. 
-
-There are two things in law we have to worry about: copyright and licence. Copyright
-is granted to the writer of the software (or book, or photograph, etc). If you
-create something you own the copyright. You don't have to do anything to get copyright, 
-except be the author or creator of the content. Authors generally place a copyright
-notice on the work though, so something like:
-
-Copyright lasts for 50 years and protects the author from someone stealing their work.
-This page has a simple explination of UK copyright law. [https://www.gov.uk/copyright#:~:text=You%20get%20copyright%20protection%20automatically,work%2C%20including%20illustration%20and%20photography]
-
-Separately, licences tell you what you can do with some code (or image, or text). For 
-commerical software, the lincence will tell you you cannot resell, give away, etc
-the software you have bought. Similarly, for open-source software the licence tells 
-you what you can do with the source code, including modifying and re-releasing and under
-what conditions.
-
-There are two main types of licences: copyleft and permissive. Within those are a whole
-bunch of different licences, but let's focus on the two main types first.
-
-Copyleft
---------
-
-Copyleft licences (a pun on copyright, geddit?) mean you can take 
-source-code, modify it, but can only re-release on a similar licence. For example,
-you could not take copyleft code, create a commercial application, then sell it. 
-That would breach the licence terms. Most copyleft licneces specify the 
-source code most be available under a similar copyleft licence.
-
-Common copyleft licences are:
-
- * GNU Public Licence (GPL)
- * Mozilla public licence (MPL)
- * LGPL (Lesser GPL); though this has some permissive terms too
- * Creative Commons, Sahrealike (CC-SA)
-
-Permissive
-----------
-
-Permissive licences are much less restrictive. They impose little or no restrictions
-on what you can do if you modify code. They can either be completely open (i.e. do whatever you want!)
-or impose some restrictions, e.g. citations.
-
-Common permissive licences include:
-
- * Apache
- * Berkley Source Distribution (BSD)
- * MIT
-
-
-Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use wikipedia.
-
-
-Adding a licence to your code
------------------------------
-
-If you write any code that is to be used by others you should always add a 
-copyright notice and a licence. This protects you and the person using it.
-Try and get in the habit of writing both of these in your code, so something like:
-Copyright |copy| 2023 by Jon Hill. CC-BY-SA.
-
-You then include the full licence in your distribution.
-
-Exercise: find the liecence type for some popular software
 

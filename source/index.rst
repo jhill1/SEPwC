@@ -15,27 +15,61 @@ scratch which can load in data, processes it and produce some meaningful output.
 
 We will teach both R and Python and you can choose which one to learn (or even both!). 
 
-The table below contains links to blocks of works which are divded into weeks
-to help guide you. However, you can forge ahead, but equalyy, don't worry if you
+The table below contains suggestions of which blocks of works to cover in each week
+to help guide you. However, you can forge ahead, but equally, don't worry if you
 slip behind a little.
 
+.. list-table:: Suggested work
+   :header-rows: 1
+
+   * - Week
+     - Content
+   * - 1
+     - Expectations, How a computer works, Licences
+   * - 2
+     - Code basics, Thinking like a computer
+   * - 3
+     - Spreadsheets to data, revision control
+   * - 4
+     - Python or R 1
+   * - 5
+     - Debugging code, testing code
+   * - 6
+     - Python or R 2
+   * - 7
+     - Python or R 3
+   * - 8
+     - Mini-courses
+   * - 9
+     - Mini-courses
+   * - 10
+     - Assessment
+   * - 11
+     - Assessment
+
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    Expectations
-   Week_1
-   Week_2
-   Week_3
-   Week_4
-   Week_5
-   Week_6
-   Week_7
+   How_a_computer_works
+   Licences
+   Code_basics
+   Algorithms
+   Spreadsheets_data
+   Revision_control
+   Python
+   Issues
+   Testing_code
+   Software_development
+   Python2
+   Python3
+   Mini_courses
    Assessments
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
