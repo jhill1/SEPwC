@@ -27,7 +27,7 @@ slip behind a little.
    * - 1
      - Expectations, How a computer works, Licences
    * - 2
-     - Code basics, Algorithms
+     - Code basics, Thinking like a computer
    * - 3
      - Spreadsheets to data, revision control
    * - 4
@@ -64,6 +64,7 @@ slip behind a little.
    Testing_code
    Software_development
    Python2
+   Python3
    Mini_courses
    Assessments
 
