@@ -41,7 +41,7 @@ We have:
 
 .. math::
 
-   y = 5 \times 0.5 - (frac{1}{2} \times 9.81 \times 0.5^2)
+   y = 5 \times 0.5 - (\frac{1}{2} \times 9.81 \times 0.5^2)
 
 I get that to be:
 
@@ -163,7 +163,7 @@ We have:
 
 .. math::
 
-   y = 5 \times 0.5 - (frac{1}{2} \times 9.81 \times 0.5^2)
+   y = 5 \times 0.5 - (\frac{1}{2} \times 9.81 \times 0.5^2)
 
 I get that to be:
 
