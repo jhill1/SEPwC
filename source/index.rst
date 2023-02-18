@@ -29,9 +29,9 @@ slip behind a little.
    * - 2
      - Code basics, Thinking like a computer
    * - 3
-     - Spreadsheets to data, revision control
+     - Revision control, Python or R 1
    * - 4
-     - Python or R 1
+     - Python or R 1, Moving from spreadsheets to data
    * - 5
      - Debugging code, testing code
    * - 6
