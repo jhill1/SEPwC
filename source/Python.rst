@@ -2,7 +2,8 @@ Python and R: the basics
 =========================
 
 We're now going to learn the basics of a language. If you've chosen 
-Python, keep reading. If you've choosen R go to this section.
+Python, keep reading. If you've choosen R :ref:`go to this section<Intro to R>`.
+
 
 Computer languages are much simpler than natural langauages, but much
 stricter. We have to get the syntax correct or things won't work. However
