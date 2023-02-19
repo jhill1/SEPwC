@@ -1,5 +1,5 @@
-The basics of code
-===================
+The fundementals of code
+=========================
 
 Some terminology
 ----------------
@@ -406,10 +406,13 @@ Is much easier to read than:
    a_list_of_numbers = [1,4,2,3,6,4]
    n = length(a_list_of_numbers) 
    for i in range(n):
-      for j in range(0, n-i-1):
-         if a_list_of_numbers[j] > a_list_of_numbers[j+1] : 
-            # swap the numbers around
-               a_list_of_numbers[j], a_list_of_numbers[j+1] = a_list_of_numbers[j+1], a_list_of_numbers[j]
+     for j in range(0, n-i-1):
+       if a_list_of_numbers[j] > a_list_of_numbers[j+1] : 
+         # swap the numbers around
+         number1 = a_list_of_numbers[j]
+         number2 = a_list_of_numbers[j+1]
+         a_list_of_numbers[j+1] = number1
+         a_list_of_numbers[j] = number2
    
    print(a_list_of_numbers)
 
@@ -467,4 +470,28 @@ The algorithm above is a bubble sort.
     
     Clearly bubble sort is far from the most efficient sorting algorithm. Still, it's simple to implement yourself.
 
+
+So we would then create the sort algorithm into a function
+
+.. code-block::
+
+   function sort(numbers)
+      
+      n = length(numbers)
+      for i in range(n):
+        for j in range(0, n-i-1):
+          if numbers[j] > numbers[j+1] : 
+            # swap the numbers around
+            number1 = a_list_of_numbers[j]
+            number2 = a_list_of_numbers[j+1]
+            a_list_of_numbers[j+1] = number1
+            a_list_of_numbers[j] = number2
+      return numbers
+
+   a_list_of_numbers = [1,4,2,3,6,4]
+   sorted_list = sort(a_list_of_numbers)
+   print(sorted_list)
+
+We now have a function that sorts number in our code. The main code is easier to read and we can sort any lists of numbers
+as many times as we wish, without writing the same code over and over. This really comes in handy (as we shall see when tesing code).
 
