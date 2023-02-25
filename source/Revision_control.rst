@@ -1401,118 +1401,104 @@ on the other hand, moving backward and forward in time becomes much easier.
     the commit ID; however, Jennifer should double-check it is the correct commit, and no one
     else has committed changes to the repository.
 
+.. admonition:: Thought exercise
 
-> ## Understanding Workflow and History
->
-> What is the output of the last command in
->
-> ~~~
-> $ cd planets
-> $ echo "Venus is beautiful and full of love" > venus.txt
-> $ git add venus.txt
-> $ echo "Venus is too hot to be suitable as a base" >> venus.txt
-> $ git commit -m "Comment on Venus as an unsuitable base"
-> $ git checkout HEAD venus.txt
-> $ cat venus.txt #this will print the contents of venus.txt to the screen
-> ~~~
-> {: .language-bash}
->
-> 1. ~~~
->    Venus is too hot to be suitable as a base
->    ~~~
->    {: .output}
-> 2. ~~~
->    Venus is beautiful and full of love
->    ~~~
->    {: .output}
-> 3. ~~~
->    Venus is beautiful and full of love
->    Venus is too hot to be suitable as a base
->    ~~~
->    {: .output}
-> 4. ~~~
->    Error because you have changed venus.txt without committing the changes
->    ~~~
->    {: .output}
->
-> > ## Solution
-> >
-> > The answer is 2. 
-> > 
-> > The command `git add venus.txt` places the current version of `venus.txt` into the staging area. 
-> > The changes to the file from the second `echo` command are only applied to the working copy, 
-> > not the version in the staging area.
-> > 
-> > So, when `git commit -m "Comment on Venus as an unsuitable base"` is executed, 
-> > the version of `venus.txt` committed to the repository is the one from the staging area and
-> > has only one line.
-> >  
-> >  At this time, the working copy still has the second line (and 
-> >  `git status` will show that the file is modified). However, `git checkout HEAD venus.txt` 
-> >  replaces the working copy with the most recently committed version of `venus.txt`.
-> >  
-> >  So, `cat venus.txt` will output 
-> >  ~~~
-> >  Venus is beautiful and full of love.
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
+    **Understanding Workflow and History**
 
-> ## Checking Understanding of `git diff`
->
-> Consider this command: `git diff HEAD~9 mars.txt`. What do you predict this command
-> will do if you execute it? What happens when you do execute it? Why?
->
-> Try another command, `git diff [ID] mars.txt`, where [ID] is replaced with
-> the unique identifier for your most recent commit. What do you think will happen,
-> and what does happen?
-{: .challenge}
+    .. code-block:: bash
 
-> ## Getting Rid of Staged Changes
->
-> `git checkout` can be used to restore a previous commit when unstaged changes have
-> been made, but will it also work for changes that have been staged but not committed?
-> Make a change to `mars.txt`, add that change, and use `git checkout` to see if
-> you can remove your change.
-{: .challenge}
+        cd planets
+        echo "Venus is beautiful and full of love" > venus.txt
+        git add venus.txt
+        echo "Venus is too hot to be suitable as a base" >> venus.txt
+        git commit -m "Comment on Venus as an unsuitable base"
+        git checkout HEAD venus.txt
+        cat venus.txt #this will print the contents of venus.txt to the screen
 
-> ## Explore and Summarize Histories
->
-> Exploring history is an important part of Git, and often it is a challenge to find
-> the right commit ID, especially if the commit is from several months ago.
->
-> Imagine the `planets` project has more than 50 files.
-> You would like to find a commit that modifies some specific text in `mars.txt`.
-> When you type `git log`, a very long list appeared.
-> How can you narrow down the search?
->
-> Recall that the `git diff` command allows us to explore one specific file,
-> e.g., `git diff mars.txt`. We can apply a similar idea here.
->
-> ~~~
-> $ git log mars.txt
-> ~~~
-> {: .language-bash}
->
-> Unfortunately some of these commit messages are very ambiguous, e.g., `update files`.
-> How can you search through these files?
->
-> Both `git diff` and `git log` are very useful and they summarize a different part of the history 
-> for you.
-> Is it possible to combine both? Let's try the following:
->
-> ~~~
-> $ git log --patch mars.txt
-> ~~~
-> {: .language-bash}
->
-> You should get a long list of output, and you should be able to see both commit messages and 
-> the difference between each commit.
->
-> Question: What does the following command do?
->
-> ~~~
-> $ git log --patch HEAD~9 *.txt
-> ~~~
+    1. ``Venus is too hot to be suitable as a base``
+    2. ``Venus is beautiful and full of love``
+    3. ``Venus is beautiful and full of love``
+       ``Venus is too hot to be suitable as a base``
+    4. ``Error because you have changed venus.txt without committing the changes``
+
+.. admonition:: Solution
+    :class: toggle
+
+    The answer is 2. 
+     
+    The command ``git add venus.txt`` places the current version of ``venus.txt`` into the staging area. 
+    The changes to the file from the second ``echo`` command are only applied to the working copy, 
+    not the version in the staging area.
+
+    So, when ``git commit -m "Comment on Venus as an unsuitable base"`` is executed, 
+    the version of ``venus.txt`` committed to the repository is the one from the staging area and
+    has only one line.
+     
+    At this time, the working copy still has the second line (and 
+    ``git status`` will show that the file is modified). However, ``git checkout HEAD venus.txt`` 
+    replaces the working copy with the most recently committed version of ``venus.txt``.
+     
+    So, ``cat venus.txt`` will output 
+    ``Venus is beautiful and full of love.``
+
+
+.. admonition:: Practical exercise
+
+   **Checking Understanding of ``git diff``**
+
+    Consider this command: ``git diff HEAD~9 mars.txt``. What do you predict this command
+    will do if you execute it? What happens when you do execute it? Why?
+
+    Try another command, ``git diff [ID] mars.txt``, where [ID] is replaced with
+    the unique identifier for your most recent commit. What do you think will happen,
+    and what does happen?
+
+
+.. admonition:: Practical exercise
+
+   **Getting Rid of Staged Changes**
+
+    ``git checkout`` can be used to restore a previous commit when unstaged changes have
+    been made, but will it also work for changes that have been staged but not committed?
+    Make a change to ``mars.txt``, add that change, and use ``git checkout`` to see if
+    you can remove your change.
+
+
+.. admonition:: Practical exercise
+
+   **Explore and Summarize Histories**
+
+Exploring history is an important part of Git, and often it is a challenge to find
+the right commit ID, especially if the commit is from several months ago.
+
+Imagine the ``planets`` project has more than 50 files.
+You would like to find a commit that modifies some specific text in ``mars.txt``.
+When you type ``git log``, a very long list appeared.
+How can you narrow down the search?
+
+Recall that the ``git diff`` command allows us to explore one specific file,
+e.g., ``git diff mars.txt``. We can apply a similar idea here.
+
+.. code-block:: bash
+
+    git log mars.txt
+
+Unfortunately some of these commit messages are very ambiguous, e.g., ``update files``.
+How can you search through these files?
+
+Both ``git diff`` and ``git log`` are very useful and they summarize a different part of the history 
+for you. Is it possible to combine both? Let's try the following:
+
+.. code-block:: bash
+
+    git log --patch mars.txt
+
+You should get a long list of output, and you should be able to see both commit messages and 
+the difference between each commit.
+
+Question: What does the following command do?
+
+.. code-block:: bash
+
+    git log --patch HEAD~9 *.txt
 
