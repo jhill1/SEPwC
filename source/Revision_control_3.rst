@@ -42,7 +42,9 @@ we can see that Git has created a hidden directory within :file:`planets` called
  
    ls -a
 
-| .	..	.git
+.. code-block:: output
+
+    .	..	.git
 
 Git uses this special subdirectory to store all the information about the project, 
 including the tracked files and sub-directories located within the project's directory.
@@ -56,8 +58,9 @@ of git. See the :ref:`Setting up git` section above for more information on this
    
    git checkout -b main
 
+.. code-block:: output
    
-| Switched to a new branch 'main'
+    Switched to a new branch 'main'
 
 
 We can check that everything is set up correctly
@@ -67,11 +70,13 @@ by asking Git to tell us the status of our project:
 
    git status
 
-| On branch main
-| 
-| No commits yet
-| 
-| nothing to commit (create/copy files and use "git add" to track)
+.. code-block:: output
+
+    On branch main
+    
+    No commits yet
+    
+    nothing to commit (create/copy files and use "git add" to track)
 
 If you are using a different version of `git`, the exact
 wording of the output might be slightly different.
@@ -101,27 +106,29 @@ wording of the output might be slightly different.
 
 
 .. admonition:: Solution
-   :class: toggle
+    :class: toggle
 
-   No. The worker does not need to make the `moons` subdirectory a Git repository 
-   because the `planets` repository can track any files, sub-directories, and 
-   subdirectory files under the `planets` directory.  Thus, in order to track 
-   all information about moons, The worker only needed to add the `moons` subdirectory
-   to the `planets` directory.
+    No. The worker does not need to make the `moons` subdirectory a Git repository 
+    because the `planets` repository can track any files, sub-directories, and 
+    subdirectory files under the `planets` directory.  Thus, in order to track 
+    all information about moons, The worker only needed to add the `moons` subdirectory
+    to the `planets` directory.
  
-   Additionally, Git repositories can interfere with each other if they are "nested":
-   the outer repository will try to version-control
-   the inner repository. Therefore, it's best to create each new Git
-   repository in a separate directory. To be sure that there is no conflicting
-   repository in the directory, check the output of `git status`. If it looks
-   like the following, you are good to go to create a new repository as shown
-   above:
+    Additionally, Git repositories can interfere with each other if they are "nested":
+    the outer repository will try to version-control
+    the inner repository. Therefore, it's best to create each new Git
+    repository in a separate directory. To be sure that there is no conflicting
+    repository in the directory, check the output of `git status`. If it looks
+    like the following, you are good to go to create a new repository as shown
+    above:
 
-   .. code-block:: bash
+    .. code-block:: bash
 
-     git status
+        git status
 
-   | fatal: Not a git repository (or any of the parent directories): .git
+    .. code-block:: output
+
+        fatal: Not a git repository (or any of the parent directories): .git
 
 .. admonition:: Thought exercise
 

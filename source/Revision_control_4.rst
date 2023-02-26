@@ -21,7 +21,9 @@ editor you choose (it might not be `nano`).
 
 Type the text below into the `mars.txt` file:
 
-| Cold and dry, but everything is my favorite color
+.. code-block:: output
+
+    Cold and dry, but everything is my favorite color
 
 Let's first verify that the file was properly created by running the list command (`ls`):
 
@@ -29,7 +31,9 @@ Let's first verify that the file was properly created by running the list comman
 
    ls
 
-| mars.txt
+.. code-block:: output
+
+    mars.txt
 
 ``mars.txt`` contains a single line, which we can see by running:
 
@@ -37,7 +41,9 @@ Let's first verify that the file was properly created by running the list comman
 
    cat mars.txt
 
-| Cold and dry, but everything is my favorite color
+.. code-block:: output
+
+    Cold and dry, but everything is my favorite color
 
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
@@ -46,16 +52,18 @@ Git tells us that it's noticed the new file:
 
    git status
 
-| On branch main
-| 
-| No commits yet
-| 
-| Untracked files:
-|  (use "git add <file>..." to include in what will be committed)
-|
-|	mars.txt
-|
-| nothing added to commit but untracked files present (use "git add" to track)
+.. code-block:: output
+
+    On branch main
+
+    No commits yet
+
+    Untracked files:
+     (use "git add <file>..." to include in what will be committed)
+
+     mars.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
 
 The "untracked files" message means that there's a file in the directory
 that Git isn't keeping track of.
@@ -71,15 +79,17 @@ and then check that the right thing happened:
    
    git status
 
-| On branch main
-| 
-| No commits yet
-| 
-| Changes to be committed:
-|   (use "git rm --cached <file>..." to unstage)
-|
-| 	new file:   mars.txt
-|
+.. code-block:: output
+
+    On branch main
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+
+      new file:   mars.txt
+
 
 Git now knows that it's supposed to keep track of `mars.txt`,
 but it hasn't recorded these changes as a commit yet.
@@ -89,9 +99,11 @@ To get it to do that, we need to run one more command:
 
    git commit -m "Start notes on Mars as a base"
 
-| [main (root-commit) f22b25e] Start notes on Mars as a base
-| 1 file changed, 1 insertion(+)
-| create mode 100644 mars.txt
+.. code-block:: output
+
+    [main (root-commit) f22b25e] Start notes on Mars as a base
+    1 file changed, 1 insertion(+)
+    create mode 100644 mars.txt
 
 When we run ``git commit``, Git takes everything we have told it to save by using ``git add``
 and stores a copy permanently inside the special ``.git`` directory.
@@ -115,8 +127,10 @@ If we run ``git status`` now:
 
    git status
 
-| On branch main
-| nothing to commit, working tree clean
+.. code-block:: output
+
+    On branch main
+    nothing to commit, working tree clean
 
 it tells us everything is up to date. If we want to know what we've done recently,
 we can ask Git to show us the project's history using `git log`:
@@ -125,16 +139,18 @@ we can ask Git to show us the project's history using `git log`:
 
    git log
 
-| commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-| Author: Jon Hill <jon.hill@york.ac.uk>
-| Date:   Thu Aug 22 09:51:46 2023 -0400
-|
-|    Start notes on Mars as a base
+.. code-block:: output
+
+    commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
+    Author: Jon Hill <jon.hill@york.ac.uk>
+    Date:   Thu Aug 22 09:51:46 2023 -0400
+
+       Start notes on Mars as a base
 
 ``git log`` lists all commits  made to a repository in reverse chronological order.
 The listing for each commit includes
 
- - the commit's full identifier (which starts with the same characters as the short identifier printed by the `git commit` command earlier),
+ - the commit's full identifier (which starts with the same characters as the short identifier printed by the ``git commit`` command earlier),
  - the commit's author,
  - when it was created,
  - and the log message Git was given when the commit was created.
@@ -151,16 +167,18 @@ The listing for each commit includes
    (and so that we can't accidentally edit or delete an old version).
 
 Now suppose we adds more information to the file.
-(Again, we'll edit with `nano` and then `cat` the file to show its contents;
-you may use a different editor, and don't need to `cat`.)
+(Again, we'll edit with ``nano`` and then ``cat`` the file to show its contents;
+you may use a different editor, and don't need to ``cat``.)
 
 .. code-block:: bash
 
    nano mars.txt
    cat mars.txt
 
-| Cold and dry, but everything is my favorite color
-| The two moons may be a problem for werewolves
+.. code-block:: output
+
+    Cold and dry, but everything is my favorite color
+    The two moons may be a problem for werewolves
 
 When we run ``git status`` now,
 it tells us that a file it already knows about has been modified:
@@ -169,21 +187,20 @@ it tells us that a file it already knows about has been modified:
 
    git status
 
-| On branch main
-| Changes not staged for commit:
-|   (use "git add <file>..." to update what will be committed)
-|   (use "git checkout -- <file>..." to discard changes in working directory)
-| 
-| 	modified:   mars.txt
-| 
-| no changes added to commit (use "git add" and/or "git commit -a")
+.. code-block:: output
 
-The last line is the key phrase:
-"no changes added to commit".
-We have changed this file,
-but we haven't told Git we will want to save those changes
-(which we do with ``git add``)
-nor have we saved them (which we do with ``git commit``).
+    On branch main
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+     
+        modified:   mars.txt
+     
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+The last line is the key phrase: "no changes added to commit".
+We have changed this file, but we haven't told Git we will want to save those changes
+(which we do with ``git add``) nor have we saved them (which we do with ``git commit``).
 So let's do that now. It is good practice to always review
 our changes before saving them. We do this using ``git diff``.
 This shows us the differences between the current state
@@ -193,13 +210,15 @@ of the file and the most recently saved version:
 
    git diff
 
-| diff --git a/mars.txt b/mars.txt
-| index df0654a..315bf3a 100644
-| --- a/mars.txt
-| +++ b/mars.txt
-| @@ -1 +1,2 @@
-|  Cold and dry, but everything is my favorite color
-| +The two moons may be a problem for werewolves
+.. code-block:: output
+
+    diff --git a/mars.txt b/mars.txt
+    index df0654a..315bf3a 100644
+    --- a/mars.txt
+    +++ b/mars.txt
+    @@ -1 +1,2 @@
+     Cold and dry, but everything is my favorite color
+    +The two moons may be a problem for werewolves
 
 The output is cryptic because
 it is actually a series of commands for tools like editors and ``patch``
@@ -223,14 +242,16 @@ After reviewing our change, it's time to commit it:
 
    git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 
-| On branch main
-| Changes not staged for commit:
-|   (use "git add <file>..." to update what will be committed)
-|   (use "git checkout -- <file>..." to discard changes in working directory)
-|
-| 	modified:   mars.txt
+.. code-block:: output
 
-| no changes added to commit (use "git add" and/or "git commit -a")
+    On branch main
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   mars.txt
+
+    no changes added to commit (use "git add" and/or "git commit -a")
 
 Whoops:
 Git won't commit because we didn't use ``git add`` first.
@@ -241,8 +262,10 @@ Let's fix that:
    git add mars.txt
    git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 
-| [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
-|  1 file changed, 1 insertion(+)
+.. code-block:: output
+
+    [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
+     1 file changed, 1 insertion(+)
 
 Git insists that we add files to the set we want to commit
 before actually committing anything. This allows us to commit our
@@ -292,22 +315,26 @@ First, we'll add another line to the file:
    nano mars.txt
    cat mars.txt
 
-| Cold and dry, but everything is my favorite color
-| The two moons may be a problem for werewolves
-| But the Mummy will appreciate the lack of humidity
+.. code-block:: output
+
+    Cold and dry, but everything is my favorite color
+    The two moons may be a problem for werewolves
+    But the Mummy will appreciate the lack of humidity
 
 .. code-block:: bash
 
   git diff
 
-| diff --git a/mars.txt b/mars.txt
-| index 315bf3a..b36abfd 100644
-| --- a/mars.txt
-| +++ b/mars.txt
-| @@ -1,2 +1,3 @@
-|  Cold and dry, but everything is my favorite color
-|  The two moons may be a problem for werewolves
-| +But the Mummy will appreciate the lack of humidity
+.. code-block:: output
+
+    diff --git a/mars.txt b/mars.txt
+    index 315bf3a..b36abfd 100644
+    --- a/mars.txt
+    +++ b/mars.txt
+    @@ -1,2 +1,3 @@
+     Cold and dry, but everything is my favorite color
+     The two moons may be a problem for werewolves
+    +But the Mummy will appreciate the lack of humidity
 
 So far, so good: we've added one line to the end of the file
 (shown with a `+` in the first column). Now let's put that change in the staging area
@@ -318,24 +345,24 @@ and see what ``git diff`` reports:
     git add mars.txt
     git diff
 
-There is no output:
-as far as Git can tell,
+There is no output: as far as Git can tell,
 there's no difference between what it's been asked to save permanently
-and what's currently in the directory.
-However, if we do this:
+and what's currently in the directory. However, if we do this:
 
 .. code-block:: bash
 
     git diff --staged
 
-| diff --git a/mars.txt b/mars.txt
-| index 315bf3a..b36abfd 100644
-| --- a/mars.txt
-| +++ b/mars.txt
-| @@ -1,2 +1,3 @@
-| Cold and dry, but everything is my favorite color
-| The two moons may be a problem for werewolves
-| But the Mummy will appreciate the lack of humidity
+.. code-block:: output
+
+    diff --git a/mars.txt b/mars.txt
+    index 315bf3a..b36abfd 100644
+    --- a/mars.txt
+    +++ b/mars.txt
+    @@ -1,2 +1,3 @@
+    Cold and dry, but everything is my favorite color
+    The two moons may be a problem for werewolves
+    But the Mummy will appreciate the lack of humidity
 
 
 it shows us the difference between the last committed change
@@ -345,8 +372,10 @@ and what's in the staging area. Let's save our changes:
 
     git commit -m "Discuss concerns about Mars' climate for Mummy"
 
-| [main 005937f] Discuss concerns about Mars' climate for Mummy
-| 1 file changed, 1 insertion(+)
+.. code-block:: output
+
+    [main 005937f] Discuss concerns about Mars' climate for Mummy
+    1 file changed, 1 insertion(+)
 
 check our status:
 
@@ -354,8 +383,10 @@ check our status:
 
     git status
 
-| On branch main
-| nothing to commit, working tree clean
+.. code-block:: output
+
+    On branch main
+    nothing to commit, working tree clean
 
 and look at the history of what we've done so far:
 
@@ -363,24 +394,25 @@ and look at the history of what we've done so far:
 
     git log
 
+.. code-block:: output
 
-| commit 005937fbe2a98fb83f0ade869025dc2636b4dad5 (HEAD -> main)
-| Author: Vlad Dracula <vlad@tran.sylvan.ia>
-| Date:   Thu Aug 22 10:14:07 2013 -0400
-| 
-|    Discuss concerns about Mars' climate for Mummy
-|
-| commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-| Author: Vlad Dracula <vlad@tran.sylvan.ia>
-| Date:   Thu Aug 22 10:07:21 2013 -0400
-| 
-|     Add concerns about effects of Mars' moons on Wolfman
-|
-| commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-| Author: Vlad Dracula <vlad@tran.sylvan.ia>
-| Date:   Thu Aug 22 09:51:46 2013 -0400
-| 
-|     Start notes on Mars as a base
+    commit 005937fbe2a98fb83f0ade869025dc2636b4dad5 (HEAD -> main)
+    Author: Vlad Dracula <vlad@tran.sylvan.ia>
+    Date:   Thu Aug 22 10:14:07 2013 -0400
+     
+       Discuss concerns about Mars' climate for Mummy
+
+    commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
+    Author: Vlad Dracula <vlad@tran.sylvan.ia>
+    Date:   Thu Aug 22 10:07:21 2013 -0400
+     
+        Add concerns about effects of Mars' moons on Wolfman
+
+    commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
+    Author: Vlad Dracula <vlad@tran.sylvan.ia>
+    Date:   Thu Aug 22 09:51:46 2013 -0400
+     
+        Start notes on Mars as a base
 
 
 .. admonition:: Learn more
@@ -422,21 +454,25 @@ and look at the history of what we've done so far:
         
         git log -1
 
-    | commit 005937fbe2a98fb83f0ade869025dc2636b4dad5 (HEAD -> main)
-    | Author: Vlad Dracula <vlad@tran.sylvan.ia>
-    | Date:   Thu Aug 22 10:14:07 2013 -0400
-    |
-    | Discuss concerns about Mars' climate for Mummy
+    .. code-block:: output
+
+        commit 005937fbe2a98fb83f0ade869025dc2636b4dad5 (HEAD -> main)
+        Author: Vlad Dracula <vlad@tran.sylvan.ia>
+        Date:   Thu Aug 22 10:14:07 2013 -0400
+        
+        Discuss concerns about Mars' climate for Mummy
 
     You can also reduce the quantity of information using the ``--oneline`` option:
 
     .. code-block:: bash
     
         git log --oneline
-    
-    | 005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
-    | 34961b1 Add concerns about effects of Mars' moons on Wolfman
-    | f22b25e Start notes on Mars as a base
+
+    .. code-block:: output
+
+        005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
+        34961b1 Add concerns about effects of Mars' moons on Wolfman
+        f22b25e Start notes on Mars as a base
     
     You can also combine the `--oneline` option with others. One useful
     combination adds `--graph` to display the commit history as a text-based
@@ -448,9 +484,11 @@ and look at the history of what we've done so far:
     
         git log --oneline --graph
 
-    | * 005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
-    | * 34961b1 Add concerns about effects of Mars' moons on Wolfman
-    | * f22b25e Start notes on Mars as a base
+    .. code-block:: output
+
+        * 005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
+        * 34961b1 Add concerns about effects of Mars' moons on Wolfman
+        * f22b25e Start notes on Mars as a base
 
 
 .. caution::
@@ -574,14 +612,18 @@ repository (``git commit``):
         nano mars.txt
         cat mars.txt
 
-    | Maybe I should start with a base on Venus.
+    .. code-block:: output
+
+        Maybe I should start with a base on Venus.
 
     .. code-block:: bash
     
         nano venus.txt
         cat venus.txt
 
-    | Venus is a nice planet and I definitely should consider it as a base.
+    .. code-block:: output
+
+        Venus is a nice planet and I definitely should consider it as a base.
 
     Now you can add both files to the staging area. We can do that in one line:
     
@@ -602,10 +644,12 @@ repository (``git commit``):
     
         git commit -m "Write plans to start a base on Venus"
 
-    | [main cc127c2]
-    | Write plans to start a base on Venus
-    | 2 files changed, 2 insertions(+)
-    | create mode 100644 venus.txt
+    .. code-block:: output
+
+        [main cc127c2]
+        Write plans to start a base on Venus
+        2 files changed, 2 insertions(+)
+        create mode 100644 venus.txt
 
 .. admonition:: Practical exercise
 
@@ -654,4 +698,5 @@ repository (``git commit``):
     .. code-block:: bash
     
         git diff me.txt
+
 

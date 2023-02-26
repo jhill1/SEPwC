@@ -16,16 +16,18 @@ and see what Git says:
 
     git status
 
-| On branch main
-| Untracked files:
-|  (use "git add <file>..." to include in what will be committed)
-|
-|	a.dat
-|	b.dat
-|	c.dat
-|	results/
-|
-| nothing added to commit but untracked files present (use "git add" to track)
+.. code-block:: output
+
+    On branch main
+    Untracked files:
+     (use "git add <file>..." to include in what will be committed)
+
+        a.dat
+        b.dat
+        c.dat
+        results/
+
+    nothing added to commit but untracked files present (use "git add" to track)
 
 Putting these files under version control would be a waste of disk space.
 What's worse, having them all listed could distract us from changes that actually matter,
