@@ -56,8 +56,7 @@ collaboration among different people.
     `Subversion <https://en.wikipedia.org/wiki/Apache_Subversion>`_ have been around since the early 1980s and are used by 
     many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various 
     limitations in their capabilities.
-    More modern systems, such as Git and [Mercurial](https://swcarpentry.github.io/hg-novice/),
-    are *distributed*, meaning that they do not need a centralized server to host the repository.
+    More modern systems, such as Git and Mercurial, are *distributed*, meaning that they do not need a centralized server to host the repository.
     These modern systems also include powerful merging tools that make it possible for 
     multiple authors to work on the same files concurrently.
 
@@ -2172,16 +2171,16 @@ GitHub, though, this command would download them to our local repository.
     afterwards!
 
 
-..  admonition:: Learn more
+.. admonition:: Learn more
     :class: toggle
 
     **Uploading files directly in GitHub browser**
 
-   Github also allows you to skip the command line and upload files directly to 
-   your repository without having to leave the browser. There are two options. 
-   First you can click the "Upload files" button in the toolbar at the top of the
-   file tree. Or, you can drag and drop files from your desktop onto the file 
-   tree. You can read more about this `on this GitHub page <https://help.github.com/articles/adding-a-file-to-a-repository/>`_
+    Github also allows you to skip the command line and upload files directly to 
+    your repository without having to leave the browser. There are two options. 
+    First you can click the "Upload files" button in the toolbar at the top of the
+    file tree. Or, you can drag and drop files from your desktop onto the file 
+    tree. You can read more about this `on this GitHub page <https://help.github.com/articles/adding-a-file-to-a-repository/>`_
 
 
 .. admonition:: Practical exercise
