@@ -83,8 +83,10 @@ What about changing what's in a variable? Just set it:
 What the above code will do is set the variable "my_name" to Jon, print it to screen, then set "my_name" to Fred and print that to screen. 
 What the users sees is:
 
-| Jon
-| Fred
+.. code-block:: output
+
+    Jon
+    Fred
 
 All the above examples require the variable to be known up front (hardcoded). What if we don't know?
 
