@@ -8,4 +8,7 @@ Revision control with Git
 .. include:: Revision_control_5.rst
 .. include:: Revision_control_6.rst
 .. include:: Revision_control_7.rst
+.. include:: Revision_control_8.rst
+.. include:: Revision_control_9.rst
+
 
