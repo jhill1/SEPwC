@@ -60,6 +60,7 @@ slip behind a little.
    Spreadsheets_data
    Revision_control
    Python
+   R
    Issues
    Testing_code
    Software_development

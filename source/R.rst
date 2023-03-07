@@ -1,26 +1,27 @@
-Python: the fundementals
-=========================
+R: the fundementals
+====================
 
 We're now going to learn the basics of a language. If you've chosen 
-Python, keep reading. If you've choosen R :ref:`go to this section<R: the fundementals>`.
+R, keep reading. If you've choosen Python :ref:`go to this section<Python: the fundementals>`.
+
 
 Computer languages are much simpler than natural langauages, but much
 stricter. We have to get the syntax correct or things won't work. However
 interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
-Intro to Python
----------------
+Intro to R
+-----------
 
-Python is an interpreted language that has become incredibily popular. Due to that 
-there are modules that will do just about anything. This makes Python a really
-powerful tool for writing code to analyse any number of problems.
+R is an interpreted language that has become incredibily popular, but 
+was originally designed as a free, open-source version of "S"; a statistical
+analysis package. Due to populularity, there are libaries that will do just about anything. 
+This makes R a really powerful tool for writing code to analyse any number of problems.
 
-Python can be run on the command line, in a Jupyter notebook, in Google Colab, 
-as a standalone script, or even as a full GUI program. There are modules
-for plotting (matplotlib), scientific algorithms (scipy), numerical algorithms
-(numpy) and GIS (gdal).
+R can be run on the command line, in a popular GUI call R-Studio,
+as a standalone script, even on websites. There are libraries
+for fancy plotting (ggplot2), scientific algorithms (e.g. deSolve), AI (dnn) and GIS (r-gdal).
 
-Let's get a simple python code running!
+Let's get a simple R code running!
 
 
 We want to calculate the height of a ball after time, t, which we can do using this formula
@@ -53,19 +54,19 @@ I get that to be:
 
 using a calculator. So let's do that in python:
 
-.. code-block:: python
+.. code-block:: R
 
    print(5*0.5 - 0.5*9.81*0.5**2)
    
-Great! Our first python code! Let's build this up to use variables. Type the following code and execute:
+Great! Our first R code! Let's build this up to use variables. Type the following code and execute:
 
-.. code-block:: python
+.. code-block:: R
 
-   time = 0.5
-   initial_velocity = 5
-   gravity = 9.81
+   time <- 0.5
+   initial_velocity <- 5
+   gravity <- 9.81
 
-   vert_position = initial_velocity * time - (0.5 * gravity * time**2)
+   vert_position <- initial_velocity * time - (0.5 * gravity * time**2)
    print(vert_position)
 
 This code is, inessence, identical to the one above, but instead of *hardcoding* the numebrs, we've used 
@@ -73,57 +74,55 @@ variables. The formula is now written in good, descriptive variable names, using
 separate the terms for readability. Not that exciting yet. What if we want to calculate the height for a
 bunch of times? Let's add a loop!
 
-.. code-block:: python
+.. code-block:: R
 
-   times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-   initial_velocity = 5
-   gravity = 9.81
+   times <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)
+   initial_velocity <- 5
+   gravity <- 9.81
 
-   for time in times:
-       vert_position = initial_velocity * time - (0.5 * gravity * time**2)
-       print(time, vert_position)
+   for (time in times) {
+       vert_position <- initial_velocity * time - (0.5 * gravity * time**2)
+       print(paste(time, vert_position))
+    }
 
 This is not the most elegant way to do this, but it works. You now have the height of the ball
 at time 0 to 0.9 in steps of 0.1.
 
 Shall we plot this?
 
-.. code-block:: python
-
-   from matplotlib import pyplot
+.. code-block:: R
 
    # set up the problem
-   times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-   heights = []
+   times = c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)
+   heights = c()
    initial_velocity = 5
    gravity = 9.81
 
    # loop through the times, calculating the height
-   for time in times:
+   for (time in times) {
        vert_position = initial_velocity * time - (0.5 * gravity * time**2)
-       heights.append(vert_position)
+       heights <- c(heights,vert_position)
+    }
        
    # the times and heights are now stored, so we can plot
-   pyplot.plot(times, heights)
-   pyplot.show()
+   plot(times, heights)
 
 
-.. image:: ../images/Python_ball_graph.png
+.. image:: ../images/R_ball_graph.png
 
 
-That's not bad for a few lines of code. You can't publish that graph (no axes labels, etc), but for
-your first Python program I think that's pretty good!
+That's not bad for a few lines of code. You can't publish that graph (axes labels without units, etc), but for
+your first R program I think that's pretty good!
 
-In the above we have used the following Python features:
+In the above we have used the following R features:
 
  * printing
  * comments
- * lists
- * importing modules
+ * vectors
  * loops and list comprehension
- * very basic matplotlib
+ * very basic plotting
  * variable names
 
 We've covered some of these in the pseudo-code chapter, so here we're going to stick to the
-Python-specific parts and go through these in more detail.
+R-specific parts and go through these in more detail.
 
