@@ -137,7 +137,7 @@ For loops are a really useful way of doing the same thing to each item in a list
 
    **Writing our table for conversion using a `for` loop?**
 
-    Write out the Farenheit to Celsius conversion table using a for loop.
+    Write out the Farenheit to Celsius conversion table using a `for` loop.
 
 .. admonition:: Solution
    :class: toggle
@@ -169,4 +169,52 @@ A while-loop executes repeatedly a set of statements as long as a boolean condit
 
     <first statement after the loop>
 
+We can write code to do a simple counter:
+
+.. code-block:: python
+
+    counter = 0
+    while counter <= 10:
+        counter = counter + 1
+        print(counter)
+
+This will loop until the counter is greater than 10. So we will see:
+
+.. code-block:: output
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+
+Note the counter started from 0 and the while loop kept going until it was `>10`. The condition
+can be any conditional statement, including key presses (but that requires some knowledge we don't have yet).
+
+
+.. admonition:: Practical exercise
+
+   **Writing our table for conversion using a `for` loop?**
+
+    Write out the Farenheit to Celsius conversion table using a `while` loop.
+
+.. admonition:: Solution
+   :class: toggle
+
+   .. code-block:: python
+
+      C = -20
+      while C <= 40:
+          F = 9/5*C + 32
+          print(C, F)
+          C = C + 5
+      
+   This is very easy to read an understand; especially the ending condition (unlike
+   the the loop above where we had to use 41...).
 
