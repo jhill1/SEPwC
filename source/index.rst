@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Solving Environmental Problems with Code (SPEwC)
+Welcome to Solving Environmental Problems with Code (SEPwC)
 ===========================================================
 
 The aim of this module is to teach you the basics of writing simple computer scripts so 
