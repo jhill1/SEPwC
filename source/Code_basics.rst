@@ -192,6 +192,41 @@ operations so "add" works on multiple data types, for example:
 Which will do what you think it does and put "hello world" into complete_string. Which 
 symbol is used depends on the language and not all languages can do this.
 
+Booleans and Logic
+------------------
+
+A boolean is either `true` or `false`. In code this is very important as it allows our code
+to make decisions based on the value of variables.
+
+.. code-block::
+
+   3 < 5
+   15 == 15
+   5 >= 1
+   4 < 5 && 5 < 6
+   4 < 5 || 6 < 3
+
+All the above will return `true`. 3 is less than 5, etc. The `&&` means *and*, so *both* booleans must
+be true for that statement to also be true; so 4 must be less than 5 *and* 5 must be less than 6. The 
+`||` means *or*. In this case only 1 of the booleans must be true for the statement to also return `true`.
+So either 4 must be less than 5 (`true`) *or* 6 must be less than 3 (`false`). 
+
+If we then add some variables into the mix.
+
+.. code-block:: 
+
+   i = 5
+   print(i<10)
+   print(i>10)
+
+Will print:
+
+.. code-block:: output
+
+   True
+   False
+
+
 Outputs
 -------
 
