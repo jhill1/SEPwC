@@ -10,5 +10,6 @@ interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
 .. include:: Python_intro.rst
 .. include:: Python_loops.rst
+.. include:: Python_conditionals.rst
 
 
