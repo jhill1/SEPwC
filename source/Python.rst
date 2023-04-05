@@ -8,9 +8,9 @@ Computer languages are much simpler than natural langauages, but much
 stricter. We have to get the syntax correct or things won't work. However
 interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
-.. include:: Python_intro.rst
-.. include:: Python_loops.rst
-.. include:: Python_conditionals.rst
-.. include:: Python_comments.rst
+.. include:: Python_intro.inc
+.. include:: Python_loops.inc
+.. include:: Python_conditionals.inc
+.. include:: Python_comments.inc
 
 

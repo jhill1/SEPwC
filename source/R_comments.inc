@@ -9,8 +9,8 @@ that has been written.
 R has a single way of adding comments, but can be used in two different ways;
 inline comments and block comments.
 
-Inline comments
-~~~~~~~~~~~~~~~
+Inline comments (R)
+~~~~~~~~~~~~~~~~~~~~
 
 Inline comments occur within the line of code:
 
@@ -29,8 +29,8 @@ Here, the same style is used, but as the line of code is so short, as is the com
 may be preferable to the second style of comments
 
 
-Block comments
-~~~~~~~~~~~~~~
+Block comments (R)
+~~~~~~~~~~~~~~~~~~
 
 Block comments occupy one or more lines. In python they look like:
 
@@ -48,8 +48,8 @@ Or if you want multiple lines:
     x = x + 1
 
 
-What to comment
-~~~~~~~~~~~~~~~
+What to comment (R)
+~~~~~~~~~~~~~~~~~~~
 
 The above tell you *how* to write a comment, but *what* should you comment? Comments need to 
 be useful for the people that come after you (including you) so they can understand the code better.

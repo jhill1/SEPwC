@@ -1,5 +1,5 @@
-Python conditionals
---------------------
+R conditionals
+---------------
 
 As we saw in the coding fundementals, conditionals are a tool to make decisions
 in code; they control the flow of code. We can make those decisions based on the state of the program at the time.
@@ -38,42 +38,44 @@ How do we write a program that prints out such a statement, based on that input?
 So we need to be able to make a decision, based on those the variables, temperature and humidity. 
 This is where `if` statements come in.
 
-Basic `if` statement
+R `if` statement
 ~~~~~~~~~~~~~~~~~~~~
 
-The `if` statment consists of an `if` condition, followed by zero or more `elif` conditions. A final `else`
-statement can be used to capture the situation where everything is `False`.
-In general, we can put together multiple conditions. Only the first condition that is `True` is executed.
+The `if` statment consists of an `if` condition, followed by zero or more `else if` conditions. A final `else`
+statement can be used to capture the situation where everything is `FALSE`.
+In general, we can put together multiple conditions. Only the first condition that is `TRUE` is executed.
 
-.. code-block:: python
+.. code-block:: R
 
-    if condition1:
-        <block of statements, executed if condition1 is True>
-    elif condition2:
-        <block of statements, executed if condition1 is False and condition2 is True>
-    elif condition3:
-        <block of statements, executed if conditions 1 and 2 are False and condition3 is True>
-    else:
-        <block of statements, executed if conditions 1, 2, and 3 are False>
+    if (condition1) {
+        <block of statements, executed if condition1 is TRUE>
+    } else if (condition2) {
+        <block of statements, executed if condition1 is FALSE and condition2 is TRUE>
+    } else if (condition3) {
+        <block of statements, executed if conditions 1 and 2 are FALSE and condition3 is TRUE>
+    } else {
+        <block of statements, executed if conditions 1, 2, and 3 are FALSE>
+    }
 
     <next statement of the program>
 
 Let's do one of the conditions of our table above.
 
-.. code-block:: python
+.. code-block:: R
 
-   humidity = "high"
-   temperature = "high"
+   humidity <- "high"
+   temperature <- "high"
 
-   if humidity == "high":
+   if (humidity == "high") {
       print("Either temperate or tropical rainforest")
+   }
 
 Here, we've check the value of humidity. If the value is "high", the following is printed:
 
 .. code-block:: output
 
-   Either temperate or tropical rainforest
-
+   [1] "Either temperate or tropical rainforest"
+   
 If humidity is anything else (including "High", "low", "sweaty"), then nothing is printed.
    
 Not the best of code, engineering-wise, but it will work. Try it out.
@@ -87,46 +89,48 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 .. admonition:: Solution
    :class: toggle
 
-   .. code-block:: python
+   .. code-block:: R
 
-      humidity = "HIGH"
-      temperature = "high"
+      humidity <- "HIGH"
+      temperature <- "high"
 
-      if humidity == "high":
+      if (humidity == "high") {
          print("Either temperate or tropical rainforest")
-      else:
-         print("Don't understand ", humidity)
+      } else {
+         print(paste0("Don't understand ", humidity))
+      }
 
    Here, we've printed the message "Don't understand " with the value of humidity then printed,
    so you should see:
 
    .. code-block:: output
 
-      Don't understand HIGH
+      [1] "Don't understand HIGH"
 
 We now need to do all combinations, with some logic to decide a few things. There are (as always!) 
-a number of ways of doing this. This is using `elif` and boolean operators:
+a number of ways of doing this. This is using `else if` and boolean operators:
 
-.. code-block:: python
+.. code-block:: R
 
-   humidity = "high"
-   temperature = "high"
+   humidity <- "high"
+   temperature <- "high"
 
-   if humidity == "high" and temperature == "high":
+   if (humidity == "high" & temperature == "high") {
       print("Tropical rainforest")
-   elif humidity == "high" and temperature == "low":
+   } else if (humidity == "high" & temperature == "low") {
       print("Temperate rainforest")
-   elif humidity == "low" and temperature == "high":
+   } else if (humidity == "low" & temperature == "high") {
       print("Hot desert")
-   elif humidity == "low" and temperature == "low":
+   } else if (humidity == "low" & temperature == "low") {
       print("Arctic desert")
-   else:
+   } else {
       print("I don't understand the inputs")
-      print("Temperature: ", temperature)
-      print("Humidity: ", humidity)
+      print(paste0("Temperature: ", temperature))
+      print(paste0("Humidity: ", humidity))
       print("Both should be `high` or `low`")
+   }
 
-Here, we've used the `and` operator to check that *both* temperature and humidity are
+Here, we've used the `&` operator (and) to check that *both* temperature and humidity are
 set appropriately. If the user supplies anything other than "high" or "low" it should print
 an message.
 
@@ -143,25 +147,27 @@ an message.
 
 The second way of working out the logic is by nested `if` statements. Here's an example:
 
-.. code-block:: python
+.. code-block:: R
 
-    mark=71
+    mark <- 71
 
-    if mark >= 40 and mark <= 100:
-        if mark >= 70:
+    if (mark >= 40 & mark <= 100) {
+        if (mark >= 70) {
             print("First!")
-        elif mark >= 60:
+        } else if (mark >= 60) {
             print("2:i!")
-        elif mark >= 50:
+        } else if (mark >= 50) {
             print("2:2.")
-        else:
+        } else {
             print("3rd")
-    elif mark > 100:
+        }
+    } else if (mark > 100) {
         print("This mark is too high.")
-    elif mark < 0:
+    } else if (mark < 0) {
         print("This mark is too low.")
-    else:
+    } else {
         print("Fail :(")
+    }
 
 The above code will do the following:
 
@@ -176,7 +182,7 @@ The above code will do the following:
  * otherwise the mark is between 0 and 39 (inclusive), which is a fail mark.
 
 Check you understand the flow of the code and note that the `if` statements are done in order, so 
-if the first one is `False`, `mark` must be less than 40 or greater than 100.
+if the first one is `FALSE`, `mark` must be less than 40 or greater than 100.
 
 .. admonition:: Practical exercise
 
@@ -188,22 +194,14 @@ if the first one is `False`, `mark` must be less than 40 or greater than 100.
    :class: toggle
 
    It should work for all floating point and integer values of mark. What if you set `mark = "test"`?
-   Then what does it do? You should see something like:
+   Then what does it do? You should see:
 
    .. code-block:: output
 
-        ---------------------------------------------------------------------------
-        TypeError                                 Traceback (most recent call last)
-        <ipython-input-3-aaf3cf3cd246> in <module>()
-        ----> 1 if mark >= 40 and mark <= 100:
-              2     if mark >= 70:
-              3         print("First!")
-              4     elif mark >= 60:
-              5         print("2:i!")
+      [1] "This mark is too high."
 
-        TypeError: '>=' not supported between instances of 'str' and 'int'
-
-    which is becasue we can't compare a string and an integer!
+    which is becasue 100 is converted to a string by R to do the comparison. "test" is > than "100" ("t" is
+    after "1" in the alphabet). You need to be careful of this when doing comparisons!
 
 Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
 
@@ -219,29 +217,32 @@ Now you've seen nested `if` statements in action. Try the final practical exerci
 
    Your code should look something like the following:
 
-   .. code-block:: python
+   .. code-block:: R
 
-       humidity = "high"
-       temperature = "high"
+       humidity <- "high"
+       temperature <- "high"
 
-       if humidity == "high":
-          if temperature == "high":
+       if (humidity == "high") {
+          if (temperature == "high") {
               print("Tropical rainforest")
-          elif temperature == "low":
+          } else if (temperature == "low") {
               print("Temperate rainforest")
-          else:
-              print("Didn't understand temperature", temperature)
-       elif humidity == "low":
-          if temperature == "high":
+          } else {
+              print(paste0("Didn't understand temperature ", temperature))
+          }
+       } else if (humidity == "low") {
+          if (temperature == "high") {
               print("Hot desert")
-          elif temperature == "low":
+          } else if (temperature == "low") {
               print("Arctic desert")
-          else:
-              print("Didn't understand temperature", temperature)
-       else:
+          } else {
+              print(paste0("Didn't understand temperature ", temperature))
+          }
+       } else {
           print("I don't understand the humidity")
-          print("Humidity: ", humidity)
+          print(paste0("Humidity: ", humidity))
           print("Should be `high` or `low`")
+       }
       
    The advantage here is we can have more nuanced error messages (relating to temperature or humidity, ratehr than both), but
    there is repeated code and it might be harder to follow the logic. I prefer the previous version, but this works just fine.

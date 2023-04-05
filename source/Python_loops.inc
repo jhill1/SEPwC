@@ -61,8 +61,8 @@ This is error prone though. What if we make a typo (likely)? How would we know? 
 is very boring and repetative. The entire idea of writing code it to remove the 
 repetative, boring stuff and let the computer do that work. This is where loops come in.
 
-`for` Loops
-~~~~~~~~~~~
+Python `for` Loops
+~~~~~~~~~~~~~~~~~~~
 
 'for' loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
@@ -155,8 +155,8 @@ For loops are a really useful way of doing the same thing to each item in a list
 In a `for` loop we always know how many times we should iterate that loop. What if we don't know in advance?
 Python also has a `while` loop which will keep going as long as some condition is true.
 
-`while` loop
-~~~~~~~~~~~~
+Python `while` loop
+~~~~~~~~~~~~~~~~~~~~
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is `True`
 

@@ -13,8 +13,8 @@ https://peps.python.org/
 
 Python has three styles of comments: inline, block and documentation.
 
-Inline comments
-~~~~~~~~~~~~~~~
+Inline comments (Python)
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Inline comments occur within the line of code:
 
@@ -33,8 +33,8 @@ Here, the same style is used, but as the line of code is so short, as is the com
 may be preferable to the second style of comments
 
 
-Block comments
-~~~~~~~~~~~~~~
+Block comments (Python)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Block comments occupy one or more lines. In python they look like:
 
@@ -56,8 +56,8 @@ The PEP8 guidance says lines of code should be sorter than 72 characters (this i
 why you may "wrap" comments onto multiple lines.
 
 
-Documentation comments
-~~~~~~~~~~~~~~~~~~~~~~
+Documentation comments (Python)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Python also has a second style of comments that also act as a way of documentating code. They should be used
 underneath functions, classes and modules where public facing (i.e. where documentation is helpful!).
@@ -80,8 +80,8 @@ An example is something like this:
 The above function, `complex` returns a complex number. The docstring, delimited by the three " marks states
 what the function does, what the arguments are. You may also add what is returned (though here, it's obvious!).
 
-What to comment
-~~~~~~~~~~~~~~~
+What to comment (Python)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The above tell you *how* to write a comment, but *what* should you comment? Comments need to 
 be useful for the people that come after you (including you) so they can understand the code better.
