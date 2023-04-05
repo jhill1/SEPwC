@@ -11,5 +11,7 @@ interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
 .. include:: R_intro.rst
 .. include:: R_loops.rst
+.. include:: R_conditionals.rst
+.. include:: R_comments.rst
 
 
