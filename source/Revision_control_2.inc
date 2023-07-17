@@ -20,9 +20,9 @@ needed for the ``verb``. So here is how I might setup my new laptop:
 
 Please use your own name and email address instead of mine. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
-`GitHub <https://github.com/>`_,
-`BitBucket <https://bitbucket.org/>`_,
-`GitLab <https://gitlab.com/>`_ or
+`GitHub <https://github.com/>`__,
+`BitBucket <https://bitbucket.org/>`__,
+`GitLab <https://gitlab.com/>`__ or
 another Git host server after this lesson will include this information.
 
 For this lesson, we will be interacting with `GitHub <https://github.com/>`__ and so the email address used should be the 
@@ -41,7 +41,7 @@ please review `GitHub's instructions for keeping your email address private <git
    Because Git uses these characters to compare files,
    it may cause unexpected issues when editing a file on different machines. 
    Though it is beyond the scope of this lesson, you can read more about this issue 
-   `in the Pro Git book <https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf>`_.
+   `in the Pro Git book <https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf>`__.
    
    You can change the way Git recognizes and encodes line endings
    using the `core.autocrlf` command to `git config`.

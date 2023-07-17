@@ -39,7 +39,7 @@ So we need to be able to make a decision, based on those the variables, temperat
 This is where `if` statements come in.
 
 Python `if` statement
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 The `if` statment consists of an `if` condition, followed by zero or more `elif` conditions. A final `else`
 statement can be used to capture the situation where everything is `False`.
