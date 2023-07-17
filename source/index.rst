@@ -47,7 +47,6 @@ slip behind a little.
    * - 11
      - Assessment
 
-
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
@@ -68,9 +67,5 @@ slip behind a little.
    Python3
    Mini_courses
    Assessments
+   genindex
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`

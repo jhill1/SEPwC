@@ -1,6 +1,9 @@
 Introduction
 ------------
 
+.. index:: 
+   pair: revision control; version control 
+
 We'll start by exploring how version control can be used to keep track of what one person did and when.
 Even if you aren't collaborating with other people, automated version control is much better than this situation:
 
@@ -15,7 +18,7 @@ multiple nearly-identical versions of the same document. Some word
 processors let us deal with this a little better, such as Microsoft
 Word's `Track Changes <https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a>`_, 
 Google Docs' `version history <https://support.google.com/docs/answer/190843?hl=en>`_, or 
-LibreOffice's `Recording and Displaying Changes <https://help.libreoffice.org/Common/Recording_and_Displaying_Changes>`.
+LibreOffice's `Recording and Displaying Changes <https://help.libreoffice.org/Common/Recording_and_Displaying_Changes>`_.
 
 Version control systems start with a base version of the document and then record changes you make each step of the way. You can
 think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, 
