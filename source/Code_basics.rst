@@ -1,10 +1,10 @@
-The fundementals of code
+The fundamentals of code
 =========================
 
 Some terminology
 ----------------
 
-Computer programming is full of jargon. Fortunately, most of the jargon is comoon across all
+Computer programming is full of jargon. Fortunately, most of the jargon is common across all
 languages. The idea of this chapter is to cover those basics so that when we get to a language
 we can focus on the language, rather than also learning the jargon!  In this chapter we're going to use pseudo-code. 
 This is code-like text that is easier to read. 
@@ -21,14 +21,14 @@ or any other thing that can be defined.
 
 **Outputs**: what you code spits out. A line of text onto the screen, an image, a file, even a noise!
 
-**Inputs**: what you code needs to run. This can be "hardcoded" or you can ask the user to supply it.
+**Inputs**: what you code needs to run. This can be "hard-coded" or you can ask the user to supply it.
 
 **Loops**: code often needs to do the same thing on a long list of data. We often use loops to do this. Loops can be nested (i.e. a loop within a loop)
 
 **Conditionals**: you often run a bit of code if a certain condition is met, for example if the variable contains a number greater than 5, do this, otherwise do that.
 This creates a logic flow to your code and allows decisions to be made.
 
-**Functions**: if you find yourself doing the same few line sof code again, and again, we don't type them out repeatedly, we instead create a function which 
+**Functions**: if you find yourself doing the same few line of code again, and again, we don't type them out repeatedly, we instead create a function which 
 we can call every time we want to run those lines. Functions take input (called arguments) and return data back to the main program (where you can store it
 in a variable, for example).
 
@@ -51,7 +51,7 @@ I've create a variable called ``my_data`` which contains a list of numbers.
 
    my_favourite_number = 7
 
-This varibale contains a single number, 7.
+This variable contains a single number, 7.
 
 .. code-block::
 
@@ -88,11 +88,11 @@ What the users sees is:
     Jon
     Fred
 
-All the above examples require the variable to be known up front (hardcoded). What if we don't know?
+All the above examples require the variable to be known up front (hard-coded). What if we don't know?
 
 .. code-block::
 
-   filname = ask_user_for_file()
+   filename = ask_user_for_file()
 
 Assuming the function (see below) works, filename will contain whatever the user tells us. We can then do something like:
 
@@ -100,14 +100,14 @@ Assuming the function (see below) works, filename will contain whatever the user
 
    data = load_file(filename)
 
-where filename was given by the user and we then load in that file. That way nothing is hardcoded. 
+where filename was given by the user and we then load in that file. That way nothing is hard-coded. 
 
 How do you decide a good variable name?
 .......................................
 
 A good variable name should make sense, make the code readable to a human and be clear. In the above
-I've used _ to seperate words. This is good practice. You can also use CamelCase (i.e. a captial letter to 
-seperate words). Whichever you do, be consistant!
+I've used _ to separate words. This is good practice. You can also use CamelCase (i.e. a capital letter to 
+separate words). Whichever you do, be consistent!
 
 Good variables:
 
@@ -135,7 +135,7 @@ Bad variables:
    rs
    mrgr
 
-The first list is clear with little doubt what that variable contains. The second list is not that helpful. Is temp temporary or temperature? chemdat might be ok, but a bit hard 
+The first list is clear with little doubt what that variable contains. The second list is not that helpful. Is temp temporary or temperature? chemdat might be OK, but a bit hard 
 to read. top is not helpful, topography or the top of something? x and rs could be anything! In 5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
 always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is reasonable shorthand for maximum, but others would disagree with me on that!
 
@@ -155,7 +155,7 @@ a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could th
 | 2   4   5   6   7 
 
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
-objects. For now, we're going to focus on the basic datatypes and will revist this idea later on (as R and Python have 
+objects. For now, we're going to focus on the basic datatypes and will revisit this idea later on (as R and Python have 
 different names for some of them).
 
 
@@ -178,7 +178,7 @@ So the above, if the user put in 2, the user would see
 
 
 Operations cover any mathematical operation (multiply, divide, subtract), but also some more
-specialist ones like "modulus" which gives you the reminder of a divsion. We can also "overload"
+specialist ones like "modulus" which gives you the reminder of a division. We can also "overload"
 operations so "add" works on multiple data types, for example:
 
 .. code-block::
@@ -206,9 +206,9 @@ to make decisions based on the value of variables.
    4 < 5 && 5 < 6
    4 < 5 || 6 < 3
 
-All the above will return `true`. 3 is less than 5, etc. The `&&` means *and*, so *both* booleans must
+All the above will return `true`. 3 is less than 5, etc. The `&&` means *and*, so *both* boolean must
 be true for that statement to also be true; so 4 must be less than 5 *and* 5 must be less than 6. The 
-`||` means *or*. In this case only 1 of the booleans must be true for the statement to also return `true`.
+`||` means *or*. In this case only 1 of the boolean must be true for the statement to also return `true`.
 So either 4 must be less than 5 (`true`) *or* 6 must be less than 3 (`false`). 
 
 If we then add some variables into the mix.
@@ -230,7 +230,7 @@ Will print:
 Outputs
 -------
 
-The output is something you, the programmer decides. It might be a text file, a CSV file, a graphic, etc, etc, it
+The output is something you, the programmer decides. It might be a text file, a CSV file, a graphic, etc., etc., it
 may just be the result printed to screen.
 
 .. code-block::
@@ -247,18 +247,18 @@ Inputs
 ------
 
 Input are, unsurprisingly, the opposite of outputs. Like the outputs of a program they come in many forms.
-The simplest are the *hardcoded* inputs.
+The simplest are the *hard-coded* inputs.
 
 .. code-block::
 
    my_file = "top_secret_data.csv"
    secret_data = load.csv(my_file)
 
-Here the input is the file "top_secret_data.csv", which is hardocded into the program. The program will
+Here the input is the file "top_secret_data.csv", which is hard-coded into the program. The program will
 read whatever is in that file so to read in different data you could a) swap the filename to something else
 or b) replace the contents of the file with your new data. 
 
-Neither is particularlly convinient to a user and would need explaining. A better solution is to ask the user
+Neither is particularly convenient to a user and would need explaining. A better solution is to ask the user
 which file to use. So how can we do this? We can use the command-line argument idea we learnt last week:
 
 .. code-block::
@@ -373,7 +373,7 @@ So our raster grid now contains.
 Conditionals
 ------------
 
-Conditional statements run code based on a variable meeting some condition. They allow code to *brnch* and
+Conditional statements run code based on a variable meeting some condition. They allow code to *branch* and
 perform actions based on some criteria.
 
 For example, only take a square root if the number if > than 0
@@ -420,15 +420,15 @@ You can negate conditionals too:
 
 This is *exactly* equivalent to our first example above (note the *not* and the <= which is opposite to >)
 
-In all languages you will find things like is equal to (for example ==), is less than, greater than, less than or equal to, etc.
+In all languages you will find things like is equal to (for example ==), is less than, greater than, less than or equal to, etc..
 Most languages have some form of "or" and "and" operations. 
 
 
 Functions
 ---------
 
-Function are for bits of code you run lots or compelx code that can be wrapped up so the main code is easier to read. 
-Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is earier to read.
+Function are for bits of code you run lots or complex code that can be wrapped up so the main code is easier to read. 
+Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is easier to read.
 
 .. code-block::
 
@@ -530,5 +530,5 @@ So we would then create the sort algorithm into a function
    print(sorted_list)
 
 We now have a function that sorts number in our code. The main code is easier to read and we can sort any lists of numbers
-as many times as we wish, without writing the same code over and over. This really comes in handy (as we shall see when tesing code).
+as many times as we wish, without writing the same code over and over. This really comes in handy (as we shall see when test code).
 

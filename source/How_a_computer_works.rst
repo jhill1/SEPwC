@@ -13,20 +13,20 @@ thicker than the CPU transistor!).
 The modern computer has several parts we need to know about in order to use
 them well:
 
- * A CPU: the processing unit of the computer. Carries out the instructns (we are going to give it!)
+ * A CPU: the processing unit of the computer. Carries out the instructions (we are going to give it!)
  * RAM: Random Access Memory, or often memory. Typical computers have 4 - 16 Gb (giga bytes). This 
-   is non-permananet storage. Turn your computer off and what is in RAM disappears.
- * Storage. Often a hard (drive) disk (HDD) or a solid state drive (SSD). This is permanant
+   is non-permanent storage. Turn your computer off and what is in RAM disappears.
+ * Storage. Often a hard (drive) disk (HDD) or a solid state drive (SSD). This is permanent
    storage and where you keep your files.
  * Graphics card or chip: Modern computers can display more colours than the eye can see and at a resolution 
    that is comparable to the human eye. To do that they have a dedicated chip, often called a GPU
    (Graphical Processing Unit). NVidia is a popular brand.
- * Operating System (OS): This is Windows, Linux, MacOS, etc. It lives on the storage.
+ * Operating System (OS): This is Windows, Linux, MacOS, etc.. It lives on the storage.
  * BIOS: Basic Input-Output System. Computers need something to tell them what to do when you
    turn it on. The BIOS does this. It's a very basic OS on a chip.
 
  A computer works by reading the BIOS, which then starts the OS loading from disk to RAM. Once done, 
- you can then log on and start using it. There is a lot of jargon around compters. We will try and cover this
+ you can then log on and start using it. There is a lot of jargon around computers. We will try and cover this
  as we go, but look up anything you come across that isn't explained.
 
 Filesystems
@@ -35,7 +35,7 @@ Filesystems
 Every computer needs to store files so it can be used. A variety of media have been used 
 in the past to do this: punch cards, tapes, floppy disks, CDs, DVDs, and of course, hard drives
 and solid state drives. How we store the data onto the drive is called the filesystem. You may
-have come across things like FAT95, NTFS, ext4, journalling, etc. These are all types of filesystems.
+have come across things like FAT95, NTFS, ext4, journaling, etc. These are all types of filesystems.
 Fortunately, we rarely need to care about this (unless we want to plug storage 
 from a Mac into Windows or vice-versa); the OS takes care of this for us. Each OS uses a different filesystem. 
 Macs use Apple File System (APFS), Windows uses NTFS, Linux uses
@@ -58,7 +58,7 @@ Exercise: Why C:? What's wrong with A? Google and find out.
 
     A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
 
-From the drive, folders are seperated with a '\' symbol. Software is generally installed
+From the drive, folders are separated with a '\' symbol. Software is generally installed
 in ``C:\Program Files`` (or ``C:\Program Files (x86)`` for older software). Your documents are
 in a *magic* folder called ``Documents``. It's possible to get this to point to network drives or 
 to your local hard drive. However, a *standard* Windows 11 machine will have this pointing to 
@@ -76,7 +76,7 @@ to Windows - yes, they use the opposite direction). In root you then find a bunc
 ``\home`` there is a directory with your username. Within there are your images, music, etc.
 
 Unlike Windows, drives can be mounted anywhere in the file structure and this is generally transparent to the user. So for example
-``\home`` can be mounted onto a completely seperate physical hard drive to the rest of the folders. The same applies to *any*
+``\home`` can be mounted onto a completely separate physical hard drive to the rest of the folders. The same applies to *any*
 folder. Temporary drives will be mounted into ``\media`` or ``\mnt``. Note that Linux filenames are case-senstive, so ``Bob.txt`` is
 a different file to ``bob.txt``
 
@@ -203,7 +203,7 @@ for directories and files, or be monochrome. The ``$`` and ``>`` symbols are pro
     17/02/2020  16:10    <DIR>          .VirtualBox
 
 
-We can now see where you are, what's in thet directory; what about moving into a new directory? For that we use the
+We can now see where you are, what's in that directory; what about moving into a new directory? For that we use the
 change directory command:
 
 |all|
@@ -224,9 +224,9 @@ Great! We can now navigate down the filesystem. What about going up a directory?
 Absolute vs Relative paths
 ---------------------------
 
-Most of the filepaths above are absolute paths. You start at the root of the drive (``C:`` or ``/``) and give the 
+Most of the file-paths above are absolute paths. You start at the root of the drive (``C:`` or ``/``) and give the 
 all the directories until you get to the file you're after. I did however sneak in a few *relative*
-paths. These are paths that start from where you curently are (be that in the command line or running
+paths. These are paths that start from where you currently are (be that in the command line or running
 a programme). 
 
 Let's do an example. Here's an absolute path:
@@ -254,11 +254,11 @@ structure is the same, the script will work.
 
 The downside of relative paths is that you must have the same directory structure, relative to 
 the script. If you move the script elsewhere, things might break. You can, of course,
-mix and match; so pull data from an absolut path in one place and from a relative path
+mix and match; so pull data from an absolute path in one place and from a relative path
 in another. Finally, you can ask the user where to get data from too (or pull data
 from the internet) saving all this hassle.
 
-However, when starting to write your own script you will `hardcode` the filenames and hence
+However, when starting to write your own script you will `hard-code` the filenames and hence
 you need to know the difference between relative and absolute paths.
 
 From source code to programme
@@ -268,7 +268,7 @@ You may have heard the term `source code` (I've probably used it already!), but 
 Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
 computer can do billions of these every second (this is the clock speed). The moving of 
 gates allow the computer to add two numbers or multiple two numbers or move data around, etc.
-These are called instructions. The CPU translate these intructions into moving those gates around
+These are called instructions. The CPU translate these instructions into moving those gates around
 to actually do something. Ultimately, all computer code does this. It is possible to write
 computer code at this level: assembler code. Back in the day this is how you programmed computers.
 This is an example of assembler code for an x86 processor (i.e. what you probably have):
@@ -312,7 +312,7 @@ This is an example of assembler code for an x86 processor (i.e. what you probabl
 .. [#] From: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
 
 Fortunately, things have moved on and we can write code in `higher level languages`. These 
-come in two broad types: `compiled` and `interpretated`. Compiled languages go through a two-step
+come in two broad types: `compiled` and `interpreted`. Compiled languages go through a two-step
 process to be turned into a programme. Interpreted languages do not, and can be run (executed)
 immediately
 
@@ -322,20 +322,20 @@ Compiled languages
 Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
 an executable. You can then give someone else the executable and they can run the software. Most software is
 written in those kind of languages. Note the user does not need the source code.
-Languagaes like Java are also compiled but at the time of execution 
+Languages like Java are also compiled but at the time of execution 
 (called Just in Time or JIT) languages. Java bridges the gap between compiled and interpreted.
 
 Interpreted languages
 ^^^^^^^^^^^^^^^^^^^^^
 
-In contract interprested languages are not compiled. You execute the source code. So you can write a text file
+In contract interpreted languages are not compiled. You execute the source code. So you can write a text file
 with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
-You therefore need another user to have the python ecutable their system to be able to run your code. The user
+You therefore need another user to have the python executable their system to be able to run your code. The user
 must also have your source code. This is the main difference between compiled and interpreted languages. 
 Compiled languages are a lot more flexible and require the user to do less. Interpreted languages are 
 easier (don't need to compile!) but need a user to set something up ahead of time.
 
-The line betwen these is getting blurred all the time as you can compile Python into an executable and use C
+The line between these is getting blurred all the time as you can compile Python into an executable and use C
 within a Python programme without pre-compiling. However, for most users, the distinction is clear: if you
 must compile to run, then it's a compiled language. If you don't need to do that it's interpreted. 
 Some languages are both.
@@ -343,9 +343,9 @@ Some languages are both.
 So what happens during compiling or interpretation? Remember that assemble code above? That's what the compiler
 does to your source code. It turns it from human readable code to those CPU instructions. Modern compilers
 are very clever and can optimise your code very well to get the most out of your computer. Interpreters do the 
-same thing but on the fly. The python exectuable (or R) is therefore turning your code into those kind of 
+same thing but on the fly. The python executable (or R) is therefore turning your code into those kind of 
 instructions as it's running the code. Interpreted languages are therefore generally slower than compiled code
-as the interpreter cannot optimise as well as a seperate compiler.
+as the interpreter cannot optimise as well as a separate compiler.
 
 
 More basic command line functions
@@ -354,13 +354,13 @@ More basic command line functions
 You were introduced to some basic command line functions earlier. We looked at those
 without really explaining them properly, so let's dig a little deeper into command lines.
 
-The Command Line Interface (CLI) is a powerful way of interating with a computer. Imagine
+The Command Line Interface (CLI) is a powerful way of interacting with a computer. Imagine
 you have a folder full of images and you want to move those that have "_final_" in their
 name somewhere else. In the GUI, this could take a while. In the command line it's a single
 command.
 
 CLIs work by running the command you type, plus the arguments you give it. Arguments can be
-mandatory or optional (and therfore called options). A typical command might look like:
+mandatory or optional (and therefore called options). A typical command might look like:
 
 |maclin|
 ``cp -r my_dir my_dir2``
@@ -406,6 +406,6 @@ Exercise: practice on those commands
 
 .. Attention::
    
-   ``rm``, ``del``, and ``rmdir`` delete files premenantly. They do *not* move the into Trash or similar. 
+   ``rm``, ``del``, and ``rmdir`` delete files permanently. They do *not* move the into Trash or similar. 
 
 

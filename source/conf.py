@@ -50,6 +50,7 @@ extensions = [
     #"sphinxawesome_theme",
     "sphinx.ext.githubpages",
     'sphinx.ext.autosectionlabel',
+    'sphinxcontrib.spelling',
     ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -78,6 +79,9 @@ exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
+
+# spell checker lang
+spelling_lang='en_UK'
 
 
 # -- Options for HTML output -------------------------------------------------

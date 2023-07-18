@@ -2,8 +2,8 @@ Thinking like a computer
 ========================
 
 To write code, we have to think in terms of algorithms and logic flow. We have covered the basics of code structures above, so now
-we can arrange those to form algorithms and then into programs. We can think about this in terms of psuedo-code (like I wrote above).
-Remember, psuedo-code is not a formal language but is code written to be read by a human with no concerns about syntax. We can also 
+we can arrange those to form algorithms and then into programs. We can think about this in terms of pseudo-code (like I wrote above).
+Remember, pseudo-code is not a formal language but is code written to be read by a human with no concerns about syntax. We can also 
 depict code as a flow diagram; this is more useful as we build more complex algorithms. 
 
 Let's build software to do some simple tasks.
@@ -27,7 +27,7 @@ Let's start by writing the pseudo-code.
          remove(word, words)
 
    unique_words = get_unique(words)
-   counts = zeros(length(unqiue_words))
+   counts = zeros(length(unique_words))
    for word in words:
       index = get_index(word, unique_words)
       counts[index] = count[index] + 1
@@ -44,24 +44,24 @@ The above code is quite complex and makes a lot of assumption on what functions 
 need to write some of these ourselves. The gist of the above code is:
 
  1. load in the text
- 2. seperate into words (removing punctuation, spaces, etc)
+ 2. separate into words (removing punctuation, spaces, etc.)
  3. loop through the list of words and remove and, the, or
- 4. get a list of unqiue words
+ 4. get a list of unique words
  5. make an empty list of counts which is the same length as the unique words
  6. loop through the list of words and find out where this is in the unique word list, incrementing the correct count value
  7. loop through the words a third time, removing those where the count is less than 2
  8. make out word cloud
 
-Let's run through an exmaple of that. Here's our text:
+Let's run through an example of that. Here's our text:
 
  | Need some sample, random, text and noise, 
  | I need some words that occur three times, so
  | random, random, noise, need, times, times, need and and and
 
 The text above should generate word cloud containing the words:
- * random (3 occurances)
- * need (4 occurances)
- * times (3 occurances)
+ * random (3 occurrences)
+ * need (4 occurrences)
+ * times (3 occurrences)
 
 Check you agree with the above.
 
@@ -119,7 +119,7 @@ Our next step (3) is to remove the words "and", "the", and "or", so we end up wi
  * times
  * need
 
-We then create a list of unqiue words (we'll do that code later), which would give us:
+We then create a list of unique words (we'll do that code later), which would give us:
 
  * need
  * some
@@ -136,7 +136,7 @@ We then create a list of unqiue words (we'll do that code later), which would gi
  * so
 
 We then count the number of times those words occur, by looping over the original word list and counting them. 
-We know there are 13 unique words. We set up a list where the count is sotred in the same location as the unique
+We know there are 13 unique words. We set up a list where the count is sorted in the same location as the unique
 word, so our lists are like this:
 
 .. list-table:: Unique word count
@@ -186,9 +186,9 @@ word, so our lists are like this:
      - 1
 
 We now have a count of each word and we loop through a final time (step 7) to remove those with 
-fewer than 3 occurances (or in other words with more than 2 occurrances). 
+fewer than 3 occurrences (or in other words with more than 2 occurrences). 
 
-Step 8 is then make the word cloud from the remining words ("times", "random" and "need")
+Step 8 is then make the word cloud from the remaining words ("times", "random" and "need")
 
 
 Making a jam sandwich
@@ -199,7 +199,7 @@ Write down the steps to make a jam sandwich. Create a flow diagram of the list. 
 
 .. hint::
  
-   Make sure you are very precise in your desciptions
+   Make sure you are very precise in your description
 
 
 
@@ -207,7 +207,7 @@ Write down the steps to make a jam sandwich. Create a flow diagram of the list. 
 Plotting a graph with options
 -----------------------------
 
-Write down the psuedo-code needed to read in the data below
+Write down the pseudo-code needed to read in the data below
 and plot a graph of time (x axis) vs wave height (y axis).
 Allow the user to flip the graph (so wave height vs time).
 

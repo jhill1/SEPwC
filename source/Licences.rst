@@ -6,7 +6,7 @@ Software licences
 
 Software needs a licence which tells your users or other developers what they are allowed
 to do with it. Most software you've heard of is commercial (Word, Windows, MacOs, 
-Adobe Reader, Corel Draw, Photoshop, etc). You pay a fee and have access to the
+Adobe Reader, Corel Draw, Photoshop, etc.). You pay a fee and have access to the
 executable code for a year or forever, for example. Some software is free (i.e. you
 don't pay to use it) but not open (you can't see the source code, nor give it 
 to someone else). All of the conditions are laid out in the "Terms and Conditions" 
@@ -19,16 +19,16 @@ type of software is called *open source*. Not only can you use it for free, you 
 modify it. 
 
 There are two things in law we have to worry about: copyright and licence. Copyright
-is granted to the writer of the software (or book, or photograph, etc). If you
+is granted to the writer of the software (or book, or photograph, etc.). If you
 create something you own the copyright. You don't have to do anything to get copyright, 
 except be the author or creator of the content. Authors generally place a copyright
 notice on the work though, so something like:
 
 Copyright lasts for 50 years and protects the author from someone stealing their work.
-This page has a simple explination of UK copyright law. [https://www.gov.uk/copyright#:~:text=You%20get%20copyright%20protection%20automatically,work%2C%20including%20illustration%20and%20photography]
+This page has a simple explanation of UK copyright law. [https://www.gov.uk/copyright#:~:text=You%20get%20copyright%20protection%20automatically,work%2C%20including%20illustration%20and%20photography]
 
 Separately, licences tell you what you can do with some code (or image, or text). For 
-commerical software, the lincence will tell you you cannot resell, give away, etc
+commercial software, the licence will tell you you cannot resell, give away, etc.
 the software you have bought. Similarly, for open-source software the licence tells 
 you what you can do with the source code, including modifying and re-releasing and under
 what conditions.
@@ -42,7 +42,7 @@ Copyleft
 Copyleft licences (a pun on copyright, geddit?) mean you can take 
 source-code, modify it, but can only re-release on a similar licence. For example,
 you could not take copyleft code, create a commercial application, then sell it. 
-That would breach the licence terms. Most copyleft licneces specify the 
+That would breach the licence terms. Most copyleft licences specify the 
 source code most be available under a similar copyleft licence.
 
 Common copyleft licences are:
@@ -66,7 +66,7 @@ Common permissive licences include:
  * MIT
 
 
-Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use wikipedia.
+Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use Wikipedia.
 
 
 Adding a licence to your code
@@ -79,5 +79,5 @@ Copyright |copy| 2023 by Jon Hill. CC-BY-SA.
 
 You then include the full licence in your distribution.
 
-Exercise: find the liecence type for some popular software
+Exercise: find the licence type for some popular software
 

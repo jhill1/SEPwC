@@ -25,7 +25,7 @@ I've listed which of these mini-courses is useful. You can do all of them if you
 
 In the workshops, move around every so often; don't stay sat at the desk for 
 three hours! Take a walk for 5 minutes or so. You can work with others and I 
-encorouage you to help your classmates if you can and discuss issues or problems
+encourage you to help your classmates if you can and discuss issues or problems
 with them. The only thing you have to work alone on is the assessment. Please see
 the academic integrity tutorial; collusion is academic misconduct.
 
@@ -59,8 +59,8 @@ code (from scratch) that solves that problem. You will know when you've solved i
 as your code will pass a series of tests (don't worry, we'll cover that in the module).
 Your final mark will be made up of several parts (see marking criteria), which includes
 the number of tests passed without errors or (foreseeable) warnings; the quality
-of your code, including comments, structure, variable naming, etc; and the 
-quality of your solution (elegance, speed, algorithmic structure, etc).
+of your code, including comments, structure, variable naming, etc.; and the 
+quality of your solution (elegance, speed, algorithmic structure, etc.).
 
 You will choose one from five assessments to complete. The assessments will be made available at
 the start of the module, along with the tests the code has to pass. I would recommend choosing
