@@ -208,7 +208,7 @@ If you are using a legacy system that doesn't support the Ed25519 algorithm, use
 .. code-block:: output
 
    Generating public/private ed25519 key pair.
-   Enter file in which to save the key (/c/Users/Vlad Dracula/.ssh/id_ed25519):
+   Enter file in which to save the key (/c/Users/jh1889/.ssh/id_ed25519):
 
 We want to use the default file, so just press :kbd: `Enter`.
 
@@ -297,8 +297,7 @@ First, we need to copy the public key.  Be sure to include the ``.pub`` at the e
 
 Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the 
 settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now, 
-you can add the title (Dracula uses the title "Vlad's Lab Laptop" so he can remember where the original key pair
-files are located), paste your SSH key into the field, and click the "Add SSH key" to complete the setup.
+you can add the title (use the name of your computer, e.g. "laptop"), paste your SSH key into the field, and click the "Add SSH key" to complete the setup.
 
 Now that we’ve set that up, let’s check our authentication again from the command line. 
 

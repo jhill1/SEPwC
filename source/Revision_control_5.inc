@@ -12,7 +12,7 @@ let's make a change to :file:`mars.txt`, adding yet another line.
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
     The two moons may be a problem for werewolves
     But the Mummy will appreciate the lack of humidity
     An ill-considered change
@@ -31,7 +31,7 @@ Now, let's see what we get.
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1,3 +1,4 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
      The two moons may be a problem for werewolves
      But the Mummy will appreciate the lack of humidity
     +An ill-considered change.
@@ -60,7 +60,7 @@ again, but with the notation ``HEAD~1``, ``HEAD~2``, and so on, to refer to them
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1 +1,4 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
     +The two moons may be a problem for werewolves
     +But the Mummy will appreciate the lack of humidity
     +An ill-considered change
@@ -88,7 +88,7 @@ working directory that we see by using ``git diff``.
     --- /dev/null
     +++ b/mars.txt
     @@ -0,0 +1 @@
-    +Cold and dry, but everything is my favorite color
+    +Cold and dry, but everything is my favourite colour
 
 We can also refer to commits using those long strings of digits and letters
 that ``git log`` displays. These are unique IDs for the changes,
@@ -107,7 +107,7 @@ has a unique 40-character identifier. Our first commit was given the ID
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1 +1,4 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
     +The two moons may be a problem for werewolves
     +But the Mummy will appreciate the lack of humidity
     +An ill-considered change
@@ -126,7 +126,7 @@ so Git lets us use just the first few characters (typically seven for normal siz
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1 +1,4 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
     +The two moons may be a problem for werewolves
     +But the Mummy will appreciate the lack of humidity
     +An ill-considered change
@@ -161,7 +161,7 @@ We can put things back the way they were by using ``git checkout``:
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
     The two moons may be a problem for werewolves
     But the Mummy will appreciate the lack of humidity
 
@@ -177,7 +177,7 @@ we can use a commit identifier instead:
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
 
 .. code-block:: bash
 
@@ -237,7 +237,7 @@ by using ``git checkout``:
     
     The "detached HEAD" is like "look, but don't touch" here,
     so you shouldn't make any changes in this state.
-    After investigating your repo's past state, reattach your ``HEAD`` with ``git checkout main``.
+    After investigating your repos' past state, reattach your ``HEAD`` with ``git checkout main``.
 
 
 It's important to remember that we must use the commit number that identifies the state of the repository

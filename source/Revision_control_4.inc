@@ -23,7 +23,7 @@ Type the text below into the `mars.txt` file:
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
 
 Let's first verify that the file was properly created by running the list command (`ls`):
 
@@ -43,7 +43,7 @@ Let's first verify that the file was properly created by running the list comman
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
 
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
@@ -177,7 +177,7 @@ you may use a different editor, and don't need to ``cat``.)
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
     The two moons may be a problem for werewolves
 
 When we run ``git status`` now,
@@ -217,7 +217,7 @@ of the file and the most recently saved version:
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1 +1,2 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
     +The two moons may be a problem for werewolves
 
 The output is cryptic because
@@ -240,7 +240,7 @@ After reviewing our change, it's time to commit it:
 
 .. code-block:: bash
 
-   git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+   git commit -m "Add concerns about effects of Mars' moons on werewolves"
 
 .. code-block:: output
 
@@ -260,11 +260,11 @@ Let's fix that:
 .. code-block:: bash
 
    git add mars.txt
-   git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+   git commit -m "Add concerns about effects of Mars' moons on werewolves"
 
 .. code-block:: output
 
-    [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
+    [main 34961b1] Add concerns about effects of Mars' moons on werewolves
      1 file changed, 1 insertion(+)
 
 Git insists that we add files to the set we want to commit
@@ -317,7 +317,7 @@ First, we'll add another line to the file:
 
 .. code-block:: output
 
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
     The two moons may be a problem for werewolves
     But the Mummy will appreciate the lack of humidity
 
@@ -332,7 +332,7 @@ First, we'll add another line to the file:
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1,2 +1,3 @@
-     Cold and dry, but everything is my favorite color
+     Cold and dry, but everything is my favourite colour
      The two moons may be a problem for werewolves
     +But the Mummy will appreciate the lack of humidity
 
@@ -360,7 +360,7 @@ and what's currently in the directory. However, if we do this:
     --- a/mars.txt
     +++ b/mars.txt
     @@ -1,2 +1,3 @@
-    Cold and dry, but everything is my favorite color
+    Cold and dry, but everything is my favourite colour
     The two moons may be a problem for werewolves
     But the Mummy will appreciate the lack of humidity
 
@@ -406,7 +406,7 @@ and look at the history of what we've done so far:
     Author: Vlad Dracula <vlad@tran.sylvan.ia>
     Date:   Thu Aug 22 10:07:21 2013 -0400
      
-        Add concerns about effects of Mars' moons on Wolfman
+        Add concerns about effects of Mars' moons on werewolves
 
     commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
     Author: Vlad Dracula <vlad@tran.sylvan.ia>
@@ -423,7 +423,7 @@ and look at the history of what we've done so far:
     Sometimes, e.g. in the case of the text documents a line-wise
     diff is too coarse. That is where the ``--color-words`` option of
     ``git diff`` comes in very useful as it highlights the changed 
-    words using colors.
+    words using colours.
 
 .. admonition:: Learn more
     :class: toggle
@@ -471,7 +471,7 @@ and look at the history of what we've done so far:
     .. code-block:: output
 
         005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
-        34961b1 Add concerns about effects of Mars' moons on Wolfman
+        34961b1 Add concerns about effects of Mars' moons on werewolves
         f22b25e Start notes on Mars as a base
     
     You can also combine the `--oneline` option with others. One useful
@@ -487,7 +487,7 @@ and look at the history of what we've done so far:
     .. code-block:: output
 
         * 005937f (HEAD -> main) Discuss concerns about Mars' climate for Mummy
-        * 34961b1 Add concerns about effects of Mars' moons on Wolfman
+        * 34961b1 Add concerns about effects of Mars' moons on werewolves
         * f22b25e Start notes on Mars as a base
 
 
