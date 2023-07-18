@@ -1,13 +1,13 @@
 Intro to R
 -----------
 
-R is an interpreted language that has become incredibily popular, but 
+R is an interpreted language that has become incredibly popular, but 
 was originally designed as a free, open-source version of "S"; a statistical
-analysis package. Due to populularity, there are libaries that will do just about anything. 
+analysis package. Due to popularity, there are libraries that will do just about anything. 
 This makes R a really powerful tool for writing code to analyse any number of problems.
 
 R can be run on the command line, in a popular GUI call R-Studio,
-as a standalone script, even on websites. There are libraries
+as a stand-alone script, even on websites. There are libraries
 for fancy plotting (ggplot2), scientific algorithms (e.g. deSolve), AI (dnn) and GIS (r-gdal).
 
 Let's get a simple R code running!
@@ -58,8 +58,8 @@ Great! Our first R code! Let's build this up to use variables. Type the followin
    vert_position <- initial_velocity * time - (0.5 * gravity * time**2)
    print(vert_position)
 
-This code is, inessence, identical to the one above, but instead of *hardcoding* the numebrs, we've used 
-variables. The formula is now written in good, descriptive variable names, using spaces and parantheses to
+This code is, in essence, identical to the one above, but instead of *hard-coding* the numbers, we've used 
+variables. The formula is now written in good, descriptive variable names, using spaces and parentheses to
 separate the terms for readability. Not that exciting yet. What if we want to calculate the height for a
 bunch of times? Let's add a loop!
 
@@ -100,7 +100,7 @@ Shall we plot this?
 .. image:: ../images/R_ball_graph.png
 
 
-That's not bad for a few lines of code. You can't publish that graph (axes labels without units, etc), but for
+That's not bad for a few lines of code. You can't publish that graph (axes labels without units, etc.), but for
 your first R program I think that's pretty good!
 
 In the above we have used the following R features:

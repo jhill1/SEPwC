@@ -17,7 +17,7 @@ repository:
 
 .. code-block:: output
 
-   Cold and dry, but everything is my favorite color
+   Cold and dry, but everything is my favourite colour
    The two moons may be a problem for werewolves
    But the Mummy will appreciate the lack of humidity
 
@@ -30,7 +30,7 @@ Let's add a line to the collaborator's copy only:
 
 .. code-block:: output
 
-   Cold and dry, but everything is my favorite color
+   Cold and dry, but everything is my favourite colour
    The two moons may be a problem for werewolves
    But the Mummy will appreciate the lack of humidity
    This line added to one copy
@@ -73,7 +73,7 @@ Now let's have the owner make a different change to their copy
 
 .. code-block:: output
 
-   Cold and dry, but everything is my favorite color
+   Cold and dry, but everything is my favourite colour
    The two moons may be a problem for werewolves
    But the Mummy will appreciate the lack of humidity
    We added a different line in the other copy
@@ -147,7 +147,7 @@ in the affected file:
 
 .. code-block:: output
 
-   Cold and dry, but everything is my favorite color
+   Cold and dry, but everything is my favourite colour
    The two moons may be a problem for werewolves
    But the Mummy will appreciate the lack of humidity
    <<<<<<< HEAD
@@ -175,7 +175,7 @@ Let's replace both so that the file looks like this:
 
 .. code-block:: output
 
-   Cold and dry, but everything is my favorite color
+   Cold and dry, but everything is my favourite colour
    The two moons may be a problem for werewolves
    But the Mummy will appreciate the lack of humidity
    We removed the conflict on this line
@@ -312,7 +312,7 @@ Conflicts can also be minimized with project management strategies:
          create mode 100644 mars.jpg
 
     Suppose that someone else has added a similar picture in the meantime.
-    Her's is a picture of the Martian sky, but it is *also* called ``mars.jpg``.
+    Here's is a picture of the Martian sky, but it is *also* called ``mars.jpg``.
     When I try to push, I get a familiar message:
 
     .. code-block:: bash
@@ -323,7 +323,7 @@ Conflicts can also be minimized with project management strategies:
 
         To https://github.com/jh1889/planets.git
          ! [rejected]        main -> main (fetch first)
-        error: failed to push some refs to 'https://github.com/vlad/planets.git'
+        error: failed to push some refs to 'https://github.com/jh1889/planets.git'
         hint: Updates were rejected because the remote contains work that you do
         hint: not have locally. This is usually caused by another repository pushing
         hint: to the same ref. You may want to first integrate the remote changes

@@ -1,14 +1,14 @@
 Python comments
 ----------------
 
-All computer languages have some mechaisms to add text that is not part of the code
+All computer languages have some mechanisms to add text that is not part of the code
 itself. These are called comments. The idea of these snippets of text are to provide
 commentary to help someone (including future you) understand the code
 that has been written.
 
 Python has multiple ways of adding comments, which actually provide slightly different
-functions. In this section we're going to stick to the PEP (Python Enhacement Protocols)
-styles to keep your code consistant. 
+functions. In this section we're going to stick to the PEP (Python Enhancement Protocols)
+styles to keep your code consistent. 
 https://peps.python.org/
 
 Python has three styles of comments: inline, block and documentation.
@@ -23,7 +23,7 @@ Inline comments occur within the line of code:
     x = x + 1                 # Increment x
 
 This style of comment should be avoided if possible. The above example is distracting
-and unecessary. It may sometimtes be useful, for example:
+and unnecessary. It may sometimes be useful, for example:
 
 .. code-block:: python
 
@@ -40,14 +40,14 @@ Block comments occupy one or more lines. In python they look like:
 
 .. code-block:: python
 
-    # incrememnt count to account for boundary cell
+    # increment count to account for boundary cell
     x = x + 1
 
 Or if you want multiple lines:
 
 .. code-block:: python
 
-    # incrememnt count to 
+    # increment count to 
     # account for boundary cell
     x = x + 1
 
@@ -59,7 +59,7 @@ why you may "wrap" comments onto multiple lines.
 Documentation comments (Python)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python also has a second style of comments that also act as a way of documentating code. They should be used
+Python also has a second style of comments that also act as a way of documenting code. They should be used
 underneath functions, classes and modules where public facing (i.e. where documentation is helpful!).
 
 An example is something like this:
@@ -107,8 +107,8 @@ This is poor coding and commenting:
                 # Say that there are no families
                 print("None.")
 
-The comments relaly help understand the code and the intentions, but there are 
-completely superfluous if the code was writen well:
+The comments really help understand the code and the intentions, but there are 
+completely superfluous if the code was written well:
 
 .. code-block:: python
 

@@ -1,7 +1,7 @@
 R comments
 ----------
 
-All computer languages have some mechaisms to add text that is not part of the code
+All computer languages have some mechanisms to add text that is not part of the code
 itself. These are called comments. The idea of these snippets of text are to provide
 commentary to help someone (including future you) understand the code
 that has been written.
@@ -19,7 +19,7 @@ Inline comments occur within the line of code:
     x = x + 1                 # Increment x
 
 This style of comment should be avoided if possible. The above example is distracting
-and unecessary. It may sometimtes be useful, for example:
+and unnecessary. It may sometimes be useful, for example:
 
 .. code-block:: R
 
@@ -36,14 +36,14 @@ Block comments occupy one or more lines. In python they look like:
 
 .. code-block:: R
 
-    # incrememnt count to account for boundary cell
+    # increment count to account for boundary cell
     x = x + 1
 
 Or if you want multiple lines:
 
 .. code-block:: R
 
-    # incrememnt count to 
+    # increment count to 
     # account for boundary cell
     x = x + 1
 
@@ -78,8 +78,8 @@ This is poor coding and commenting:
          }
     }
 
-The comments relaly help understand the code and the intentions, but there are 
-completely superfluous if the code was writen well:
+The comments really help understand the code and the intentions, but there are 
+completely superfluous if the code was written well:
 
 .. code-block:: R
 

@@ -1,7 +1,7 @@
 Python conditionals
 --------------------
 
-As we saw in the coding fundementals, conditionals are a tool to make decisions
+As we saw in the coding fundamentals, conditionals are a tool to make decisions
 in code; they control the flow of code. We can make those decisions based on the state of the program at the time.
 
 We want to inform the user if their climate is either a hot desert, arctic desert, temperate rainforest, or tropical 
@@ -41,7 +41,7 @@ This is where `if` statements come in.
 Python `if` statement
 ~~~~~~~~~~~~~~~~~~~~~
 
-The `if` statment consists of an `if` condition, followed by zero or more `elif` conditions. A final `else`
+The `if` statement consists of an `if` condition, followed by zero or more `elif` conditions. A final `else`
 statement can be used to capture the situation where everything is `False`.
 In general, we can put together multiple conditions. Only the first condition that is `True` is executed.
 
@@ -134,7 +134,7 @@ an message.
     :class: toggle
 
     Note the error message we gave in the `else` block contains what the user
-    had supplied us with. It often helps to print out the variables in quesiton
+    had supplied us with. It often helps to print out the variables in question
     when you do the else like this. It helps you, the programmer, to debug and it helps
     the user possibly see what to change to fix. Here, we've also told the user what they should be
 
@@ -203,7 +203,7 @@ if the first one is `False`, `mark` must be less than 40 or greater than 100.
 
         TypeError: '>=' not supported between instances of 'str' and 'int'
 
-    which is becasue we can't compare a string and an integer!
+    which is because we can't compare a string and an integer!
 
 Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
 
@@ -243,5 +243,5 @@ Now you've seen nested `if` statements in action. Try the final practical exerci
           print("Humidity: ", humidity)
           print("Should be `high` or `low`")
       
-   The advantage here is we can have more nuanced error messages (relating to temperature or humidity, ratehr than both), but
+   The advantage here is we can have more nuanced error messages (relating to temperature or humidity, rather than both), but
    there is repeated code and it might be harder to follow the logic. I prefer the previous version, but this works just fine.

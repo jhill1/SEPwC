@@ -1,12 +1,12 @@
 Python Loops
 ------------
 
-As we saw in the coding fundementals, loops are a tool to iterate over
+As we saw in the coding fundamentals, loops are a tool to iterate over
 many "bits" of data, like rows or columns in a spreadsheet, a list of parameters,
-or through time (as in the example above). They are therefore fundemental
+or through time (as in the example above). They are therefore fundamental
 to a lot of data analysis.
 
-Suppose we want to make a table to convert Celsius to Farenheit:
+Suppose we want to make a table to convert Celsius to Fahrenheit:
 
 .. code-block:: output
 
@@ -58,8 +58,8 @@ We could therefore write:
     C = 40; F = 9/5*C + 32; print(C, F)
 
 This is error prone though. What if we make a typo (likely)? How would we know? Also this
-is very boring and repetative. The entire idea of writing code it to remove the 
-repetative, boring stuff and let the computer do that work. This is where loops come in.
+is very boring and repetitive. The entire idea of writing code it to remove the 
+repetitive, boring stuff and let the computer do that work. This is where loops come in.
 
 Python `for` Loops
 ~~~~~~~~~~~~~~~~~~~
@@ -123,7 +123,7 @@ The output will be identical to the above, but we're accessing the list via the 
     5
 
 `i` goes from 0 (Python starts counting from 0. R starts from 1) to the length of the list - 1. The `range` function
-creates a list contining those numbers. So although this loops looks different to the first one we created,
+creates a list containing those numbers. So although this loops looks different to the first one we created,
 it's actually identical in terms of it's construction.
 
 The `range` function is ``range(start, stop, increment)``
@@ -137,7 +137,7 @@ For loops are a really useful way of doing the same thing to each item in a list
 
    **Writing our table for conversion using a `for` loop?**
 
-    Write out the Farenheit to Celsius conversion table using a `for` loop.
+    Write out the Fahrenheit to Celsius conversion table using a `for` loop.
 
 .. admonition:: Solution
    :class: toggle
@@ -202,7 +202,7 @@ can be any conditional statement, including key presses (but that requires some 
 
    **Writing our table for conversion using a `while` loop?**
 
-    Write out the Farenheit to Celsius conversion table using a `while` loop.
+    Write out the Fahrenheit to Celsius conversion table using a `while` loop.
 
 .. admonition:: Solution
    :class: toggle

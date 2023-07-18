@@ -1,12 +1,12 @@
 Intro to Python
 ---------------
 
-Python is an interpreted language that has become incredibily popular. Due to that 
+Python is an interpreted language that has become incredibly popular. Due to that 
 there are modules that will do just about anything. This makes Python a really
 powerful tool for writing code to analyse any number of problems.
 
 Python can be run on the command line, in a Jupyter notebook, in Google Colab, 
-as a standalone script, or even as a full GUI program. There are modules
+as a stand-alone script, or even as a full GUI program. There are modules
 for plotting (matplotlib), scientific algorithms (scipy), numerical algorithms
 (numpy) and GIS (gdal).
 
@@ -22,7 +22,7 @@ We want to calculate the height of a ball after time, t, which we can do using t
 where:
 
  * :math:`y(t)` is the height of the ball at time :math:`t`
- * :math:`v_0` is the initial velocity of tha ball (at :math:`t=0`), and
+ * :math:`v_0` is the initial velocity of the ball (at :math:`t=0`), and
  * :math:`g` is the acceleration due to gravity
 
 Let's work this out by hand for a ball thrown at 5 m/s, with :math:`g=9.81`, at :math:`t=0.5`
@@ -58,8 +58,8 @@ Great! Our first python code! Let's build this up to use variables. Type the fol
    vert_position = initial_velocity * time - (0.5 * gravity * time**2)
    print(vert_position)
 
-This code is, inessence, identical to the one above, but instead of *hardcoding* the numebrs, we've used 
-variables. The formula is now written in good, descriptive variable names, using spaces and parantheses to
+This code is, in essence, identical to the one above, but instead of *hard-coding* the numbers, we've used 
+variables. The formula is now written in good, descriptive variable names, using spaces and parentheses to
 separate the terms for readability. Not that exciting yet. What if we want to calculate the height for a
 bunch of times? Let's add a loop!
 
@@ -75,7 +75,7 @@ bunch of times? Let's add a loop!
 
 This is not the most elegant way to do this, but it works. You now have the height of the ball
 at time 0 to 0.9 in steps of 0.1. Note the indentation. In Python *whitespace* matters. It signifies 
-which statements are part of the `for` loop. You must be consistant with indentation or your
+which statements are part of the `for` loop. You must be consistent with indentation or your
 code will not run.
 
 .. admonition:: Practical exercise
@@ -94,7 +94,7 @@ code will not run.
           vert_position = initial_velocity * time - (0.5 * gravity * time**2)
           print(time, vert_position)
 
-   Let's edit that to produce some wierd indentation:
+   Let's edit that to produce some weird indentation:
 
    .. code-block:: python
 
@@ -156,7 +156,7 @@ Shall we plot this?
 .. image:: ../images/Python_ball_graph.png
 
 
-That's not bad for a few lines of code. You can't publish that graph (no axes labels, etc), but for
+That's not bad for a few lines of code. You can't publish that graph (no axes labels, etc.), but for
 your first Python program I think that's pretty good!
 
 In the above we have used the following Python features:

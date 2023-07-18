@@ -8,7 +8,7 @@ play Owner and Collaborator.
 
 .. hint::
 
-   **Practicing By Yourself**
+   **Practising By Yourself**
 
    If you're working through this lesson on your own, you can carry on by opening
    a second terminal window.
@@ -125,7 +125,7 @@ your browser to see the new commit.
 
     Remember that the name you give to a remote only exists locally. It's
     an alias that you choose - whether ``origin``\ , or ``upstream``\ , or ``fred`` -
-    and not something intrinstic to the remote repository.
+    and not something intrinsic to the remote repository.
 
     The ``git remote`` family of commands is used to set up and alter the remotes
     associated with a repository. Here are some of the most useful ones:
