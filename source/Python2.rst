@@ -1,2 +1,4 @@
-Python and R: part 2
-=====================
+Python: part 2
+===============
+
+In this next section of Python
