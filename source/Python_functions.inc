@@ -105,3 +105,164 @@ This function takes a value (Centrigrade) and converts it to Farenheit, returnin
 
 
 
+Function arguments
+...................
+
+A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).
+
+Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the funciton takes
+two keyword arguments:
+
+.. code-block:: python
+
+   def print_greeting(greeting, name):
+
+       print(greeting+", "+name+"!")
+
+       return
+
+   print_greeting("Hello", "Bryan")
+
+You can see that by specifying two arguments in the function decleration we have access to those values inside the function.
+What happens if the user supplies only a single argument, not two as we've asked? Try the code below:
+
+
+.. code-block:: python
+
+   def print_greeting(greeting, name):
+
+       print(greeting+", "+name+"!")
+
+       return
+
+   print_greeting("Hello")
+
+What error message did you get?
+
+..  admonition:: Check your answer
+    :class: toggle
+
+
+   .. code-block:: python
+     
+      TypeError     Traceback (most recent call last)
+      Cell In [1], line 7
+            3     print(greeting+", "+name+"!")
+            5     return
+      ----> 7 print_greeting("Hello")
+
+      TypeError: print_greeting() missing 1 required positional argument: 'name'
+      
+
+We can also write function that have default values.
+
+.. code-block:: python
+
+   def print_greeting(name, greeting="Hello"):
+
+       print(greeting+", "+name+"!")
+
+       return
+
+   print_greeting("Bryan")
+
+When running this, we can give the ``name`` argument and we get a default ``greeting``. We could also set the ``greeting`` ourselves:
+
+.. code-block:: python
+
+   def print_greeting(name, greeting="Hello"):
+
+       print(greeting+", "+name+"!")
+
+       return
+
+   print_greeting("Bryan", "Ey-up")
+
+However, you may note I've switched the order of the arguments around. What happens if we didn't?
+
+.. code-block:: python
+
+   def print_greeting(greeting="Hello", name):
+
+       print(greeting+", "+name+"!")
+
+       return
+
+   print_greeting("Bryan")
+
+..  admonition:: Check your answer
+    :class: toggle
+
+
+   .. code-block:: python
+     
+      Cell In [5], line 1
+        def print_greeting(greeting="Hello", name):
+                       ^
+      SyntaxError: non-default argument follows default argument
+
+Python tells us that we have a syntax error and to swap the arguments around.
+
+I mentioned earlier that you could pass an arbitrary number of arguments into a python function. This isn't used very often, but you will see it
+in a few places when using Python. Let's think about a function to add some numbers together:
+
+.. code-block:: python
+
+   def sum_numbers(x,y,z):
+      print("sum:",x+y+z)
+
+   sum_numbers(1,2,3)
+
+This prints:
+
+.. code-block:: bash
+
+   sum: 6
+
+What if we wanted to add 9 numbers togther? Or 1 million? This is where ``*args`` comes in. ``*args`` gives us an argument list of any length:
+
+.. code-block:: python
+
+   def sum_numbers(*numbers):
+      
+      sum = 0
+      for n in numbers:
+         sum = sum + n
+
+      print("sum:", sum)
+
+   sum_numbers(1,2,3)
+
+This gives us the same result as last time, but we can also do:
+
+.. code-block:: python
+
+   def sum_numbers(*numbers):
+      
+      sum = 0
+      for n in numbers:
+         sum = sum + n
+
+      print("sum:", sum)
+
+   sum_numbers(1,2,3)
+   sum_numbers(1,2,3,4,5,6,7,8,9,1000)
+   sum_numbers(5,7)
+
+Inside the function, the argument is represented by a tuple. We can therefore iterate over this and write code accordingly. We can also force
+keyword arguments using a similar approach called ``**kwargs``.
+
+.. code-block:: python
+
+    def intro(**data):
+        print("\nData type of argument:",type(data))
+
+        for key, value in data.items():
+            print("{} is {}".format(key,value))
+
+    intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
+    intro(Firstname="John", Lastname="Wood", Email="johnwood@nomail.com", Country="Wakanda", Age=25, Phone=9876543210)
+
+Note that the **kwargs requires a keyword (which can be anything) and a value (which can be anything). Inside the function this is presented as a dictionary.
+
+
