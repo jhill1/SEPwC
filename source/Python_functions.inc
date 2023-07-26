@@ -263,6 +263,6 @@ keyword arguments using a similar approach called ``**kwargs``.
     intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
     intro(Firstname="John", Lastname="Wood", Email="johnwood@nomail.com", Country="Wakanda", Age=25, Phone=9876543210)
 
-Note that the **kwargs requires a keyword (which can be anything) and a value (which can be anything). Inside the function this is presented as a dictionary.
+Note that the ``**kwargs`` requires a keyword (which can be anything) and a value (which can be anything). Inside the function this is presented as a dictionary.
 
 
