@@ -2,4 +2,5 @@ R: part 2
 ====================
 
 
+.. include:: R_functions.inc
 .. include:: R_libraries.inc
