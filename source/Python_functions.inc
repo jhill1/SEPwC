@@ -60,8 +60,8 @@ where we store the length in a variable, then use it.
 
    We call the `len()` function inside of the `print()` function.
 
-Writing your own functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Writing your own Python functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Whilst it's all well and good to use functions, you will need to write them too. Python allows you to create your own functions
 
@@ -105,8 +105,8 @@ This function takes a value (Centrigrade) and converts it to Farenheit, returnin
 
 
 
-Function arguments
-...................
+Function arguments in Python
+.............................
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).
 
