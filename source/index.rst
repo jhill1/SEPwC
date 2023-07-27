@@ -64,6 +64,7 @@ slip behind a little.
    Testing_code
    Software_development
    Python2
+   R2
    Python3
    Mini_courses
    Assessments
