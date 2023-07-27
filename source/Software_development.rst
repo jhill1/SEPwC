@@ -114,4 +114,7 @@ Test-driven development turns the development cycle around to put testing up-fro
 The tests are written immediately after requirements capture and before any code is written (so the test will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
 
 
+Design templates or patterns
+-----------------------------
 
+Common patterns of code structure seen a lot. 
