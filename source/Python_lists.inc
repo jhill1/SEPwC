@@ -119,3 +119,20 @@ Iterating over a list
 
 Two ways; as an object as indexing. Concept of zip looping
 
+Looping over lists
+~~~~~~~~~~~~~~~~~~~
+
+As we saw above python lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
+
+.. code-block:: Python
+
+   a_list = [1,2,3,4,5,6,7,8,9]
+
+   for i in range(0,len(a_list)):
+       print(i, a_list[i])
+
+The code above creates a temporary list of numbers that goes from 0 to 8. That temporary list is looped over and each loop the value is stored in the variable ``i``. We then use ``i`` as the index to access the list we want.
+
+Exercise: read docs for the range function to understand why it doesn't go from 0 to 9.
+
+This is a common design template in python code
