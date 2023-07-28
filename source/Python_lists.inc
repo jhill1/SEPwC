@@ -114,15 +114,10 @@ You use them like this:
 
 Exercises...
 
-Iterating over a list
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Two ways; as an object as indexing. Concept of zip looping
-
-Looping over lists
+Iterating over lists
 ~~~~~~~~~~~~~~~~~~~
 
-As we saw above python lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
+As we saw above and inthe introductory chapters, lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
 
 .. code-block:: Python
 
@@ -135,4 +130,27 @@ The code above creates a temporary list of numbers that goes from 0 to 8. That t
 
 Exercise: read docs for the range function to understand why it doesn't go from 0 to 9.
 
-This is a common design template in python code
+This is a common design template in Python code as it can give some good flexibility, including starting from a non-zero index, ending the iteration before the end of the list, looping over several lists of the same length or indexing in steps other than 1. However, it is somewhat cumbersome with nested parentheses due to nested functions. 
+
+An alternative way is to use the fact that a list is an ``Iterable`` object. Here, we specify the list after the ``in`` keyword in the loop. 
+
+.. code-block:: Python
+
+   a_list = [1,2,3,4,5,6,7,8,9]
+
+   for item in a_list:
+       print(item)
+
+Now ``item`` is a variable (so you can name it how you see fit), not an index, containing each list item, in order. This is much cleaner and more readable code. You have direct access to each item in the list without having to index the list (compare ``a_list[i]`` above to simply using ``item``).
+
+If you have multiple lists of the same length you can interate them over them simultaneously using the ``zip()`` functions:
+
+.. code-block:: Python
+
+   a_list = [1,2,3,4,5,6,7,8,9]
+   second_list = [11,12,13,14,15,16,17,18,19]
+
+   for i1, i2 in zip(a_list,second_list):
+       print(i1, i2)
+
+Python is such a flexible language there are other ways to iterate over lists, but the two ways above are the most common. 
