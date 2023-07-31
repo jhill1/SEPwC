@@ -29,15 +29,15 @@ slip behind a little.
    * - 2
      - Code basics, Thinking like a computer
    * - 3
-     - Revision control, Python or R 1
+     - Python or R 1, Debugging code,
    * - 4
-     - Python or R 1, Moving from spreadsheets to data
-   * - 5
-     - Debugging code, testing code
-   * - 6
      - Python or R 2
-   * - 7
+   * - 5
      - Python or R 3
+   * - 6 
+     - Revision control, Moving from spreadsheets to data, 
+   * - 7
+     - Testing code, Software development
    * - 8
      - Mini-courses
    * - 9
@@ -56,16 +56,17 @@ slip behind a little.
    Licences
    Code_basics
    Algorithms
-   Spreadsheets_data
-   Revision_control
    Python
    R
    Issues
-   Testing_code
-   Software_development
    Python2
    R2
    Python3
+   R3
+   Revision_control   
+   Spreadsheets_data
+   Testing_code
+   Software_development
    Mini_courses
    Assessments
    genindex
