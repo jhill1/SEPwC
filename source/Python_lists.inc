@@ -115,7 +115,7 @@ You use them like this:
 Exercises...
 
 Iterating over lists
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 As we saw above and inthe introductory chapters, lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
 
@@ -154,3 +154,5 @@ If you have multiple lists of the same length you can interate them over them si
        print(i1, i2)
 
 Python is such a flexible language there are other ways to iterate over lists, but the two ways above are the most common. 
+
+
