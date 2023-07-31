@@ -83,7 +83,7 @@ Rather than staying abstract, let's do something more concrete. Let's write a fu
 
 .. code-block:: python
 
-   def toFarenheit(Centrigrade):
+   def toFarenheit(Centigrade):
 
        F = 9.0/5.0*Centigrade + 32.0
 
@@ -94,7 +94,7 @@ This function takes a value (Centrigrade) and converts it to Farenheit, returnin
 
 .. code-block:: python
 
-   def toFarenheit(Centrigrade):
+   def toFarenheit(Centigrade):
 
        F = 9.0/5.0*Centigrade + 32.0
 
