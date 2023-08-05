@@ -77,7 +77,7 @@ The tests above have been manual in nature. Testing comes into it's own when it'
 
 Both R and Python have testing frameworks; modules/libraries that help set-up, run and tear-down all tests in your code. We'll cover each in turn, but skip to whichever language you've chosen.
 
-.. include:: unitest.inc
+.. include:: pytest.inc
 .. include:: testthat.inc
 
 
