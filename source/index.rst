@@ -53,7 +53,6 @@ slip behind a little.
     :caption: Contents:
 
     acknowledgements
-    Expectations
     How_a_computer_works
     Licences
     Code_basics
@@ -70,7 +69,6 @@ slip behind a little.
     Testing_code
     Software_development
     Mini_courses
-    Assessments
     genindex
 
 
