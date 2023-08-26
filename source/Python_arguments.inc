@@ -63,5 +63,57 @@ Within our script we access them as we would any other list:
    copy_from = sys.argv[1]
    copy_to = sys.argv[2]
 
+.. warning::
+
+   Security bugs in code are often due to user input not being **parsed** correctly. If your application 
+   interacts with a database, for example, and the user can input which field to search, it may be possible
+   to construct input which can then delete the database. You must always check what the user is giving you before
+   using it, especially when it comes to files, databases, or URLs. 
+
+Advanced command line interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Python has a number of modules that make command line parsing a lot easier and more functional. The most commonly used is
+``argparse``
+
+With ``argparse`` you define the options in your code and then ``argparse`` figures out how to get those from the ``sys.argv``. Moreover,
+the module will help with error messages, etc when the user gives incorrect arguments. 
+
+The core functionality of ``argparse`` is the ``ArgumentParser``
+
+.. code:: python
+
+   import argparser
+
+   parser = argparser.ArgumentParser(
+                        prog="Name",
+                        description="Brief one line of what the program does",
+                        epilog="Any text at the bottom of help, e.g. copyright"
+                        )
+
+Once an ArgumentParser is set-up you can then add optional and positional arguments to that.
+
+.. code:: python
+
+    parser.add_argument("filename"
+                        help="the file to read the data from") # a positional argument
+    parser.add_argument('-c', '--count'
+                        help="How many times to copy")         # option that takes a value
+    parser.add_argument('-v', '--verbose',
+                        action='store_true',
+                        help="Print progress")                 # on/off flag
+
+
+You can also specify which variable the argument is parsered into, the type, if an argument is required, if it should be a list
+and a lot more too.
+
+You then parse the argument and put them in variables as you see fit
+
+.. code:: python
+
+    args = parser.parse_args()
+    boundary_file = args.filename
+    polygon_file = args.polygon
+    default_PhysID = args.default_PhysID
 
 
