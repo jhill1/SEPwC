@@ -79,5 +79,5 @@ Both R and Python have testing frameworks; modules/libraries that help set-up, r
 
 .. include:: pytest.inc
 .. include:: testthat.inc
-.. include:: continuous_test.inc
+.. include:: continuous_testing.inc
 

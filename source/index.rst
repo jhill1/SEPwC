@@ -47,27 +47,31 @@ slip behind a little.
    * - 11
      - Assessment
 
+    
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+    :maxdepth: 1
+    :caption: Contents:
 
-   Expectations
-   How_a_computer_works
-   Licences
-   Code_basics
-   Algorithms
-   Python
-   R
-   Issues
-   Python2
-   R2
-   Python3
-   R3
-   Revision_control   
-   Spreadsheets_data
-   Testing_code
-   Software_development
-   Mini_courses
-   Assessments
-   genindex
+    acknowledgements
+    Expectations
+    How_a_computer_works
+    Licences
+    Code_basics
+    Algorithms
+    Python
+    R
+    Issues
+    Python2
+    R2
+    Python3
+    R3
+    Revision_control   
+    Spreadsheets_data
+    Testing_code
+    Software_development
+    Mini_courses
+    Assessments
+    genindex
+
+
 
