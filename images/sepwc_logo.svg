@@ -41,7 +41,7 @@
    fit-margin-bottom="2" /><metadata
    id="metadata2408"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs2406"><clipPath
      id="clipPath2462"
      clipPathUnits="userSpaceOnUse"><path
@@ -176,18 +176,7 @@
      height="1.3879803"><feGaussianBlur
        inkscape:collect="always"
        stdDeviation="4.9566109"
-       id="feGaussianBlur1447" /></filter></defs><path
-   style="fill:none;fill-opacity:1;stroke:#ffff9c;stroke-width:1.70183825;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-   id="path595"
-   sodipodi:type="arc"
-   sodipodi:cx="143.53258"
-   sodipodi:cy="115.55806"
-   sodipodi:rx="112.64908"
-   sodipodi:ry="112.64908"
-   sodipodi:start="3.1415927"
-   sodipodi:end="0"
-   d="M 30.883499,115.55805 A 112.64908,112.64908 0 0 1 143.53258,2.9089813 112.64908,112.64908 0 0 1 256.18166,115.55806"
-   sodipodi:open="true" /><g
+       id="feGaussianBlur1447" /></filter></defs><g
    transform="matrix(0.522275,0,0,-0.522275,-252.34125,266.16934)"
    id="g2456"><g
      id="g2458"><g
@@ -200,6 +189,7 @@
      y="0"
      font-size="7.92px"
      id="tspan2468">2008 Jun 12 04:45:24</tspan></text>
+
 
 
 
@@ -219,6 +209,7 @@
 
 
 
+
 </g></g></g><g
    transform="matrix(0.522275,0,0,-0.522275,-252.34125,266.16934)"
    id="g8970"><g
@@ -235,9 +226,10 @@
 
 
 
+
 </g></g></g><g
    id="g1631"
-   transform="translate(-17.375074,-40.154366)"
+   transform="translate(-17.375072,-21.336114)"
    style="opacity:0.51799999"><g
      id="ce"
      transform="matrix(0.5743125,-0.1772375,0.1772375,0.5743125,94.4825,17.9925)"><path
@@ -270,10 +262,11 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#419416;fill-opacity:1;stroke:#000000;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="text1635"
-   x="-4.1999969"
+   x="142.675"
    y="60.625107"><tspan
-   id="tspan1633"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:53.33333206px;font-family:'Linux Biolinum Keyboard O';-inkscape-font-specification:'Linux Biolinum Keyboard O Bold';text-align:center;text-anchor:middle;fill:#419416;fill-opacity:1;stroke:#000000;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">SEPwC</tspan></text>
+     id="tspan1633"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:53.33333206px;font-family:'Linux Biolinum Keyboard O';-inkscape-font-specification:'Linux Biolinum Keyboard O Bold';text-align:center;text-anchor:middle;fill:#419416;fill-opacity:1;stroke:#000000;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">SEPwC</tspan></text>
+
 
 
 <g

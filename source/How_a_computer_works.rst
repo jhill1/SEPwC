@@ -219,7 +219,161 @@ We saw this already for Windows, but we need to give an argument (this is the di
 
 Great! We can now navigate down the filesystem. What about going up a directory?
 
-.. GUI way. Need screenshots of this and video
+In all OSes the ``..`` is the parent directory to where we currently are. Similarly, ``.`` is the current directory. So to go up
+one level we run the command:
+
+.. code-block:: bash
+   :caption: |all|
+
+    cd ..
+
+We can traverse up and down in quite complex ways using this. Let's imagine we want to go up two directories, then down into
+a subfolder:
+
+.. code-block:: bash
+   :caption: |maclin|
+
+    cd ../../subfolder
+
+.. code-block:: bat
+   :caption: |win|
+
+    cd ..\..\subfolder
+
+.. warning::
+
+    Windows drives, labelled A, B, C, D, etc are a small 'gotcha' when using ``cd``. Try this (assuming 
+    you have two drive letters available):
+
+    .. code-block:: bat
+       :caption: |win|
+
+        cd H:Documents
+
+    And nothing will happen. The prompt will still say ``C:``. The command has worked, but Windows wants you 
+    to swap drives first. You have to type the drive letter to do so:
+
+    .. code-block:: bat
+       :caption: |win|
+
+       H:
+
+    You will then find you prompt has switch to ``H:\Documents``. This has caught me out a number of times.
+       
+
+.. admonition:: Practical exercise
+
+    **Navigating a filesystem**
+    
+    Download `this zip file <https://github.com/jhill1/SEPwC/raw/master/code_examples/cli_example.zip>`_ 
+    to your Home directory. Extract it.
+
+    What we are going to do is use the graphical and CLI navigation side-by-side to show how to navigate a filesystem.
+
+    Open up the Windows file explorer, Nautilus (or similar on Linux), or Finder on Mac. You should see your home directory.
+
+    Assuming the zip file has been extracted you should see a folder called ``cli_example`` like this image:
+
+    .. image:: ../images/filesystem/filesystem_gui_ex1_1.png
+    :alt: imgae of files and folders
+
+    Double-click the ``cli_example`` folder
+
+    In a command line:
+
+    .. code-block:: bat
+    :caption: |win|
+
+        cd cli_example
+        dir
+        pwd
+
+    .. code-block:: bash
+    :caption: |maclin|
+
+        cd cli_example
+        ls
+        pwd
+
+    You should see three folders both in the command line and the GUI.
+
+    .. image:: ../images/filesystem/filesystem_gui_ex1_2.png
+    :alt: imgae of files and folders
+
+    Let's now go a few folders down. Double-click on ``data_files``, then ``sedimentary_data``, then ``site1``. You 
+    should see:
+
+    .. image:: ../images/filesystem/filesystem_gui_ex1_3.png
+    :alt: imgae of files and folders
+
+    Let's do the the same in the command line:
+
+    .. code-block:: bat
+    :caption: |win|
+
+        cd data_files\sedimentary_data\site1
+        dir
+        pwd
+
+    .. code-block:: bash
+    :caption: |maclin|
+
+        cd data_files/sedimentay_data/site1
+        ls
+        pwd
+
+    Note that we can put several directories together. We can do the same to go up, then back down directories:
+
+    .. code-block:: bat
+    :caption: |win|
+
+        cd ..\gis_data\site_locations
+        dir
+        pwd
+
+    .. code-block:: bash
+    :caption: |maclin|
+
+        cd ../gis_data/site_locations
+        ls
+        pwd
+
+    And in the GUI, if you go up one directory, then into ``gis_data``, then ``site_locations`` you should see:
+
+    .. image:: ../images/filesystem/filesystem_gui_ex1_4.png
+    :alt: imgae of files and folders
+
+    Feel free to continue to explore the folders, using both the GUI and CLI to navigate. Remember to use ``pwd`` to
+    find where you are if you need to.
+
+
+.. admonition:: Thought exercise
+
+    **Navigating a filesystem**
+    
+    Imagine the following filesytem of folders:
+
+    .. image:: ../images/filesystem_challenge.png
+    :alt: An example filesytem of directories
+
+    The output of ``pwd`` is ``Figures``. (For each question we start here!)
+
+    * Question 1: How would we move to the ``papers`` folder?
+    * Quesiton 2: If I run the command ``cd ../../work``, what would happen?
+    * Question 3: I run the commands ``cd ../../../``, followed by ``cd work/backup``. Where am I now?
+    * Quesiton 4: In one command, move to the ``2021-01-27`` folder from ``Figures``
+    * Question 5: how would the above be simpler if ``Users`` was at the root of the filesystem?
+        
+.. admonition:: Solution
+    :class: toggle
+    
+    * Question 1: ``cd ../../`` or ``cd ..\..\`` in Windows
+    * Question 2: An error would occur as we would move up two directories to ``papers``, then try and move into the ``work`` folder which does not exist
+    * Question 3: In the ``backup`` directory.
+    * Question 4: ``cd ../../../work/backup/2021-01-07``
+    * Question 5: If Users was at the root, we could start from there, giving an absolute path, e.g. ``cd /Users/work/backup/2021-01-07``
+
+
 
 Absolute vs Relative paths
 ---------------------------
