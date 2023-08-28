@@ -275,21 +275,21 @@ a subfolder:
     Assuming the zip file has been extracted you should see a folder called ``cli_example`` like this image:
 
     .. image:: ../images/filesystem/filesystem_gui_ex1_1.png
-    :alt: imgae of files and folders
+       :alt: image of files and folders
 
     Double-click the ``cli_example`` folder
 
     In a command line:
 
     .. code-block:: bat
-    :caption: |win|
+       :caption: |win|
 
         cd cli_example
         dir
         pwd
 
     .. code-block:: bash
-    :caption: |maclin|
+       :caption: |maclin|
 
         cd cli_example
         ls
@@ -298,25 +298,25 @@ a subfolder:
     You should see three folders both in the command line and the GUI.
 
     .. image:: ../images/filesystem/filesystem_gui_ex1_2.png
-    :alt: imgae of files and folders
+       :alt: image of files and folders
 
     Let's now go a few folders down. Double-click on ``data_files``, then ``sedimentary_data``, then ``site1``. You 
     should see:
 
     .. image:: ../images/filesystem/filesystem_gui_ex1_3.png
-    :alt: imgae of files and folders
+       :alt: image of files and folders
 
     Let's do the the same in the command line:
 
     .. code-block:: bat
-    :caption: |win|
+       :caption: |win|
 
         cd data_files\sedimentary_data\site1
         dir
         pwd
 
     .. code-block:: bash
-    :caption: |maclin|
+       :caption: |maclin|
 
         cd data_files/sedimentay_data/site1
         ls
@@ -325,14 +325,14 @@ a subfolder:
     Note that we can put several directories together. We can do the same to go up, then back down directories:
 
     .. code-block:: bat
-    :caption: |win|
+       :caption: |win|
 
         cd ..\gis_data\site_locations
         dir
         pwd
 
     .. code-block:: bash
-    :caption: |maclin|
+       :caption: |maclin|
 
         cd ../gis_data/site_locations
         ls
@@ -341,7 +341,7 @@ a subfolder:
     And in the GUI, if you go up one directory, then into ``gis_data``, then ``site_locations`` you should see:
 
     .. image:: ../images/filesystem/filesystem_gui_ex1_4.png
-    :alt: imgae of files and folders
+       :alt: image of files and folders
 
     Feel free to continue to explore the folders, using both the GUI and CLI to navigate. Remember to use ``pwd`` to
     find where you are if you need to.
@@ -353,8 +353,8 @@ a subfolder:
     
     Imagine the following filesytem of folders:
 
-    .. image:: ../images/filesystem_challenge.png
-    :alt: An example filesytem of directories
+    .. image:: ../images/filesystem-challenge.png
+       :alt: An example filesytem of directories
 
     The output of ``pwd`` is ``Figures``. (For each question we start here!)
 
