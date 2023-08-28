@@ -270,7 +270,7 @@ a subfolder:
     **Navigating a filesystem**
     
     Download `this zip file <https://github.com/jhill1/SEPwC/raw/master/code_examples/cli_example.zip>`_ 
-    to your Home directory. Extract it.
+    to your Home directory. Extract it. Keep the original zip file (or make a note to download again later).
 
     What we are going to do is use the graphical and CLI navigation side-by-side to show how to navigate a filesystem.
 
@@ -568,10 +568,14 @@ So what are the basic commands you should know? Here's a list:
  - del
  - rmdir
 
+.. Attention::
+   
+   ``rm``, ``del``, and ``rmdir`` delete files permanently. They do *not* move the into Trash or similar. 
+
 
 .. admonition:: Practical exercise
 
-    **Find what the basc commands do**
+    **Find what the basic commands do**
 
     For the list of commands above, search for each one, or use the help system, and work out what they do. 
     Have a look through the options too. Some might not be that useful and you may neve need them, but some
@@ -581,10 +585,92 @@ So what are the basic commands you should know? Here's a list:
 
     **Using some basic commands**
 
-    
+    We're going to carry out some file operations in the GUI file manager first, then do the exact same commands in the command line
+    using the zip file and folder we extracted earlier.
 
-.. Attention::
-   
-   ``rm``, ``del``, and ``rmdir`` delete files permanently. They do *not* move the into Trash or similar. 
+    *Using the GUI*
+
+    * Navigate to ``cli_example/data_files/gis_data/site_locations``
+    * make a new directory ``site_2``
+    * Copy all the files there **except** site1.csv to ``site_2`` directory
+    * rename all the files from ``site_1.*`` to ``site_2.*``
+
+    You should have something like this:
+
+    .. image:: ../images/filesystem/commands_exercise_1.png
+       :alt: image of files and folders
+
+    * Navigate to ``cli_example/data_files/notes``
+    * Delete the ``notes.txt``
+
+    * Navigate to ``cli_examples/documents/notes``
+    * Move the ``notes.txt`` file one direcotry up to ``cli_example\documents``
+    * Delete the notes folder
+
+    .. image:: ../images/filesystem/commands_exercise_2.png
+       :alt: image of files and folders
+
+    * Rename ``cli_example`` to ``cli_example_gui``
+    
+    Now reset, by extract/unzip-ing the ``cli_example.zip`` (to make a new version of the original folder).
+
+    *Using the CLI*
+
+    Do the same as above, but using the command line only. The only exception is the last bullet point where you should rename to
+    ``cli_example_cli``
+    
+.. admonition:: Solution
+    :class: toggle
+    
+    .. code-block:: bash
+       :caption: |maclin|
+
+        cd cli_example/data_files/gid_data/site_locations
+        mkdir site_2
+        cp site_1.* site_2
+        cd site_2
+        mv site_1.prj site_2.prj
+        mv site_1.qpj site_2.qpj
+        mv site_1.cpg site_2.cpg
+        mv site_1.dbf site_2.dbf
+        mv site_1.shp site_2.shp
+        mv site_1.shx site_2.shx
+        cd ../../../notes
+        rm notes.txt
+        cd ../../documents/
+        mv notes/notes.txt .
+        rmdir notes
+        cd ../
+        mv cli_example cli_example_cli
+
+    .. code-block:: bat
+       :caption: |win|
+
+        cd cli_example\data_files\gid_data\site_locations
+        md site_2
+        copy site_1.* site_2
+        cd site_2
+        ren site_1.prj site_2.prj
+        ren site_1.qpj site_2.qpj
+        ren site_1.cpg site_2.cpg
+        ren site_1.dbf site_2.dbf
+        ren site_1.shp site_2.shp
+        ren site_1.shx site_2.shx
+        cd ..\..\..\notes
+        del notes.txt
+        cd ..\..\documents
+        ren notes\notes.txt .
+        rmdir notes
+        cd ..\
+        ren cli_example cli_example_cli
+
+
+..  admonition:: Learn More
+    :class: toggle
+
+    In the above example, the renaming of files with the same name, but different extensions is a little cumbersome. It was fine with six
+    files, but what if there were 100 files. On the command line that's annoying. In the GUI it would be very annoying! In Linux there is the 
+    ``rename`` command that can do it in one go. You can also write a small ``bash`` script to do it in a loop. In windows you can download tools
+    that do this or, like Linux, write a short script to do it. This shows the power of the command line and scripting.
 
 
