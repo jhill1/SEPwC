@@ -26,7 +26,7 @@ Reading CSV in R
 CSV files are handled in R without an additional libraries. `The full documentation can be found online 
 <https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html>`_ but some brief examples:
 
-.. code:: R
+.. code-block:: R
 
 
     # Read CSV into DataFrame
@@ -55,7 +55,7 @@ quotes and headers making it much easier than trying to parse data ourselves. Yo
 the `full documentation for the CSV module online <https://docs.python.org/3/library/csv.html>`_
 but briefly we can load data in using code like this:
 
-.. code:: python
+.. code-block:: python
 
     import csv
     
@@ -73,7 +73,7 @@ EXAMPLE
 Alternatively, you can read the data as a dictionary. Here we assume the CSV has a header:
 
 
-.. code:: python
+.. code-block:: python
 
     import csv
 

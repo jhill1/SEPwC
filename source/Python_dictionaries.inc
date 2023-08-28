@@ -39,8 +39,8 @@ In addition to the ``{}`` construction you can also use ``dict`` construction:
    telephone = dict(Bob=3452345, Mildred=53235)
    # works for simple string keys
 
-Looping with dictionaries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Looping with Python dictionaries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Like lists, dictionaries are at their most powerful in loops. Also like lists there are a number of ways of looping over them.
 

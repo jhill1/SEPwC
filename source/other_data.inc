@@ -24,7 +24,7 @@ XML
 XML (eXtensible Markup Language) is a tree-structed, tag-based format that is human and machine readable but can also 
 contain binary data. An example:
 
-.. code:: xml
+.. code-block:: xml
     
     <employees>
       <employee>
@@ -46,7 +46,7 @@ JSON
 JSON (JavaScript Object Notation) is another text-based format that is human and machine readable. It is 
 similar in structure to a dictionary.
 
-.. code:: json
+.. code-block:: json
 
     {"employees":[
       { "firstName":"John", "lastName":"Doe" },

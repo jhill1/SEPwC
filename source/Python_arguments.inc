@@ -5,14 +5,14 @@ The simplest user-facing scripts/software use the Command Line Interface (CLI) t
 The CLI allows the user to pass options to a script as they execute. We have already used these elsewhere
 in the course, for example:
 
-.. code:: bash
+.. code-block:: bash
 
    ls -l
 
 which is the command to list things, ``ls``, in a Unix shell with the option supplied to make it a table ``-l``.
 Similaraly, we've covered:
 
-.. code:: bash
+.. code-block:: bash
 
    cp -r dir1 dir2
 
@@ -26,13 +26,13 @@ Python and the command line
 
 When you run a Python script, with some arbitrary text after:
 
-.. code:: bash
+.. code-block:: bash
 
    python arg_script.py arg1 arg2 arg3
 
 that text is passed to the ``sys`` module in Python. Let's create this simple script, named ``arg_script.py``
 
-.. code:: bash
+.. code-block:: bash
 
    import sys
 
@@ -41,13 +41,13 @@ that text is passed to the ``sys`` module in Python. Let's create this simple sc
 
 Now run that on the command line.
 
-.. code:: bash
+.. code-block:: bash
 
    python arg_script.py arg1 arg2 arg3
 
 Your output is:
 
-.. code:: bash
+.. code-block:: bash
 
     Length: 4 
     Argument List: ['arg_script.py', 'arg1', 'arg2', 'arg3']
@@ -56,7 +56,7 @@ The arguments are stored in ``sys.argv``. The first is always the name of the sc
 are what the user has given. These could be files or options of some kind (e.g. keywords).
 Within our script we access them as we would any other list:
 
-.. code:: python
+.. code-block:: python
 
    import sys
 
@@ -81,7 +81,7 @@ the module will help with error messages, etc when the user gives incorrect argu
 
 The core functionality of ``argparse`` is the ``ArgumentParser``
 
-.. code:: python
+.. code-block:: python
 
    import argparser
 
@@ -93,7 +93,7 @@ The core functionality of ``argparse`` is the ``ArgumentParser``
 
 Once an ArgumentParser is set-up you can then add optional and positional arguments to that.
 
-.. code:: python
+.. code-block:: python
 
     parser.add_argument("filename"
                         help="the file to read the data from") # a positional argument
@@ -109,7 +109,7 @@ and a lot more too.
 
 You then parse the argument and put them in variables as you see fit
 
-.. code:: python
+.. code-block:: python
 
     args = parser.parse_args()
     boundary_file = args.filename

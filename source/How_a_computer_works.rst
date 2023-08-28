@@ -42,7 +42,9 @@ Macs use Apple File System (APFS), Windows uses NTFS, Linux uses
 ext4 or similar.
 
 The OS then stores files on its filesystem. Each OS has different characteristics and ways of 
-storing your files. This we do care about. We'll go through each OS in turn.
+storing your files. This we do care about. As we will be writing software that will load in data from 
+files at some point, we need to understand how to access files and hence, we need to 
+understand the filesystem for he OS we're using. We'll go through each OS in turn.
 
 Windows
 ^^^^^^^
@@ -51,12 +53,16 @@ Windows organises files into drives. Drives are usually physical drives, but can
 (i.e. divide your 1 Tb drive into a 250 Gb drive and a 750 Gb drive). Drives are given letters, A:, B:, C:, etc. C: is
 the root drive where Windows actually lives, along with your programs (apps) and your data and files.
 
-Exercise: Why C:? What's wrong with A? Google and find out.
+.. admonition:: Practical exercise
 
-..  admonition:: Learn more
+    ** Why C:?**
+    What's wrong with A? Google and find out.
+
+
+..  admonition:: Solution
     :class: toggle
 
-    A: and B: were reserved for floppy disks, which is what MSDOS computers generally had.
+    A: and B: were reserved for floppy disks, which is what early MSDOS computers generally had.
 
 From the drive, folders are separated with a '\' symbol. Software is generally installed
 in ``C:\Program Files`` (or ``C:\Program Files (x86)`` for older software). Your documents are
@@ -93,8 +99,6 @@ Like Linux, MacOS is case sensitive.
 
 Exercises
 ^^^^^^^^^
-
-https://github.com/kai687/sphinxawesome-theme/issues/939
 
 As we have to deal with multiple OSes, from here we will designate sections with 
 symbols.
@@ -535,6 +539,14 @@ Linux ``-h`` or ``--help`` is used. You can also use the help that comes with
 the OS, so on Windows ``help copy`` will display the manual page for the ``copy``
 command. On MacOS/Linux ``man cp`` will do the same.
 
+Why should we care about this? Many higher-level langauges like Python and R can move, copy, 
+create, and delete files. Their functions to do this are based heavily on the command line 
+commands to do the same thing. By understanding how the commands built into the OS we're using, we
+simplify somethings later. Moreover, many tools we will use later to help use develop better software
+(like revision control) are also based on these commands. Finally, by getting a better 
+understanding of how the computer works, we can be more efficient at using one and hence get
+more done when programming.
+
 So what are the basic commands you should know? Here's a list:
 
 |maclin|
@@ -556,7 +568,20 @@ So what are the basic commands you should know? Here's a list:
  - del
  - rmdir
 
-Exercise: practice on those commands
+
+.. admonition:: Practical exercise
+
+    **Find what the basc commands do**
+
+    For the list of commands above, search for each one, or use the help system, and work out what they do. 
+    Have a look through the options too. Some might not be that useful and you may neve need them, but some
+    very useful!
+
+.. admonition:: Practical exercise
+
+    **Using some basic commands**
+
+    
 
 .. Attention::
    
