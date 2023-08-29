@@ -24,8 +24,8 @@ create something you own the copyright. You don't have to do anything to get cop
 except be the author or creator of the content. Authors generally place a copyright
 notice on the work though, so something like:
 
-Copyright lasts for 50 years and protects the author from someone stealing their work.
-This page has a simple explanation of UK copyright law. [https://www.gov.uk/copyright#:~:text=You%20get%20copyright%20protection%20automatically,work%2C%20including%20illustration%20and%20photography]
+Copyright lasts for 50 years (or 75 for music) and protects the author from someone stealing their work.
+`This page has a simple explanation of UK copyright law. <https://www.gov.uk/copyright>`_
 
 Separately, licences tell you what you can do with some code (or image, or text). For 
 commercial software, the licence will tell you you cannot resell, give away, etc.
@@ -65,8 +65,54 @@ Common permissive licences include:
  * Berkley Source Distribution (BSD)
  * MIT
 
+.. admonition:: Practical exercise
 
-Exercise: write down basic terms for 2 permissive and 2 copyleft licences. Use Wikipedia.
+    **Licences**
+    
+    Write down some restrictions for 2 permissive and 2 copyleft licences. Use Wikipedia.
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    * Apache: Permissive licence. Restriction is to preserve copyright, trademark and attribution
+      notices.
+    * BSD: Permissive. Restriction is to preserve copyright and the notice. Also had to show this
+      with advertising. Spawned a number of similar licences without that clause.
+    * MIT: Same above Apache in most respects!
+    * GPL: Copyleft. All software using your must be released under similar terms. 
+      You can modify, share, run without restrictions.
+    * LGPL: As above, but if you use a LGPL code in proprietry software and modify it you 
+      must release that modification. You don't have to release your proproetry software
+      as copyleft though.
+    * CC: A number of different licences that can allow share-alike, acknowledgement only or non-commercial use.
+    * MPL: Somewhere between GPL and Apache, so similar to LGPL. You can use the software in proprietry
+      software, but you need to make it available.
+
+
+.. admonition:: Practical exercise
+
+    **Licences**
+    
+    Find the licence for the following software:
+    
+    * Ubuntu
+    * MacOs
+    * Google Chrome
+    * R
+    * Python
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    * Ubuntu: `A mix <https://ubuntu.com/legal/intellectual-property-policy>`_. 
+      Ubuntu itself is a bespoke licence. The various bits of software in Ubuntu have their own licences.
+    * MacOs: `Bespoke <https://www.apple.com/uk/legal/sla/>`_, with some terms to prevent 
+      reverse engineering, and running on non-Apple branded hardware!
+    * Google Chrome: Freeware. It is based on the open source Chromium which is under BSD.
+    * R: GPL3/GPL2. 
+    * Python: `PSF <https://docs.python.org/3/license.html>`_, which is GPL compatible. 
 
 
 Adding a licence to your code
@@ -79,5 +125,4 @@ Copyright |copy| 2023 by Jon Hill. CC-BY-SA.
 
 You then include the full licence in your distribution.
 
-Exercise: find the licence type for some popular software
 
