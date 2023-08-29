@@ -28,16 +28,17 @@ or any other thing that can be defined.
 **Conditionals**: you often run a bit of code if a certain condition is met, for example if the variable contains a number greater than 5, do this, otherwise do that.
 This creates a logic flow to your code and allows decisions to be made.
 
-**Functions**: if you find yourself doing the same few line of code again, and again, we don't type them out repeatedly, we instead create a function which 
-we can call every time we want to run those lines. Functions take input (called arguments) and return data back to the main program (where you can store it
-in a variable, for example).
+**Functions**: if you find yourself doing the same few line of code again, and again, we don't type them out repeatedly, we instead 
+create a function which we can call every time we want to run those lines. Functions take input (called arguments) and 
+return data back to the main program (where you can store it in a variable, for example).
 
 
 Defining a variable
 --------------------
 
-A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time. In compiled language you need to decide
-up-front which variables you need. Variables can change what they store throughout the code.
+A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time.
+In compiled language you need to decide up-front which variables you need. Variables can change what they store throughout the code, 
+including the type of data they store.
 
 Some examples:
 
@@ -135,18 +136,51 @@ Bad variables:
    rs
    mrgr
 
-The first list is clear with little doubt what that variable contains. The second list is not that helpful. Is temp temporary or temperature? chemdat might be OK, but a bit hard 
-to read. top is not helpful, topography or the top of something? x and rs could be anything! In 5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
-always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is reasonable shorthand for maximum, but others would disagree with me on that!
+The first list is clear with little doubt what that variable contains. The second list is not that helpful.
+Is temp temporary or temperature? chemdat might be OK, but a bit hard 
+to read. top is not helpful, topography or the top of something? x and rs could be anything! In 
+5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
+always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is reasonable shorthand 
+for maximum, but others would disagree with me on that!
+
+
+.. admonition:: Thought exercise
+
+    **Datatypes**
+    
+    What would make a good variable name for the following?
+
+    * A list of student names
+    * A single student name
+    * grain size data for a single location
+    * A list of the above grain size data
+    * sea surface temperature
+    * the point-by-point trakectory of an object
+    * an input filename supplied by the user
+
+..  admonition:: Solution
+    :class: toggle
+
+    These are suggestions!
+
+    * student_names
+    * name (or student_name)
+    * grain_size
+    * grain_sizes
+    * sea_surface_temperature (or possibly sst as that is a standard acronym)
+    * trajectory
+    * input_filename
 
 
 Datatypes
 ---------
 
-The variables we create can store any kind of data. In interpreted languages that can even change throughout the code. In compiled language you often have 
+The variables we create can store any kind of data. In interpreted languages that can even change throughout the 
+code. In compiled language you often have 
 to fix the kind of data up front. That kind of data is the datatype.
 
-Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), a string ("like this one") a boolean (true or false). We can also make up 
+Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), 
+a string ("like this one") a boolean (true or false). We can also make up 
 our own datatypes! We can take the basic kinds and join them together, so for example, we can have a "list" datatype, which can contain
 a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could then make lists of lists, which we can think of as a table:
 
@@ -157,6 +191,31 @@ a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could th
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
 objects. For now, we're going to focus on the basic datatypes and will revisit this idea later on (as R and Python have 
 different names for some of them).
+
+.. admonition:: Thought exercise
+
+    **Datatypes**
+    
+    What kind of data are the following? (They will be one of interger, float, string, character or list)
+
+    * 1.0
+    * 1
+    * 1 divded by 2
+    * Hello
+    * 42e-45
+    * @
+    * 4, 56, 2345.23423, 324, 45.34
+
+..  admonition:: Solution
+    :class: toggle
+
+    * 1.0: float
+    * 1: integer
+    * 1 divided by 2: float (0.5)
+    * Hello: string
+    * 42e-45: float, 0.00000...42 
+    * @: character
+    * 4, 56, 2345.23423, 324, 45.34: list (of floats and integers)
 
 
 Operations
@@ -192,6 +251,33 @@ operations so "add" works on multiple data types, for example:
 Which will do what you think it does and put "hello world" into complete_string. Which 
 symbol is used depends on the language and not all languages can do this.
 
+.. admonition:: Thought exercise
+
+    **Datatypes**
+    
+    What is the answer to the following operations?
+
+    .. code-block:: 
+
+        var_1 = 5
+        var_2 = 10
+        var_3 = 20
+
+        ? = var_1 + var_2
+        ? = var_1 * var_1
+        ? = var_3 / var_1
+        ? = ((var_3 / var_1) * var_1) + var_2
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    * 15
+    * 25
+    * 2
+    * 20
+
+
 Booleans and Logic
 ------------------
 
@@ -225,6 +311,39 @@ Will print:
 
    True
    False
+
+
+.. admonition:: Thought exercise
+
+    **Datatypes**
+    
+    What is the answer to the following boolean operations?
+
+    .. code-block:: 
+
+        var_1 = 5
+        var_2 = 10
+        var_3 = 20
+
+        ? = var_1 < var_2
+        ? = var_3 < var_2 / var_1
+        ? = var_3 == var_1
+        ? = var_3 < var_2 && var_2 > var_1
+        ? = var_3 < var_2 || var_2 < var_1
+        ? = var_1 >= 5
+        ? = var_3 <= var_2 / 2
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    * False
+    * False
+    * False
+    * True
+    * False
+    * True
+    * True
 
 
 Outputs
@@ -370,6 +489,49 @@ So our raster grid now contains.
 | 4 8 12 16
 | 5 10 15 20
 
+
+.. admonition:: Thought exercise
+
+    **Loops**
+    
+    What's the largest number printed out in this code?
+
+    .. code-block:: 
+
+        max_x = 3
+        max_y = 4
+        for i < max_x
+            for j < max_y
+                print(i*j)
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    6. The loop will go:
+    .. line-block::
+    
+        i = 1, j = 1
+        i = 1, j = 2
+        i = 1, j = 3
+        i = 2, j = 1
+        i = 2, j = 2
+        i = 2, j = 3
+
+
+.. admonition:: Thought exercise
+
+    **Loops**
+    
+    How many nested loops do you need to traverse all values in a three-dimensional array?
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    Three. One per dimension. 
+
+
 Conditionals
 ------------
 
@@ -422,6 +584,36 @@ This is *exactly* equivalent to our first example above (note the *not* and the 
 
 In all languages you will find things like is equal to (for example ==), is less than, greater than, less than or equal to, etc..
 Most languages have some form of "or" and "and" operations. 
+
+
+.. admonition:: Thought exercise
+
+    **Conditionals**
+    
+    Which statement will be printed out?
+
+    .. code-block:: 
+
+        max_x = 3
+        max_y = 4
+        if max_x > 3
+            print("Hi!")
+        else if max_x < 4 && max_y <4
+            print("Hello!")
+        else if max_x == 3
+            print("Hola!")
+        else if max_y == 4
+            print("Hej!")
+        else
+            print("Bonjour!")
+
+..  admonition:: Solution
+    :class: toggle
+
+    Hola! will be printed. The first if is not true, so we move to the next, which is also not true.
+    The third is true, so we go inside that conditional and hence print("Hola!") is executed. The forth 
+    statement is also true, but the code will not enter that block as it is par tof the same ``if..else`` block.
+    The ``else`` would be executed if none of the satements were true.
 
 
 Functions
