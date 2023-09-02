@@ -77,7 +77,7 @@ An example is something like this:
             return complex_zero
         ...
 
-The above function, `complex` returns a complex number. The docstring, delimited by the three " marks states
+The above function, ``complex`` returns a complex number. The docstring, delimited by the three ``"`` marks states
 what the function does, what the arguments are. You may also add what is returned (though here, it's obvious!).
 
 What to comment (Python)
@@ -132,7 +132,7 @@ You should also avoid comments that simply repeat the code:
 
     return a  # Returns a
 
-That comments adds nothing to the understanding. If `a` was a proper variable name, e.g. `list_of_cells` then even adding a comment becomes somewhat 
+That comments adds nothing to the understanding. If ``a`` was a proper variable name, e.g. ``list_of_cells`` then even adding a comment becomes somewhat 
 redundant. Add a docstring to the top of a function and there is no need at all to comment the return statement.
 
 The best hint for comments is to write them at the top of code blocks:

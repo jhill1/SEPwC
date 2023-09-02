@@ -36,14 +36,14 @@ How do we write a program that prints out such a statement, based on that input?
      - Arctic desert
 
 So we need to be able to make a decision, based on those the variables, temperature and humidity. 
-This is where `if` statements come in.
+This is where ``if`` statements come in.
 
 Python `if` statement
 ~~~~~~~~~~~~~~~~~~~~~
 
-The `if` statement consists of an `if` condition, followed by zero or more `elif` conditions. A final `else`
-statement can be used to capture the situation where everything is `False`.
-In general, we can put together multiple conditions. Only the first condition that is `True` is executed.
+The ``if`` statement consists of an ``if`` condition, followed by zero or more ``elif`` conditions. A final ``else``
+statement can be used to capture the situation where everything is ``False``.
+In general, we can put together multiple conditions. Only the first condition that is ``True`` is executed.
 
 .. code-block:: python
 
@@ -80,9 +80,10 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 
 .. admonition:: Practical exercise
 
-   **Add an `else` block**
+   **Add an ``else`` block**
 
-    Amend the example below to add an `else` block to print something if humidity is not "high"
+    Amend the example below to add an ``else`` block to print a message about not understanding the input
+    if humidity is not "high"
 
 .. admonition:: Solution
    :class: toggle
@@ -105,7 +106,7 @@ Not the best of code, engineering-wise, but it will work. Try it out.
       Don't understand HIGH
 
 We now need to do all combinations, with some logic to decide a few things. There are (as always!) 
-a number of ways of doing this. This is using `elif` and boolean operators:
+a number of ways of doing this. This is using ``elif`` and boolean operators:
 
 .. code-block:: python
 
@@ -124,16 +125,16 @@ a number of ways of doing this. This is using `elif` and boolean operators:
       print("I don't understand the inputs")
       print("Temperature: ", temperature)
       print("Humidity: ", humidity)
-      print("Both should be `high` or `low`")
+      print("Both should be 'high' or 'low'")
 
-Here, we've used the `and` operator to check that *both* temperature and humidity are
+Here, we've used the ``and`` operator to check that *both* temperature and humidity are
 set appropriately. If the user supplies anything other than "high" or "low" it should print
-an message.
+a message.
 
 ..  admonition:: Learn more
     :class: toggle
 
-    Note the error message we gave in the `else` block contains what the user
+    Note the error message we gave in the ``else`` block contains what the user
     had supplied us with. It often helps to print out the variables in question
     when you do the else like this. It helps you, the programmer, to debug and it helps
     the user possibly see what to change to fix. Here, we've also told the user what they should be
@@ -141,7 +142,7 @@ an message.
     In reality, these variable should be checked before hand and a more informative error message could
     be given *before* any processing takes place. This code is so tiny that it makes no difference.
 
-The second way of working out the logic is by nested `if` statements. Here's an example:
+The second way of working out the logic is by nested ``if`` statements. Here's an example:
 
 .. code-block:: python
 
@@ -175,14 +176,14 @@ The above code will do the following:
  * or less than 0
  * otherwise the mark is between 0 and 39 (inclusive), which is a fail mark.
 
-Check you understand the flow of the code and note that the `if` statements are done in order, so 
-if the first one is `False`, `mark` must be less than 40 or greater than 100.
+Check you understand the flow of the code and note that the ``if`` statements are done in order, so 
+if the first one is ``False``, ``mark`` must be less than 40 or greater than 100.
 
 .. admonition:: Practical exercise
 
    **Test the code**
 
-    Try the code above with different values of `mark`. Does it work as expected?
+    Try the code above with different values of ``mark``. Does it work as expected?
 
 .. admonition:: Solution
    :class: toggle
@@ -205,13 +206,13 @@ if the first one is `False`, `mark` must be less than 40 or greater than 100.
 
     which is because we can't compare a string and an integer!
 
-Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
+Now you've seen nested ``if`` statements in action. Try the final practical exercise of this section.
 
 .. admonition:: Practical exercise
 
-   **Nested `if` version**
+   **Nested ``if`` version**
 
-   Re-write the environment code using nested `if` statements
+   Re-write the environment code using nested ``if`` statements
 
 
 .. admonition:: Solution
