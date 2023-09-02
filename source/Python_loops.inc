@@ -35,7 +35,7 @@ and a single line in this table is:
 .. code-block:: python
 
     C = -20
-    F = 9/5*C + 32
+    F = 9./5.*C + 32
 
     print(C, F)
 
@@ -43,19 +43,19 @@ We could therefore write:
 
 .. code-block:: python
 
-    C = -20; F = 9/5*C + 32; print(C, F)
-    C = -15; F = 9/5*C + 32; print(C, F)
-    C = -10; F = 9/5*C + 32; print(C, F)
-    C = -5; F = 9/5*C + 32; print(C, F)
-    C = 0; F = 9/5*C + 32; print(C, F)
-    C = 5; F = 9/5*C + 32; print(C, F)
-    C = 10; F = 9/5*C + 32; print(C, F)
-    C = 15; F = 9/5*C + 32; print(C, F)
-    C = 20; F = 9/5*C + 32; print(C, F)
-    C = 25; F = 9/5*C + 32; print(C, F)
-    C = 30; F = 9/5*C + 32; print(C, F)
-    C = 35; F = 9/5*C + 32; print(C, F)
-    C = 40; F = 9/5*C + 32; print(C, F)
+    C = -20; F = 9.0/5.0*C + 32; print(C, F)
+    C = -15; F = 9.0/5.0*C + 32; print(C, F)
+    C = -10; F = 9.0/5.0*C + 32; print(C, F)
+    C = -5; F = 9.0/5.0*C + 32; print(C, F)
+    C = 0; F = 9.0/5.0*C + 32; print(C, F)
+    C = 5; F = 9.0/5.0*C + 32; print(C, F)
+    C = 10; F = 9.0/5.0*C + 32; print(C, F)
+    C = 15; F = 9.0/5.0*C + 32; print(C, F)
+    C = 20; F = 9.0/5.0*C + 32; print(C, F)
+    C = 25; F = 9.0/5.0*C + 32; print(C, F)
+    C = 30; F = 9.0/5.0*C + 32; print(C, F)
+    C = 35; F = 9.0/5.0*C + 32; print(C, F)
+    C = 40; F = 9.0/5.0*C + 32; print(C, F)
 
 This is error prone though. What if we make a typo (which is likely)? How would we know? 
 Also this is very boring and repetitive. Note, I've used ``;`` to seperate out
@@ -148,7 +148,7 @@ For loops are a really useful way of doing the same thing to each item in a list
    .. code-block:: python
 
       for C in range(-20,41,5):
-          F = 9/5*C + 32
+          F = 9.0/5.0*C + 32
           print(C, F)
       
    This version uses the `range` function to go from -20 to 41 (note: not 40!) in steps of 5
@@ -214,7 +214,7 @@ can be any conditional statement, including key presses (but that requires some 
 
       C = -20
       while C <= 40:
-          F = 9/5*C + 32
+          F = 9.0/5.0*C + 32
           print(C, F)
           C = C + 5
       

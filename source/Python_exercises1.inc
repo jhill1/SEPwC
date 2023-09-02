@@ -47,7 +47,7 @@ Try the following exercsies. For any of the exercises, feel free to type out the
     .. code-block:: Python
     
         for C in range(-20,41,5):
-            F = 9/5*C + 32
+            F = 9.0/5.0*C + 32
           
         print(C, F)
 
@@ -59,4 +59,27 @@ Try the following exercsies. For any of the exercises, feel free to type out the
    statement is not indented to within the loop, so is only run when the loop is finished.
 
 
+.. admonition:: Exercise
+
+    What's with ``9.0/5.0``? In all the exercises above converting centigrade to Farenheit I've used ``9.0/5.0``.
+    Why not ``9/5``? Let's try it.
+
+    .. code-block:: Python
+    
+        C = -20
+        # Where therefore expect F to be -4
+        F = 9.0/5.0*C + 32  
+        print(C, F)
+        F = 9/5*C + 32  
+        print(C, F)
+
+
+.. admonition:: Solution
+   :class: toggle
+
+   This one is very subtle. ``9/5*C`` is done in integer maths. ``9/5`` comes out as ``1`` (try it in python). You therefore get the
+   wrong answer. By typing ``9.0/5.0`` we push python into using floating point maths so you get ``1.8``. You only need one floating
+   point number in an operation to make it all floaitng point, so just using ``9.0/5`` will suffice. This is a very easy bug to introduce
+   into any code (I have!) so it's worth getting in the habit of typing ``9.0`` or ``9.`` when using any number you mean to be a float
+   in python.
 
