@@ -12,5 +12,6 @@ interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 .. include:: Python_loops.inc
 .. include:: Python_conditionals.inc
 .. include:: Python_comments.inc
+.. include:: Python_exercises1.inc
 
 
