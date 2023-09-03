@@ -12,5 +12,5 @@ interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 .. include:: R_loops.inc
 .. include:: R_conditionals.inc
 .. include:: R_comments.inc
-
+.. include:: R_exercises1.inc
 
