@@ -35,7 +35,7 @@ and a single line in this table is:
 .. code-block:: python
 
     C = -20
-    F = 9./5.*C + 32
+    F = 9.0/5.0*C + 32
 
     print(C, F)
 

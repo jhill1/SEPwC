@@ -621,7 +621,7 @@ Functions
 
 Function are for bits of code you run lots or complex code that can be wrapped up so the main code is easier to read. 
 Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is easier to read.
-
+Functions also make a code much easier to test.
 .. code-block::
 
    a_list_of_numbers = [1,4,2,3,6,4]
@@ -723,4 +723,8 @@ So we would then create the sort algorithm into a function
 
 We now have a function that sorts number in our code. The main code is easier to read and we can sort any lists of numbers
 as many times as we wish, without writing the same code over and over. This really comes in handy (as we shall see when test code).
+
+As you break your code down into smaller chunks, you can test each chunk to make sure
+sure it works as you expected (including when you give it "incorrect" data). If all the functions in your code work in the tests
+then you can be more confident your whole code works.
 

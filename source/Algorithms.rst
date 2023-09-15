@@ -6,6 +6,10 @@ we can arrange those to form algorithms and then into programs. We can think abo
 Remember, pseudo-code is not a formal language but is code written to be read by a human with no concerns about syntax. We can also 
 depict code as a flow diagram; this is more useful as we build more complex algorithms. 
 
+However, thinking algorithmically is difficult. As humans we are amazingly good as using shortcuts, rules of thumb, 
+and assumptions to get things done. Computers cannot do any of those things! We have to describe exactly and precisely
+what we want the computer to do.
+
 Let's build software to do some simple tasks.
 
 Making a jam sandwich
@@ -48,7 +52,7 @@ Write a list of steps and have a go at psuedo-code to do this.
 
         number = 10456
 
-        # no language has a function to split, *but* if we turn it into a string, we can
+        # no language has a function to split an integer number, *but* if we turn it into a string, we can
         # split it easily in most!
         number_as_string = str(number)
         chars = as_chars(number_as_string)
@@ -58,9 +62,42 @@ Write a list of steps and have a go at psuedo-code to do this.
 
         print(sum)
 
-The solution needed a bit of lateral thinking in terms of thinking how a computer would represent an 
-integer and how you might break it up. Don't worry if your psuedo code didn't contain that
-level of detail!
+    The solution needed a bit of lateral thinking in terms of thinking how a computer would represent an 
+    integer and how you might break it up. Don't worry if your psuedo code didn't contain that
+    level of detail!
+
+Searching for a number
+-----------------------
+
+Given a list of numbers: 1, 4, 5, 2, 6, 7, 8, 9, 10
+
+Write down the steps to find the location (index) of a value in that list, let's say the number 9.
+
+..  admonition:: Solution
+    :class: toggle
+
+    * loop through the list
+    * if the number matches the target, exit and report the index
+    * if the match isn't found, exit with a negative number to indicate failure
+
+    .. code-block:: 
+
+        list = [1, 4, 5, 2, 6, 7, 8, 9, 10]
+        target = 9
+
+        index = 0
+        for number in list
+            if (number == target)
+                return index
+            # remember to increment the index each loop!
+            index = index + 1
+
+        # we cna only get here if the number wasn't found
+        return -1
+
+    The above is a linear search algorithm. Fine for small lists, but very slow for very long lists, especially if your
+    target is near the end. Binary search is another search algorithm used. 
+
 
 Create a word cloud
 -------------------
