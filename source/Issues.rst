@@ -42,6 +42,41 @@ Sometimes a bit obscurely, but once you can decipher the error message they are 
 Warning examples
 ~~~~~~~~~~~~~~~~
 
+Warnings are non-critical messages, normally issued by a library or module you're using. However, most of the time
+they are an error (as in you're getting the wrong answer) but the code can still continue. You should therefore
+pay attention and decide if you do need to care.
+
+R warning examples
+''''''''''''''''''
+
+.. code-block:: R
+
+    cor( c( 1 , 1 ), c( 2 , 3 ) )
+    [1] NA
+    Warning message:
+    In cor(c(1, 1), c(2, 3)) : the standard deviation is zero
+
+Here, the user has tried to perform a correlation with 2 points. The warning shows this isn't a good idea, 
+but the ``cor`` function could produce an answer (albeit ``NA``).
+
+Python warning example
+'''''''''''''''''''''''
+
+In this example I divide by zero; mathmatically producing infinity.
+
+.. code-block:: Python
+ 
+    import numpy as np
+    np.array([1])/0
+    <ipython-input-2-f6baf8772c4a>:1: RuntimeWarning: divide by zero encountered in divide
+       np.array([1])/0
+    Out[2]: array([inf])
+
+Note I get a ``RuntimeWarning`` which gives a message and the line of code. I still get an answer, 
+here, ``inf``.
+
+It's unlikely I actually wanted that, but I would need to work out a way of dealing with this if the
+numbers were supplied by a user or in the data. The warnings can therefore be very useful!
 
 Bugs
 ------

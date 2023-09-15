@@ -74,4 +74,4 @@ There's an error here (``nam`` instead of ``name``). When we run this:
 
 We read this from the bottom up. The error is a ``NameError``. It is on line 3 of our code. We caused this by calling
 the ``say`` function on line 5. We can see this is a bug in the ``say`` function. If that's our code we can fix, if it's not
-re-read any documentation for the function and ehck you're passing in the correct data. 
+re-read any documentation for the function and check you're passing in the correct data. 
