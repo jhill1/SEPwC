@@ -24,6 +24,8 @@ create something you own the copyright. You don't have to do anything to get cop
 except be the author or creator of the content. Authors generally place a copyright
 notice on the work though, so something like:
 
+*Copyright 2024. Jon Hill*
+
 Copyright lasts for 50 years (or 75 for music) and protects the author from someone stealing their work.
 `This page has a simple explanation of UK copyright law. <https://www.gov.uk/copyright>`_
 
@@ -33,7 +35,7 @@ the software you have bought. Similarly, for open-source software the licence te
 you what you can do with the source code, including modifying and re-releasing and under
 what conditions.
 
-There are two main types of licences: copyleft and permissive. Within those are a whole
+There are two main types of open licences: copyleft and permissive. Within those are a whole
 bunch of different licences, but let's focus on the two main types first.
 
 Copyleft
@@ -50,7 +52,7 @@ Common copyleft licences are:
  * GNU Public Licence (GPL)
  * Mozilla public licence (MPL)
  * LGPL (Lesser GPL); though this has some permissive terms too
- * Creative Commons, Sahrealike (CC-SA)
+ * Creative Commons, Share-alike (CC-SA)
 
 Permissive
 ----------
@@ -79,7 +81,7 @@ Common permissive licences include:
       notices.
     * BSD: Permissive. Restriction is to preserve copyright and the notice. Also had to show this
       with advertising. Spawned a number of similar licences without that clause.
-    * MIT: Same above Apache in most respects!
+    * MIT: Same as Apache in most respects!
     * GPL: Copyleft. All software using your must be released under similar terms. 
       You can modify, share, run without restrictions.
     * LGPL: As above, but if you use a LGPL code in proprietry software and modify it you 
@@ -121,7 +123,8 @@ Adding a licence to your code
 If you write any code that is to be used by others you should always add a 
 copyright notice and a licence. This protects you and the person using it.
 Try and get in the habit of writing both of these in your code, so something like:
-Copyright |copy| 2023 by Jon Hill. CC-BY-SA.
+
+*Copyright 2023 by Jon Hill. CC-BY-SA.*
 
 You then include the full licence in your distribution.
 
