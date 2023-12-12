@@ -7,7 +7,7 @@ print statements around code to output the contents of variables to help you
 understand the flow of the program. The downside of this debugging is you have to 
 add and then *remove* a lot of print statements!
 
-If I'm not sure why code isn't working, and perhaps more importantly, where, 
+If I'm not sure why code is not working, and perhaps more importantly, where, 
 I first add "programming noise"; print statements like:
 
 .. code-block::
@@ -26,7 +26,7 @@ of any key variable sduring the loop. When you code breaks you know exactly whic
 loop index it was on. Running this in RStudio or Spyder means you can then 
 explore your data using that index. Very helpful!
 
-However print debugging can be unweidly, producing massive amoutns of output
+However print debugging can be unweidly, producing massive amounts of output
 that can be be as hard to decipher as the error you're trying to fix.
 
 EXERCISE on print debugging (R and Python)
@@ -37,16 +37,9 @@ you can explore them to see what might be wrong.
 
 EXERCISE on console debugging (R and Python)
 
-I've been writing code in one form or another for *cough*35 years*cough* and
+I've been writing code in one form or another for *cough* 35 years *cough* and
 I *still* use print debugging, especially in when writing code for multiple
 cores. It's incredibly useful and quick. However, some bugs or errors are
-best fixed using specialist debugging software called a debugger. 
-
-
-pdb 
-
-R equiv?
-
-
-Exercises: Bug spotting (inc running debugger)
+best fixed using specialist debugging software called a debugger. We'll cover 
+debuggers in the optional mini-courses at the end.
  

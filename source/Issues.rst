@@ -82,6 +82,57 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
 
     Try the following codes and check you understand the warning or error.
 
+    .. code-block:: Python
+
+        list_of_URLs = (
+         'https://example.com/1',
+         'https://example.com/2",
+         'https://example.com/3
+         )
+        print(list_of_URLs)
+
+    .. code-block:: R
+
+        list_of_URLs = c(
+         'https://example.com/1',
+         'https://example.com/2",
+         'https://example.com/3
+         )
+        print(list_of_URLs)
+
+    .. code-block:: Python
+
+        user = 'username1'
+        pass = 'password1'
+
+    .. code-block:: R
+
+        first = 'Mercedes'
+        next = 'Aston Martin'
+
+    .. code-block:: Python
+
+        print(100 is 100)
+
+    .. code-block:: R
+
+        x <- 1:10000
+        x      
+
+..  admonition:: Solution
+    :class: toggle
+
+    The first example (R and Python) contains two errors. 'https://example.com/2" uses different
+    quote marks to start and end. If you fixed that, there then a missing ' at the 
+    end of the third URL. 
+
+    The second set of examples (R and Python) both use *reserved words*. You cannot use those
+    for variable names.
+
+    The final two examples issue warnings. The Python example checks you meant `is` not `==`.
+    The R example prints a wanring about max.print (i.e. you've printed too much!). We can 
+    alter that.
+
 
 Bugs
 ------
@@ -104,8 +155,8 @@ There are a number of different categories of bugs:
    a race condition (wrong order) etc. Parallel programming is very hard because of this.
  * Resource bugs: Using an unitilised variable or a null pointer. This are actually quite hard to generate in 
    interpreted languages like Python and R. 
- * Syntax: Using ``x==5`` rather than ``x=5``. Can be valid syntax but not what you expected. Again, in 
-   interpreted languages this is hard to do as you get an error.
+ * Syntax: Using ``x==5`` rather than ``x=5`` can be valid syntax but not what you expected. Again, in 
+   interpreted languages this is hard to do as you get an error or warning.
  * Human: When working in teams it is really important to communicate and use tests. It is very easy to 
    add bugs by not updating comments, not documenting code correctly and duplicating code.
 
@@ -117,7 +168,7 @@ code deletes the entire database.
 Reporting a bug
 ~~~~~~~~~~~~~~~~
 
-One of the best ways of giving back to the open souce communicty is to report bugs when you
+One of the best ways of giving back to the open souce community is to report bugs when you
 come across them. As a beginner programmer it's more likely that the error is in your code
 rather than a well-used library like ``matplotlib`` or ``ggplot2``. However, you may well 
 find the odd bug as you go.
@@ -145,6 +196,11 @@ It always worth searching the Open and Closed bugs to see if your issue is there
     Find a bug on github for an R or Python package/library which has an MRE.
 
     Can you replicate the bug and the error message?
+
+    `Here's an example for R using tsibble. <https://github.com/tidyverts/tsibble/issues/300>`_
+
+    `Here's an example for Python. <https://github.com/numpy/numpy/issues/24593>`_
+
 
 
 Fixing Errors
