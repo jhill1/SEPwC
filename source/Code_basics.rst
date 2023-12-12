@@ -189,9 +189,7 @@ a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could th
 | 2   4   5   6   7 
 
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
-objects. For now, we're going to focus on the basic datatypes and will revisit this idea later on (as R and Python have 
-different names for some of them).
-
+objects. 
 .. admonition:: Thought exercise
 
     **Datatypes**
@@ -728,3 +726,79 @@ As you break your code down into smaller chunks, you can test each chunk to make
 sure it works as you expected (including when you give it "incorrect" data). If all the functions in your code work in the tests
 then you can be more confident your whole code works.
 
+Objects and classes
+-------------------
+
+Modern programming uses objects to pass data around. This style of programming is called
+object-oriented programming. An object is a collection of data *and* functions that go together.
+Objects are widely used in both Python and R modules/libraries, so it's worth getting our head
+around them now.
+
+An object is a single instance of a class. Think of the the `Class` as the template. You can 
+make multiple instances of that `Class` and each one is an `Object`.
+
+Let's make a `Dog` class. Each `Dog` has a set of attributes and some actions. Those will depend
+on what we need this class to do, but as this is a thought exercise for now, let's 
+keep it simple.
+
+Each `Dog` should have
+
+  * a name
+  * age
+  * a colour
+
+Each `Dog` should then be able to:
+
+  * bark
+  * go for walkies
+  * be cleaned
+
+We would create a class something like:
+
+.. code-block::
+
+    Class Dog
+        self.name = ""
+        self.age = 0
+        self.colour = ""
+        self.state = "clean"
+
+        function init(name, age, colour)
+            self.name = name
+            self.age = age
+            self.colour = colour
+
+        function bark()
+            print("Woof!")
+
+        function walkies()
+            self.state = "muddy"
+
+        function beCleaned()
+            if (self.state == "clean")
+                print(name + " is already clean")
+            else if (self.state == "muddy")
+                print(name + " is now clean")
+                self.state = "clean"
+
+
+You could then have a pack of dogs:
+
+.. code-block::
+
+    Dog1 = new Dog("Bob", 2, "white")
+    Dog2 = new Dog("Fluffy", "5", "black")
+    Dog1.bark()
+    Dog2.walkies()
+
+
+.. admonition:: Thought exercise
+
+    **Objects**
+    
+    Create a class for a car. Think about what variables need to be stored
+    and what functions are needed. The use case for this car class is to 
+    create a traffic model (i.e. you'll have multiple cars travelling around some
+    imaginary roads).
+
+    There are no answers to this, but we can discuss in class.
