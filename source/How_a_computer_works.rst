@@ -56,7 +56,7 @@ the root drive where Windows actually lives, along with your programs (apps) and
 .. admonition:: Practical exercise
 
     ** Why C:?**
-    What's wrong with A? Google and find out.
+    What's wrong with A? Search and find out.
 
 
 ..  admonition:: Solution
@@ -78,7 +78,7 @@ Linux
 
 Linux organises things around the root drive, which is access via ``/`` (note the direction of the slash compared 
 to Windows - yes, they use the opposite direction). In root you then find a bunch of standard directories, ``\etc``, ``\bin``
-``\var``, etc. This contain the system files. One directory is called ``\home``. This is where user files live. Within 
+``\var``, etc. These contain the system files. One directory is called ``\home``. This is where user files live. Within 
 ``\home`` there is a directory with your username. Within there are your images, music, etc.
 
 Unlike Windows, drives can be mounted anywhere in the file structure and this is generally transparent to the user. So for example
@@ -89,7 +89,7 @@ a different file to ``bob.txt``
 MacOS
 ^^^^^
 
-Mac is very similar to Linux (it is in fact based on Unix, which Linux is too). Unlike Linux Apple added some
+Mac is very similar to Linux (it is in fact based on Unix, which Linux is too). Unlike Linux, Apple added some
 standard folder names and moved a few things around compared to Linux. I'll note the differences only here.
 
 User directories live in ``\Users`` rather than ``\home``. Applications are stored ``\Applications``, but there
@@ -350,6 +350,9 @@ a subfolder:
     Feel free to continue to explore the folders, using both the GUI and CLI to navigate. Remember to use ``pwd`` to
     find where you are if you need to.
 
+    Once you've done this in Windows or Linux (or Mac), try on the other operating system as it's good to have a basic understanding
+    of both main types.
+
 
 .. admonition:: Thought exercise
 
@@ -406,7 +409,7 @@ So relative to scripts, that's ``../data/very_important_data.csv``
 
 This is a really useful thing. Rather than give a full/absolute path, we can give relative paths
 to file. Imagine I had written a script that used absolute paths to data on my computer and gave that to
-you. It would not work as you're not on my computer and you are not logged in as me. You would then
+you. It would not work as you're not on my computer and you are not logged in as me even if you were. You would then
 have to edit every path in the script. However, if I give relative paths, as long as the directory 
 structure is the same, the script will work. 
 
@@ -424,12 +427,14 @@ From source code to programme
 
 You may have heard the term `source code` (I've probably used it already!), but what is it?
 Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
-computer can do billions of these every second (this is the clock speed). The moving of 
+computer can do billions of these every second (this is the clock speed so 1 Ghz can do 1 
+billion 'things' per second). The moving of these 
 gates allow the computer to add two numbers or multiple two numbers or move data around, etc.
 These are called instructions. The CPU translate these instructions into moving those gates around
 to actually do something. Ultimately, all computer code does this. It is possible to write
-computer code at this level: assembler code. Back in the day this is how you programmed computers.
-This is an example of assembler code for an x86 processor (i.e. what you probably have):
+computer code at this level: assembler code. Back in the day (i.e. when I started programming),
+this is how you programmed computers, especially for games where you needed maximum performance.
+This is an example of assembler code for an x86 processor (i.e. what the type of processor you probably have):
 
 
 .. code-block::
@@ -479,14 +484,14 @@ Compiled languages
 
 Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
 an executable. You can then give someone else the executable and they can run the software. Most software is
-written in those kind of languages. Note the user does not need the source code.
+written in those kind of languages. Note that the user does not need the source code.
 Languages like Java are also compiled but at the time of execution 
 (called Just in Time or JIT) languages. Java bridges the gap between compiled and interpreted.
 
 Interpreted languages
 ^^^^^^^^^^^^^^^^^^^^^
 
-In contract interpreted languages are not compiled. You execute the source code. So you can write a text file
+In contrast, interpreted languages are not compiled. You execute the source code. So you can write a text file
 with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
 You therefore need another user to have the python executable their system to be able to run your code. The user
 must also have your source code. This is the main difference between compiled and interpreted languages. 
@@ -501,8 +506,8 @@ Some languages are both.
 So what happens during compiling or interpretation? Remember that assemble code above? That's what the compiler
 does to your source code. It turns it from human readable code to those CPU instructions. Modern compilers
 are very clever and can optimise your code very well to get the most out of your computer. Interpreters do the 
-same thing but on the fly. The python executable (or R) is therefore turning your code into those kind of 
-instructions as it's running the code. Interpreted languages are therefore generally slower than compiled code
+same thing but as you execute the script. The python (or R) executable is therefore turning your code/script into those kind of 
+instructions as it's running. Interpreted languages are therefore generally slower than compiled code
 as the interpreter cannot optimise as well as a separate compiler.
 
 
@@ -578,8 +583,8 @@ So what are the basic commands you should know? Here's a list:
     **Find what the basic commands do**
 
     For the list of commands above, search for each one, or use the help system, and work out what they do. 
-    Have a look through the options too. Some might not be that useful and you may neve need them, but some
-    very useful!
+    Have a look through the options too. Some might not be that useful and you may never need them, but some
+    are very useful!
 
 .. admonition:: Practical exercise
 

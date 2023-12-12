@@ -25,23 +25,23 @@ slip behind a little.
    * - Week
      - Content
    * - 1
-     - Expectations, How a computer works, Licences
+     - :ref:`How a computer works<How a computer works>`, :ref:`Licences<Software licences>`
    * - 2
-     - Code basics, Thinking like a computer
+     - :ref:`Code basics<The fundamentals of code>`, :ref:`Thinking like a computer<Thinking like a computer>`
    * - 3
-     - Python or R 1, Debugging code,
+     - :ref:`Python<Python: the fundamentals>` or :ref:`R<R: the fundamentals>` 1, :ref:`Debugging code<Solving issues and debugging>`,
    * - 4
-     - Python or R 2
+     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2
    * - 5
-     - Python or R 3
+     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3
    * - 6 
-     - Revision control, Moving from spreadsheets to data, 
+     - :ref:`Revision control<Revision control with Git>`, :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 7
-     - Testing code, Software development
+     - :ref:`Testing code<Testing code>`, :ref:`Software development<Software development>`
    * - 8
-     - Mini-courses
+     - :ref:`Mini-courses<Mini-courses>`
    * - 9
-     - Mini-courses
+     - :ref:`Mini-courses<Mini-courses>`
    * - 10
      - Assessment
    * - 11
