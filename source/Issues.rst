@@ -240,12 +240,12 @@ Note that've not copied any of the specific parts of the error in a search, e.g.
 
     File ~/.local/lib/python3.8/site-packages/pandas/_libs/lib.pyx:668, in pandas._libs.lib.astype_intsafe()
 
-You'll note that they are speciifc to the version of Python I'm using and to where pandas is installed, and even the
+You'll note that they are specific to the version of Python I'm using and to where pandas is installed, and even the
 OS I'm using. Anyone using Windows, Python 3.11 and a version of pandas installed via Anaconda will have very
 different paths to mine! Search engines aren't that good...
 
 The above example is also a good example of the fact this is *your* error. It is not a bug in the pandas library.
-The code creates a number as a striong that cannot be converted into an int (as it's a floating point number). 
+The code creates a number as a string that cannot be converted into an int (as it's a floating point number). 
 
 Let's do an example in R now.
 
