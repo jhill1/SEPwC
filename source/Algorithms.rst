@@ -32,7 +32,69 @@ Write down the steps to make a jam sandwich. You can then reveal the answer
     * cut diagonally from corner to corner to form two triangles
     * place both triangles on a plate to serve
 
+
+Creating a number guessing game
+--------------------------------
+
+For this exercise, we will create a flow chart of a number guessing game and write the
+psuedocode. Later, we will write this as actual code.
+
+The game is as follows:
+
+ * generate a random integer between 1 and 100
+ * ask the user to guess the number
+ * if they are correct, print a message and end the games
+ * if they are incorrect, print a message saying if their guess is higher or lower than the number and ask them to guess again
+
+.. admonition:: Exercise
+
+    Draw a flow diagram of the code structure
+    outlined above to represent the game.
+
+..  admonition:: Solution
+    :class: toggle
+
+    This is my flow diagram.
+
+    .. image:: ../images/guess_game_flow.png
+       :alt: Flow diagram showing pathways around the guessing game structure.
     
+
+.. admonition:: Exercise
+
+    Now you have a flow diagram, write the psuedocode to implement this.
+
+
+..  admonition:: Solution
+    :class: toggle
+
+    My code would be something like this.
+
+    .. code-block:: 
+
+        print("Welcome to the number guessing game!")
+        print("I have thought of a number between 1 and 100")
+        print("Can you guess what it is?")
+
+        number = random(1,100)
+        guess = 0
+        # we create a guess that cannot be the answer...
+
+        while guess != number
+            guess = ask("What's your guess?)
+            if guess < number
+                print("Your guess is less than my number")
+                print("Try again")
+            else if guess > number
+                print("Your guess is greater than my number")
+                print("Try again")
+            else if guess == number
+                print("Correct! You guessed right!)
+                print("Bye!)
+                exit()
+            end if
+
+
 Creating the sum of an integer number
 --------------------------------------
 
@@ -280,6 +342,7 @@ word, so our lists are like this:
 We now have a count of each word and we loop through a final time (step 7) to remove those with 
 fewer than 3 occurrences (or in other words with more than 2 occurrences). 
 
-Step 8 is then make the word cloud from the remaining words ("times", "random" and "need")
+Step 8 is then make the word cloud from the remaining words ("times", "random" and "need"). 
+We'll not cover that here as it is quite difficult to do graphics in pseudocode. 
 
 
