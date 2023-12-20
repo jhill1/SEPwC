@@ -117,3 +117,24 @@ You then parse the argument and put them in variables as you see fit
     default_PhysID = args.default_PhysID
 
 
+Getting input from a user
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to ask the user something, e.g. a file name
+or if they wish to continue, you can use the ``input`` function.
+
+.. code-block:: python
+
+    answer = input("Do you wish to continue (Y/N)?")
+    if answer == "Y":
+        # do something
+    elif answer == "N":
+        # do something else
+    else:
+        print("I didn't understand " + answer)
+
+Note that the input is returned as a string, so you may need to convert 
+to a floating point number or integer, etc. As with command line
+arguments, be careful with any user input and check it carefully
+before using it.
+

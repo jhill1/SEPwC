@@ -8,5 +8,5 @@ In this next section of Python
 .. include:: Python_dictionaries.inc
 .. include:: Python_files.inc
 .. include:: Python_arguments.inc
-
+.. include:: Python_exercises2.inc
 
