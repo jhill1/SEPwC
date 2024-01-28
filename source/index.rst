@@ -30,12 +30,12 @@ slip behind a little.
      - :ref:`Code basics<The fundamentals of code>`, :ref:`Thinking like a computer<Thinking like a computer>`
    * - 3
      - :ref:`Python<Python: the fundamentals>` or :ref:`R<R: the fundamentals>` 1, :ref:`Debugging code<Solving issues and debugging>`,
-   * - 4
-     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2
+   * - 4 
+     - :ref:`Revision control<Revision control with Git>`,
    * - 5
-     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3
-   * - 6 
-     - :ref:`Revision control<Revision control with Git>`, :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
+     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2, :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3, 
+   * - 6
+     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 7
      - :ref:`Testing code<Testing code>`, :ref:`Software development<Software development>`
    * - 8
@@ -60,11 +60,11 @@ slip behind a little.
     Python
     R
     Issues
+    Revision_control   
     Python2
     R2
     Python3
     R3
-    Revision_control   
     Spreadsheets_data
     Testing_code
     Software_development

@@ -55,7 +55,7 @@ the root drive where Windows actually lives, along with your programs (apps) and
 
 .. admonition:: Practical exercise
 
-    ** Why C:?**
+    **Why C:?**
     What's wrong with A? Search and find out.
 
 

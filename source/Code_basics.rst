@@ -44,7 +44,7 @@ Some examples:
 
 .. code-block::
 
-   my_data = 1, 2, 3, 5, 19, 18
+   my_data = [1, 2, 3, 5, 19, 18]
    
 I've create a variable called ``my_data`` which contains a list of numbers.
 
@@ -108,7 +108,7 @@ How do you decide a good variable name?
 
 A good variable name should make sense, make the code readable to a human and be clear. In the above
 I've used _ to separate words. This is good practice. You can also use CamelCase (i.e. a capital letter to 
-separate words). Whichever you do, be consistent!
+separate words). Whichever way you choose, be consistent!
 
 Good variables:
 
@@ -137,12 +137,11 @@ Bad variables:
    mrgr
 
 The first list is clear with little doubt what that variable contains. The second list is not that helpful.
-Is temp temporary or temperature? chemdat might be OK, but a bit hard 
-to read. top is not helpful, topography or the top of something? x and rs could be anything! In 
-5 year's time you will not remember what mrgr is, but max_reef_growth_rate will
-always make sense. Note I've not typed maximum_reef_growth_rate as I feel max is reasonable shorthand 
+Is `temp` "temporary" or "temperature"? `chemdat` might be OK, but a bit hard 
+to read. `top` is not helpful, topography or the top of something? `x` and `rs` could be anything! In 
+5 year's time you will not remember what `mrgr` is, but `max_reef_growth_rate` will
+always make sense. Note I've not typed `maximum_reef_growth_rate` as I feel max is reasonable shorthand 
 for maximum, but others would disagree with me on that!
-
 
 .. admonition:: Thought exercise
 
@@ -163,13 +162,13 @@ for maximum, but others would disagree with me on that!
 
     These are suggestions!
 
-    * student_names
-    * name (or student_name)
-    * grain_size
-    * grain_sizes
-    * sea_surface_temperature (or possibly sst as that is a standard acronym)
-    * trajectory
-    * input_filename
+    * `student_names`
+    * `name` (or `student_name`)
+    * `grain_size`
+    * `grain_sizes`
+    * `sea_surface_temperature` (or possibly `sst` as that is a standard acronym)
+    * `trajectory`
+    * `input_filename`
 
 
 Datatypes
@@ -177,7 +176,7 @@ Datatypes
 
 The variables we create can store any kind of data. In interpreted languages that can even change throughout the 
 code. In compiled language you often have 
-to fix the kind of data up front. That kind of data is the datatype.
+to fix the kind of data up front. The kind of data is the datatype.
 
 Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), 
 a string ("like this one") a boolean (true or false). We can also make up 
@@ -190,6 +189,7 @@ a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could th
 
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
 objects. 
+
 .. admonition:: Thought exercise
 
     **Datatypes**
@@ -233,7 +233,6 @@ So the above, if the user put in 2, the user would see
   You gave me 2
   You now have 7
 
-
 Operations cover any mathematical operation (multiply, divide, subtract), but also some more
 specialist ones like "modulus" which gives you the reminder of a division. We can also "overload"
 operations so "add" works on multiple data types, for example:
@@ -244,7 +243,6 @@ operations so "add" works on multiple data types, for example:
    ending = " world"
 
    complete_string = my_string + ending
-
 
 Which will do what you think it does and put "hello world" into complete_string. Which 
 symbol is used depends on the language and not all languages can do this.
@@ -516,6 +514,8 @@ So our raster grid now contains.
         i = 2, j = 2
         i = 2, j = 3
 
+        so the largest number is 6.
+
 
 .. admonition:: Thought exercise
 
@@ -610,7 +610,7 @@ Most languages have some form of "or" and "and" operations.
 
     Hola! will be printed. The first if is not true, so we move to the next, which is also not true.
     The third is true, so we go inside that conditional and hence print("Hola!") is executed. The forth 
-    statement is also true, but the code will not enter that block as it is par tof the same ``if..else`` block.
+    statement is also true, but the code will not enter that block as it is part of the same ``if..else`` block.
     The ``else`` would be executed if none of the satements were true.
 
 
