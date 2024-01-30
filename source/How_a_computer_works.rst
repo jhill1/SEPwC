@@ -331,14 +331,14 @@ a subfolder:
     .. code-block:: bat
        :caption: |win|
 
-        cd ..\gis_data\site_locations
+        cd ..\..\gis_data\site_locations
         dir
         pwd
 
     .. code-block:: bash
        :caption: |maclin|
 
-        cd ../gis_data/site_locations
+        cd ../../gis_data/site_locations
         ls
         pwd
 
@@ -352,6 +352,9 @@ a subfolder:
 
     Once you've done this in Windows or Linux (or Mac), try on the other operating system as it's good to have a basic understanding
     of both main types.
+
+..  youtube:: F2K68Wjq7qY
+   :align: center
 
 
 .. admonition:: Thought exercise
