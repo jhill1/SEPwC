@@ -72,7 +72,7 @@ binary files have a Python module to read them, so are more specialist in nature
 
 We can read text files line-by-line or in one go. To read line-by-line:
 
-.. clode-block:: python
+.. code-block:: python
 
     file = open('my_file.txt', 'r')
      
@@ -86,7 +86,7 @@ to read the text line-by-line.
 
 If we want to read in all the text at once:
 
-.. clode-block:: python
+.. code-block:: python
 
     file = open('my_file.txt', 'r')
      
@@ -96,7 +96,7 @@ The ``file.read()`` function grabs all the text from the file into memory (and h
 be stored in a variable). The ``read()`` function can also take an argument for the number of characters to read, 
 for example this reads the first 5 characters:
 
-.. clode-block:: python
+.. code-block:: python
 
     file = open('my_file.txt', 'r')
      
@@ -106,7 +106,7 @@ My preferred way of reading text files is by line and performing any operations 
 works for most files as data in text files tends to be organised that way. I use the ``readline()`` function
 to make this very clear. For example:
 
-.. clode-block:: python
+.. code-block:: python
 
     with open("datafile.txt", "r") as file:
         data = file.readlines()
