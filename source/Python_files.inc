@@ -60,5 +60,123 @@ the file handle is lost (i.e. `.close()` is called or the variable goes out of s
         # do things
         file.close()
 
-The `file.close()` is now redundant, but can still be put in the code. All variables create in the `with`
-block then disappear afterwards (this has caused me a few bugs in the past). 
+The `file.close()` is now redundant, but can still be used in the code to make it clear. All variables create in the `with`
+block disappear afterwards (this has caused me a few bugs in the past), but makes the scope of your variables
+clear.
+
+Reading files
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We can now open and close files, how do we get information from them? We'll focus on text files for now. Most
+binary files have a Python module to read them, so are more specialist in nature.
+
+We can read text files line-by-line or in one go. To read line-by-line:
+
+.. clode-block:: python
+
+    file = open('my_file.txt', 'r')
+     
+    # This will print every line one by one in the file
+    for line in file:
+        print(line)
+
+
+The ``file`` operator is also an iterable object, so a loop over each element in the ``file`` allows us
+to read the text line-by-line.
+
+If we want to read in all the text at once:
+
+.. clode-block:: python
+
+    file = open('my_file.txt', 'r')
+     
+    print(file.read())
+
+The ``file.read()`` function grabs all the text from the file into memory (and here prints immediately, but can also
+be stored in a variable). The ``read()`` function can also take an argument for the number of characters to read, 
+for example this reads the first 5 characters:
+
+.. clode-block:: python
+
+    file = open('my_file.txt', 'r')
+     
+    print(file.read(5))
+
+My preferred way of reading text files is by line and performing any operations on a line-by-line basis. This
+works for most files as data in text files tends to be organised that way. I use the ``readline()`` function
+to make this very clear. For example:
+
+.. clode-block:: python
+
+    with open("datafile.txt", "r") as file:
+        data = file.readlines()
+        for line in data:
+            words = line.split()
+            print(words)
+
+The ``split()`` function is an example of the type of processing; here splitting the line of text
+into words (seperated by spaces) and creating a list of those.
+
+Writing files
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Writing files is a bit different to reading files. You are in charge of putting the line breaks in!
+
+.. code-block:: python
+
+    with open("file.txt", "w") as f: 
+        f.write("Hello World!!!")
+        f.write("No, really, hello!")
+
+The above opens a text file for writing (note the ``'w'``) and writes a single line of text. Try it.
+
+To get multiple lines we either need to create a string with those newline characters in it *or* use
+the ``writelines()`` function with a list of strings. As with a lot of things in Python there are a number of ways 
+of doing this!
+
+Let's add some newlines to the example above first.
+
+.. code-block:: python
+
+    with open("file.txt", "w") as f: 
+        f.write("Hello World!!!\n")
+        f.write("No, really, hello!\n")
+
+Notice the ``\n`` character - this is a newline character. So you will now have a file that contains:
+
+.. code-block:: bash
+
+   Hellow World!!!
+   No, really, hello!
+
+We could acheive the same thing using ``writelines()`` but we are still responsible for adding the newlines:
+
+.. code-block:: python
+
+    contents = ["Hello World!!!\n", "No, really, hello!\n"]
+    with open("file.txt", "w") as f: 
+        f.writelines(contents)
+
+Produces the same output as above. If your list of strings doesn't have newline characters, then something like
+this works well:
+
+
+.. code-block:: python
+
+    contents = ["Hello World!!!\n", "No, really, hello!\n"]
+    with open("file.txt", "w") as f: 
+        f.write('\n'.join(contents))
+
+Here, we join each element of contents with a newline character. We could also do:
+
+.. code-block:: python
+
+    contents = ["Hello World!!!\n", "No, really, hello!\n"]
+    with open("file.txt", "w") as f: 
+        f.writelines("%s\n" % l for l in contents)
+
+Here, we using generator expressions (the ``l for l in contents``) and formatting expressions to stick a string a newline
+together.
+
+All of the above are correct and will work fine. Some may argue for one way being more 'Pythonic' than
+others, but your job is to write clear code so use whichever is clearest for you.
