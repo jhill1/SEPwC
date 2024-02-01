@@ -130,6 +130,9 @@ code will not run.
 
       0.9 0.5269499999999994
       
+..  youtube:: 7U89TwLas1I
+    :align: center
+
 
 Shall we plot this?
 

@@ -203,6 +203,9 @@ if the first one is `FALSE`, `mark` must be less than 40 or greater than 100.
     which is because 100 is converted to a string by R to do the comparison. "test" is > than "100" ("t" is
     after "1" in the alphabet). You need to be careful of this when doing comparisons!
 
+..  youtube:: Czeh0-sUgtM
+    :align: center
+
 Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
 
 .. admonition:: Practical exercise
