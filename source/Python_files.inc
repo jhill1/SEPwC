@@ -117,6 +117,24 @@ to make this very clear. For example:
 The ``split()`` function is an example of the type of processing; here splitting the line of text
 into words (seperated by spaces) and creating a list of those.
 
+.. admonition:: Practical exercise
+
+    Download this text file. Write code to open the file
+    and read all the contents in one go and save into a variable.
+    Print that variable to screen.
+
+    Then write a version that reads in the file line by, splitting
+    the lines by commas and printing to screen each line.
+
+..  admonition:: Solution
+    :class: toggle
+
+    This is my code, wrapping both parts into one code.
+    
+    .. code-block:: python
+
+        
+
 Writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
