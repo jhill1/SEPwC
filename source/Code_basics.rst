@@ -325,19 +325,19 @@ Will print:
         ? = var_3 < var_2 / var_1
         ? = var_3 == var_1
         ? = var_3 < var_2 && var_2 > var_1
-        ? = var_3 < var_2 || var_2 < var_1
+        ? = var_3 > var_2 || var_2 < var_1
         ? = var_1 >= 5
-        ? = var_3 <= var_2 / 2
+        ? = var_3 > var_2 && var_1 < var_2
 
 
 ..  admonition:: Solution
     :class: toggle
 
+    * True
     * False
     * False
     * False
     * True
-    * False
     * True
     * True
 
