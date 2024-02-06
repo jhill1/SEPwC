@@ -310,11 +310,12 @@ console (in Spyder or RStudio is fine).
         +             }
         +         }
         Error: object 'description' not found
-            
+
+
     A lot of errors. We can probably fix them from top to bottom. So let's
     try dealing with the first error by editing the `descriptions` variable.
     We can try in the console to get it to work. Pressing up in the R console until 
-    we get to the line. Then edit the line; note the ``` vs `'`. so
+    we get to the line. Then edit the line; note the backtick vs `'`. so
     `descriptions = c('funny', 'cute', 'friendly')`. That works! Do the same 
     for the `animals` variable too.
 
