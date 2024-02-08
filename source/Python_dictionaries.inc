@@ -57,6 +57,94 @@ Like lists, dictionaries are at their most powerful in loops. Also like lists th
 Useful dictionary functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dictionaries also come with a number of useful functions. Commonly used ones are ``keys()`` and ``values()`` which return a list of the keys and values respectively.
+Dictionaries also come with a number of useful functions. Commonly used ones are ``keys()`` and 
+``values()`` which return a list of the keys and values respectively. Both of these return lists
+which can be looped over, e.g.
 
+.. code-block:: Python
+ 
+    knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+    names = keys(knights)
+    for n in names:
+        print(knights(n))
+
+is a common idiom you will see in Python code. 
+
+.. admonition:: Practical exercise - capital cities
+
+    Create a dictionary that holds a country as the key, and the capital
+    city as the value, e.g. Germany - Berlin, UK - London.
+
+ ..  admonition:: Solution
+    :class: toggle
+
+    .. code-block::Python
+
+    capitals = {
+        "Germany": "Berlin",
+        "UK": "London",
+        "USA": "Washington DC",
+        "France": "Paris",
+        "Burkina Faso": "Ouagadougou"
+    }
+
+
+.. admonition:: Practical exercise - capital cities: add
+
+    Add more countries to your list, without creating a new variable.
+
+ ..  admonition:: Solution
+    :class: toggle
+
+    .. code-block::Python
+
+    capitals["Italy"] = "Rome"
+    capitals["Mexico"] = "Mexico City"
+
+
+
+.. admonition:: Practical exercise - capital cities: delete
+
+    Remove the UK from the list. You may have to search the internet to find the answer to this one!
+
+ ..  admonition:: Solution
+    :class: toggle
+
+    .. code-block::Python
+
+    del capitals["UK"]
+
+.. admonition:: Practical exercise - capital cities: edit
+
+    Edit the value for one of your capitals. Ouagadougou is also known as Wagadugu
+
+ ..  admonition:: Solution
+    :class: toggle
+
+    .. code-block::Python
+
+    capitals["Burkina Faso"] = "Wagadugu"
+
+.. admonition:: Practical exercise - capital cities: functions
+
+    Find out how you might do the following:
+
+     - Check if a key exists in a dictionary
+     - Check the length of a dictionary
+     - Create a copy of a dictionary
+     - Clear a dictionary
+
+ ..  admonition:: Solution
+    :class: toggle
+
+    .. code-block::Python
+
+    if ("UK" in captials):
+        print(cpatials["UK"])
+
+    print(len(captials))
+
+    capitals_mkII = copy(capitals)
+
+    clear(pactials)
 
