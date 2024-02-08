@@ -49,8 +49,8 @@ extensions = [
     "sphinx.ext.githubpages",
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.youtube'
-    
+    'sphinxcontrib.youtube',
+    'sphinxcontrib.googleanalytics'
     ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,6 +91,8 @@ spelling_lang='en_UK'
 #
 #html_theme = "furo"
 html_theme = "sphinx_book_theme"
+
+googleanalytics_id = 'G-GPHGXML15W'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
