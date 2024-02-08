@@ -72,34 +72,34 @@ is a common idiom you will see in Python code.
 
 .. admonition:: Practical exercise - capital cities
 
-    Create a dictionary that holds a country as the key, and the capital
-    city as the value, e.g. Germany - Berlin, UK - London.
+   Create a dictionary that holds a country as the key, and the capital
+   city as the value, e.g. Germany - Berlin, UK - London.
 
- ..  admonition:: Solution
+..  admonition:: Solution
     :class: toggle
 
-    .. code-block::Python
+    .. code-block:: Python
 
-    capitals = {
-        "Germany": "Berlin",
-        "UK": "London",
-        "USA": "Washington DC",
-        "France": "Paris",
-        "Burkina Faso": "Ouagadougou"
-    }
+        capitals = {
+            "Germany": "Berlin",
+            "UK": "London",
+            "USA": "Washington DC",
+            "France": "Paris",
+            "Burkina Faso": "Ouagadougou"
+        }
 
 
 .. admonition:: Practical exercise - capital cities: add
 
     Add more countries to your list, without creating a new variable.
 
- ..  admonition:: Solution
+..  admonition:: Solution
     :class: toggle
 
-    .. code-block::Python
+    .. code-block:: Python
 
-    capitals["Italy"] = "Rome"
-    capitals["Mexico"] = "Mexico City"
+        capitals["Italy"] = "Rome"
+        capitals["Mexico"] = "Mexico City"
 
 
 
@@ -107,23 +107,23 @@ is a common idiom you will see in Python code.
 
     Remove the UK from the list. You may have to search the internet to find the answer to this one!
 
- ..  admonition:: Solution
+..  admonition:: Solution
     :class: toggle
 
-    .. code-block::Python
+    .. code-block:: Python
 
-    del capitals["UK"]
+        del capitals["UK"]
 
 .. admonition:: Practical exercise - capital cities: edit
 
     Edit the value for one of your capitals. Ouagadougou is also known as Wagadugu
 
- ..  admonition:: Solution
+..  admonition:: Solution
     :class: toggle
 
-    .. code-block::Python
+    .. code-block:: Python
 
-    capitals["Burkina Faso"] = "Wagadugu"
+        capitals["Burkina Faso"] = "Wagadugu"
 
 .. admonition:: Practical exercise - capital cities: functions
 
@@ -134,17 +134,17 @@ is a common idiom you will see in Python code.
      - Create a copy of a dictionary
      - Clear a dictionary
 
- ..  admonition:: Solution
+..  admonition:: Solution
     :class: toggle
 
-    .. code-block::Python
+    .. code-block:: Python
 
-    if ("UK" in captials):
-        print(cpatials["UK"])
+        if ("UK" in captials):
+            print(capitals["UK"])
 
-    print(len(captials))
+        print(len(capitals))
 
-    capitals_mkII = copy(capitals)
+        capitals_mkII = copy(capitals)
 
-    clear(pactials)
+        clear(capitals)
 
