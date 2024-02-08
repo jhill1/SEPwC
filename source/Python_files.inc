@@ -119,7 +119,8 @@ into words (seperated by spaces) and creating a list of those.
 
 .. admonition:: Practical exercise
 
-    Download this text file. Write code to open the file
+    Download `this text file <https://raw.githubusercontent.com/jhill1/SEPwC/master/code_examples/depth_data.csv>`_ .
+    Write code to open the file
     and read all the contents in one go and save into a variable.
     Print that variable to screen.
 
@@ -133,7 +134,35 @@ into words (seperated by spaces) and creating a list of those.
     
     .. code-block:: python
 
+        with open("depth_data.csv","r") as f:
+            all_file = f.read()
+            print(all_file)
+
+        # the file will be closed above as the "with"
+        # block has ended.
+        with open("depth_data.csv","r") as f:
+            for line in f:
+                print(line.split(","))
+
+    which produces:
+
+    .. code-block::bash
+
+        File,Top,Bottom
+        core_13.xlsx,22.75,30
+        core_16.xlsx,27,33
+        core_17.xlsx,27.75,43
+
+        ['File', 'Top', 'Bottom\n']
+        ['core_13.xlsx', '22.75', '30\n']
+        ['core_16.xlsx', '27', '33\n']
+        ['core_17.xlsx', '27.75', '43\n']
         
+
+    Note how the second method has produced lists (due to the `split()` function) which
+    we could iterate over and do something sensible with, e.g. opening the file in the first
+    element, perhaps.
+
 
 Writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
