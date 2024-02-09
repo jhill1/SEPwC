@@ -143,10 +143,10 @@ into words (seperated by spaces) and creating a list of those.
         with open("depth_data.csv","r") as f:
             for line in f:
                 print(line.split(","))
-
+    
     which produces:
-
-    .. code-block::bash
+    
+    .. code-block:: bash
 
         File,Top,Bottom
         core_13.xlsx,22.75,30
@@ -228,4 +228,39 @@ together.
 All of the above are correct and will work fine. Some may argue for one way being more 'Pythonic' than
 others, but your job is to write clear code so use whichever is clearest for you.
 
+.. admonition:: Practical exercise
+
+    Write your `capitals` dictionary into a file, seperated by commas, so country in 
+    column 1 and the city in column 2. Each country is then on a new line.
+    This creates a CSV file, which you can load into Excel, etc.
+
+..  admonition:: Solution
+    :class: toggle
+
+    This is my code, wrapping both parts into one code.
+    
+    .. code-block:: python
+
+        capitals = {
+            "Germany": "Berlin",
+            "UK": "London",
+            "USA": "Washington DC",
+            "France": "Paris",
+            "Burkina Faso": "Ouagadougou"
+        }
+        with open("capitals.csv", "w") as f: 
+            for country in capitals:
+                f.write(country + "," + capitals[country] + "\n")
+
+    The file then contains:
+
+    .. code-block:: bash
+
+        jh1889@mirovia:~/work/teaching/SEPwC/source$ more capitals.csv 
+        Germany,Berlin
+        UK,London
+        USA,Washington DC
+        France,Paris
+        Burkina Faso,Ouagadougou
+    
 
