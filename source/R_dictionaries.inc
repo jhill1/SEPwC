@@ -64,7 +64,7 @@ reassigning the dictionary to the same variable. For example:
 
     telephone[names(telephone) != "Grenville"]
     
-Gives the `telephone` dictionary without `"Grenville". To make that change permanaent, 
+Gives the `telephone` dictionary without `"Grenville"`. To make that change permanaent, 
 you reassign the output back into telephone:
 
 
