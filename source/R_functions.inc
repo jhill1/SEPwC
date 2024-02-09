@@ -165,9 +165,8 @@ What happens if the user supplies only a single argument, not two as we've asked
 
 What error message did you get?
 
-..  admonition:: Check your answer
-    :class: toggle
-
+.. admonition:: Solution
+   :class: toggle
 
    .. code-block:: R
      
@@ -213,9 +212,8 @@ However, you may note I've switched the order of the arguments around. What happ
 
    print_greeting("Bryan")
 
-..  admonition:: Check your answer
-    :class: toggle
-
+.. admonition:: Solution
+   :class: toggle
 
    .. code-block:: R
      

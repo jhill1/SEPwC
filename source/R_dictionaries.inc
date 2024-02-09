@@ -53,4 +53,28 @@ which loops over the values. If we want to loop over the keys:
     }
 
 
+Some useful tricks with R dictionaries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Because R doesn't have built in dictionaries, it's a bit cumbersome to 
+delete items and manipulate a dictionary in place. You often find yourself
+reassigning the dictionary to the same variable. For example:
+
+.. code-block:: R
+
+    telephone[names(telephone) != "Grenville"]
+    
+Gives the `telephone` dictionary without `"Grenville". To make that change permanaent, 
+you reassign the output back into telephone:
+
+
+.. code-block:: R
+
+    telephone <- telephone[names(telephone) != "Grenville"]
+
+If any code you write makes eavy use of dictionaries, it is worth writing little
+helper functions to do this so you code is cleaner.
+
+R does have libraries that make proper dictionaries. `hash` is one such library. 
+If you are making heavy use of dictionaries, it may be better to use that library instead!
 
