@@ -32,7 +32,7 @@ When you run a Python script, with some arbitrary text after:
 
 that text is passed to the ``sys`` module in Python. Let's create this simple script, named ``arg_script.py``
 
-.. code-block:: bash
+.. code-block:: python
 
    import sys
 
