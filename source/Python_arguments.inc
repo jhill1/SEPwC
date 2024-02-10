@@ -70,6 +70,25 @@ Within our script we access them as we would any other list:
    to construct input which can then delete the database. You must always check what the user is giving you before
    using it, especially when it comes to files, databases, or URLs. 
 
+.. admonition:: Practical exercise - simple command line arguments
+
+    Write a simple python script to get all command line arguments given to it
+    and print them out on individual lines. Do not include the script name.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+
+        import sys
+
+        count = 1
+        # note the 1:, I'm skipping the 0-th element!
+        for arg in sys.argv[1:]:
+            print(str(count) + " " + arg)
+            count =+ 1
+
+
 Advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -115,6 +134,54 @@ You then parse the argument and put them in variables as you see fit
     boundary_file = args.filename
     polygon_file = args.polygon
     default_PhysID = args.default_PhysID
+
+
+.. admonition:: Practical exercise - more complex arguments
+
+    Write a simple python script that returns the square of a given number, 
+    e.g. if the users give 2, the program returns 4 to screen. 
+    It must have the following arguments using `argparse`. 
+
+     - an optional ``verbose`` flag, which can take an `int` value of 0, 1 or 2.
+       This increases the verbosity of the output from just the number (`verbosity==0`)
+       to a full sentence (`verbosity==2`), with default of 0.
+     - restrict the input number to an integer only
+     - add a check for negative numbers as input
+     - optional output to a file
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+
+        import argparse
+        import sys
+
+        parser = argparse.ArgumentParser()
+        parser.add_argument("square", type=int,
+                            help="display a square of a given number")
+        parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2],
+                            help="increase output verbosity", default=0)
+        parse.add_argument("--output_file")
+        args = parser.parse_args()
+        square = args.square
+        output_file = args.output_file
+
+        if square <= 0:
+            print("Please provide a positive integer")
+            sys.exit(-1)
+        answer = square**2
+        if args.verbosity == 2:
+            print(f"the square of {square} equals {answer}")
+        elif args.verbosity == 1:
+            print(f"{square}^2 == {answer}")
+        else:
+            print(answer)
+
+        if output_file != None:
+            with open(output_file, "w") as f: 
+                f.write(f"The square of {square} equals {answer}\n")
+
 
 
 Getting input from a user
