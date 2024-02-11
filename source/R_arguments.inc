@@ -203,11 +203,19 @@ Getting input from a user
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to ask the user something, e.g. a file name
-or if they wish to continue, you can use the ``readline`` function.
+or if they wish to continue, you can use the ``readLines`` function.
+However, this is a bit hacky; it wasn't really design for this, so 
+it works well enough, but for running within an ``Rscript`` *and* in the console
+it needs some work. We point it at a "stdin" file (i.e. the keyboard) and
+ask for a single line.
+
+If you search online for how to read user input from keyboard in R you will find
+reference to the ``scan``, ``readline`` and ``readlines`` functions. They all work 
+well in an interactive environment, but not when running as a batch script via ``Rscript``.
 
 .. code-block:: R
 
-    answer <- readline("Do you wish to continue (Y/N)?")
+    answer <- readLines(file("stdin"),1)
     if (answer == "Y") {
         # do something
     } else if (answer == "N") {
@@ -216,7 +224,7 @@ or if they wish to continue, you can use the ``readline`` function.
         print(paste0("I didn't understand ", answer))
     }
 
-Note that the innput is returned as a string, so you may need to convert 
+Note that the input is returned as a string, so you may need to convert 
 to a floating point number or integer, etc. As with command line
 arguments, be careful with any user input and check it carefully
 before using it.
