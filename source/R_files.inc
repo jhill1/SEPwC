@@ -1,4 +1,4 @@
-R files
+R: files
 ----------------------------
 
 Writing software for scientific/research purposes often invovles reading in 
@@ -35,4 +35,52 @@ it. In other words `read.table` is more flexible in reading in data as it
 can read in data seperated by spaces, semi-colons, pipes, etc. Both
 functions return a data frame object (we'll learn more on this later), 
 with the columns labelled by the headers. 
+
+Similarly if we have data in a variable, we can get R to write this out
+in a CSV or table, easily:
+
+.. code-block:: R
+
+    write.csv(df,file='new_file.csv')
+
+Here, ``df`` is your data frame which contains the data, with the filename
+given by the ``file`` argument. 
+
+There are a number of arguements you can give to the function to get the 
+data file to look as you wish. This includes appending to an existing file, 
+the type of quotes to use, the seperator and whether to use row and column names.
+
+It's worth finding the R manuals online to see these and experiment a little.
+
+.. admonition:: Practical exercise
+
+    Write your `capitals` dictionary into a file, seperated by commas, so country in 
+    column 1 and the city in column 2. Each country is then on a new line.
+    This creates a CSV file, which you can load into Excel, etc.
+
+..  admonition:: Solution
+    :class: toggle
+ 
+    .. code-block:: R
+
+        capitals = {
+            "Germany": "Berlin",
+            "UK": "London",
+            "USA": "Washington DC",
+            "France": "Paris",
+            "Burkina Faso": "Ouagadougou"
+        }
+        write.table(capitals,"capitals.csv",sep=",",col.names=F)
+
+    The file then contains:
+
+    .. code-block:: bash
+
+        jh1889@thalassa:~/work/teaching/SEPwC$ more captials.csv 
+        "Germany","Berlin"
+        "UK","London"
+        "USA","Washington DC"
+        "France","Paris"
+        "Burkina Faso","Ouagadougou"
     
+    Why did I use the `write.table` function? What happens if `write.csv` is used? 
