@@ -5,9 +5,6 @@ Writing software for scientific/research purposes often invovles reading in
 data from files. Python file handling is very powerful, but surprisingly
 easy to use and manage.
 
-First, a diversion...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Files in computing have a very long history and there's a lot of baggage
 carried over from this history. Some of this creeps into the jargon
 we end up using. First, there's the two main types of files

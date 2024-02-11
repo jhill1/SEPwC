@@ -88,8 +88,8 @@ Within our script we access them as we would any other list:
     and print them out on individual lines. Do not include the script name or the other
     R specific things; just the user arguments.
 
-..  admonition:: Solution
-    :class: toggle
+.. admonition:: Solution
+   :class: toggle
 
     .. code-block:: R
 
@@ -101,8 +101,8 @@ Within our script we access them as we would any other list:
         }
 
 
-Advanced command line interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R advanced command line interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 R has a number of libraries that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -162,8 +162,8 @@ You then parse the argument and put them in variables as you see fit
      - add a check for negative numbers as input
      - optional output to a file
 
-..  admonition:: Solution
-    :class: toggle
+.. admonition:: Solution
+   :class: toggle
 
     .. code-block:: R
 
@@ -185,22 +185,22 @@ You then parse the argument and put them in variables as you see fit
         }
         answer <- square**2
         if (args$verbosity == 2) {
-            print(paste0("The square of ",square, "equals ", answer"))
+            print(paste0("The square of ",square, "equals ", answer))
         } else if (args.verbosity == 1) {
             print(paste0(square,"^2 == ",answer))
         } else {
             print(answer)
         }
 
-        if (output_file != NA) {
-            with open(output_file, "w") as f: 
-                f.write(f"The square of {square} equals {answer}\n")
-        }
+        #if (output_file != NA) {
+        #    with open(output_file, "w") as f: 
+        #        f.write(f"The square of {square} equals {answer}\n")
+        #}
 
 
 
-Getting input from a user
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Getting input from a user in R
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``readLines`` function.

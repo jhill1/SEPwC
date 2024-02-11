@@ -89,8 +89,8 @@ Within our script we access them as we would any other list:
             count =+ 1
 
 
-Advanced command line interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python advanced command line interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Python has a number of modules that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -184,8 +184,8 @@ You then parse the argument and put them in variables as you see fit
 
 
 
-Getting input from a user
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Getting input from a user in Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``input`` function.
