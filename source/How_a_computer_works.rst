@@ -64,7 +64,7 @@ the root drive where Windows actually lives, along with your programs (apps) and
 
     A: and B: were reserved for floppy disks, which is what early MSDOS computers generally had.
 
-From the drive, folders are separated with a '\' symbol. Software is generally installed
+From the drive, folders are separated with a ``\`` symbol (backslash). Software is generally installed
 in ``C:\Program Files`` (or ``C:\Program Files (x86)`` for older software). Your documents are
 in a *magic* folder called ``Documents``. It's possible to get this to point to network drives or 
 to your local hard drive. However, a *standard* Windows 11 machine will have this pointing to 
@@ -76,7 +76,7 @@ it's in ``Documents``; we need a full path (see later).
 Linux
 ^^^^^
 
-Linux organises things around the root drive, which is access via ``/`` (note the direction of the slash compared 
+Linux organises things around the root drive, which is access via ``/`` (forward slash: note the direction of the slash compared 
 to Windows - yes, they use the opposite direction). In root you then find a bunch of standard directories, ``\etc``, ``\bin``
 ``\var``, etc. These contain the system files. One directory is called ``\home``. This is where user files live. Within 
 ``\home`` there is a directory with your username. Within there are your images, music, etc.
@@ -566,7 +566,7 @@ So what are the basic commands you should know? Here's a list:
 
 |win|
 
- - ren
+ - ren or move
  - md
  - copy
  - dir
@@ -643,9 +643,9 @@ So what are the basic commands you should know? Here's a list:
         cd ../../../notes
         rm notes.txt
         cd ../../documents/
-        mv notes/notes.txt .
+        mv notes/notes.txt ..
         rmdir notes
-        cd ../
+        cd ../../
         mv cli_example cli_example_cli
 
     .. code-block:: bat
@@ -664,9 +664,9 @@ So what are the basic commands you should know? Here's a list:
         cd ..\..\..\notes
         del notes.txt
         cd ..\..\documents
-        ren notes\notes.txt .
+        move notes\notes.txt ..
         rmdir notes
-        cd ..\
+        cd ..\..\
         ren cli_example cli_example_cli
 
 
