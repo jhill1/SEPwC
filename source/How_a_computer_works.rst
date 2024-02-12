@@ -396,11 +396,8 @@ a programme).
 Let's do an example. Here's an absolute path:
 
 |maclin|
-``/home/jon/my_exicting_project/data/very_important_data.csv``
+``/home/jon/my_exciting_project/data/very_important_data.csv``
 
-This is in a directory structure like:
-
-[add image]
 
 Now let's cd into the scripts folder
 
