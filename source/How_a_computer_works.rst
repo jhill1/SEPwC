@@ -369,9 +369,9 @@ a subfolder:
     The output of ``pwd`` is ``Figures``. (For each question we start here!)
 
     * Question 1: How would we move to the ``papers`` folder?
-    * Quesiton 2: If I run the command ``cd ../../work``, what would happen?
+    * Question 2: If I run the command ``cd ../../work``, what would happen?
     * Question 3: I run the commands ``cd ../../../``, followed by ``cd work/backup``. Where am I now?
-    * Quesiton 4: In one command, move to the ``2021-01-27`` folder from ``Figures``
+    * Question 4: In one command, move to the ``2021-01-27`` folder from ``Figures``
     * Question 5: how would the above be simpler if ``Users`` was at the root of the filesystem?
         
 .. admonition:: Solution
