@@ -578,6 +578,10 @@ So what are the basic commands you should know? Here's a list:
    ``rm``, ``del``, and ``rmdir`` delete files permanently. They do *not* move the into Trash or similar. 
 
 
+..  youtube:: WUlRxCAYHTY
+   :align: center
+
+
 .. admonition:: Practical exercise
 
     **Find what the basic commands do**
