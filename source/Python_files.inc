@@ -234,8 +234,6 @@ others, but your job is to write clear code so use whichever is clearest for you
 ..  admonition:: Solution
     :class: toggle
 
-    This is my code, wrapping both parts into one code.
-    
     .. code-block:: python
 
         capitals = {
