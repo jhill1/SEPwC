@@ -130,7 +130,7 @@ code will not run.
 
       0.9 0.5269499999999994
       
-..  youtube:: 7U89TwLas1I
+.. youtube:: 7U89TwLas1I
     :align: center
 
 
@@ -174,4 +174,7 @@ In the above we have used the following Python features:
 
 We've covered some of these in the pseudo-code chapter, so here we're going to stick to the
 Python-specific parts and go through these in more detail.
+
+.. youtube:: QX5XQt8jPXQ
+    :align: center
 

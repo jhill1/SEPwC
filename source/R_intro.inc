@@ -115,3 +115,7 @@ In the above we have used the following R features:
 We've covered some of these in the pseudo-code chapter, so here we're going to stick to the
 R-specific parts and go through these in more detail.
 
+.. youtube:: 6bU0paSFdXw
+    :align: center
+
+
