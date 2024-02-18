@@ -57,9 +57,9 @@ the file handle is lost (i.e. `.close()` is called or the variable goes out of s
         # do things
         file.close()
 
-The `file.close()` is now redundant, but can still be used in the code to make it clear. All variables create in the `with`
-block disappear afterwards (this has caused me a few bugs in the past), but makes the scope of your variables
-clear.
+The `file.close()` is now redundant, but can still be used in the code to make it clear if needed. What the
+``with`` block does is call ``__enter__`` and ``__exit__`` functions, so files are automatically
+closed etc. 
 
 Reading files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
