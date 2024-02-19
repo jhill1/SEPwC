@@ -515,7 +515,7 @@ lists.
 
 You can visualize it this way:
 
-.. image:: images/np_indexing.png
+.. image:: ../images/np_indexing.png
 
 
 You may want to take a section of your array or specific array elements to use
@@ -763,7 +763,7 @@ Once you've created your arrays, you can start to work with them.  Let's say,
 for example, that you've created two arrays, one called "data" and one called
 "ones"
 
-.. image:: images/np_array_dataones.png
+.. image:: ../images/np_array_data_ones.png
 
 You can add the arrays together with the plus sign.
 
@@ -774,7 +774,7 @@ You can add the arrays together with the plus sign.
   >>> data + ones
   array([2, 3])
 
-.. image:: images/np_data_plus_ones.png
+.. image:: ../images/np_data_plus_ones.png
 
 You can, of course, do more than just addition!
 
@@ -787,7 +787,7 @@ You can, of course, do more than just addition!
   >>> data / data
   array([1., 1.])
 
-.. image:: images/np_sub_mult_divide.png
+.. image:: ../images/np_sub_mult_divide.png
 
 Basic operations are simple with NumPy. If you want to find the sum of the
 elements in an array, you'd use ``sum()``. This works for 1D arrays, 2D arrays,
@@ -830,7 +830,7 @@ Transposing and reshaping a matrix
 It's common to need to transpose your matrices. NumPy arrays have the property
 ``T`` that allows you to transpose a matrix.
 
-.. image:: images/np_transposing_reshaping.png
+.. image:: ../images/np_transposing_reshaping.png
 
 You may also need to switch the dimensions of a matrix. This can happen when,
 for example, you have a model that expects a certain input shape that is
@@ -847,7 +847,7 @@ You simply need to pass in the new dimensions that you want for the matrix.
          [3, 4],
          [5, 6]])
 
-.. image:: images/np_reshape.png
+.. image:: ../images/np_reshape.png
 
 You can also use ``.transpose()`` to reverse or change the axes of an array
 according to the values you specify.
