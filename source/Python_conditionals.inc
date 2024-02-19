@@ -131,6 +131,9 @@ Here, we've used the ``and`` operator to check that *both* temperature and humid
 set appropriately. If the user supplies anything other than "high" or "low" it should print
 a message.
 
+.. youtube:: WQtInJwxXkg
+    :align: center
+
 ..  admonition:: Learn more
     :class: toggle
 
@@ -139,7 +142,7 @@ a message.
     when you do the else like this. It helps you, the programmer, to debug and it helps
     the user possibly see what to change to fix. Here, we've also told the user what they should be
 
-    In reality, these variable should be checked before hand and a more informative error message could
+    In reality, these variable should be checked beforehand and a more informative error message could
     be given *before* any processing takes place. This code is so tiny that it makes no difference.
 
 The second way of working out the logic is by nested ``if`` statements. Here's an example:
@@ -205,6 +208,10 @@ if the first one is ``False``, ``mark`` must be less than 40 or greater than 100
         TypeError: '>=' not supported between instances of 'str' and 'int'
 
     which is because we can't compare a string and an integer!
+
+.. youtube:: WfO07chn53k
+    :align: center
+
 
 Now you've seen nested ``if`` statements in action. Try the final practical exercise of this section.
 
