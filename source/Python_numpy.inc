@@ -146,8 +146,9 @@ If we used Python lists we would use ``a[1][3]``
     However, you will find these terms in codes that are mathematical in 
     nature and use NumPy!
 
-Array attributes
-----------------
+
+Numpy array attributes
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The number of dimensions of an array is contained in the ``ndim`` attribute.
 
@@ -187,7 +188,7 @@ only one "data type". The data type is recorded in the ``dtype`` attribute.
 
 
 How to create a basic array
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Besides creating an array from a sequence of elements, you can easily create an
 array filled with ``0``'s::
@@ -825,7 +826,7 @@ You can sum over the axis of columns with:
 
 
 Transposing and reshaping a matrix
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's common to need to transpose your matrices. NumPy arrays have the property
 ``T`` that allows you to transpose a matrix.
@@ -970,6 +971,7 @@ You can also reverse the column at index position 1 (the second column):
    [ 9  2 11 12]]
 
 
-*Image credits: Jay Alammar https://jalammar.github.io/*
+*Image credits: `Jay Alammar <https://jalammar.github.io/>`_*.
 
-Material is based on https://numpy.org/doc/stable/license.html#
+Material is based on `Numpy's starter guide <https://numpy.org/doc/stable/user/absolute_beginners.html>'_.
+See original `licence <https://numpy.org/doc/stable/license.html>`_
