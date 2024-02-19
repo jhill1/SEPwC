@@ -154,7 +154,7 @@ for maximum, but others would disagree with me on that!
     * grain size data for a single location
     * A list of the above grain size data
     * sea surface temperature
-    * the point-by-point trakectory of an object
+    * the point-by-point trajectory of an object
     * an input filename supplied by the user
 
 ..  admonition:: Solution
