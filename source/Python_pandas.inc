@@ -71,7 +71,7 @@ labels and the values are the column values.
    df2
 
 The columns of the resulting :class:`DataFrame` have different
-:ref:`dtypes <basics.dtypes>`:
+datatypes:
 
 .. code-block::python
 
@@ -173,7 +173,6 @@ Selection
    recommend the optimized pandas data access methods, :meth:`DataFrame.at`, :meth:`DataFrame.iat`,
    :meth:`DataFrame.loc` and :meth:`DataFrame.iloc`.
 
-See the indexing documentation :ref:`Indexing and Selecting Data <indexing>` and :ref:`MultiIndex / Advanced Indexing <advanced>`.
 
 Getitem (``[]``)
 ...................
@@ -194,8 +193,6 @@ For a :class:`DataFrame`, passing a slice ``:`` selects matching rows:
 
 Selection by label
 ...................
-
-See more in :ref:`Selection by Label <indexing.label>` using :meth:`DataFrame.loc` or :meth:`DataFrame.at`.
 
 Selecting a row matching a label:
 
@@ -229,8 +226,6 @@ For getting fast access to a scalar (equivalent to the prior method):
 
 Selection by position
 .......................
-
-See more in :ref:`Selection by Position <indexing.integer>` using :meth:`DataFrame.iloc` or :meth:`DataFrame.iat`.
 
 Select via the position of the passed integers:
 
@@ -347,8 +342,7 @@ Missing data
 .............
 
 For NumPy data types, ``np.nan`` represents missing data. It is by
-default not included in computations. See the :ref:`Missing Data section
-<missing_data>`.
+default not included in computations. 
 
 Reindexing allows you to change/add/delete the index on a specified axis. This
 returns a copy of the data:
@@ -380,8 +374,6 @@ returns a copy of the data:
 
 panda Operations
 ~~~~~~~~~~~~~~~~~
-
-See the :ref:`Basic section on Binary Ops <basics.binop>`.
 
 Stats
 .......
@@ -425,8 +417,6 @@ that reduces or broadcasts its result respectively.
 Value Counts
 .............
 
-See more at :ref:`Histogramming and Discretization <basics.discretization>`.
-
 .. code-block::python
 
    s = pd.Series(np.random.randint(0, 7, size=10))
@@ -438,8 +428,7 @@ String Methods
 
 :class:`Series` is equipped with a set of string processing methods in the ``str``
 attribute that make it easy to operate on each element of the array, as in the
-code snippet below. See more at :ref:`Vectorized String Methods
-<text.string_methods>`.
+code snippet below. 
 
 .. code-block::python
 
@@ -456,8 +445,6 @@ pandas provides various facilities for easily combining together :class:`Series`
 :class:`DataFrame` objects with various kinds of set logic for the indexes
 and relational algebra functionality in the case of join / merge-type
 operations.
-
-See the :ref:`Merging section <merging>`.
 
 Concatenating pandas objects together row-wise with :func:`concat`:
 
@@ -481,7 +468,7 @@ Concatenating pandas objects together row-wise with :func:`concat`:
 Join
 ......
 
-:func:`merge` enables SQL style join types along specific columns. See the :ref:`Database style joining <merging.join>` section.
+:func:`merge` enables SQL style join types along specific columns.
 
 .. code-block::python
 
@@ -511,8 +498,6 @@ following steps:
 * **Applying** a function to each group independently
 * **Combining** the results into a data structure
 
-See the :ref:`Grouping section <groupby>`.
-
 .. code-block::python
 
    df = pd.DataFrame(
@@ -541,9 +526,6 @@ Grouping by multiple columns label forms :class:`MultiIndex`.
 
 Reshaping
 ~~~~~~~~~~~
-
-See the sections on :ref:`Hierarchical Indexing <advanced.hierarchical>` and
-:ref:`Reshaping <reshaping.stacking>`.
 
 Stack
 .........
@@ -580,8 +562,6 @@ With a "stacked" DataFrame or Series (having a :class:`MultiIndex` as the
 Pivot tables
 .............
 
-See the section on :ref:`Pivot Tables <reshaping.pivot>`.
-
 .. code-block::python
 
    df = pd.DataFrame(
@@ -608,7 +588,7 @@ Time series
 pandas has simple, powerful, and efficient functionality for performing
 resampling operations during frequency conversion (e.g., converting secondly
 data into 5-minutely data). This is extremely common in, but not limited to,
-financial applications. See the :ref:`Time Series section <timeseries>`.
+financial applications.
 
 .. code-block::python
 
@@ -642,8 +622,8 @@ Adding a non-fixed duration (:class:`~pandas.tseries.offsets.BusinessDay`) to a 
 Categoricals
 ~~~~~~~~~~~~~~
 
-pandas can include categorical data in a :class:`DataFrame`. For full docs, see the
-:ref:`categorical introduction <categorical>` and the :ref:`API documentation <api.arrays.categorical>`.
+pandas can include categorical data in a :class:`DataFrame`.
+
 
 .. code-block::python
 
