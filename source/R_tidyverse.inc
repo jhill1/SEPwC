@@ -177,155 +177,143 @@ columns. For this we'll use `mutate()`.
 
 To create a new column of weight in kg:
 
-```{r, purl=FALSE}
-surveys %>%
-  mutate(weight_kg = weight / 1000)
-```
+.. code-block:: R
+
+    surveys %>%
+      mutate(weight_kg = weight / 1000)
 
 You can also create a second new column based on the first new column within the same call of `mutate()`:
 
-```{r, purl=FALSE}
-surveys %>%
-  mutate(weight_kg = weight / 1000,
-         weight_lb = weight_kg * 2.2)
-```
+.. code-block:: R
+
+    surveys %>%
+      mutate(weight_kg = weight / 1000,
+             weight_lb = weight_kg * 2.2)
 
 If this runs off your screen and you just want to see the first few rows, you
 can use a pipe to view the `head()` of the data. (Pipes work with non-``dplyr``
 functions, too, as long as the ``dplyr`` or `magrittr` package is loaded).
 
-```{r, purl=FALSE}
-surveys %>%
-  mutate(weight_kg = weight / 1000) %>%
-  head()
-```
+.. code-block:: R
+
+    surveys %>%
+       mutate(weight_kg = weight / 1000) %>%
+       head()
 
 The first few rows of the output are full of `NA`s, so if we wanted to remove
 those we could insert a `filter()` in the chain:
 
-```{r, purl=FALSE}
-surveys %>%
-  filter(!is.na(weight)) %>%
-  mutate(weight_kg = weight / 1000) %>%
-  head()
-```
+.. code-block:: R
+
+    surveys %>%
+        filter(!is.na(weight)) %>%
+        mutate(weight_kg = weight / 1000) %>%
+        head()
 
 `is.na()` is a function that determines whether something is an `NA`. The `!`
 symbol negates the result, so we're asking for every row where weight *is not* an `NA`.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+.. admonition:: Practical exercise
 
-### Challenge {.challenge}
+    Create a new data frame from the `surveys` data that meets the following
+    criteria: contains only the `species_id` column and a new column called
+    `hindfoot_cm` containing the `hindfoot_length` values (currently in mm)
+    converted to centimeters.
+    In this `hindfoot_cm` column, there are no `NA`s and all values are less
+    than 3.
 
-Create a new data frame from the `surveys` data that meets the following
-criteria: contains only the `species_id` column and a new column called
-`hindfoot_cm` containing the `hindfoot_length` values (currently in mm)
-converted to centimeters.
-In this `hindfoot_cm` column, there are no `NA`s and all values are less
-than 3.
+    **Hint**: think about how the commands should be ordered to produce this data frame!
 
-**Hint**: think about how the commands should be ordered to produce this data frame!
+..  admonition:: Solution
+    :class: toggle
 
-:::::::: solution
+    .. code-block:: R
 
-```{r, answer=TRUE, eval=FALSE, purl=FALSE}
-surveys_hindfoot_cm <- surveys %>%
-    filter(!is.na(hindfoot_length)) %>%
-    mutate(hindfoot_cm = hindfoot_length / 10) %>%
-    filter(hindfoot_cm < 3) %>%
-    select(species_id, hindfoot_cm)
-```
+        surveys_hindfoot_cm <- surveys %>%
+            filter(!is.na(hindfoot_length)) %>%
+            mutate(hindfoot_cm = hindfoot_length / 10) %>%
+            filter(hindfoot_cm < 3) %>%
+            select(species_id, hindfoot_cm)
 
-:::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-```{r, eval=FALSE, purl=TRUE, echo=FALSE}
-## Mutate Challenge:
-##  Create a new data frame from the `surveys` data that meets the following
-##  criteria: contains only the `species_id` column and a new column called
-##  `hindfoot_cm` containing the `hindfoot_length` values converted to centimeters.
-##  In this `hindfoot_cm` column, there are no `NA`s and all values are less
-##  than 3.
-
-##  Hint: think about how the commands should be ordered to produce this data frame!
-```
-
-### Split-apply-combine data analysis and the `summarize()` function
+Split-apply-combine data analysis and the ``summarize()`` function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Many data analysis tasks can be approached using the *split-apply-combine*
 paradigm: split the data into groups, apply some analysis to each group, and
 then combine the results. Key functions of ``dplyr`` for this workflow are
 `group_by()` and `summarize()`.
 
-#### The `group_by()` and `summarize()` functions
+The ``group_by()`` and ``summarize()`` functions
+..............................................
 
-`group_by()` is often used together with `summarize()`, which collapses each
-group into a single-row summary of that group.  `group_by()` takes as arguments
+``group_by()`` is often used together with ``summarize()``, which collapses each
+group into a single-row summary of that group.  ``group_by()`` takes as arguments
 the column names that contain the **categorical** variables for which you want
 to calculate the summary statistics. So to compute the mean `weight` by sex:
 
-```{r, purl=FALSE}
-surveys %>%
-  group_by(sex) %>%
-  summarize(mean_weight = mean(weight, na.rm = TRUE))
-```
+.. code-block:: R
+
+    surveys %>%
+        group_by(sex) %>%
+        summarize(mean_weight = mean(weight, na.rm = TRUE))
 
 You may also have noticed that the output from these calls doesn't run off the
 screen anymore. It's one of the advantages of `tbl_df` over data frame.
 
 You can also group by multiple columns:
 
-```{r, purl=FALSE}
-surveys %>%
-  group_by(sex, species_id) %>%
-  summarize(mean_weight = mean(weight, na.rm = TRUE)) %>%
-  tail()
-```
+.. code-block:: R
 
-Here, we used `tail()` to look at the last six rows of our summary. Before, we had
-used `head()` to look at the first six rows. We can see that the `sex` column contains
-`NA` values because some animals had escaped before their sex and body weights
-could be determined. The resulting `mean_weight` column does not contain `NA` but
-`NaN` (which refers to "Not a Number") because `mean()` was called on a vector of
-`NA` values while at the same time setting `na.rm = TRUE`. To avoid this, we can
+    surveys %>%
+        group_by(sex, species_id) %>%
+        summarize(mean_weight = mean(weight, na.rm = TRUE)) %>%
+        tail()
+
+Here, we used ``tail()`` to look at the last six rows of our summary. Before, we had
+used `head()` to look at the first six rows. We can see that the ``sex`` column contains
+``NA`` values because some animals had escaped before their sex and body weights
+could be determined. The resulting ``mean_weight`` column does not contain ``NA`` but
+``NaN`` (which refers to "Not a Number") because ``mean()`` was called on a vector of
+``NA`` values while at the same time setting ``na.rm = TRUE``. To avoid this, we can
 remove the missing values for weight before we attempt to calculate the summary
 statistics on weight. Because the missing values are removed first, we can omit
-`na.rm = TRUE` when computing the mean:
+``na.rm = TRUE`` when computing the mean:
 
-```{r, purl=FALSE}
-surveys %>%
-  filter(!is.na(weight)) %>%
-  group_by(sex, species_id) %>%
-  summarize(mean_weight = mean(weight))
-```
+.. code-block:: R
+
+    surveys %>%
+        filter(!is.na(weight)) %>%
+        group_by(sex, species_id) %>%
+        summarize(mean_weight = mean(weight))
 
 Here, again, the output from these calls doesn't run off the screen
-anymore. If you want to display more data, you can use the `print()` function
+anymore. If you want to display more data, you can use the ``print()`` function
 at the end of your chain with the argument `n` specifying the number of rows to
 display:
 
-```{r, purl=FALSE}
-surveys %>%
-  filter(!is.na(weight)) %>%
-  group_by(sex, species_id) %>%
-  summarize(mean_weight = mean(weight)) %>%
-  print(n = 15)
-```
+.. code-block:: R
+
+    surveys %>%
+        filter(!is.na(weight)) %>%
+        group_by(sex, species_id) %>%
+        summarize(mean_weight = mean(weight)) %>%
+        print(n = 15)
 
 Once the data are grouped, you can also summarize multiple variables at the same
 time (and not necessarily on the same variable). For instance, we could add a
 column indicating the minimum weight for each species for each sex:
 
-```{r, purl=FALSE}
-surveys %>%
-  filter(!is.na(weight)) %>%
-  group_by(sex, species_id) %>%
-  summarize(mean_weight = mean(weight),
-            min_weight = min(weight))
-```
+.. code-block:: R
 
-It is sometimes useful to rearrange the result of a query to inspect the values. For instance, we can sort on `min_weight` to put the lighter species first:
+    surveys %>%
+        filter(!is.na(weight)) %>%
+        group_by(sex, species_id) %>%
+        summarize(mean_weight = mean(weight),
+                  min_weight = min(weight))
+
+It is sometimes useful to rearrange the result of a query to inspect the values. For instance, we can 
+sort on ``min_weight`` to put the lighter species first:
 
 ```{r, purl=FALSE}
 surveys %>%
