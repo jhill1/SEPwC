@@ -1,72 +1,28 @@
 R: tidyverse
 -------------
 
----
-title: Manipulating, analyzing and exporting data with tidyverse
-author: Data Carpentry contributors
-minutes: 
----
-
-```{r, echo=FALSE, purl=FALSE, message=FALSE}
-source("setup.R")
-surveys <- read.csv("data_raw/portal_data_joined.csv")
-suppressWarnings(surveys$date <- lubridate::ymd(paste(surveys$year,
-                                                      surveys$month,
-                                                      surveys$day,
-                                                      sep = "-")))
-```
-
-:::::::::::::::::::::::::::::::::::::::  objectives
-
-- Describe the purpose of the **`dplyr`** and **`tidyr`** packages.
-- Select certain columns in a data frame with the **`dplyr`** function `select`.
-- Extract certain rows in a data frame according to logical (boolean) conditions with the **`dplyr`** function `filter` .
-- Link the output of one **`dplyr`** function to the input of another function with the 'pipe' operator `%>%`.
-- Add new columns to a data frame that are functions of existing columns with `mutate`.
-- Use the split-apply-combine concept for data analysis.
-- Use `summarize`, `group_by`, and `count` to split a data frame into groups of observations, apply summary statistics for each group, and then combine the results.
-- Describe the concept of a wide and a long table format and for which purpose those formats are useful.
-- Describe what key-value pairs are.
-- Reshape a data frame from long to wide format and back with the `pivot_wider` and `pivot_longer` commands from the **`tidyr`** package.
-- Export a data frame to a .csv file.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::: questions
-
-- What are dplyr and tidyr?
-- How can I select specific rows and/or columns from a dataframe?
-- How can I combine multiple commands into a single command?
-- How can I create new columns or remove existing columns from a dataframe?
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-# Data manipulation using **`dplyr`** and **`tidyr`**
-
 Bracket subsetting is handy, but it can be cumbersome and difficult to read,
-especially for complicated operations. Enter **`dplyr`**. **`dplyr`** is a package for
-helping with tabular data manipulation. It pairs nicely with **`tidyr`** which enables you to swiftly convert between different data formats for plotting and analysis.
+especially for complicated operations. Enter ``dplyr``. ``dplyr`` is a package for
+helping with tabular data manipulation. It pairs nicely with ``tidyr`` which 
+enables you to swiftly convert between different data formats for plotting and analysis.
 
-The **`tidyverse`** package is an
-"umbrella-package" that installs **`tidyr`**, **`dplyr`**, and several other useful packages for data analysis, such as  **`ggplot2`**, **`tibble`**, etc.
+The `tidyverse` package is an "umbrella-package" that installs ``tidyr``, ``dplyr``, 
+and several other useful packages for data analysis, such as  ``ggplot2``, ``tibble``, etc.
 
-The **`tidyverse`** package tries to address 3 common issues that arise when
+The ``tidyverse`` package tries to address 3 common issues that arise when
 doing data analysis in R:
 
-1. The results from a base R function sometimes depend on the type of data.
-2. R expressions are used in a non standard way, which can be confusing for new
-  learners.
-3. The existence of hidden arguments having default operations that new learners are not aware
-  of.
+ 1. The results from a base R function sometimes depend on the type of data.
+ 2. R expressions are used in a non standard way, which can be confusing for new
+    learners.
+ 3. The existence of hidden arguments having default operations that new learners are not aware
+    of.
 
-You should already have installed and loaded the **`tidyverse`** package.
-If you haven't already done so, you can type `install.packages("tidyverse")` straight into the console. Then, type `library(tidyverse)` to load the package.
+What are ``dplyr`` and ``tidyr``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## What are **`dplyr`** and **`tidyr`**?
-
-The package **`dplyr`** provides helper tools for the most common data manipulation
-tasks. It is built to work directly with data frames, with many common tasks
-optimized by being written in a compiled language (C++). An additional feature is the
+The package ``dplyr`` provides helper tools for the most common data manipulation
+tasks. It is built to work directly with data frames with the
 ability to work directly with data stored in an external database. The benefits of
 doing this are that the data can be managed natively in a relational database,
 queries can be conducted on that database, and only the results of the query are
@@ -78,71 +34,61 @@ memory. The database connections essentially remove that limitation in that you
 can connect to a database of many hundreds of GB, conduct queries on it directly, and pull
 back into R only what you need for analysis.
 
-The package **`tidyr`** addresses the common problem of wanting to reshape your data for
+The package ``tidyr`` addresses the common problem of wanting to reshape your data for
 plotting and usage by different R functions. For example, sometimes we want data sets where we have one
 row per measurement. Other times we want a data frame where each measurement type has its
 own column, and rows are instead more aggregated groups
 (e.g., a time period, an experimental unit like a plot or a batch number).
-Moving back and forth between these formats is non-trivial, and **`tidyr`** gives you tools
-for this and more sophisticated  data manipulation.
+Moving back and forth between these formats is non-trivial, and ``tidyr`` gives you tools
+for this and more sophisticated data manipulation.
 
-To learn more about **`dplyr`** and **`tidyr`** after the workshop, you may want to check out this
-[handy data transformation with **`dplyr`** cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
-and this [one about **`tidyr`**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf).
+We'll read in our data using the `read_csv()` function from the
+tidyverse package ``readr``.
 
-As before, we'll read in our data using the `read_csv()` function from the
-tidyverse package **`readr`**.
+.. code-block:: R
 
-```{r, results="hide", purl=FALSE}
-surveys <- read_csv("data_raw/portal_data_joined.csv")
-```
+    surveys <- read_csv("data_raw/portal_data_joined.csv")
 
-```{r, results="hide", purl=FALSE}
-## inspect the data
-str(surveys)
-```
+    ## inspect the data
+    str(surveys)
+    ## preview the data
+    view(surveys)
 
-```{r, eval=FALSE, purl=FALSE}
-## preview the data
-view(surveys)
-```
+Next, we're going to learn some of the most common ``dplyr`` functions:
 
-Next, we're going to learn some of the most common **`dplyr`** functions:
+ - ``select()``: subset columns
+ - ``filter()``: subset rows on conditions
+ - ``mutate()``: create new columns by using information from other columns
+ - ``group_by()`` and ``summarize()``: create summary statistics on grouped data
+ - ``arrange()``: sort results
+ - ``count()``: count discrete values
 
-- `select()`: subset columns
-- `filter()`: subset rows on conditions
-- `mutate()`: create new columns by using information from other columns
-- `group_by()` and `summarize()`: create summary statistics on grouped data
-- `arrange()`: sort results
-- `count()`: count discrete values
+Selecting columns and filtering rows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Selecting columns and filtering rows
-
-To select columns of a data frame, use `select()`. The first argument
-to this function is the data frame (`surveys`), and the subsequent
+To select columns of a data frame, use ``select()``. The first argument
+to this function is the data frame (``surveys``), and the subsequent
 arguments are the columns to keep.
 
-```{r, results="hide", purl=FALSE}
-select(surveys, plot_id, species_id, weight)
-```
+.. code-block:: R
+    select(surveys, plot_id, species_id, weight)
 
 To select all columns *except* certain ones, put a "-" in front of
 the variable to exclude it.
 
-```{r, results="hide", purl=FALSE}
-select(surveys, -record_id, -species_id)
-```
+.. code-block:: R
+    select(surveys, -record_id, -species_id)
 
-This will select all the variables in `surveys` except `record_id`
-and `species_id`.
+This will select all the variables in ``surveys`` except ``record_id``
+and ``species_id``.
 
-To choose rows based on a specific criterion, use `filter()`:
+To choose rows based on a specific criterion, use ``filter()``:
 
-```{r, purl=FALSE}
-filter(surveys, year == 1995)
-```
+.. code-block:: R
+    filter(surveys, year == 1995)
 
-## Pipes
+Pipes
+~~~~~~
 
 What if you want to select and filter at the same time? There are three
 ways to do this: use intermediate steps, nested functions, or pipes.
@@ -150,18 +96,19 @@ ways to do this: use intermediate steps, nested functions, or pipes.
 With intermediate steps, you create a temporary data frame and use
 that as input to the next function, like this:
 
-```{r, purl=FALSE}
-surveys2 <- filter(surveys, weight < 5)
-surveys_sml <- select(surveys2, species_id, sex, weight)
-```
+.. code-block:: R
 
-This is readable, but can clutter up your workspace with lots of objects that you have to name individually. With multiple steps, that can be hard to keep track of.
+    surveys2 <- filter(surveys, weight < 5)
+    surveys_sml <- select(surveys2, species_id, sex, weight)
+
+This is readable, but can clutter up your workspace with lots of objects that 
+you have to name individually. With multiple steps, that can be hard to keep track of.
 
 You can also nest functions (i.e. one function inside of another), like this:
 
-```{r, purl=FALSE}
-surveys_sml <- select(filter(surveys, weight < 5), species_id, sex, weight)
-```
+.. code-block:: R
+
+    surveys_sml <- select(filter(surveys, weight < 5), species_id, sex, weight)
 
 This is handy, but can be difficult to read if too many functions are nested, as
 R evaluates the expression from the inside out (in this case, filtering, then selecting).
@@ -169,71 +116,60 @@ R evaluates the expression from the inside out (in this case, filtering, then se
 The last option, *pipes*, are a recent addition to R. Pipes let you take
 the output of one function and send it directly to the next, which is useful
 when you need to do many things to the same dataset.  Pipes in R look like
-`%>%` and are made available via the **`magrittr`** package, installed automatically
-with **`dplyr`**. If you use RStudio, you can type the pipe with <kbd>Ctrl</kbd>
+``%>%`` and are made available via the ``magrittr`` package, installed automatically
+with ``dplyr``. If you use RStudio, you can type the pipe with :kbd:`Ctrl` + 
+:kbd:`Shift` + :kbd:`M` if you have a PC or :kbd:`Cmd` + :kbd:`Shift` + :kbd:`M`: if you have a Mac.
 
-- <kbd>Shift</kbd> + <kbd>M</kbd> if you have a PC or <kbd>Cmd</kbd> +
-  <kbd>Shift</kbd> + <kbd>M</kbd> if you have a Mac.
+.. code-block:: R
 
-```{r, purl=FALSE}
-surveys %>%
-  filter(weight < 5) %>%
-  select(species_id, sex, weight)
-```
+    surveys %>%
+        filter(weight < 5) %>%
+        select(species_id, sex, weight)
 
-In the above code, we use the pipe to send the `surveys` dataset first through
-`filter()` to keep rows where `weight` is less than 5, then through `select()`
-to keep only the `species_id`, `sex`, and `weight` columns. Since `%>%` takes
+In the above code, we use the pipe to send the ``surveys`` dataset first through
+``filter()`` to keep rows where ``weight`` is less than 5, then through ``select()``
+to keep only the ``species_id``, ``sex``, and ``weight`` columns. Since ``%>%`` takes
 the object on its left and passes it as the first argument to the function on
 its right, we don't need to explicitly include the data frame as an argument
-to the `filter()` and `select()` functions any more.
+to the ``filter()`` and ``select()`` functions any more.
 
 Some may find it helpful to read the pipe like the word "then." For instance,
-in the example above, we took the data frame `surveys`, *then* we `filter`ed
-for rows with `weight < 5`, *then* we `select`ed columns `species_id`, `sex`,
-and `weight`. The **`dplyr`** functions by themselves are somewhat simple,
+in the example above, we took the data frame ``surveys``, *then* we ``filter``ed
+for rows with ``weight < 5``, *then* we ``select``ed columns ``species_id``, ``sex``,
+and ``weight``. The ``dplyr`` functions by themselves are somewhat simple,
 but by combining them into linear workflows with the pipe we can accomplish
 more complex manipulations of data frames.
 
 If we want to create a new object with this smaller version of the data, we
 can assign it a new name:
 
-```{r, purl=FALSE}
-surveys_sml <- surveys %>%
-  filter(weight < 5) %>%
-  select(species_id, sex, weight)
+.. code-block:: R
 
-surveys_sml
-```
+    surveys_sml <- surveys %>%
+        filter(weight < 5) %>%
+        select(species_id, sex, weight)
+
+    surveys_sml
+
 
 Note that the final data frame is the leftmost part of this expression.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+.. admonition:: Practical exercise
 
-### Challenge {.challenge}
+    Using pipes, subset the ``surveys`` data to include animals collected before
+    1995 and retain only the columns ``year``, ``sex``, and ``weight``.
 
-Using pipes, subset the `surveys` data to include animals collected before
-1995 and retain only the columns `year`, `sex`, and `weight`.
 
-:::::::: solution
+..  admonition:: Solution
+    :class: toggle
 
-```{r, answer=TRUE, eval=FALSE, purl=FALSE}
-surveys %>%
-    filter(year < 1995) %>%
-    select(year, sex, weight)
-```
+    .. code-block:: R
+        surveys %>%
+            filter(year < 1995) %>%
+            select(year, sex, weight)
 
-:::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-```{r, eval=FALSE, purl=TRUE, echo=FALSE}
-## Pipes Challenge:
-##  Using pipes, subset the data to include animals collected
-##  before 1995, and retain the columns `year`, `sex`, and `weight.`
-```
-
-### Mutate
+Mutate
+~~~~~~~
 
 Frequently you'll want to create new columns based on the values in existing
 columns, for example to do unit conversions, or to find the ratio of values in two
@@ -255,8 +191,8 @@ surveys %>%
 ```
 
 If this runs off your screen and you just want to see the first few rows, you
-can use a pipe to view the `head()` of the data. (Pipes work with non-**`dplyr`**
-functions, too, as long as the **`dplyr`** or `magrittr` package is loaded).
+can use a pipe to view the `head()` of the data. (Pipes work with non-``dplyr``
+functions, too, as long as the ``dplyr`` or `magrittr` package is loaded).
 
 ```{r, purl=FALSE}
 surveys %>%
@@ -319,7 +255,7 @@ surveys_hindfoot_cm <- surveys %>%
 
 Many data analysis tasks can be approached using the *split-apply-combine*
 paradigm: split the data into groups, apply some analysis to each group, and
-then combine the results. Key functions of **`dplyr`** for this workflow are
+then combine the results. Key functions of ``dplyr`` for this workflow are
 `group_by()` and `summarize()`.
 
 #### The `group_by()` and `summarize()` functions
@@ -414,7 +350,7 @@ surveys %>%
 #### Counting
 
 When working with data, we often want to know the number of observations found
-for each factor or combination of factors. For this task, **`dplyr`** provides
+for each factor or combination of factors. For this task, ``dplyr`` provides
 `count()`. For example, if we wanted to count the number of rows of data for
 each sex, we would do:
 
@@ -749,7 +685,7 @@ surveys_long %>%
 
 # Exporting data
 
-Now that you have learned how to use **`dplyr`** to extract information from
+Now that you have learned how to use ``dplyr`` to extract information from
 or summarize your raw data, you may want to export these new data sets to share
 them with your collaborators or for archival.
 
