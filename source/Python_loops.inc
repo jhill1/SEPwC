@@ -64,8 +64,8 @@ statements so they can go on a single line.
 The entire idea of writing code it to remove the 
 repetitive, boring stuff and let the computer do that work. This is where loops come in.
 
-Python `for` Loops
-~~~~~~~~~~~~~~~~~~~
+Python ``for`` Loops
+~~~~~~~~~~~~~~~~~~~~~~
 
 ``for`` loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
@@ -138,7 +138,7 @@ For loops are a really useful way of doing the same thing to each item in a list
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a ``for`` loop?**
+   **Writing our table for conversion using a** ``for`` **loop?**
 
     Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
 
@@ -164,8 +164,8 @@ Python also has a ``while`` loop which will keep going as long as some condition
 
 
 
-Python `while` loop
-~~~~~~~~~~~~~~~~~~~~
+Python ``while`` loop
+~~~~~~~~~~~~~~~~~~~~~~~
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``
 
@@ -209,7 +209,7 @@ can be any conditional statement, including key presses (but that requires some 
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a ``while`` loop?**
+   **Writing our table for conversion using a** ``while`` **loop?**
 
     Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
 

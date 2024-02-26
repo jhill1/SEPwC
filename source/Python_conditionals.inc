@@ -80,9 +80,9 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 
 .. admonition:: Practical exercise
 
-   **Add an ``else`` block**
+   **Add an** ``else`` **block**
 
-    Amend the example below to add an ``else`` block to print a message about not understanding the input
+    Amend the example above to add an ``else`` block to print a message about not understanding the input
     if humidity is not "high"
 
 .. admonition:: Solution
