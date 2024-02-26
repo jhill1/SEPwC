@@ -74,7 +74,7 @@ An example is something like this:
         imag -- the imaginary part (default 0.0)
         """
         if imag == 0.0 and real == 0.0:
-            return complex_zero
+            return 0j+0
         ...
 
 The above function, ``complex`` returns a complex number. The docstring, delimited by the three ``"`` marks states

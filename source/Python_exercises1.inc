@@ -39,7 +39,16 @@ Try the following exercsies. For any of the exercises, feel free to type out the
 .. admonition:: Solution
    :class: toggle
 
-   The number 13 is printed only. The range goes in steps of 2, so hits 15 on the second
+   The number 13 is printed only. However, this is only the case after we've fixed the code!
+
+    .. code-block:: Python
+    
+        limit = 15
+        
+        for i in range(13,limit,2):
+            print(i)
+
+   The range goes in steps of 2, so hits 15 on the second
    iteration, which is equal to the upper limit of range, so the loop terminates.
 
 .. youtube:: 1cuDMdeTSmE
@@ -62,31 +71,6 @@ Try the following exercsies. For any of the exercises, feel free to type out the
 
    This one is tricky! What is printed are the last values of the loop, so "40   104.0". The print 
    statement is not indented to within the loop, so is only run when the loop is finished.
-
-
-.. admonition:: Exercise
-
-    What's with ``9.0/5.0``? In all the exercises above converting centigrade to Farenheit I've used ``9.0/5.0``.
-    Why not ``9/5``? Let's try it.
-
-    .. code-block:: Python
-    
-        C = -20
-        # Where therefore expect F to be -4
-        F = 9.0/5.0*C + 32  
-        print(C, F)
-        F = 9/5*C + 32  
-        print(C, F)
-
-
-.. admonition:: Solution
-   :class: toggle
-
-   This one is very subtle. ``9/5*C`` is done in integer maths. ``9/5`` comes out as ``1`` (try it in python). You therefore get the
-   wrong answer. By typing ``9.0/5.0`` we push python into using floating point maths so you get ``1.8``. You only need one floating
-   point number in an operation to make it all floaitng point, so just using ``9.0/5`` will suffice. This is a very easy bug to introduce
-   into any code (I have!) so it's worth getting in the habit of typing ``9.0`` or ``9.`` when using any number you mean to be a float
-   in python.
 
 
 .. admonition:: Exercise

@@ -11,7 +11,7 @@ to work out durations, samples and deal with leap years and timezones.
 
     import datetime
 
-    now = dateime.datetime.now()
+    now = datetime.datetime.now()
 
     print(now)
 

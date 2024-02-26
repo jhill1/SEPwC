@@ -322,7 +322,7 @@ a subfolder:
     .. code-block:: bash
        :caption: |maclin|
 
-        cd data_files/sedimentay_data/site1
+        cd data_files/sedimentary_data/site1
         ls
         pwd
 

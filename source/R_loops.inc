@@ -37,25 +37,25 @@ and a single line in this table is:
     C = -20
     F = 9/5*C + 32
 
-    print(C, F)
+    print(paste(C, F))
 
 We could therefore write:
 
 .. code-block:: R
 
-    C = -20; F = 9/5*C + 32; print(C, F)
-    C = -15; F = 9/5*C + 32; print(C, F)
-    C = -10; F = 9/5*C + 32; print(C, F)
-    C = -5; F = 9/5*C + 32; print(C, F)
-    C = 0; F = 9/5*C + 32; print(C, F)
-    C = 5; F = 9/5*C + 32; print(C, F)
-    C = 10; F = 9/5*C + 32; print(C, F)
-    C = 15; F = 9/5*C + 32; print(C, F)
-    C = 20; F = 9/5*C + 32; print(C, F)
-    C = 25; F = 9/5*C + 32; print(C, F)
-    C = 30; F = 9/5*C + 32; print(C, F)
-    C = 35; F = 9/5*C + 32; print(C, F)
-    C = 40; F = 9/5*C + 32; print(C, F)
+    C = -20; F = 9/5*C + 32; print(paste(C, F))
+    C = -15; F = 9/5*C + 32; print(paste(C, F))
+    C = -10; F = 9/5*C + 32; print(paste(C, F))
+    C = -5; F = 9/5*C + 32; print(paste(C, F))
+    C = 0; F = 9/5*C + 32; print(paste(C, F))
+    C = 5; F = 9/5*C + 32; print(paste(C, F))
+    C = 10; F = 9/5*C + 32; print(paste(C, F))
+    C = 15; F = 9/5*C + 32; print(paste(C, F))
+    C = 20; F = 9/5*C + 32; print(paste(C, F))
+    C = 25; F = 9/5*C + 32; print(paste(C, F))
+    C = 30; F = 9/5*C + 32; print(paste(C, F))
+    C = 35; F = 9/5*C + 32; print(paste(C, F))
+    C = 40; F = 9/5*C + 32; print(paste(C, F))
 
 This is error prone though. What if we make a typo (likely)? How would we know? Also this
 is very boring and repetitive. The entire idea of writing code it to remove the 
