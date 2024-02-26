@@ -261,8 +261,8 @@ symbol is used depends on the language and not all languages can do this.
 
         ? = var_1 + var_2
         ? = var_1 * var_1
-        ? = var_3 / var_1
-        ? = ((var_3 / var_1) * var_1) + var_2
+        ? = var_3 / var_2
+        ? = ((var_3 / var_2) * var_1) + var_2
 
 
 ..  admonition:: Solution
