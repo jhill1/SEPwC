@@ -1,6 +1,10 @@
 R: tidyverse
 -------------
 
+This chapter is taken from the `Data Carpentary on the tidyverse
+<https://datacarpentry.org/R-ecology-lesson/03-dplyr.html>`_ under
+CC-BY 4.0 licence. 
+
 Bracket subsetting is handy, but it can be cumbersome and difficult to read,
 especially for complicated operations. Enter ``dplyr``. ``dplyr`` is a package for
 helping with tabular data manipulation. It pairs nicely with ``tidyr`` which 
@@ -488,7 +492,8 @@ transitions between these layouts more straightforward than you might think! The
 shows how these two formats relate to each other, and gives you an idea of how we can use R
 to shift from one format to the other.
 
-![](fig/tidyr-pivot_wider_longer.gif)
+.. image:: ../images/tidyr-pivot_wider_longer.gif
+    :alt: animation of pivot from wide to long
 
 Pivoting from long to wide format
 ......................................
@@ -532,7 +537,8 @@ Using ``pivot_wider()`` with the names from `genus` and with values from ``mean_
     str(surveys_wide)
 
 
-![](fig/pivot_wider_graphic.png)
+.. image:: ../images/pivot_wider_graphic.png
+    :alt: diagram explaining pivot to wider format
 
 We could now plot comparisons between the weight of genera (one is called a genus,
 multiple are called genera) in different plots,
@@ -576,7 +582,8 @@ In pivoting longer, we also need to specify what columns to reshape. If the colu
 
     str(surveys_long)
 
-![](fig/pivot_longer_graphic.png)
+.. image:: ../images/pivot_longer_graphic.png
+    :alt: diagrom of a pivot to longer format
 
 Note that now the ``NA`` genera are included in the long format data frame. Pivoting wider
 and then longer can be a useful way to balance out a dataset so that every

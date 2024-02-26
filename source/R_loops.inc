@@ -165,6 +165,11 @@ For loops are a really useful way of doing the same thing to each item in a list
 In a `for` loop we always know how many times we should iterate that loop. What if we don't know in advance?
 R also has a `while` loop which will keep going as long as some condition is true.
 
+
+.. youtube:: i98WjaITzNk
+    :align: center
+
+
 R `while` loop
 ~~~~~~~~~~~~~~~
 
@@ -229,4 +234,8 @@ can be any conditional statement, including key presses (but that requires some 
       }
       
    This is very easy to read an understand; especially the ending condition.
+
+
+.. youtube:: TqYuSD0RkME
+    :align: center
 

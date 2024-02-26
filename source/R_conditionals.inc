@@ -145,6 +145,11 @@ an message.
     In reality, these variable should be checked before hand and a more informative error message could
     be given *before* any processing takes place. This code is so tiny that it makes no difference.
 
+
+.. youtube:: BVik22tUSwo
+    :align: center
+
+
 The second way of working out the logic is by nested `if` statements. Here's an example:
 
 .. code-block:: R
@@ -249,3 +254,7 @@ Now you've seen nested `if` statements in action. Try the final practical exerci
       
    The advantage here is we can have more nuanced error messages (relating to temperature or humidity, rather than both), but
    there is repeated code and it might be harder to follow the logic. I prefer the previous version, but this works just fine.
+
+
+.. youtube:: Rnr3w7FJSbU
+    :align: center
