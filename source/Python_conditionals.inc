@@ -253,3 +253,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
       
    The advantage here is we can have more nuanced error messages (relating to temperature or humidity, rather than both), but
    there is repeated code and it might be harder to follow the logic. I prefer the previous version, but this works just fine.
+
+.. youtube:: FbhPmWWTq-k
+    :align: center
+
