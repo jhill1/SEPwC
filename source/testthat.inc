@@ -14,7 +14,7 @@ Once testthat is installed, you can load it into your R sessions just like any o
 
    library(testthat)
 
-We're going to test our Farenheit to Celcius and vice-vera functions from the first R chapter. Let's get these two functions in an R test file and save it:
+We're going to test our Fahrenheit to Celsius and vice-versa functions from the first R chapter. Let's get these two functions in an R test file and save it:
 
 .. code-block:: R
 
@@ -64,7 +64,7 @@ We can create the same test for the ``C_to_F`` function:
 
 You can run those two tests if you've compied them into your R session (along with the ``temperature_conversion.R`` file: hint ``source``).
 
-The better idea is to simply run all the tests at once. So let's create a test file with the following contents (includign a fake test that will fail).
+The better idea is to simply run all the tests at once. So let's create a test file with the following contents (including a fake test that will fail).
 
 
 .. code-block:: R

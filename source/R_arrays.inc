@@ -56,7 +56,7 @@ will print:
 
       print(a_vector[5])
 
-   will instead return ``NA`` (i.e. no-data). This is something that can catch you out later (speaking from experience!).
+   will instead return ``NA`` (i.e. no data). This is something that can catch you out later (speaking from experience!).
 
 
 Apart from accessing vectors a single item at a time, R has some tricks to play too:
@@ -65,7 +65,7 @@ Apart from accessing vectors a single item at a time, R has some tricks to play 
 
    a_vector = c(1, 2, 3, 4)   
 
-   a_vector[c(1,3)] # acces 1 and 3 and return another vector
+   a_vector[c(1,3)] # access 1 and 3 and return another vector
    a_vector[-1] # access all but the 1st, returning another vector
    a_vector[a_vector < 3] # return any items with a value of < 3. 
 

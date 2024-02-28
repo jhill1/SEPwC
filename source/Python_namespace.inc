@@ -10,14 +10,14 @@ names pointing to the object in memory. There are several layers of namespaces i
  3. Enclosing
  4. Local
 
-These have different lifespans and Python handles the creation and deletion of the namesapces
+These have different lifespans and Python handles the creation and deletion of the namespaces
 as our code is executed. 
 
 The namespaces
 ~~~~~~~~~~~~~~~
 
 The built-in namespace contains all of Python's built-in object which are
-availabel everytime you run any Python. We can
+available every time you run any Python. We can
 look at this:
 
 .. code-block:: Python
@@ -59,7 +59,7 @@ for a variable in:
  3. Global
  4. Built-in
 
-If you look for ``max()`` function, Python will look in the local, th enclosing, then global
+If you look for ``max()`` function, Python will look in the local, then enclosing, then global
 then the built-in namespaces. 
 
 .. code-block:: python
@@ -172,7 +172,7 @@ If we want ``func1`` to actually modify the global variable we have to tell Pyth
     func1()
     print(x)
 
-If you create a global variable within a function it will be available to the global namesapce:
+If you create a global variable within a function it will be available to the global namespace:
 
 .. code-block:: python
 

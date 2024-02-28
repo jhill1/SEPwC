@@ -17,11 +17,11 @@ We've used a number of R functions already.
    print("Hello")
    print(paste(time, vert_position))
 
-The first thing to note is that a function is called with `()` parenthesies. Sometimes it gives back 
+The first thing to note is that a function is called with `()` parentheses. Sometimes it gives back 
 a value (called "returning a value"), sometimes it does not. Sometimes there are things in between the
-parantheses, sometimes not (these things are called "arguments").
+parentheses, sometimes not (these things are called "arguments").
 
-So using, or calling, a R function is easy. Give the function name, open the brackets, add any arguments you need (seperated by commas),
+So using, or calling, a R function is easy. Give the function name, open the brackets, add any arguments you need (separated by commas),
 close your brackets, if you are expecting a number back, store it:
 
 .. code-block:: R
@@ -102,19 +102,19 @@ Rather than staying abstract, let's do something more concrete. Let's write a fu
 
 .. code-block:: R
 
-   toFarenheit <- (Centrigrade) {
+   toFahrenheit <- (Centigrade) {
 
        F = 9.0/5.0*Centigrade + 32.0
 
        return F
    }
 
-This function takes a value (Centrigrade) and converts it to Farenheit, returning that number. We would use it something like this:
+This function takes a value (Centigrade) and converts it to Fahrenheit, returning that number. We would use it something like this:
 
 
 .. code-block:: R
 
-   toFarenheit <- funtion(Centrigrade) {
+   toFahrenheit <- function(Centigrade) {
 
        F = 9.0/5.0*Centigrade + 32.0
 
@@ -122,10 +122,10 @@ This function takes a value (Centrigrade) and converts it to Farenheit, returnin
    }
 
    # store the number
-   water_freezing = toFarenheit(0)
+   water_freezing = toFahrenheit(0)
    
    # nested functions to print it
-   print(paste("Water freezes at ",toFarenheit(0)," deg F")
+   print(paste("Water freezes at ",toFahrenheit(0)," deg F")
 
 
 Function arguments in R
@@ -133,7 +133,7 @@ Function arguments in R
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments
 
-Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the funciton takes
+Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the function takes
 two keyword arguments:
 
 .. code-block:: R
@@ -147,7 +147,7 @@ two keyword arguments:
 
    print_greeting("Hello", "Bryan")
 
-You can see that by specifying two arguments in the function decleration we have access to those values inside the function.
+You can see that by specifying two arguments in the function declaration we have access to those values inside the function.
 What happens if the user supplies only a single argument, not two as we've asked? Try the code below:
 
 

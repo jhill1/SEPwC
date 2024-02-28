@@ -1,7 +1,7 @@
 Solving issues and debugging
 =============================
 
-When writing code you will inevitavely get it wrong occasionally. You will therefore always hit some 
+When writing code you will inevitably get it wrong occasionally. You will therefore always hit some 
 issues when writing any code. Some issues are easy to fix (you've typo'd a library or module), whilst some are 
 extremely difficult to fix (a bug deep in a library that is used by a library you use). Here, we're going to concentrate on what kind of issues
 you might come across and how you might go about understanding them.
@@ -18,7 +18,7 @@ There are several types of issues you will come across:
  - errors: These are errors and you need to fix them. R and Python will tell you where the error is and often how to fix it. 
    These are your problem to deal with.
  - bugs: These are also errors and you also need to fix them. However, you may get no warnings, or message, just output you 
-   didn't expect! A bug is simply unexpected beahviour. It is usually your problem to deal with, however, it is possible 
+   didn't expect! A bug is simply unexpected behaviour. It is usually your problem to deal with, however, it is possible 
    the bug is in a library you're using. We will learn how to report these kind of issues if we need to.
  - seg faults: This is a major error in the code. A segmentation fault (or seg fault) is usually caused by accessing memory 
    you shouldn't have access to. In Python and R these are very rare as memory allocation is handled for us, rather than by 
@@ -29,8 +29,8 @@ Simple issues
 
 The majority of issues encountered when writing code are really straight forward. You have messed up the syntax, or typo'd a library name, etc. 
 This happens a lot. As someone who has used dozens of programming languages over the years I often mix them up and type some weird hybrid
-of R, Python, Perl, PHP and/or Matlab. Possibly with a bit of Fortran and C in there too. Each language has it's own idiosynchronies which you 
-will get used to. In addiiton, it's very easy to type a ``[`` instead of a ``{``. 
+of R, Python, Perl, PHP and/or Matlab. Possibly with a bit of Fortran and C in there too. Each language has it's own idiosyncrasies which you 
+will get used to. In addition, it's very easy to type a ``[`` instead of a ``{``. 
 
 What makes these errors simple though is that you are told about them when you run the code!
 Sometimes a bit obscurely, but once you can decipher the error message they are easy to fix.
@@ -42,7 +42,7 @@ Sometimes a bit obscurely, but once you can decipher the error message they are 
 Warning examples
 ~~~~~~~~~~~~~~~~
 
-Warnings are non-critical messages, normally issued by a library or module you're using. However, most of the time
+Warnings are noncritical messages, normally issued by a library or module you're using. However, most of the time
 they are an error (as in you're getting the wrong answer) but the code can still continue. You should therefore
 pay attention and decide if you do need to care.
 
@@ -138,22 +138,22 @@ Bugs
 ------
 
 Bugs are errors in the code that result in incorrect output or the program to fail. In other words
-they are unintential behaviours of the code. With ever more complex software being developed which uses
+they are unintentional behaviours of the code. With ever more complex software being developed which uses
 a stack of other libraries to create the functionality making sure your code is bug free is getting harder
 but yet more important. It's also important to note that bugs are always introduced by programmers; they 
 don't manifest themselves!
 
 There are a number of different categories of bugs:
 
- * Arthimetic: dividing by zero, creating a number larger than the computer can handle, loss of precision etc
+ * Arithmetic: dividing by zero, creating a number larger than the computer can handle, loss of precision etc
    can all introduce bugs
  * Control flow: your logic may not be correct, so the program goes into a branch not expected.
  * Interfacing: If you use other libraries (which you will!) you can pass incorrect data to them. This 
-   is particularlly challenging when a library updates on a system and the interface (called the 
+   is particularly challenging when a library updates on a system and the interface (called the 
    Application Programming Interface or API) changes. 
  * Concurrency: when using more than one core or using threads you can end up deadlocking (nothing runs) or 
    a race condition (wrong order) etc. Parallel programming is very hard because of this.
- * Resource bugs: Using an unitilised variable or a null pointer. This are actually quite hard to generate in 
+ * Resource bugs: Using an initialised variable or a null pointer. This are actually quite hard to generate in 
    interpreted languages like Python and R. 
  * Syntax: Using ``x==5`` rather than ``x=5`` can be valid syntax but not what you expected. Again, in 
    interpreted languages this is hard to do as you get an error or warning.
@@ -170,12 +170,12 @@ Reporting a bug
 
 One of the best ways of giving back to the open souce community is to report bugs when you
 come across them. As a beginner programmer it's more likely that the error is in your code
-rather than a well-used library like ``matplotlib`` or ``ggplot2``. However, you may well 
+rather than a well used library like ``matplotlib`` or ``ggplot2``. However, you may well 
 find the odd bug as you go.
 
 When reporting a bug you need to give enough information for the developer to recreate the problem.
 The most useful thing to provide is an example code which is as small as possible; a
-minimum reproduceable example or MRE. You would take your failing code and strip away anything
+minimum reproducible example or MRE. You would take your failing code and strip away anything
 that is not associated with the bug. You should then describe the error/issue, and give details
 of your set-up, including Python or R version, your operating system and what you expected to happen.
 
@@ -224,7 +224,7 @@ Try the following:
 
 The error is much longer than I gave here, but try copying and pasting the lower part into a search 
 engine and you will hopefully find a page with some answers on what the error is and even how to fix it.
-Note that've not copied any of the specific parts of the error in a search, e.g.:
+Note that I have not copied any of the specific parts of the error in a search, e.g.:
 
 .. code-block:: python
 

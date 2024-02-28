@@ -1,7 +1,7 @@
 Python Exercises
 --------------------
 
-Try the following exercsies. For any of the exercises, feel free to type out the code and try it for real first, or figure out and see if you were right.
+Try the following exercises. For any of the exercises, feel free to type out the code and try it for real first, or figure out and see if you were right.
 
 .. admonition:: Exercise
 

@@ -5,7 +5,7 @@ Dates and time are a common aspect of environmental data. We often need to
 crop date/times to a specific range and compare or take samples from our
 data every *N* minutes, for example. Python comes with a datetime module
 that helps us deal with these issues. It provides a variety of functions
-to work out durations, samples and deal with leap years and timezones.
+to work out duration, samples and deal with leap years and timezones.
 
 .. code-block:: Python
 
@@ -120,9 +120,9 @@ There is also a function to print a datetime object into a specific format:
 You can see the various formatting options `here <https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior>`_. 
 
 The final bit of the datetime we need to know about are timezones. The UK has two timezones, GMT and BST
-which occur in the winter and summer respecitvely. There is a Universal Time zone (UTC) which is 
+which occur in the winter and summer respectively. There is a Universal Time zone (UTC) which is 
 effectively GMT (but doesn't shift in the UK summer!). The datetime object can handle
-timezones and can convert times for you (and takes care of durations over different timezones!).
+timezones and can convert times for you (and takes care of duration over different timezones!).
 However, we need another python module ``pytz`` to handle the actual timezones.
 
 .. code-block:: python

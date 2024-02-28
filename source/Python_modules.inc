@@ -48,7 +48,7 @@ Write the above into a file called ``fibo.py`` and save it. In that same directo
 
 
 You can see we import the code we have already written. We can then call the functions we added from that module. Note the ``.`` notation. 
-A function is referred to via the original module ``.`` function name. This seperates your current namesapce from the module's.
+A function is referred to via the original module ``.`` function name. This separates your current namespace from the module's.
 You can assign this to a local variable is you wish:
 
 .. code-block:: python
@@ -59,7 +59,7 @@ You can assign this to a local variable is you wish:
 
    fb(1000)
 
-You can also import single functions or items from a module, ratehr than the whole module:
+You can also import single functions or items from a module, rather than the whole module:
 
 .. code-block:: python
 
@@ -133,7 +133,7 @@ Module search path
 
 Where does Python look for modules? Python will look for modules in the following order:
 
-  * The directory contining the input script (or current directory where no script is specified)
+  * The directory containing the input script (or current directory where no script is specified)
   * using the PYTHONPATH environment variable
   * The system default path
 

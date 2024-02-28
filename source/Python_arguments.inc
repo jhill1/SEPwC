@@ -10,7 +10,7 @@ in the course, for example:
    ls -l
 
 which is the command to list things, ``ls``, in a Unix shell with the option supplied to make it a table ``-l``.
-Similaraly, we've covered:
+Similarly, we've covered:
 
 .. code-block:: bash
 

@@ -122,8 +122,8 @@ The best hint for comments is to write them at the top of code blocks:
 
     # following Saha et al 2002
     # we need: slope and roughness (their relative relief) from the DEM.
-    slope <- terrain(dem, opt=c('slope'), unit='degrees', neighbors=8)
-    roughness <- terrain(dem, opt=c('roughness'), unit='degrees', neighbors=8)
+    slope <- terrain(dem, opt=c('slope'), unit='degrees', neighbours=8)
+    roughness <- terrain(dem, opt=c('roughness'), unit='degrees', neighbours=8)
 
 The code itself might not make perfect sense to someone new to the whole code, but the comment above helps orient them
 if there some error in that part of the code. It also helps to explain *why* rather than the how in comments. The how

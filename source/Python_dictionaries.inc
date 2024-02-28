@@ -20,7 +20,7 @@ You can add to a dictionary by using the ``[]`` notation:
 .. code-block:: Python
 
    telephone['Grenville'] = 435353
-   print(telelphone)
+   print(telephone)
 
 To check if a key is used in a dictionary, you can use the ``in`` keyword:
 

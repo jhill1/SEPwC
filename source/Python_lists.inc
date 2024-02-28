@@ -143,7 +143,7 @@ An alternative way is to use the fact that a list is an ``Iterable`` object. Her
 
 Now ``item`` is a variable (so you can name it how you see fit), not an index, containing each list item, in order. This is much cleaner and more readable code. You have direct access to each item in the list without having to index the list (compare ``a_list[i]`` above to simply using ``item``).
 
-If you have multiple lists of the same length you can interate them over them simultaneously using the ``zip()`` functions:
+If you have multiple lists of the same length you can integrate them over them simultaneously using the ``zip()`` functions:
 
 .. code-block:: Python
 

@@ -1,7 +1,7 @@
 Moving from spreadsheets to data
 =================================
 
-We often use spreadsheets to store data, visualise those data and even analyise it. It's therefore useful
+We often use spreadsheets to store data, visualise those data and even analyse it. It's therefore useful
 to think about the differences between a spreadsheet of data and what a computer will do with it.
 
 When loading data into a program you are **parsing** the data from a file into variables. Whilst this

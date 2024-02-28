@@ -1,7 +1,7 @@
 Python functions 
 --------------------
 
-Whenever you write some code you get tempted to cpoy and paste a block, change a variable, and have two nearly
+Whenever you write some code you get tempted to copy and paste a block, change a variable, and have two nearly
 identical blocks of code, bar one variable. Might be OK with a single repeat, but what if you then need to
 do that 10 times, or 100 times, or a million times?
 
@@ -18,11 +18,11 @@ We've used a number of Python functions already.
    print("Hello")
    range(0,len(my_list),1)
 
-The first thing to note is that a function is called with `()` parenthesies. Sometimes it gives back 
-a value (called "returning a value"), sometimes it doesn not. Sometimes there are things inbetween the
-parantheses, sometimes not (these are called "arguments").
+The first thing to note is that a function is called with `()` parentheses. Sometimes it gives back 
+a value (called "returning a value"), sometimes it does not. Sometimes there are things in between the
+parentheses, sometimes not (these are called "arguments").
 
-So using, or calling, a Python function is easy. Give the function name, open the brackets, add any arguments you need (seperated by commas),
+So using, or calling, a Python function is easy. Give the function name, open the brackets, add any arguments you need (separated by commas),
 close your brackets, if you are expecting a number back, store it:
 
 .. code-block:: python
@@ -75,33 +75,33 @@ They follow this pattern:
 
        return 
 
-The key thing are the keyword `def` folloed by the name of your function and the arguments expected, then a a `:`. Next comes your
+The key thing are the keyword `def` followed by the name of your function and the arguments expected, then a a `:`. Next comes your
 function body (indented; remember whitespace matters!). At the end of your function, use the `return` keyword (with a value if you want
 to return something).
 
-Rather than staying abstract, let's do something more concrete. Let's write a function to convert from Centigrade to Farenheit. 
+Rather than staying abstract, let's do something more concrete. Let's write a function to convert from Centigrade to Fahrenheit. 
 
 .. code-block:: python
 
-   def toFarenheit(Centigrade):
+   def toFahrenheit(Centigrade):
 
        F = 9.0/5.0*Centigrade + 32.0
 
        return F
 
-This function takes a value (Centrigrade) and converts it to Farenheit, returning that number. We would use it something like this:
+This function takes a value (Centigrade) and converts it to Fahrenheit, returning that number. We would use it something like this:
 
 
 .. code-block:: python
 
-   def toFarenheit(Centigrade):
+   def toFahrenheit(Centigrade):
 
        F = 9.0/5.0*Centigrade + 32.0
 
        return F
 
-   water_freezing = toFarenheit(0)
-   print("Water freezes at " + str(toFarenheit(0)) + " deg F")
+   water_freezing = toFahrenheit(0)
+   print("Water freezes at " + str(toFahrenheit(0)) + " deg F")
 
 
 
@@ -110,7 +110,7 @@ Function arguments in Python
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).
 
-Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the funciton takes
+Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the function takes
 two keyword arguments:
 
 .. code-block:: python
@@ -123,7 +123,7 @@ two keyword arguments:
 
    print_greeting("Hello", "Bryan")
 
-You can see that by specifying two arguments in the function decleration we have access to those values inside the function.
+You can see that by specifying two arguments in the function declaration we have access to those values inside the function.
 What happens if the user supplies only a single argument, not two as we've asked? Try the code below:
 
 

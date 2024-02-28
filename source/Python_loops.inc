@@ -58,7 +58,7 @@ We could therefore write:
     C = 40; F = 9.0/5.0*C + 32; print(C, F)
 
 This is error prone though. What if we make a typo (which is likely)? How would we know? 
-Also this is very boring and repetitive. Note, I've used ``;`` to seperate out
+Also this is very boring and repetitive. Note, I've used ``;`` to separate out
 statements so they can go on a single line.
 
 The entire idea of writing code it to remove the 

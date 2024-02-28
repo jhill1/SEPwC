@@ -1,11 +1,11 @@
 Using Excel
 ------------
 
-Excel is one of the most ubiquitous peices of software in the world today. It's spawned many copies
+Excel is one of the most ubiquitous pieces of software in the world today. It's spawned many copies
 including Google Sheets, Libreoffice Sheets, etc and itself is based on previous spreadsheet packages
 (VisiCalc, Lotus 1-2-3, etc).
 
-Spreadhseets offer a tabular view of data. They consist of cells, arranged in rows and columns. Columns are
+Spreadsheets offer a tabular view of data. They consist of cells, arranged in rows and columns. Columns are
 often labelled using the alphabet (A, B, C, etc) and rows via a number. Each cell can therefore be located using a letter
 and number combination, e.g. A3. A user can input data into each cell or use formulas, e.g. ``=5*3``, showing ``15`` in the cell.
 
@@ -13,7 +13,7 @@ Like computer programs, spreadsheets can create formulaalues using formulas that
 a computer program the variable is another cell (rather than a named thing). For example, ``=5*C3`` would make that
 cell the value sof C3 multiplied by 5. These formulas can be chained together and hence produce quite complex spreadsheets,
 even to run simple algorithms, without resorting to computer code at all. Couple that to nice visual formatting
-and you can see why spreadsheets are ubiqutious office software!
+and you can see why spreadsheets are ubiquitous office software!
 
 What a spreadsheet is not, is a database. A database is many tables of data that are related to each other (this is a
 **relational database**). A spreadsheet can contain many tables, but lacks the relational aspect to the data. It is
@@ -38,6 +38,6 @@ using Excel or similar and from that you can check your script is running correc
 .. warning::
 
     However useful Excel and similar tools are though, they should be avoided for storing your final data in. 
-    They often have inbuilt algorithms to chnage data based on it's format, e.g. SEPT2 (a gene name) can be 
-    translated into a date by Excel. If that chnage is then saved the data integrity is lost. `This occurs
+    They often have inbuilt algorithms to change data based on it's format, e.g. SEPT2 (a gene name) can be 
+    translated into a date by Excel. If that change is then saved the data integrity is lost. `This occurs
     in the scientific literature. <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7>`_

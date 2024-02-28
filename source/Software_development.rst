@@ -1,9 +1,9 @@
 Software development
 ====================
 
-Software developmen (softdev) or engineering (softeng) are the process by which we write code. There is a subtle difference between these two titles, 
-with engineers being resonsible for creating, designing, and testing the whole software applicaiton, whereas developers are responsible for a 
-portion of that cycle. When we write code for ourselve, we are software engineers!
+Software development (softdev) or engineering (softeng) are the process by which we write code. There is a subtle difference between these two titles, 
+with engineers being responsible for creating, designing, and testing the whole software application, whereas developers are responsible for a 
+portion of that cycle. When we write code for ourselves, we are software engineers!
 
 There are multiple processes by which software is created. Here, we're not going to become softdevs or softengs in any meaningful way
 but we are going to learn some of the basics of the process, which helps us write better code.
@@ -12,7 +12,7 @@ Revision control
 ----------------
 
 We've already learnt one of the key tools (or if you've skipped to this bit, you can go back and learn about it), which is revision control.
-Rather than keep seperate versions of code in seperate files (which would be a nightmare for any reasonable sized applicaiton), we keep versions
+Rather than keep separate versions of code in separate files (which would be a nightmare for any reasonable sized application), we keep versions
 of files in a revision control system. In this course we've learnt about `git`, but there are other tools, jut not as popular. 
 
 However, revision control is a tool to help development; it does not solve all problems. You can use it in a number of ways depending on the project, the number of people and the aims of the code. There is no single right way to do this and any development tools helps set up a process, but it's humans that actually devise and use (or not!) any processes.
@@ -56,9 +56,9 @@ We've covered testing, bug fixing and writing code elsewhere, so let's focus on 
 Requirements capture
 ~~~~~~~~~~~~~~~~~~~~~
 
-If you are going to write code it is because you want to do something. You want to be able to analyse data, merge datasets togther, create animations of outputs, etc., etc. Requirements capture is a process by which we lay out what code should be able to do (and perhaps what it won't be able to do). There are a number of ways this can happen including interviews, workshops, user observations, prototyping and use cases/scenarios. For the purposes of this course we're going to assume you are the developer and the user so not all of these methods will be useful (unless you want to interview yourself...).
+If you are going to write code it is because you want to do something. You want to be able to analyse data, merge datasets together, create animations of outputs, etc., etc. Requirements capture is a process by which we lay out what code should be able to do (and perhaps what it won't be able to do). There are a number of ways this can happen including interviews, workshops, user observations, prototyping and use cases/scenarios. For the purposes of this course we're going to assume you are the developer and the user so not all of these methods will be useful (unless you want to interview yourself...).
 
-Prototyping is a useful thing when you are struggling to see what a code can or cannot do. It is often helpful to write short script with hard-coded data to try and work *how* to do something. The aim here is to create a realisitic, but small, dataset or set-up and write code that does a single, particular thing. You can then build on that to abstract it (e.g. take user input or a file) and develop code from there. It's often useful to then use this protype as template for a test. This way you don't get overwhelmed in designing the whole code/software in one go, but build it up bit-by-bit as you go. 
+Prototyping is a useful thing when you are struggling to see what a code can or cannot do. It is often helpful to write short script with hard-coded data to try and work *how* to do something. The aim here is to create a realistic, but small, dataset or set-up and write code that does a single, particular thing. You can then build on that to abstract it (e.g. take user input or a file) and develop code from there. It's often useful to then use this protype as template for a test. This way you don't get overwhelmed in designing the whole code/software in one go, but build it up bit-by-bit as you go. 
 
 Use cases or scenarios are also really useful for the lone developer. Think about how you want to use your new software. Imagine being yourself in five years' time writing some new code that uses this. How would you like to call functions; do names make sense; does the flow make sense? With experience this kind of thinking becomes more second nature, but writing this down in a document will help clarify your thoughts and help the logical flow of code before you start writing. 
 
@@ -69,7 +69,7 @@ The above takes time but helps you write better, cleaner, more readable code. Re
 Refactoring
 ~~~~~~~~~~~~
 
-Refactoring is re-writing existing code into a new design or structure. Code ultimately goes out of date. Languages eventually die off for example and code will therefore need to be moved to a new language (or version of the same language as in Python 2 to Python 3) or the libraries we depend on may become obsolete. Sometimes, greater experience means we can see how an older code can be rewritten to be clearer or faster or use less memory. Regardless of the reason code will probably need rewritting at some point.
+Refactoring is rewriting existing code into a new design or structure. Code ultimately goes out of date. Languages eventually die off for example and code will therefore need to be moved to a new language (or version of the same language as in Python 2 to Python 3) or the libraries we depend on may become obsolete. Sometimes, greater experience means we can see how an older code can be rewritten to be clearer or faster or use less memory. Regardless of the reason code will probably need rewriting at some point.
 
 Refactoring can be done in one of two ways: starting from scratch (but with the knowledge of what has gone before) or step-by-step. The means depends on a number of factors, but regardless one should not be afraid to start again. Your code is safe in a revision control repository and refactoring, even in a minor way, can vastly improve code.
 
@@ -81,7 +81,7 @@ There are number of processes that have been devised to manage software projects
 Traditional development
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A traditional software project will create a document to set out the reuirements of the software. Another document will be created for the design, following discussions and prototyping. More documents will outline the tests and the test infrastructure as well as the processes and protocols. Develoeprs can then be sent off to write individuals blocks of code or tests. A project manager overseas this and checks progress of each element and ensures they work together. 
+A traditional software project will create a document to set out the requirements of the software. Another document will be created for the design, following discussions and prototyping. More documents will outline the tests and the test infrastructure as well as the processes and protocols. Developers can then be sent off to write individuals blocks of code or tests. A project manager overseas this and checks progress of each element and ensures they work together. 
 
 The project may be split into phases with client approval at each phase, but clients generally don't see or interact with the code between these releases. 
 
@@ -93,11 +93,11 @@ Agile development
 
 Agile development takes the software development process and creates a tight, rapid loop of development, which is repeated often. Rather than create an overarching requirements capture and then a grand design, you start small. You would aim to create a single feature, design it, code it, test it and get approval within a short timeframe. You then move onto the next. 
 
-Agile development has a huge advantage when a project is ill-defined (which is bascially all research code as we have no idea what is needed in the future!), but comes at potential costs. With no overarching design or plan it is very difficult to give a final cost and development may go "off-piste" with features that aren't actually needed.
+Agile development has a huge advantage when a project is ill-defined (which is basically all research code as we have no idea what is needed in the future!), but comes at potential costs. With no overarching design or plan it is very difficult to give a final cost and development may go "off piste" with features that aren't actually needed.
 
-However, for a lone developer/user it works well, if you also have an eye on the larger picture of what you need to acheive. The documetns listed above may still be needed!
+However, for a lone developer/user it works well, if you also have an eye on the larger picture of what you need to achieve. The documents listed above may still be needed!
 
-THis is how apps on phones tend to be managed, with small minor updates and features added relatively frequently. More larger software packages use this method now, with releases more often (ChromeOS for example).
+This is how apps on phones tend to be managed, with small minor updates and features added relatively frequently. More larger software packages use this method now, with releases more often (ChromeOS for example).
 
 
 Test-driven development

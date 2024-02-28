@@ -343,6 +343,6 @@ We now have a count of each word and we loop through a final time (step 7) to re
 fewer than 3 occurrences (or in other words with more than 2 occurrences). 
 
 Step 8 is then make the word cloud from the remaining words ("times", "random" and "need"). 
-We'll not cover that here as it is quite difficult to do graphics in pseudocode. 
+We'll not cover that here as it is quite difficult to do graphics in pseudo-code. 
 
 

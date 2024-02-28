@@ -3,25 +3,25 @@ Python: pytest
 
 Python has a few testing packages. ``pytest`` is a very common one. It 
 
-We're going to test our Farenheit to Celcius and vice-vera functions from the first Python chapter. Let's get these two functions in an Python test file and save it:
+We're going to test our Fahrenheit to Celsius and vice-versa functions from the first Python chapter. Let's get these two functions in an Python test file and save it:
 
 .. code-block:: Python
 
-   def toFarenheit(Centigrade):
+   def toFahrenheit(Centigrade):
 
        F = 9.0/5.0*Centigrade + 32.0
 
        return F
 
-   def toCentigrade(Farenheit):
+   def toCentigrade(Fahrenheit):
 
-       C =  (Farenheit - 32) * 5/9;
+       C =  (Fahrenheit - 32) * 5/9;
 
        return C
 
 Save the contents as ``temperature_conversion.py``.
 
-We can then use a seperate file to create our tests. ``pytest`` is largely automated in terms of finding and running tests; we simply need to stick to a naming convention of having ``test_*.py`` or ``*_test.py`` in the filename. ``pytest will then find and run those files in the current directory and any subdirectories. You can organise your tests into files, with our without classes. If you do you a class it *must* begin with "Test". For our check on the above two functions we will create a single class, with three methods to run a total of five tests. Create a file called ``test_temperature_conversion.py`` (note the filename convention here, prepend ``test_`` to the filname of the thing you're testing).
+We can then use a separate file to create our tests. ``pytest`` is largely automated in terms of finding and running tests; we simply need to stick to a naming convention of having ``test_*.py`` or ``*_test.py`` in the filename. ``pytest will then find and run those files in the current directory and any subdirectories. You can organise your tests into files, with our without classes. If you do you a class it *must* begin with "Test". For our check on the above two functions we will create a single class, with three methods to run a total of five tests. Create a file called ``test_temperature_conversion.py`` (note the filename convention here, prepend ``test_`` to the filename of the thing you're testing).
 
 
 .. code-block:: Python
@@ -41,7 +41,6 @@ We can then use a seperate file to create our tests. ``pytest`` is largely autom
 
         def test_f_to_c(self):
 
-            temp_f = temperature_conversion.toFarenheit(10)
 
             assert temp_f == 50
             assert type(temp_f) == float

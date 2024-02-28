@@ -6,7 +6,7 @@ there are modules that will do just about anything. This makes Python a really
 powerful tool for writing code to analyse any number of problems.
 
 Python can be run on the command line, in a Jupyter notebook, in Google Colab, 
-as a stand-alone script, or even as a full GUI program. There are modules
+as a standalone script, or even as a full GUI program. There are modules
 for plotting (matplotlib), scientific algorithms (scipy), numerical algorithms
 (numpy) and GIS (gdal).
 

@@ -120,7 +120,7 @@ completely superfluous if the code was written well:
 
     def no_families(cities):
         for city in cities:
-            if not families_by_city[city]:
+            if not city in families_by_city:
                 print(f"No families in {city}.")
 
 This code doesn't need any comments now; the variable names make things a lot clearer. You 

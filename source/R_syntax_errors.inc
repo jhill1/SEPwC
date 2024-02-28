@@ -48,4 +48,4 @@ to give:
     2: f(x) at #1
     1: g("a")
 
-So we now know it was the g("a") causing the issue and the error occured in the f function
+So we now know it was the g("a") causing the issue and the error occurred in the f function

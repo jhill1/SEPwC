@@ -1,7 +1,7 @@
 Python: Files
 ----------------------
 
-Writing software for scientific/research purposes often invovles reading in 
+Writing software for scientific/research purposes often involves reading in 
 data from files. Python file handling is very powerful, but surprisingly
 easy to use and manage.
 
@@ -48,7 +48,7 @@ The various modes are:
 
 It's useful to get into the habit of closing files or using the Python `with` statement
 to prevent files being left open. This is especially important when writing to 
-a file as often the data is "bufferred" by the system and only gets written once 
+a file as often the data is "buffered" by the system and only gets written once 
 the file handle is lost (i.e. `.close()` is called or the variable goes out of scope). 
 
 .. code-block:: python
@@ -112,7 +112,7 @@ to make this very clear. For example:
             print(words)
 
 The ``split()`` function is an example of the type of processing; here splitting the line of text
-into words (seperated by spaces) and creating a list of those.
+into words (separated by spaces) and creating a list of those.
 
 .. admonition:: Practical exercise
 
@@ -193,7 +193,7 @@ Notice the ``\n`` character - this is a newline character. So you will now have 
    Hellow World!!!
    No, really, hello!
 
-We could acheive the same thing using ``writelines()`` but we are still responsible for adding the newlines:
+We could achieve the same thing using ``writelines()`` but we are still responsible for adding the newlines:
 
 .. code-block:: python
 
@@ -227,7 +227,7 @@ others, but your job is to write clear code so use whichever is clearest for you
 
 .. admonition:: Practical exercise
 
-    Write your `capitals` dictionary into a file, seperated by commas, so country in 
+    Write your `capitals` dictionary into a file, separated by commas, so country in 
     column 1 and the city in column 2. Each country is then on a new line.
     This creates a CSV file, which you can load into Excel, etc.
 

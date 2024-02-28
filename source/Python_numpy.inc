@@ -7,7 +7,7 @@ multidimensional array data structures, such as the homogeneous, N-dimensional
 ``ndarray``, and a large library of functions that operate efficiently on these
 data structures. 
 
-Python lists are general-purpose containers. They can be
+Python lists are general purpose containers. They can be
 "heterogeneous", meaning that they can contain elements of a variety of datatypes.
 
 However, scientific data is often numerical and hence `homogeneous`. 
@@ -37,7 +37,7 @@ Numpy is generally imported into Python code like this:
     import numpy as np
 
 This widespread convention allows access to NumPy features with a short,
-recognizable prefix (``np.``) while distinguishing NumPy features from others
+recognisable prefix (``np.``) while distinguishing NumPy features from others
 that have the same name (e.g. ``max()``)
 
 
@@ -95,7 +95,7 @@ data in the original array. The original array can be mutated using the view.
     >>> c
     >>> d
 
-Two- and higher-dimensional arrays can be initialized from nested Python
+Two- and higher-dimensional arrays can be initialised from nested Python
 sequences::
 
 .. code-block:: python

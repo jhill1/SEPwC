@@ -2,7 +2,7 @@ Python: Pandas module
 ----------------------
 
 pandas is a Python package providing fast, flexible, and expressive data structures 
-designed to make working with “relational” or “labeled” data both easy and intuitive.
+designed to make working with “relational” or “labelled” data both easy and intuitive.
 It aims to be the fundamental high-level building block for doing practical, 
 real-world data analysis in Python.
 
@@ -44,7 +44,7 @@ a default :class:`RangeIndex`.
    s
 
 Creating a :class:`DataFrame` by passing a NumPy array with a datetime index using :func:`date_range`
-and labeled columns:
+and labelled columns:
 
 .. code-block::python
 
@@ -170,7 +170,7 @@ Selection
 
    While standard Python / NumPy expressions for selecting and setting are
    intuitive and come in handy for interactive work, for production code, we
-   recommend the optimized pandas data access methods, :meth:`DataFrame.at`, :meth:`DataFrame.iat`,
+   recommend the optimised pandas data access methods, :meth:`DataFrame.at`, :meth:`DataFrame.iat`,
    :meth:`DataFrame.loc` and :meth:`DataFrame.iloc`.
 
 
@@ -587,7 +587,7 @@ Time series
 
 pandas has simple, powerful, and efficient functionality for performing
 resampling operations during frequency conversion (e.g., converting secondly
-data into 5-minutely data). This is extremely common in, but not limited to,
+data into 5-minute splices of data). This is extremely common in, but not limited to,
 financial applications.
 
 .. code-block::python

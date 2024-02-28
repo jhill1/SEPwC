@@ -9,14 +9,14 @@ NetCDF
 Network Common Data Format. This is a binary file format which store large arrays of data that are linked in 
 some ways. Often used for spatial data. Arrays will be latitude, longitude and then values based on 
 those arrays, e.g. sea surface temperature. It can handle multiple dimensions, so it is possible to 
-store three-dimensional field that vary in time (4D!). 
+store three dimensional field that vary in time (4D!). 
 
 GeoTIFF
 ~~~~~~~
 
 Raster data (height data on a grid or similar) is often stored in a GeoTIFF file which is based on the common image format. 
 TIFF is a lossless image format (unlike JPEG or GIF) and also contains a header. It's this header that is crucial! It can 
-contain the locational data and projection space.
+contain the location data and projection space.
 
 XML
 ~~~~

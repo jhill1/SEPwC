@@ -2,7 +2,7 @@ Debugging
 ----------
 
 Once you have some understanding of the error and the cause you can start to debug 
-your code. The easiset form of debugging is called "print debugging". You insert
+your code. The easiest form of debugging is called "print debugging". You insert
 print statements around code to output the contents of variables to help you 
 understand the flow of the program. The downside of this debugging is you have to 
 add and then *remove* a lot of print statements!
@@ -22,11 +22,11 @@ By watching the print statements I can zero in where the code is breaking. I can
 really zero in on a line or lines of code that are breaking.
 
 If the error is in a loop, it can be helpful to print the loop index and the value
-of any key variable sduring the loop. When you code breaks you know exactly which
+of any key variables during the loop. When you code breaks you know exactly which
 loop index it was on. Running this in RStudio or Spyder means you can then 
 explore your data using that index. Very helpful!
 
-However print debugging can be unweidly, producing massive amounts of output
+However print debugging can be unwieldy, producing massive amounts of output
 that can be be as hard to decipher as the error you're trying to fix.
 
 .. admonition:: Practical exercise - Python
@@ -57,7 +57,7 @@ that can be be as hard to decipher as the error you're trying to fix.
 ..  admonition:: Solution
     :class: toggle
 
-    There were erros in syntax and logic! My version is below. More elgant solutions
+    There were errors in syntax and logic! My version is below. More elegant solutions
     can be found too.
         
     .. code-block:: python 
@@ -117,7 +117,7 @@ that can be be as hard to decipher as the error you're trying to fix.
 ..  admonition:: Solution
     :class: toggle
 
-    There were erros in syntax and logic! My version is below. More elgant solutions
+    There were errors in syntax and logic! My version is below. More elegant solutions
     can be found too.
         
     .. code-block:: R

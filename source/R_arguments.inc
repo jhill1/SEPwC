@@ -10,7 +10,7 @@ in the course, for example:
    ls -l
 
 which is the command to list things, ``ls``, in a Unix shell with the option supplied to make it a table ``-l``.
-Similaraly, we've covered:
+Similarly, we've covered:
 
 .. code-block:: bash
 
@@ -53,7 +53,7 @@ Your output is:
     [1] "Length: 3"
 
 The arguments are stored in ``args``. The first is always the name of the script, however, we 
-automaticlaly removed that by using the `trainlingOnly=True` argument. Try it without:
+automatically removed that by using the `trainlingOnly=True` argument. Try it without:
 
 .. code-block:: bash
 

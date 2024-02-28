@@ -3,7 +3,7 @@ R dictionaries
 
 Dictionaries are linked lists; rather than accessing items via a numerical index, you access via a ``key``. A dictionary therefore contains a list of keys and a list of corresponding values. The keys have to be unique, but the values do not.
 
-R doesn't have a built-in dictionary datatype, *but* vectors, matricies, lists etc can behave like dictionaries. 
+R doesn't have a built-in dictionary datatype, *but* vectors, matrices, lists etc can behave like dictionaries. 
 
 .. code-block:: R
 
@@ -72,7 +72,7 @@ you reassign the output back into telephone:
 
     telephone <- telephone[names(telephone) != "Grenville"]
 
-If any code you write makes eavy use of dictionaries, it is worth writing little
+If any code you write makes extensive use of dictionaries, it is worth writing little
 helper functions to do this so you code is cleaner.
 
 R does have libraries that make proper dictionaries. `hash` is one such library. 

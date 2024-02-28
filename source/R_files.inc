@@ -21,7 +21,7 @@ Read and write tables/csv files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most of the time when using R you end up reading data from CSV
-(Comma Seperated Values) or tables (the same as CSV, but seperated by
+(Comma Separated Values) or tables (the same as CSV, but separated by
 something other than a comma!). The syntax for these function is very similar.
 
 .. code-block:: R
@@ -30,9 +30,9 @@ something other than a comma!). The syntax for these function is very similar.
     data<-read.csv("data.txt",header = TRUE)
 
 Those two lines of code produce identical results. The `read.csv` has
-the seperator (`sep=`) set to `,` by default. In `read.table` we specify
+the separator (`sep=`) set to `,` by default. In `read.table` we specify
 it. In other words `read.table` is more flexible in reading in data as it
-can read in data seperated by spaces, semi-colons, pipes, etc. Both
+can read in data separated by spaces, semi-colons, pipes, etc. Both
 functions return a data frame object (we'll learn more on this later), 
 with the columns labelled by the headers. 
 
@@ -46,15 +46,15 @@ in a CSV or table, easily:
 Here, ``df`` is your data frame which contains the data, with the filename
 given by the ``file`` argument. 
 
-There are a number of arguements you can give to the function to get the 
+There are a number of arguments you can give to the function to get the 
 data file to look as you wish. This includes appending to an existing file, 
-the type of quotes to use, the seperator and whether to use row and column names.
+the type of quotes to use, the separator and whether to use row and column names.
 
 It's worth finding the R manuals online to see these and experiment a little.
 
 .. admonition:: Practical exercise
 
-    Write your `capitals` dictionary into a file, seperated by commas, so country in 
+    Write your `capitals` dictionary into a file, separated by commas, so country in 
     column 1 and the city in column 2. Each country is then on a new line.
     This creates a CSV file, which you can load into Excel, etc.
 

@@ -91,5 +91,5 @@ So here we've added a new function ``complete_trianing`` and overridden the ``ba
 
 There are a lot other features of objects in Python, but the main reason for learning about them here is that
 most other modules/libraries in Python create objects of some kind. You therefore need to be familiar with the
-idea of a varable, e.g. ``buddy`` being able to have a function to call using the ``.`` notation. When you see
+idea of a variable, e.g. ``buddy`` being able to have a function to call using the ``.`` notation. When you see
 this; you are dealing with an object.
