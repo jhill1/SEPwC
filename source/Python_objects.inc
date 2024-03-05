@@ -80,7 +80,7 @@ all of the variables and functions from the ``Dog`` class. We can add to or over
             print("Guide dogs don't bark")
 
         def complete_trianing(self):
-            self.completed_traiing = True
+            self.completed_training = True
 
 So here we've added a new function ``complete_trianing`` and overridden the ``bark`` function. 
 
