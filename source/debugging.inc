@@ -153,6 +153,9 @@ that can be be as hard to decipher as the error you're trying to fix.
         print(total)
 
 
+.. youtube:: GjewIVXl_Ts
+    :align: center
+
 Console debugging
 ~~~~~~~~~~~~~~~~~
 
@@ -380,6 +383,8 @@ console (in Spyder or RStudio is fine).
             }
         }
 
+.. youtube:: WohwZjcigjk
+    :align: center
 
 I've been writing code in one form or another for *cough* 35 years *cough* and
 I *still* use print debugging, especially in when writing code for multiple

@@ -202,6 +202,9 @@ It always worth searching the Open and Closed bugs to see if your issue is there
     `Here's an example for Python. <https://github.com/numpy/numpy/issues/24593>`_
 
 
+.. youtube:: QQpnNc5OrAk
+    :align: center
+
 
 Fixing Errors
 -------------
