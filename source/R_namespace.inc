@@ -25,7 +25,7 @@ We can use the ``rlang`` packge to explore this.
 
 .. code-block:: R
 
-    library(rlang)
+   library(rlang)
 
    env_parents(global_env())
      [[1]] $ <env: package:rlang>
@@ -90,8 +90,8 @@ called, not the function of the same name in the ``rlang`` package.
 
    .. code-block:: R
 
-   rlang::env_parents(global_env())
-   
+     rlang::env_parents(global_env())
+     
      [[1]] $ <env: package:rlang>
      [[2]] $ <env: package:stats>
      [[3]] $ <env: package:graphics>
@@ -125,7 +125,7 @@ get the wrong one.
 Super assignment
 ~~~~~~~~~~~~~~~~~
 
-Later, we will deal with R objects and you'll see the ``<<-`` operator for 
+In the next section, we will deal with R objects and you'll see the ``<<-`` operator for 
 assigning values. You will have already seen the `<-` assignment operator. Why
 the two?
 
