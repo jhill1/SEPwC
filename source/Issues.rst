@@ -134,6 +134,10 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
     alter that.
 
 
+..  youtube:: QsEjIjzkpGM
+    :align: center
+
+
 Bugs
 ------
 
@@ -203,6 +207,9 @@ It always worth searching the Open and Closed bugs to see if your issue is there
 
 
 .. youtube:: QQpnNc5OrAk
+    :align: center
+
+.. youtube:: NotnvtJUDCI
     :align: center
 
 
