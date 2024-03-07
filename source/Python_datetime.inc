@@ -78,7 +78,7 @@ out, for example, creating a duration:
 
     # what about leap years?
     date1 = datetime.date(2024, 2, 29)
-    date2 = datetime.date(2023, 2, 29)
+    date2 = datetime.date(2023, 2, 28)
 
     print(date1 - date2)
 
