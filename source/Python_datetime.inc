@@ -78,11 +78,12 @@ out, for example, creating a duration:
 
     # what about leap years?
     date1 = datetime.date(2024, 2, 29)
-    date2 = datetime.date(2023, 2, 29)
+    date2 = datetime.date(2023, 2, 28)
 
     print(date1 - date2)
 
-The datetime module knows about leap years, etc so can account for those in durations.
+The datetime module knows about leap years, etc so can account for those in durations. Try
+the above code with 29th Feb 2023, for example
 
 This all assumes that the datetime can be constructed from user input easily. Often we
 need to parse a string to create a datetime object. For example out data might be a
@@ -90,9 +91,9 @@ CSV with dates listed as:
 
 .. code-block:: bash
 
-    1984-1-1-0, 480
-    1984-1-1-1, 510
-    1984-1-1-2, 580
+    1984-1-1, 4
+    1984-1-1, 5
+    1984-1-1, 5
 
 Here the date is represented by the year, month, day and then hour seperated by a hyphen.
 There is no minute or second data.
