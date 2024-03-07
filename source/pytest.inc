@@ -21,7 +21,7 @@ We're going to test our Fahrenheit to Celsius and vice-versa functions from the 
 
 Save the contents as ``temperature_conversion.py``.
 
-We can then use a separate file to create our tests. ``pytest`` is largely automated in terms of finding and running tests; we simply need to stick to a naming convention of having ``test_*.py`` or ``*_test.py`` in the filename. ``pytest will then find and run those files in the current directory and any subdirectories. You can organise your tests into files, with our without classes. If you do you a class it *must* begin with "Test". For our check on the above two functions we will create a single class, with three methods to run a total of five tests. Create a file called ``test_temperature_conversion.py`` (note the filename convention here, prepend ``test_`` to the filename of the thing you're testing).
+We can then use a separate file to create our tests. ``pytest`` is largely automated in terms of finding and running tests; we simply need to stick to a naming convention of having ``test_*.py`` or ``*_test.py`` in the filename. ``pytest`` will then find and run those files in the current directory and any subdirectories. You can organise your tests into files, with our without classes. If you do you a class it *must* begin with "Test". For our check on the above two functions we will create a single class, with three methods to run a total of five tests. Create a file called ``test_temperature_conversion.py`` (note the filename convention here, prepend ``test_`` to the filename of the thing you're testing).
 
 
 .. code-block:: Python

@@ -45,12 +45,12 @@ CSV files are handled in R without an additional libraries. `The full documentat
     read_csv = read.csv('/Users/admin/file_noheader.csv', stringsAsFactors='FALSE')
 
 The `Tidyverse <https://www.tidyverse.org/>`_ collection of packages has some additional
-function to read in CSV and we'' cover those later. 
+function to read in CSV data.. 
 
 Reading CSV in Python
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Python contains a useful `csv` library to help us here. It can handle different delimiters, 
+Python contains a useful ``csv`` library to help us here. It can handle different delimiters, 
 quotes and headers making it much easier than trying to parse data ourselves. You can find
 the `full documentation for the CSV module online <https://docs.python.org/3/library/csv.html>`_
 but briefly we can load data in using code like this:
@@ -64,10 +64,8 @@ but briefly we can load data in using code like this:
     for row in spamreader:
         print(', '.join(row))
 
-The above reads the CSV file by row and prints out the content. The `row` variable is a list
+The above reads the CSV file by row and prints out the content. The ``row`` variable is a list
 with each item containing the column data from that row.
-
-EXAMPLE
 
 
 Alternatively, you can read the data as a dictionary. Here we assume the CSV has a header:
@@ -82,9 +80,8 @@ Alternatively, you can read the data as a dictionary. Here we assume the CSV has
         for row in reader:
             print(row['first_name'], row['last_name'])
 
-The `row` variable is now a dictionary, with the items labelled by whatever was in the first row (the header). 
+The ``row`` variable is now a dictionary, with the items labelled by whatever was in the first row (the header). 
 As a programmer you would need to know that information beforehand to use them correctly. 
 
-EXAMPLE
+Pandas, covered earlier, can also read in CSV files.
 
-We will cover the other main option, pandas, later. 
