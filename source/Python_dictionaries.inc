@@ -64,9 +64,9 @@ which can be looped over, e.g.
 .. code-block:: Python
  
     knights = {'gallahad': 'the pure', 'robin': 'the brave'}
-    names = keys(knights)
+    names = knights.keys()
     for n in names:
-        print(knights(n))
+        print(knights[n])
 
 is a common idiom you will see in Python code. 
 
