@@ -15,6 +15,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+from sphinx.builders.html import StandaloneHTMLBuilder 
 
 # -- Project information -----------------------------------------------------
 
@@ -83,6 +84,12 @@ pygments_style = None
 # spell checker lang
 spelling_lang='en_UK'
 
+new_supported_image_types = [
+    'image/svg+xml',
+    'image/gif',
+    'image/png',
+    'image/jpeg'
+]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -117,6 +124,9 @@ html_static_path = ['ystatic']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+
+additional_default_supported_images = list(set(StandaloneHTMLBuilder.supported_image_types) - set(new_supported_image_types))
+StandaloneHTMLBuilder.supported_image_types = new_supported_image_types + additional_default_supported_images
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

@@ -106,7 +106,7 @@ Rather than staying abstract, let's do something more concrete. Let's write a fu
 
        F = 9.0/5.0*Centigrade + 32.0
 
-       return F
+       return(F)
    }
 
 This function takes a value (Centigrade) and converts it to Fahrenheit, returning that number. We would use it something like this:
@@ -118,7 +118,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
        F = 9.0/5.0*Centigrade + 32.0
 
-       return F
+       return(F)
    }
 
    # store the number
@@ -157,7 +157,6 @@ What happens if the user supplies only a single argument, not two as we've asked
 
        print(paste(greeting,", ",name,"!"))
 
-       return
     }
 
    print_greeting("Hello")
@@ -181,7 +180,6 @@ We can also write function that have default values.
 
        print(paste(greeting,", ",name,"!"))
 
-       return
     }
 
    print_greeting("Bryan")
@@ -193,8 +191,6 @@ When running this, we can give the ``name`` argument and we get a default ``gree
    print_greeting <- function(name, greeting="Hello") {
 
        print(paste(greeting,", ",name,"!"))
-
-       return
     }
 
    print_greeting("Bryan", "Ey-up")
@@ -207,7 +203,6 @@ However, you may note I've switched the order of the arguments around. What happ
 
        print(paste(greeting,", ",name,"!"))
 
-       return
     }
 
    print_greeting("Bryan")
