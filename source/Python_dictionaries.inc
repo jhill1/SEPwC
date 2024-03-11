@@ -144,7 +144,7 @@ is a common idiom you will see in Python code.
 
         print(len(capitals))
 
-        capitals_mkII = copy(capitals)
+        capitals_mkII = capitals.copy()
 
-        clear(capitals)
+        capitals.clear()
 
