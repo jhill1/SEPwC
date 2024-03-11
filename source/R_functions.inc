@@ -102,7 +102,7 @@ Rather than staying abstract, let's do something more concrete. Let's write a fu
 
 .. code-block:: R
 
-   toFahrenheit <- (Centigrade) {
+   toFahrenheit <- function(Centigrade) {
 
        F = 9.0/5.0*Centigrade + 32.0
 
@@ -142,7 +142,6 @@ two keyword arguments:
 
        print(paste(greeting,", ",name,"!"))
 
-       return
     }
 
    print_greeting("Hello", "Bryan")
