@@ -155,10 +155,14 @@ The listing for each commit includes
  - when it was created,
  - and the log message Git was given when the commit was created.
 
-..  admonition:: Learn more
-    :class: toggle
+..  youtube:: xjuu34mhiLM
+   :align: center
 
-    **Where Are My Changes?**
+
+.. admonition:: Learn more
+   :class: toggle
+
+   **Where Are My Changes?**
 
    If we run ``ls`` at this point, we will still see just one file called `mars.txt`.
    That's because Git saves information about files' history
@@ -698,5 +702,8 @@ repository (``git commit``):
     .. code-block:: bash
     
         git diff me.txt
+
+..  youtube:: OX6jt7_rMfw
+   :align: center
 
 

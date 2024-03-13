@@ -131,6 +131,8 @@ so Git lets us use just the first few characters (typically seven for normal siz
     +But the Mummy will appreciate the lack of humidity
     +An ill-considered change
 
+..  youtube:: YBOmWfZvxRY
+   :align: center
 
 So we can save changes to files and see what we've changed. Now, how can we restore older versions of things?
 Let's suppose we change our mind about the last update to ``mars.txt`` (the "ill-considered change").
@@ -416,6 +418,8 @@ on the other hand, moving backward and forward in time becomes much easier.
    Make a change to ``mars.txt``, add that change, and use ``git checkout`` to see if
    you can remove your change.
 
+..  youtube:: sC8qfvtQqkU
+   :align: center
 
 .. admonition:: Practical exercise
 
