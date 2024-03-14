@@ -94,6 +94,8 @@ You will often see:
 
 for example.
 
+.. youtube:: 9mb4Xpau30o
+   :align: center 
 
 Executing modules as scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
