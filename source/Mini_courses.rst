@@ -18,3 +18,5 @@ Graphs - Python
 ----------------
 
 
+.. include:: tides_python.inc
+
