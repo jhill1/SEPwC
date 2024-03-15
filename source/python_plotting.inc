@@ -307,7 +307,7 @@ and the current axes with `~.pyplot.cla`.  If you find
 it annoying that states (specifically the current image, figure and axes)
 are being maintained for you behind the scenes, don't despair: this is just a thin
 stateful wrapper around an object-oriented API, which you can use
-instead (see :ref:`artists_tutorial`)
+instead.
 
 If you are making lots of figures, you need to be aware of one
 more thing: the memory required for a figure is not completely
@@ -325,8 +325,7 @@ Working with text
 
 `~.pyplot.text` can be used to add text in an arbitrary location, and
 `~.pyplot.xlabel`, `~.pyplot.ylabel` and `~.pyplot.title` are used to add
-text in the indicated locations (see :ref:`text_intro` for a
-more detailed example)
+text in the indicated locations 
 
 .. code-block:: Python
 
@@ -353,8 +352,6 @@ passing keyword arguments into the text functions or using `~.pyplot.setp`::
 
   t = plt.xlabel('my data', fontsize=14, color='red')
 
-These properties are covered in more detail in :ref:`text_props`.
-
 
 Using mathematical expressions in text
 ........................................
@@ -368,13 +365,11 @@ you can write a TeX expression surrounded by dollar signs::
 The ``r`` preceding the title string is important -- it signifies
 that the string is a *raw* string and not to treat backslashes as
 python escapes.  matplotlib has a built-in TeX expression parser and
-layout engine, and ships its own math fonts -- for details see
-:ref:`mathtext`.  Thus, you can use mathematical text across
+layout engine, and ships its own math fonts.Thus, you can use mathematical text across
 platforms without requiring a TeX installation.  For those who have LaTeX
 and dvipng installed, you can also use LaTeX to format your text and
 incorporate the output directly into your display figures or saved
-postscript -- see :ref:`usetex`.
-
+postscript. 
 
 Annotating text
 ................
@@ -407,10 +402,7 @@ these arguments are ``(x, y)`` tuples.
 
 In this basic example, both the ``xy`` (arrow tip) and ``xytext``
 locations (text location) are in data coordinates.  There are a
-variety of other coordinate systems one can choose -- see
-:ref:`annotations-tutorial` and :ref:`plotting-guide-annotation` for
-details.  More examples can be found in
-:doc:`/gallery/text_labels_and_annotations/annotation_demo`.
+variety of other coordinate systems one can choose. 
 
 
 Logarithmic and other nonlinear axes
