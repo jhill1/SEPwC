@@ -14,8 +14,7 @@ Stats - R
 Graphs - R
 -----------
 
-Graphs - Python
-----------------
+.. include:: python_plotting.inc
 
 
 .. include:: tides_python.inc
