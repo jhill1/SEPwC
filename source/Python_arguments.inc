@@ -102,9 +102,9 @@ The core functionality of ``argparse`` is the ``ArgumentParser``
 
 .. code-block:: python
 
-   import argparser
+   import argparse
 
-   parser = argparser.ArgumentParser(
+   parser = argparse.ArgumentParser(
                         prog="Name",
                         description="Brief one line of what the program does",
                         epilog="Any text at the bottom of help, e.g. copyright"
