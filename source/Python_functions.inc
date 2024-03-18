@@ -1,15 +1,19 @@
 Python functions 
 --------------------
+..index::
+  single: Functions; python
 
 Whenever you write some code you get tempted to copy and paste a block, change a variable, and have two nearly
 identical blocks of code, bar one variable. Might be OK with a single repeat, but what if you then need to
 do that 10 times, or 100 times, or a million times?
 
-This is where functions come in. You can generalise a but of code and package it up so you can call it
-repeatedly. That might be within the same script; it might be as part of many scripts.
+This is where functions come in. You can generalise a bit of code and package it up so you can call it
+repeatedly. That might be within the same script; it might be part of many scripts.
 
 Using a Python function
 ~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: len(); python
 
 We've used a number of Python functions already. 
 
@@ -35,8 +39,11 @@ As we've seen already you can nest functions within other functions!
 
    range(0,len(my_list),1)
 
+..index::
+  single: range(); python
+
 Here, we're calling the `range` function to go from `0` to the length of my_list (`len(my_list)`) in steps of 1. But `len()` is 
-also a function. The return value of `len(my_list)` gets put in place of that bit of code. This is eaxtly equivlant of doing:
+also a function. The return value of `len(my_list)` gets put in place of that bit of code. This is exactly equivalent of doing:
 
 .. code-block:: python
 
@@ -44,6 +51,8 @@ also a function. The return value of `len(my_list)` gets put in place of that bi
    range(0,length,1)
 
 where we store the length in a variable, then use it.
+..index::
+  single: Nested functions; python
 
 .. admonition:: Practical exercise
 
@@ -107,6 +116,8 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
 Function arguments in Python
 .............................
+..index::
+  single: Function Arguments; python
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).
 
@@ -154,7 +165,9 @@ What error message did you get?
       TypeError: print_greeting() missing 1 required positional argument: 'name'
       
 
-We can also write function that have default values.
+We can also write functions that have default values.
+..index::
+  single: Default Value Functions; python
 
 .. code-block:: python
 
@@ -219,7 +232,7 @@ This prints:
 
    sum: 6
 
-What if we wanted to add 9 numbers togther? Or 1 million? This is where ``*args`` comes in. ``*args`` gives us an argument list of any length:
+What if we wanted to add 9 numbers together? Or 1 million? This is where ``*args`` comes in. ``*args`` gives us an argument list of any length:
 
 .. code-block:: python
 
