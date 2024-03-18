@@ -133,7 +133,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 Function arguments in R
 ..........................
 .. index:: 
-   pair: functions; function arguments; r 
+   single: function arguments; r 
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments
 
