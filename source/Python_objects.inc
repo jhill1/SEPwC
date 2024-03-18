@@ -1,5 +1,7 @@
 Python objects
 ---------------
+..index::
+  single: Objects; python
 
 We discussed objects back in :ref:`Objects and classes` which are containers for both
 data and functions to manipulate that data.
@@ -65,7 +67,7 @@ build complex stacks of classes using base classes. Let's create a class for a G
     class GuideDog(Dog)
         pass
 
-This create a new class from the Dog class previously. It doesn't add anything as yet, but we have
+This creates a new class from the Dog class previously. It doesn't add anything as yet, but we have
 all of the variables and functions from the ``Dog`` class. We can add to or override any of these.
 
 .. code-block:: python
