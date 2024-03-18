@@ -1,5 +1,7 @@
 Python modules
 ---------------
+..index::
+  single: Modules; python
 
 When writing code we want to package up functionality/code into descrete bundles. In Python these are called modules or packages. 
 You can then put this module on the internet such that other can download, install it and use it. You can also save your own code 
@@ -10,6 +12,8 @@ modules, ratehr than creating them.
 
 Import statement
 ~~~~~~~~~~~~~~~~~
+..index::
+  single: Importing; python
 
 To use an existing module or package in your code you must ``import`` it. 
 
@@ -99,6 +103,8 @@ for example.
 
 Executing modules as scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Modules as scripts; modules; python
 
 Python is a versatile language, so modules can also be scripts! Python has a special variable called ``__name__`` which is set to a value of ``__main__`` is a file is called as a script.
 
@@ -132,6 +138,8 @@ creating a structure of common functions across a number of projects/scripts.
 
 Module search path
 ~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Module Search Path; modules; python
 
 Where does Python look for modules? Python will look for modules in the following order:
 
@@ -151,6 +159,8 @@ will add the directory to the end of that list above.
 
 Seeing what is in a module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Inside a Module; modules; python
 
 The built-in function ``dir()`` is used to find out which names a module defines. It returns a sorted list of strings:
 
