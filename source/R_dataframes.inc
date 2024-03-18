@@ -1,5 +1,7 @@
 R dataframes 
 ----------------------------
+.. index:: 
+   single: dataframes; r
 
 Data frames (tables) are an object of class ``data.frame``. They are a two dimensional
 array-like sructure where columns contains values of a single variable, and each row contains
