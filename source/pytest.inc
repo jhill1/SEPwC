@@ -1,5 +1,7 @@
 Python: pytest
 ~~~~~~~~~~~~~~~~~~
+..index::
+  single: Pytest; python
 
 Python has a few testing packages. ``pytest`` is a very common one. It 
 
