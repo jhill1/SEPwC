@@ -14,7 +14,7 @@ inline comments and block comments.
 Inline comments (R)
 ~~~~~~~~~~~~~~~~~~~~
 .. index:: 
-   pair: comments; inline comments; r
+   single: inline comments; r
 
 Inline comments occur within the line of code:
 
@@ -36,7 +36,7 @@ may be preferable to the second style of comments
 Block comments (R)
 ~~~~~~~~~~~~~~~~~~
 .. index:: 
-   pair: comments; block comments; r
+   single: block comments; r
 
 Block comments occupy one or more lines. In python they look like:
 
