@@ -1,5 +1,7 @@
 R libraries
 ------------
+.. index:: 
+   single: libraries; r
 
 When writing code we want to package up functionality/code into discrete bundles. In R these are called libraries or packages. 
 You can then put this library on the internet such that other can download, install it and use it. You can also save your own code 
