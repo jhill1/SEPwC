@@ -1,6 +1,9 @@
 Python: command line arguments
 -------------------------------
 
+.. index::
+   pair: arguments; command line arguments; python
+
 The simplest user-facing scripts/software use the Command Line Interface (CLI) to interact with a user.
 The CLI allows the user to pass options to a script as they execute. We have already used these elsewhere
 in the course, for example:
@@ -23,7 +26,8 @@ advanced usage options.
 
 Python and the command line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+.. index::
+   single: command line; python
 When you run a Python script, with some arbitrary text after:
 
 .. code-block:: bash
@@ -91,6 +95,8 @@ Within our script we access them as we would any other list:
 
 Python advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: argarse; ArgumentParser; python
 
 Python has a number of modules that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -186,6 +192,8 @@ You then parse the argument and put them in variables as you see fit
 
 Getting input from a user in Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: user input; python
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``input`` function.
