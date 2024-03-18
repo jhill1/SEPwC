@@ -13,6 +13,7 @@ inline comments and block comments.
 
 Inline comments (R)
 ~~~~~~~~~~~~~~~~~~~~
+
 .. index:: 
    single: inline comments; r
 
@@ -36,6 +37,7 @@ may be preferable to the second style of comments
 Block comments (R)
 ~~~~~~~~~~~~~~~~~~
 .. index:: 
+
    single: block comments; r
 
 Block comments occupy one or more lines. In python they look like:

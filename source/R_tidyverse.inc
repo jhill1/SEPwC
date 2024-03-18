@@ -1,5 +1,7 @@
 R: tidyverse
 -------------
+.. index:: 
+   single:tidyverse (R)
 
 This chapter is taken from the `Data Carpentary on the tidyverse
 <https://datacarpentry.org/R-ecology-lesson/03-dplyr.html>`_ under
@@ -24,6 +26,11 @@ doing data analysis in R:
 
 What are ``dplyr`` and ``tidyr``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: tidyverse; dplyr
+
+.. index:: 
+   single: tidyverse; tidyr
 
 The package ``dplyr`` provides helper tools for the most common data manipulation
 tasks. It is built to work directly with data frames with the
@@ -69,6 +76,11 @@ Next, we're going to learn some of the most common ``dplyr`` functions:
 
 Selecting columns and filtering rows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: tidyverse; select()
+
+.. index:: 
+   single: tidyverse; filter()
 
 To select columns of a data frame, use ``select()``. The first argument
 to this function is the data frame (``surveys``), and the subsequent
@@ -96,6 +108,8 @@ To choose rows based on a specific criterion, use ``filter()``:
 
 Pipes
 ~~~~~~
+.. index:: 
+   single: tidyverse; pipes
 
 What if you want to select and filter at the same time? There are three
 ways to do this: use intermediate steps, nested functions, or pipes.
@@ -178,6 +192,8 @@ Note that the final data frame is the leftmost part of this expression.
 
 Mutate
 ~~~~~~~
+.. index:: 
+   single: tidyverse; mutate
 
 Frequently you'll want to create new columns based on the values in existing
 columns, for example to do unit conversions, or to find the ratio of values in two
@@ -254,6 +270,11 @@ then combine the results. Key functions of ``dplyr`` for this workflow are
 
 The ``group_by()`` and ``summarize()`` functions
 ..................................................
+.. index:: 
+   single: tidyverse; group_by()
+
+.. index:: 
+   single: tidyverse; summarize()
 
 ``group_by()`` is often used together with ``summarize()``, which collapses each
 group into a single-row summary of that group.  ``group_by()`` takes as arguments
@@ -347,6 +368,8 @@ To sort in descending order, we need to add the `desc()` function. If we want to
 
 Counting
 ..............
+.. index:: 
+   single: tidyverse; counting
 
 When working with data, we often want to know the number of observations found
 for each factor or combination of factors. For this task, ``dplyr`` provides
@@ -452,6 +475,8 @@ the *albigula* species that are not specified for its sex (i.e. ``NA``).
 
 Reshaping with pivot\_longer and pivot\_wider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: tidyverse; pivot
 
 In the [spreadsheet
 lesson](https://datacarpentry.org/spreadsheet-ecology-lesson/01-format-data/),
@@ -672,6 +697,8 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
 
 Exporting data
 ~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: tidyverse; exporting data
 
 Now that you have learned how to use ``dplyr`` to extract information from
 or summarize your raw data, you may want to export these new data sets to share
