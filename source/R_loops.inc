@@ -1,5 +1,7 @@
 R Loops
 -------
+.. index:: 
+   single: loops; r 
 
 As we saw in the coding fundamentals, loops are a tool to iterate over
 many "bits" of data, like rows or columns in a spreadsheet, a list of parameters,
@@ -63,6 +65,8 @@ repetitive, boring stuff and let the computer do that work. This is where loops 
 
 R `for` Loops
 ~~~~~~~~~~~~~~
+.. index:: 
+   single: for; r
 
 'for' loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
@@ -172,6 +176,8 @@ R also has a `while` loop which will keep going as long as some condition is tru
 
 R `while` loop
 ~~~~~~~~~~~~~~~
+.. index:: 
+   single: while; r
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is `True`
 
