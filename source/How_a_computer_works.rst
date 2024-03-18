@@ -31,6 +31,8 @@ them well:
 
 Filesystems
 -----------
+.. index:: 
+   single: filesystems
 
 Every computer needs to store files so it can be used. A variety of media have been used 
 in the past to do this: punch cards, tapes, floppy disks, CDs, DVDs, and of course, hard drives
@@ -48,6 +50,8 @@ understand the filesystem for he OS we're using. We'll go through each OS in tur
 
 Windows
 ^^^^^^^
+.. index:: 
+   single: filesystems; Windows
 
 Windows organises files into drives. Drives are usually physical drives, but can be partitions on a single drive too
 (i.e. divide your 1 Tb drive into a 250 Gb drive and a 750 Gb drive). Drives are given letters, A:, B:, C:, etc. C: is
@@ -75,6 +79,8 @@ it's in ``Documents``; we need a full path (see later).
 
 Linux
 ^^^^^
+.. index:: 
+   single: filesystems; Linux
 
 Linux organises things around the root drive, which is access via ``/`` (forward slash: note the direction of the slash compared 
 to Windows - yes, they use the opposite direction). In root you then find a bunch of standard directories, ``\etc``, ``\bin``
@@ -88,6 +94,8 @@ a different file to ``bob.txt``
 
 MacOS
 ^^^^^
+.. index:: 
+   single: filesystems; MacOS
 
 Mac is very similar to Linux (it is in fact based on Unix, which Linux is too). Unlike Linux, Apple added some
 standard folder names and moved a few things around compared to Linux. I'll note the differences only here.
@@ -387,6 +395,14 @@ a subfolder:
 
 Absolute vs Relative paths
 ---------------------------
+.. index:: 
+   single: paths
+
+.. index:: 
+   single: paths; relative
+
+.. index:: 
+   single: paths; absolute
 
 Most of the file-paths above are absolute paths. You start at the root of the drive (``C:`` or ``/``) and give the 
 all the directories until you get to the file you're after. I did however sneak in a few *relative*
@@ -481,6 +497,8 @@ immediately
 
 Compiled languages
 ^^^^^^^^^^^^^^^^^^
+.. index:: 
+   single: compiled languages
 
 Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
 an executable. You can then give someone else the executable and they can run the software. Most software is
@@ -490,6 +508,8 @@ Languages like Java are also compiled but at the time of execution
 
 Interpreted languages
 ^^^^^^^^^^^^^^^^^^^^^
+.. index:: 
+   single: interpreted languages
 
 In contrast, interpreted languages are not compiled. You execute the source code. So you can write a text file
 with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
@@ -513,6 +533,8 @@ as the interpreter cannot optimise as well as a separate compiler.
 
 More basic command line functions
 ----------------------------------
+.. index:: 
+   single: command line functions
 
 You were introduced to some basic command line functions earlier. We looked at those
 without really explaining them properly, so let's dig a little deeper into command lines.
@@ -554,6 +576,12 @@ more done when programming.
 
 So what are the basic commands you should know? Here's a list:
 
+.. index:: 
+   single: command line functions; MacOS
+
+.. index:: 
+   single: command line functions; Linux
+
 |maclin|
 
  - mv
@@ -563,6 +591,9 @@ So what are the basic commands you should know? Here's a list:
  - pwd
  - rm
  - rmdir
+
+.. index:: 
+   single: command line functions; Windows
 
 |win|
 
