@@ -1,5 +1,7 @@
 Python Loops
 ------------
+..index::
+  single: Loops; python
 
 As we saw in the coding fundamentals, loops are a tool to iterate over
 many "bits" of data, like rows or columns in a spreadsheet, a list of parameters,
@@ -66,6 +68,8 @@ repetitive, boring stuff and let the computer do that work. This is where loops 
 
 Python ``for`` Loops
 ~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: For loops; python
 
 ``for`` loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
@@ -128,6 +132,8 @@ The output will be identical to the above, but we're accessing the list via the 
 ``i`` goes from 0 (Python starts counting from 0. R starts from 1) to the length of the list - 1. The ``range`` function
 creates a list containing those numbers. So although this loops looks different to the first one we created,
 it's actually identical in terms of it's construction.
+..index::
+  single: range(); python
 
 The ``range`` function is ``range(start, stop, increment)``
 which generates a list of integers: ``start``, ``start+increment``, ``start+2*increment``, and so on up to, but not including, ``stop``. 
@@ -166,6 +172,8 @@ Python also has a ``while`` loop which will keep going as long as some condition
 
 Python ``while`` loop
 ~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: While loops; python
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``
 
@@ -224,7 +232,7 @@ can be any conditional statement, including key presses (but that requires some 
           print(C, F)
           C = C + 5
       
-   This is very easy to read an understand; especially the ending condition (unlike
+   This is very easy to read and understand; especially the ending condition (unlike
    the the loop above where we had to use 41...).
 
 .. youtube:: Ui28nauWJ9Y

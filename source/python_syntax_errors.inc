@@ -1,5 +1,7 @@
 Python examples
 ~~~~~~~~~~~~~~~~
+..index::
+  single; Syntax Errors; python
 
 If we make an error in our Python code we will receive a message like:
 

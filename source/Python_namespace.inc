@@ -1,5 +1,7 @@
 Python: namespace
 -------------------------------
+..index::
+  single: namespace; python
 
 Namespace and scope are the section of code where your variables are valid. A namespace
 is a collection of currently defined symbolic names; basically a dictionary of variable
@@ -16,7 +18,7 @@ as our code is executed.
 The namespaces
 ~~~~~~~~~~~~~~~
 
-The built-in namespace contains all of Python's built-in object which are
+The built-in namespace contains all of Python's built-in objects which are
 available every time you run any Python. We can
 look at this:
 
@@ -46,6 +48,8 @@ created only exist within that function.
 
 Python Scope
 ~~~~~~~~~~~~~
+..index::
+  single: Scope; python
 
 These namespaces mean variables of the same name can exist at the same time. As long as they are
 in a different namespace they won't interfere with each other. But how does Python know which one
@@ -113,7 +117,7 @@ See if you can work out what will be printed this time. Our final exercise:
     func1()
     print(x)
 
-What ahppens this time? Did you use a fresh ipython or script?
+What happens this time? Did you use a fresh ipython or script?
 
 So how do you modify variables that aren't in the current scope?
 

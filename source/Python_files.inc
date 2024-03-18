@@ -1,5 +1,7 @@
 Python: Files
 ----------------------
+..index::
+  single: Files; python
 
 Writing software for scientific/research purposes often involves reading in 
 data from files. Python file handling is very powerful, but surprisingly
@@ -17,6 +19,8 @@ come into being. We'll learn a lot more in the data section.
 
 Opening and closing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: Opening and Closing Files; python
 
 Before reading or writing data to a file we must first open that
 file and specify if we are going to read from it, or write to it. 
@@ -63,6 +67,8 @@ closed etc.
 
 Reading files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: Reading Files; python
 
 We can now open and close files, how do we get information from them? We'll focus on text files for now. Most
 binary files have a Python module to read them, so are more specialist in nature.
@@ -111,8 +117,12 @@ to make this very clear. For example:
             words = line.split()
             print(words)
 
+..index::
+  single: Split function; python
+
 The ``split()`` function is an example of the type of processing; here splitting the line of text
 into words (separated by spaces) and creating a list of those.
+
 
 .. admonition:: Practical exercise
 
@@ -163,6 +173,8 @@ into words (separated by spaces) and creating a list of those.
 
 Writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: Writing Files; python
 
 Writing files is a bit different to reading files. You are in charge of putting the line breaks in!
 
@@ -219,7 +231,7 @@ Here, we join each element of contents with a newline character. We could also d
     with open("file.txt", "w") as f: 
         f.writelines("%s\n" % l for l in contents)
 
-Here, we using generator expressions (the ``l for l in contents``) and formatting expressions to stick a string a newline
+Here, we are using generator expressions (the ``l for l in contents``) and formatting expressions to stick a string a newline
 together.
 
 All of the above are correct and will work fine. Some may argue for one way being more 'Pythonic' than
