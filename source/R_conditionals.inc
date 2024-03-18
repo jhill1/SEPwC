@@ -43,7 +43,7 @@ This is where `if` statements come in.
 R `if` statement
 ~~~~~~~~~~~~~~~~~~~~
 .. index:: 
-   pair: conditionals; if statement; r
+   single: if statement; r
 
 The `if` statement consists of an `if` condition, followed by zero or more `else if` conditions. A final `else`
 statement can be used to capture the situation where everything is `FALSE`.
@@ -157,7 +157,7 @@ an message.
 The second way of working out the logic is by nested `if` statements. Here's an example:
 
 .. index:: 
-   pair: conditionals; nested if statements; r  
+   single: nested if statements; r  
 
 .. code-block:: R
 
