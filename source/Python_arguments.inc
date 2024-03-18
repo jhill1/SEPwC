@@ -28,6 +28,7 @@ Python and the command line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
    single: command line; python
+
 When you run a Python script, with some arbitrary text after:
 
 .. code-block:: bash
