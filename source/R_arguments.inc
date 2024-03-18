@@ -106,7 +106,7 @@ Within our script we access them as we would any other list:
 R advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index:: 
-   pair: command line arguments; advanced command line interface; r 
+   single: advanced command line interface; r 
 
 R has a number of libraries that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -205,8 +205,6 @@ You then parse the argument and put them in variables as you see fit
 
 Getting input from a user in R
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. index:: 
-   pair: command line arguments; user input; r 
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``readLines`` function.
