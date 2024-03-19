@@ -1,6 +1,6 @@
 Python comments
 ----------------
-..index::
+.. index::
   single: Comments; Python
 
 All computer languages have some mechanisms to add text that is not part of the code
@@ -17,7 +17,7 @@ Python has three styles of comments: inline, block and documentation.
 
 Inline comments (Python)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Inline Comments; Python
 
 Inline comments occur within the line of code:
@@ -39,7 +39,7 @@ may be preferable to the second style of comments
 
 Block comments (Python)
 ~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Block Comments; Python
 
 Block comments occupy one or more lines. In python they look like:
@@ -64,7 +64,7 @@ why you may "wrap" comments onto multiple lines.
 
 Documentation comments (Python)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Documentation Comments; Python
 
 Python also has a second style of comments that also act as a way of documenting code. They should be used
@@ -90,7 +90,7 @@ what the function does, what the arguments are. You may also add what is returne
 
 What to comment (Python)
 ~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Comments; Python
 
 The above tell you *how* to write a comment, but *what* should you comment? Comments need to 

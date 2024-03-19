@@ -1,6 +1,6 @@
 Python conditionals
 --------------------
-..index::
+.. index::
   single: Conditionals; Python
 
 As we saw in the coding fundamentals, conditionals are a tool to make decisions
@@ -42,7 +42,7 @@ This is where ``if`` statements come in.
 
 Python `if` statement
 ~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: If statements; Python
 
 The ``if`` statement consists of an ``if`` condition, followed by zero or more ``elif`` conditions. A final ``else``

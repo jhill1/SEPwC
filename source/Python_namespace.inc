@@ -1,6 +1,6 @@
 Python: namespace
 -------------------------------
-..index::
+.. index::
   single: namespace; Python
 
 Namespace and scope are the section of code where your variables are valid. A namespace
@@ -48,7 +48,7 @@ created only exist within that function.
 
 Python Scope
 ~~~~~~~~~~~~~
-..index::
+.. index::
   single: Scope; Python
 
 These namespaces mean variables of the same name can exist at the same time. As long as they are

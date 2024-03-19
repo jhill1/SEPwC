@@ -1,6 +1,6 @@
 Python functions 
 --------------------
-..index::
+.. index::
   single: Functions; Python
 
 Whenever you write some code you get tempted to copy and paste a block, change a variable, and have two nearly
@@ -12,7 +12,7 @@ repeatedly. That might be within the same script; it might be part of many scrip
 
 Using a Python function
 ~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: len(); Python
 
 We've used a number of Python functions already. 
@@ -39,7 +39,7 @@ As we've seen already you can nest functions within other functions!
 
    range(0,len(my_list),1)
 
-..index::
+.. index::
   single: range(); Python
 
 Here, we're calling the `range` function to go from `0` to the length of my_list (`len(my_list)`) in steps of 1. But `len()` is 
@@ -117,7 +117,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
 Function arguments in Python
 .............................
-..index::
+.. index::
   single: Function Arguments; Python
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).

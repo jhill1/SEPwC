@@ -1,6 +1,6 @@
 Python: Files
 ----------------------
-..index::
+.. index::
   single: Files; Python
 
 Writing software for scientific/research purposes often involves reading in 
@@ -19,7 +19,7 @@ come into being. We'll learn a lot more in the data section.
 
 Opening and closing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Opening and Closing Files; Python
 
 Before reading or writing data to a file we must first open that
@@ -67,7 +67,7 @@ closed etc.
 
 Reading files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Reading Files; Python
 
 We can now open and close files, how do we get information from them? We'll focus on text files for now. Most
@@ -117,7 +117,7 @@ to make this very clear. For example:
             words = line.split()
             print(words)
 
-..index::
+.. index::
   single: Split function; Python
 
 The ``split()`` function is an example of the type of processing; here splitting the line of text
@@ -173,7 +173,7 @@ into words (separated by spaces) and creating a list of those.
 
 Writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Writing Files; Python
 
 Writing files is a bit different to reading files. You are in charge of putting the line breaks in!

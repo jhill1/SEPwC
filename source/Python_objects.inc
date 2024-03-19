@@ -1,6 +1,6 @@
 Python objects
 ---------------
-..index::
+.. index::
   single: Objects; Python
 
 We discussed objects back in :ref:`Objects and classes` which are containers for both

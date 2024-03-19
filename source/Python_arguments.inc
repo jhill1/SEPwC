@@ -97,7 +97,7 @@ Within our script we access them as we would any other list:
 
 Python advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Argarse; ArgumentParser; Python
 
 Python has a number of modules that make command line parsing a lot easier and more functional. The most commonly used is
@@ -194,7 +194,7 @@ You then parse the argument and put them in variables as you see fit
 
 Getting input from a user in Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: User Input; Python
 
 If you want to ask the user something, e.g. a file name

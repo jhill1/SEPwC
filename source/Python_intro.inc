@@ -73,7 +73,7 @@ bunch of times? Let's add a loop!
        vert_position = initial_velocity * time - (0.5 * gravity * time**2)
        print(time, vert_position)
 
-..index::
+.. index::
   single: Indentation; Python
 
 This is not the most elegant way to do this, but it works. You now have the height of the ball
@@ -136,7 +136,7 @@ code will not run.
 .. youtube:: 7U89TwLas1I
     :align: center
 
-..index::
+.. index::
   single: Plotting; Python
 
 Shall we plot this?

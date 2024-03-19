@@ -193,7 +193,7 @@ only one "data type". The data type is recorded in the ``dtype`` attribute.
 
 How to create a basic array
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Arrays; Python
 
 Besides creating an array from a sequence of elements, you can easily create an
@@ -259,7 +259,7 @@ specify which data type you want using the ``dtype`` keyword.
 
 Adding, removing, and sorting elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Array; Elements; Python
 
 Sorting an element is simple with ``np.sort()``. You can specify the axis, kind,
@@ -325,9 +325,9 @@ To read more about concatenate, see: `concatenate`.
 
 How do you know the shape and size of an array?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Array; Shape; Python
-..index::
+.. index::
   pair: Array; Size; Python
 
 ``ndarray.ndim`` will tell you the number of axes, or dimensions, of the array.
@@ -439,7 +439,7 @@ to preserve the indexing convention or not reorder the data.
 
 How to convert a 1D array into a 2D array (how to add a new axis to an array)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Array; Axis; Python
 
 You can use ``np.newaxis`` and ``np.expand_dims`` to increase the dimensions of
@@ -513,7 +513,7 @@ You can add an axis at index position 0 with:
 
 Indexing and slicing
 ~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Array; Indexing; Python
 
 You can index and slice NumPy arrays in the same ways you can slice Python
@@ -536,7 +536,7 @@ You can visualize it this way:
 
 .. image:: ../images/np_indexing.png
 
-..index::
+.. index::
   pair: Array; Slice; Python
 
 You may want to take a section of your array or specific array elements to use
@@ -655,7 +655,7 @@ array of indices will be empty. For example:
 
 How to create an array from existing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: Array; Python
 
 You can easily create a new array from a section of an existing array.
@@ -781,7 +781,7 @@ Using the ``copy`` method will make a complete copy of the array and its data (a
 
 Basic array operations
 ~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: iArray Operations; Python
 
 Once you've created your arrays, you can start to work with them.  Let's say,
@@ -851,7 +851,7 @@ You can sum over the axis of columns with:
 
 Transposing and reshaping a matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Transposing; Matrix; Python
 
 It's common to need to transpose your matrices. NumPy arrays have the property

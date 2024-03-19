@@ -1,6 +1,6 @@
 Python: Datetimes
 ----------------------
-..index::
+.. index::
   single: Datetimes; Python
 
 Dates and time are a common aspect of environmental data. We often need to 

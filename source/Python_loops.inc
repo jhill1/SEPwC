@@ -1,6 +1,6 @@
 Python Loops
 ------------
-..index::
+.. index::
   single: Loops; Python
 
 As we saw in the coding fundamentals, loops are a tool to iterate over
@@ -68,7 +68,7 @@ repetitive, boring stuff and let the computer do that work. This is where loops 
 
 Python ``for`` Loops
 ~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: For loops; Python
 
 ``for`` loops work in Python using a control variable (the thing that increments each loop) and 
@@ -173,7 +173,7 @@ Python also has a ``while`` loop which will keep going as long as some condition
 
 Python ``while`` loop
 ~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   single: While loops; Python
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``

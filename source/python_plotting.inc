@@ -1,6 +1,6 @@
 Pyplot tutorial
 ----------------
-..index::
+.. index::
   single: Pyplot; python
 
 This is based on the ``pyplot`` tutorial from the Matplotlib Development Team
@@ -58,7 +58,7 @@ arguments.  For example, to plot x versus y, you can write:
 
 Formatting the style of your plot
 ---------------------------------
-..index::
+.. index::
   pair: Pyplot; Formatting 
 
 For every x, y pair of arguments, there is an optional third argument
@@ -103,7 +103,7 @@ using arrays.
 
 Plotting with keyword strings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyplot; Keyword Strings
 
 There are some instances where you have data in a format that lets you
@@ -133,7 +133,7 @@ the strings corresponding to these variables.
 
 Plotting with categorical variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyplot; Categorical Variables
 
 It is also possible to create a plot using categorical variables.
@@ -160,7 +160,7 @@ many plotting functions. For example:
 
 Controlling line properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyploy; Line Properties
 
 Lines have many attributes that you can set: linewidth, dash style,
@@ -247,10 +247,10 @@ To get a list of settable line properties, call the
 
 Working with multiple figures and axes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyplot; Multiple figures
 
-..index::
+.. index::
   pair: Pyplot; Multiple Axes
 
 MATLAB, and :mod:`.pyplot`, have the concept of the current figure
@@ -337,7 +337,7 @@ is called.
 
 Working with text
 ~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyplot; Text; 
 
 `~.pyplot.text` can be used to add text in an arbitrary location, and
@@ -372,7 +372,7 @@ passing keyword arguments into the text functions or using `~.pyplot.setp`::
 
 Using mathematical expressions in text
 ........................................
-..index::
+.. index::
   pair: Pyplot; Mathematical expressions 
 
 Matplotlib accepts TeX equation expressions in any text expression.
@@ -392,7 +392,7 @@ postscript.
 
 Annotating text
 ................
-..index::
+.. index::
   pair: Pyplot; Annotating text 
 
 The uses of the basic `~.pyplot.text` function above
@@ -428,10 +428,10 @@ variety of other coordinate systems one can choose.
 
 Logarithmic and other nonlinear axes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..index::
+.. index::
   pair: Pyplot; Logarithmic 
 
-..index::
+.. index::
   pair: Pyplot; Nonlinear Axes
 
 :mod:`matplotlib.pyplot` supports not only linear axis scales, but also
