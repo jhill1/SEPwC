@@ -281,6 +281,9 @@ and the corresponding bibliography entries,
 but *not* commit some of our work drafting the conclusion
 (which we haven't finished yet).
 
+.. youtube:: 6xLFpdjw0V0
+    :align: center
+
 To allow for this, Git has a special *staging area*
 where it keeps track of things that have been added to
 the current changeset but not yet committed.
@@ -654,6 +657,10 @@ repository (``git commit``):
         Write plans to start a base on Venus
         2 files changed, 2 insertions(+)
         create mode 100644 venus.txt
+
+
+..  youtube:: P9IDlU7Wpvc
+   :align: center
 
 .. admonition:: Practical exercise
 
