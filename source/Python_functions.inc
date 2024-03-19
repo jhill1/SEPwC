@@ -70,6 +70,10 @@ where we store the length in a variable, then use it.
 
    We call the `len()` function inside of the `print()` function.
 
+.. youtube:: jA5KYi6fjdg
+    :align: center
+    
+
 Writing your own Python functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

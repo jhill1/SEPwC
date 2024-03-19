@@ -60,6 +60,9 @@ and another string. Three functions nested within each ohter. This is equivalent
 
    We call the `log10()` function inside of the `print()` function.
 
+.. youtube:: qMV817flI4w
+    :align: center
+
 Writing your own R functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
