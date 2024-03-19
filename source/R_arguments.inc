@@ -1,5 +1,7 @@
 R command line arguments 
 ----------------------------
+.. index:: 
+   single: command line arguments; R
 
 The simplest user-facing scripts/software use the Command Line Interface (CLI) to interact with a user.
 The CLI allows the user to pass options to a script as they execute. We have already used these elsewhere
@@ -103,6 +105,8 @@ Within our script we access them as we would any other list:
 
 R advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: advanced command line interface; R 
 
 R has a number of libraries that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -144,9 +148,9 @@ You then parse the argument and put them in variables as you see fit
 .. code-block:: R
 
     args = parser$parse_args()
-    boundary_file = args$filename
-    polygon_file = args$polygon
-    default_PhysID = args$default_PhysID
+    intput_file = args$filename
+    counter = args$count
+    verbosity = args$verbose
 
 
 .. admonition:: Practical exercise - more complex arguments
@@ -169,27 +173,33 @@ You then parse the argument and put them in variables as you see fit
 
         library(argparse)
 
-        parser <- argparse.ArgumentParser()
-        parser$add_argument("square", type=int,
-                            help="display a square of a given number")
-        parser$add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2],
-                            help="increase output verbosity", default=0)
-        parse$add_argument("--output_file")
-        args <- parser$parse_args()
-        square <- args.square
-        output_file <- args.output_file
+        parser <-  ArgumentParser(
+          prog="Square Machine",
+          description="Will square your number",
+          epilog="Copyright Jon Hill, 2024"
+        )
 
-        if (square <= 0) {
-            print("Please provide a positive integer")
-            exit()
+        parser$add_argument("square", type="integer",
+                          help="the number to be squared")
+        parser$add_argument("verbosity", type="integer", choices=c(0,1,2),
+                          help="increases the verbosity of the output", default=0)
+        parser$add_argument("--output_file")
+
+        args <- parser$parse_args()
+        square <- args$square
+        output_file <- args$output_file
+
+        if (square==0) {
+          print("please provide positive integer")
         }
+
         answer <- square**2
         if (args$verbosity == 2) {
-            print(paste0("The square of ",square, "equals ", answer))
-        } else if (args.verbosity == 1) {
-            print(paste0(square,"^2 == ",answer))
+          print(paste("The square of", square, "equals", answer))
+        } else if(args$verbosity == 1) {
+          print(paste0(square, "^2 =",  answer))
         } else {
-            print(answer)
+          print(answer)
         }
 
         #if (output_file != NA) {
@@ -204,7 +214,7 @@ Getting input from a user in R
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``readLines`` function.
-However, this is a bit hacky; it wasn't really design for this, so 
+However, this is a bit hacky; it wasn't really designed for this, so 
 it works well enough, but for running within an ``Rscript`` *and* in the console
 it needs some work. We point it at a "stdin" file (i.e. the keyboard) and
 ask for a single line.

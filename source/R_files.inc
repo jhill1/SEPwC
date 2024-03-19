@@ -1,5 +1,7 @@
 R: files
 ----------------------------
+.. index:: 
+   single: files; R
 
 Writing software for scientific/research purposes often invovles reading in 
 data from files. R file handling is very powerful, but surprisingly

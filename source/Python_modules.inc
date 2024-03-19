@@ -1,5 +1,7 @@
 Python modules
 ---------------
+..index::
+  single: Modules; Python
 
 When writing code we want to package up functionality/code into descrete bundles. In Python these are called modules or packages. 
 You can then put this module on the internet such that other can download, install it and use it. You can also save your own code 
@@ -10,6 +12,8 @@ modules, ratehr than creating them.
 
 Import statement
 ~~~~~~~~~~~~~~~~~
+..index::
+  single: Importing; Python
 
 To use an existing module or package in your code you must ``import`` it. 
 
@@ -99,10 +103,12 @@ for example.
 
 Executing modules as scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Modules as scripts; modules; Python
 
 Python is a versatile language, so modules can also be scripts! Python has a special variable called ``__name__`` which is set to a value of ``__main__`` is a file is called as a script.
 
-Running something like:
+Running something like this in the command line:
 
 .. code-block:: bash
 
@@ -112,7 +118,6 @@ will set this ``__name__`` variable to `__main__``.
 
 Exercise: try this
 
-
 We can make use of this to write a script within our module. Add the following code to the bottom of ``fibo.py``
 
 .. code-block:: python
@@ -121,7 +126,7 @@ We can make use of this to write a script within our module. Add the following c
       import sys
       write_fibonacci(int(sys.argv[1]))
 
-The call the script directly:
+The call the script directly via the command line:
 
 .. code-block:: bash
 
@@ -132,6 +137,8 @@ creating a structure of common functions across a number of projects/scripts.
 
 Module search path
 ~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Module Search Path; modules; Python
 
 Where does Python look for modules? Python will look for modules in the following order:
 
@@ -151,6 +158,8 @@ will add the directory to the end of that list above.
 
 Seeing what is in a module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Inside a Module; modules; Python
 
 The built-in function ``dir()`` is used to find out which names a module defines. It returns a sorted list of strings:
 

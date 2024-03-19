@@ -1,5 +1,10 @@
 Python: dictionaries
 -------------------------------
+..index::
+  single: Dictionaries; Python
+
+..index::
+  single: Keys; Python
 
 Dictionaries are linked lists; rather than accessing items via a numerical index, you access via a ``key``. A dictionary therefore contains a list of keys and a list of corresponding values. The keys have to be unique, but the values do not.
 
@@ -41,6 +46,8 @@ In addition to the ``{}`` construction you can also use ``dict`` construction:
 
 Looping with Python dictionaries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  pair: Loops; dictionaries; Python
 
 Like lists, dictionaries are at their most powerful in loops. Also like lists there are a number of ways of looping over them.
 
@@ -56,6 +63,14 @@ Like lists, dictionaries are at their most powerful in loops. Also like lists th
 
 Useful dictionary functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..index::
+  single: Dictionary functions; Python
+
+..index::
+  single: keys; Python
+
+..index::
+  single: values; Python
 
 Dictionaries also come with a number of useful functions. Commonly used ones are ``keys()`` and 
 ``values()`` which return a list of the keys and values respectively. Both of these return lists

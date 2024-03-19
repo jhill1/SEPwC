@@ -1,5 +1,7 @@
 R conditionals
 ---------------
+.. index:: 
+   single: conditionals; R
 
 As we saw in the coding fundamentals, conditionals are a tool to make decisions
 in code; they control the flow of code. We can make those decisions based on the state of the program at the time.
@@ -40,6 +42,9 @@ This is where `if` statements come in.
 
 R `if` statement
 ~~~~~~~~~~~~~~~~~~~~
+
+.. index:: 
+   single: if statement; R
 
 The `if` statement consists of an `if` condition, followed by zero or more `else if` conditions. A final `else`
 statement can be used to capture the situation where everything is `FALSE`.
@@ -151,6 +156,9 @@ an message.
 
 
 The second way of working out the logic is by nested `if` statements. Here's an example:
+
+.. index:: 
+   single: nested if statements; R  
 
 .. code-block:: R
 

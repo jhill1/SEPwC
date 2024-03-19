@@ -73,6 +73,9 @@ bunch of times? Let's add a loop!
        vert_position = initial_velocity * time - (0.5 * gravity * time**2)
        print(time, vert_position)
 
+..index::
+  single: Indentation; Python
+
 This is not the most elegant way to do this, but it works. You now have the height of the ball
 at time 0 to 0.9 in steps of 0.1. Note the indentation. In Python *whitespace* matters. It signifies 
 which statements are part of the `for` loop. You must be consistent with indentation or your
@@ -133,6 +136,8 @@ code will not run.
 .. youtube:: 7U89TwLas1I
     :align: center
 
+..index::
+  single: Plotting; Python
 
 Shall we plot this?
 

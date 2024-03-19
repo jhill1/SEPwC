@@ -1,5 +1,7 @@
 R functions 
 ---------------
+.. index:: 
+   single: functions; R
 
 Functions are blocks of code that can be called frequently. Rather than copy and paste the same block of 
 code which is identical apart from a single variable you can instead create a function.
@@ -130,6 +132,8 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
 Function arguments in R
 ..........................
+.. index:: 
+   single: function arguments; R 
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments
 

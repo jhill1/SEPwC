@@ -3,6 +3,8 @@
 
 Software licences
 =================
+.. index:: 
+   single: software licences
 
 Software needs a licence which tells your users or other developers what they are allowed
 to do with it. Most software you've heard of is commercial (Word, Windows, MacOs, 
@@ -40,6 +42,8 @@ bunch of different licences, but let's focus on the two main types first.
 
 Copyleft
 --------
+.. index:: 
+   single: software licences; copyleft
 
 Copyleft licences (a pun on copyright, geddit?) mean you can take 
 source-code, modify it, but can only re-release on a similar licence. For example,
@@ -56,6 +60,8 @@ Common copyleft licences are:
 
 Permissive
 ----------
+.. index:: 
+   single: software licences; permissive
 
 Permissive licences are much less restrictive. They impose little or no restrictions
 on what you can do if you modify code. They can either be completely open (i.e. do whatever you want!)
