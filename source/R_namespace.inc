@@ -9,7 +9,7 @@ names pointing to the object in memory.
 
 In R, the namespace and scope are referred to as the ``environment``. You can create environments
 yourself, but they are also created in certain circumstances. There is always at least
-three ``environment``s: ``empty``, ``global`` and ``current``. 
+three ``environments``: ``empty``, ``global`` and ``current``. 
 
 The two important ``environments`` are the ``current_env()`` and the ``global_env()``. The
 global environment is your "workspace" as it's where all activity, outside functions, takes
