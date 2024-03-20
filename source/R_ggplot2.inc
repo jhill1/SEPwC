@@ -7,7 +7,8 @@ ggplot2 tutorial
 works in a simialr way to the tidyverse in terms of using dataframes as the basic data
 and then adding layers on top to create the final plot. 
 
-This section is based on the tutorial by Cedric Scherer https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/
+This section is based on the tutorial by 
+`Cedric Scherer <https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/>`_
 
 ``ggplot2`` is also used as a basis for other graphing packages, such as ``ggpubr`` which simplifies some
 of the syntax here to create publicaiton-level quality graphs. By learning ``ggplot2`` you should find
@@ -169,16 +170,19 @@ subset your data to do this, but you can also
            ylim(c(0, 50))
 
 There are other ways of limiting the plot using ``scale_y_continuous(limits = c(0,50))`` or
-``core_cartesian(ylim = c(0,50))``. These give similar results, but are, in fact, slightly different.
+``coord_cartesian(ylim = c(0,50))``. These give similar results, but are, in fact, slightly different.
 Try them both instead of the ``ylim()``.
 
-IMAGE
+.. image:: ../images/axis-limit-comp-1.png
+   :alt: Graphs plotted using the ylim or scale (left) vs the coord_cartesian (right).
 
 Note the lack of buffer on the ``coord_cartesian()`` plot, compared to the ``scale_y_continuous()`` plot?
 This is the difference between subsetting (``scale_y_continuous`` and ``ylim()``) and clipping (``coord_cartesian()``).
 This is even more pronounced on a box-whisker plot:
 
-IMAGE
+
+.. image:: ../images/axis-limit-comp-box-1.png
+   :alt: Boxplots plotted using the ylim or scale (left) vs the coord_cartesian (right).
 
 .. caution::
 
@@ -190,7 +194,7 @@ You can force R to plot starting from some coordinates, e.g. the (0,0) origin:
 
 .. code-block::
 
-chic_high <- dplyr::filter(chic, temp > 25, o3 > 20)
+    chic_high <- dplyr::filter(chic, temp > 25, o3 > 20)
 
     ggplot(chic_high, aes(x = temp, y = o3)) +
            geom_point(color = "darkcyan") +
@@ -378,4 +382,160 @@ you add the ``show.legend = FALSE`` to the ``geom_*()`` call:
     labs(x = "Year", y = "Temperature (°F)") +
     geom_rug(show.legend = FALSE)
 
+The examples above are for discrete or categorical data. ``ggplot2`` also shows legends
+for continuous data, such as the temperature:
+
+.. code-block:: R
+
+    ggplot(chic,
+           aes(x = date, y = temp, color = temp)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)", color = "Temperature (°F)")
+
+It is possible to force discrete legends or binned legends too.
+
+Colours
+..........
+
+A key part of the plot is the colour scheme chosen. There are two main
+colour elements to alter; ``color`` and ``fill``. These can be either a single colour
+or assigned to a variable. For a specified colour add the colour to the ``geometry()``
+function:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp)) +
+    geom_point(shape = 21, size = 2, stroke = 1,
+               color = "#3cc08f", fill = "#c08f3c") +
+    labs(x = "Year", y = "Temperature (°F)")
+
+Here, I've specifed the ``color`` and the ``fill``. The ``color`` is
+used as an outline, where the ``fill`` is used in the centre of the shape. 
+Note I've also had to specify a stroke (the outline) to show the this. Also note
+I've specified colours using hexidecimal codes. These are the R(ed) G(reen) B(lue)
+components in values of 0 to 255 in hexidecimal. There are lot of webpages
+to find the hex codes of colours around.
+
+You can also asign a palatte to a colour. This is obviously most useful when assign 
+colour to a variable. You can alter these using the ``scale_color_*`` and ``scale_fill_*``
+functions. You can also manually create a palette.
+
+.. code-block:: R
+
+    (ga <- ggplot(chic, aes(x = date, y = temp, color = season)) +
+           geom_point() +
+           labs(x = "Year", y = "Temperature (°F)", color = NULL))
+
+We've created a ``ggplot2`` object, ``ga`` with the default palette. Now lets
+alter this:
+
+.. code-block:: R
+
+    ga + scale_color_brewer(palette = "Set1")
+
+To use the ``Set1`` scheme from R Color Brewer. If we wanted to set our own colours:
+
+.. code-block:: R
+
+    ga + scale_color_manual(values = c("dodgerblue4",
+                                       "darkolivegreen4",
+                                       "darkorchid3",
+                                       "goldenrod1"))
+
+For continuous variables we need the ``scale_*_gradient()`` or ``scale_*_continuous()``
+functions:
+
+.. code-block:: R
+
+    gb <- ggplot(chic, aes(x = date, y = temp, color = temp)) +
+                 geom_point() +
+                 labs(x = "Year", y = "Temperature (°F)", color = "Temperature (°F):")
+
+    gb + scale_color_continuous()
+
+We can use a diverging colour scheme:
+
+.. code-block:: R
+
+    mid <- mean(chic$temp)  ## midpoint
+    gb + scale_color_gradient2(midpoint = mid)
+
+It is possible to specify your own colour palette, but I would recommend sticking to 
+pre-defined ones, espesially the ``viridis`` set, which are colour-blind safe. 
+
+    p1 <- gb + scale_color_viridis_c() + ggtitle("'viridis' (default)")
+    p2 <- gb + scale_color_viridis_c(option = "inferno") + ggtitle("'inferno'")
+    p3 <- gb + scale_color_viridis_c(option = "plasma") + ggtitle("'plasma'")
+    p4 <- gb + scale_color_viridis_c(option = "cividis") + ggtitle("'cividis'")
+
+    library(patchwork)
+    (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
+
+Multiple plots
+~~~~~~~~~~~~~~~
+
+In the last example I snuck in an example of adding multiple plots to a figure!
+There are two main ways to do this: using the built-in ``facet`` or using an external
+package, such as ``patchwork``. 
+
+Facets
+.........
+
+Facets act on a variable in your data so are an easy way to separate out components.
+There are two ways to do this using either ``facet_grid`` or ``facet_wrap``. The first
+can produce a grid based on one or two variables. The latter produces a "ribbon" of plots.
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp)) +
+    geom_point(color = "orangered", alpha = .3) +
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+    labs(x = "Year", y = "Temperature (°F)") +
+    facet_grid(year ~ season)
+
+Try the above with ``facet_grid(season ~ year)`` too. The ``facet_wrap`` produces something similar:
+
+.. code-block:: R
+
+    g <- ggplot(chic, aes(x = date, y = temp)) +
+         geom_point(color = "chartreuse4", alpha = .3) +
+         labs(x = "Year", y = "Temperature (°F)") +
+         theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
+    g + facet_wrap(~ year, nrow=1)
+
+There are a number of other options to tailor the plot just to your liking. In the above
+example, the wrap uses the same axis (this is generally what you would want!), but here, we don't.
+We can alter using the ``scales = "free"``:
+
+.. code-block:: R
+
+    g + facet_wrap(~ year, nrow = 2, scales = "free")
+
+If we use two variables with ``facet_wrap`` we can a slightly different view:
+
+.. code-block:: R
+
+    g + facet_wrap(year ~ season, nrow = 4, scales = "free_x")
+
+Saving the plot
+~~~~~~~~~~~~~~~~
+
+Assuming you have saved your plot into an object you can save the plot to a file using 
+the ``ggsave()`` function:
+
+.. code-block:: R
+
+    ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")
+
+This saves an A4 PDF of the ``final_plot`` object. Look up the ``ggsave`` function for more options. 
+
+When using ``patchwork`` (or ``ggarange`` or any other package to place multiple plots together) that
+object is the output of the ``patchwork`` call:
+
+.. code-block:: R
+
+    final_plot <- (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
+    ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")
+    
 

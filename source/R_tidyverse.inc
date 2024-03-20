@@ -197,7 +197,7 @@ Mutate
 
 Frequently you'll want to create new columns based on the values in existing
 columns, for example to do unit conversions, or to find the ratio of values in two
-columns. For this we'll use `mutate()`.
+columns. For this we'll use ``mutate()``.
 
 To create a new column of weight in kg:
 
@@ -517,7 +517,7 @@ transitions between these layouts more straightforward than you might think! The
 shows how these two formats relate to each other, and gives you an idea of how we can use R
 to shift from one format to the other.
 
-.. image:: ../images/tidyr-pivot_wider_longer.png
+.. image:: ../images/tidyr-pivot_wider_longer.gif
     :alt: animation of pivot from wide to long
 
 Pivoting from long to wide format

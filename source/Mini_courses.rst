@@ -11,11 +11,9 @@ GIS - Python
 Stats - R
 ----------
 
-Graphs - R
------------
+.. include:: R_ggplot2.inc
 
 .. include:: python_plotting.inc
-
 
 .. include:: tides_python.inc
 
