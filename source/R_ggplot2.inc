@@ -289,4 +289,93 @@ We can remove titles for legend using the ``element_blank()``:
     labs(x = "Year", y = "Temperature (°F)") +
     theme(legend.title = element_blank())
 
+And also chnage the position:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)") +
+    theme(legend.position = "top")
+
+The possible options are "top", "right", "left" and "bottom". You can also specify 
+a coordinate for the legend to be from 0 to 1 (0 is the left/bottom, 1 is the right/top):
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)",
+         color = NULL) +
+    theme(legend.position = c(.15, .15),
+          legend.background = element_rect(fill = "transparent"))
+
+The legend also has a transparent background here to make sure no points are hidden. You can also switch the
+direction:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)") +
+    theme(legend.position = c(.5, .97),
+          legend.background = element_rect(fill = "transparent")) +
+    guides(color = guide_legend(direction = "horizontal"))
+
+The default title is dictated by the variable name, just as the axes. To change it
+to something more readable use the ``labs()`` function:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)",
+         color = "Seasons\nindicated\nby colors:")
+
+You will probably want to alter the order in which the legend elements appear, e.g. for 
+seasons, putting them in order makes sense. We can't that in ``ggplot2`` and instead we
+have to alter the variable in the dataframe itself. We alter the ``levels`` in the ``season`` 
+column:
+
+.. code-block:: R
+
+    chic$season <-
+        factor(chic$season,
+               levels = c("Winter", "Spring", "Summer", "Autumn"))
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)")
+
+You can alter the labels though easily in ``ggplot2``:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)") +
+    scale_color_discrete(
+        name = "Seasons:",
+        labels = c("Mar—May", "Jun—Aug", "Sep—Nov", "Dec—Feb")
+    )
+
+If you add multiple geometries you will find the legend has them all on too, for example:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)") +
+    geom_rug()
+
+Note the line in the legend symbols? This comes from the ``geom_rug()``. To turn it off
+you add the ``show.legend = FALSE`` to the ``geom_*()`` call:
+
+.. code-block:: R
+
+    ggplot(chic, aes(x = date, y = temp, color = season)) +
+    geom_point() +
+    labs(x = "Year", y = "Temperature (°F)") +
+    geom_rug(show.legend = FALSE)
+
 
