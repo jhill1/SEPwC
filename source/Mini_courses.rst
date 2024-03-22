@@ -1,6 +1,7 @@
 Mini-courses
 =============
 
+.. include:: GIS_basics.inc
 
 GIS - R
 ---------
