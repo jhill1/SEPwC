@@ -6,7 +6,7 @@ def toFarenheit(Centigrade):
 
 def toCentigrade(Farenheit):
 
-   C =  (Farenheit - 32) * 5/9;
+   C =  (Farenheit - 32) * 5.0/9.0;
 
    return C
 
