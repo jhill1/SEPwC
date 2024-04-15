@@ -49,4 +49,29 @@ Let's get these lexicons and see what they contain.
 
 Each one is a table of words (the unigram) and the sentiment, either as an emotion, positive/negative, or a score. 
 
+Using the `inner join` to get the sentiments from your data
+-------------------------------------------------------------
+
+We can use the Jane Austen book database as our text. Let's first see which words are used to convey "joy" in 
+*Emma*. We firs tneed to seperate the words into seperate rows in a dataframe, for which we can use
+`unnest_tokens()`. When we do this, we can also set up some other columns to help keep track of chapters, etc.
+
+.. code-block:: R
+
+    library(janeaustenr)
+    library(dplyr)
+    library(stringr)
+
+    tidy_books <- austen_books() %>%
+      group_by(book) %>% # so we have each book as a group
+      mutate(            # add some new columns
+        linenumber = row_number(),  # like a line number
+        chapter = cumsum(str_detect(text, # a chapter
+                                    regex("^chapter [\\divxlc]", 
+                                          ignore_case = TRUE)))) %>%
+      ungroup() %>% # now we've done that, ungroup
+      unnest_tokens(word, text) # and finally seperate out the words!
+
+For `unnest_tokens` we chose the oclumn `word`; this is very helpful - look at the output
+from the sentiment lexiconcs before; note they also have a column`word`. 
 
