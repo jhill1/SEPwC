@@ -57,7 +57,7 @@ arguments.  For example, to plot x versus y, you can write:
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
 Formatting the style of your plot
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
   pair: Pyplot; Formatting 
 
