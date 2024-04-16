@@ -11,9 +11,11 @@ but we are going to learn some of the basics of the process, which helps us writ
 Revision control
 ----------------
 
-We've already learnt one of the key tools (or if you've skipped to this bit, you can go back and learn about it), which is revision control.
-Rather than keep separate versions of code in separate files (which would be a nightmare for any reasonable sized application), we keep versions
-of files in a revision control system. In this course we've learnt about `git`, but there are other tools, jut not as popular. 
+We've already learnt one of the key tools (or if you've skipped to this bit, you can go back and learn about it), 
+which is :ref:`revision control <Revision control with Git>`.
+Rather than keep separate versions of code in separate files (which would be a nightmare for any reasonable sized application), 
+we keep versions of files in a revision control system. In this course we've learnt about `git`, but there are other 
+tools, jut not as popular. 
 
 However, revision control is a tool to help development; it does not solve all problems. You can use it in a number of ways depending on the project, the number of people and the aims of the code. There is no single right way to do this and any development tools helps set up a process, but it's humans that actually devise and use (or not!) any processes.
 
@@ -35,7 +37,7 @@ With teams of developers this is the preferred method and only a few individuals
 Testing
 --------
 
-How do you know your code is correct? See this chapter!
+How do you know your code is correct? :ref:`See this chapter <Testing code>`!
 
 
 Development process
@@ -114,7 +116,195 @@ Test-driven development turns the development cycle around to put testing up-fro
 The tests are written immediately after requirements capture and before any code is written (so the test will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
 
 
-Design templates or patterns
------------------------------
+Linting your code
+-------------------
 
-Common patterns of code structure seen a lot. 
+*Linting* refers to running your code through software that checks the syntax and layout/formatting of your code. The
+term comes from the fluff shed by clothing, i.e. `lint` removes the extraneous fluff from your code. It often
+points our better ways of writing functions, sylistic issues with your code and, when working in a team, checks
+things are consistant across the whole team (e.g. using 4 spaces to indent, rather than some people using 3 or 2).
+
+Both R and Python (and most other languages) have some form of lint software available. For R the 
+package is called `lintr`, for Python it's `pylint`. Let's deal with these in turn.
+
+`lintr`
+~~~~~~~~
+
+`lintr` is used inside an R environment. 
+
+Create a file (e.g. `test_lint.R`) contining the following:
+
+.. code-block:: R
+
+    T_and_F_symbol_linter=function(){
+        list()
+    }
+
+Now open R and type the following:
+
+.. code-block:: R
+
+    library(lintr)
+
+    lintr::lint("test_lint.R")
+
+You should see something like the following output:
+
+.. code-block:: R
+
+    >     lintr::lint("test_lint.R")
+    test_lint.R:1:1: style: [object_name_linter] Variable and function name style should match snake_case or symbols.
+    T_and_F_symbol_linter=function(){
+    ^~~~~~~~~~~~~~~~~~~~~
+    est_lint.R:1:22: style: [assignment_linter] Use <-, not =, for assignment.
+    T_and_F_symbol_linter=function(){
+                         ^
+    test_lint.R:1:22: style: [infix_spaces_linter] Put spaces around all infix operators.
+    T_and_F_symbol_linter=function(){
+                         ^
+    test_lint.R:1:33: style: [brace_linter] There should be a space before an opening curly brace.
+    T_and_F_symbol_linter=function(){
+                                    ^
+    test_lint.R:1:33: style: [paren_body_linter] There should be a space between a right parenthesis and a body expression.
+    T_and_F_symbol_linter=function(){
+                                    ^
+    test_lint.R:2:4: style: [indentation_linter] Indentation should be 2 spaces but is 4 spaces.
+        list()
+      ~^
+    test_lint.R:4:1: style: [trailing_blank_lines_linter] Trailing blank lines are superfluous.
+
+
+.. admonition:: Practical exercise
+
+    **Fix the errors!**
+
+    Each warning gives the line number and the change to make, so do it and remove them all.
+
+..  admonition:: Solution
+    :class: toggle
+ 
+    .. code-block:: R
+
+       true_and_false_symbol_linter <- function() {
+         list()
+       }
+
+    Running the lint function on that should return nothing.
+
+`pylint`
+~~~~~~~~
+
+`pylint` is run from the command line (e.g. your Anaconda bash or the terminal emulator). Create a 
+file called "circle.py" with the following contents:
+
+.. code-block:: Python
+
+    #!/user/bin/env python3
+
+    import string
+
+    PI = 3.14 
+
+    class Circle:
+
+        def __init__(self,radius:int) -> None:
+            assert radius > 0 , \
+                "circle radius must be a positive number"
+            self.radius = radius
+
+        def area(self) -> str:
+            return PI * self.radius**2 
+
+        def perimeter(self) -> str:
+            return 2 * PI * self.radius
+        
+        def __repr__(self):
+            return f"{self.__class__.__name__}(radius={self.radius})"
+
+Run pylint on that file in the command line:
+
+.. code-block:: bash
+
+    pylint circle.py
+
+and you should see the following output:
+
+.. code-block:: bash
+
+    ************* Module circle
+    circle.py:5:9: C0303: Trailing whitespace (trailing-whitespace)
+    circle.py:15:34: C0303: Trailing whitespace (trailing-whitespace)
+    circle.py:19:0: C0303: Trailing whitespace (trailing-whitespace)
+    circle.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+    circle.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+    circle.py:14:4: C0116: Missing function or method docstring (missing-function-docstring)
+    circle.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
+    circle.py:3:0: W0611: Unused import string (unused-import)
+
+    -----------------------------------
+    Your code has been rated at 3.33/10
+
+Each line of the output contains the line and column of the file, along with a 
+description of the warning/error. 
+
+.. admonition:: Practical exercise
+
+    **Fix the errors!**
+
+    Each warning gives the line number and the change to make, so do it and remove them all.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+
+        #!/user/bin/env python3
+        """
+        This module calculates propeties of a circle
+        """
+
+        PI = 3.14
+
+        class Circle:
+            """A class to represent the circle.
+
+                ..........
+            Attributes
+            ----------
+            radius: str
+                the radius of the Circle
+
+            Methods
+            -------
+            area():
+                Prints the Circle's area.
+
+            perimeter():
+                Prints the Circle's perimeter.
+            """
+            def __init__(self,radius:int) -> None:
+                """
+                Constructs all the necessary attributes for the Circle object.
+                
+                Parameters
+                ----------
+                    radius: str
+                        the radius of the Circle
+                """
+                assert radius > 0 , \
+                    "circle radius must be a positive number"
+                self.radius = radius
+
+            def area(self) -> str:
+                '''calculate the area of the circle, return the result'''
+                return PI * self.radius**2
+
+            def perimeter(self) -> str:
+                '''calculate the perimeter of the circle, return the result'''
+                return 2 * PI * self.radius
+
+            def __repr__(self):
+                return f"{self.__class__.__name__}(radius={self.radius})"
+
+    Running the `pylint` command on that should return nothing.
+

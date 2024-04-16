@@ -129,7 +129,7 @@ dropped during the processing. We can quickly plot these data:
 .. image:: ../images/jane_austen_sentiment.png
        :alt: A graphs of overall sentiment for each of Austen's novels.
 
-.. admonition:: Practical exercise
+.. admonition:: Practical Exercise
 
     **Use the NRC and AFINN databases**
     
