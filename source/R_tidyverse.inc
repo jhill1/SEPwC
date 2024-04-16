@@ -53,17 +53,26 @@ own column, and rows are instead more aggregated groups
 Moving back and forth between these formats is non-trivial, and ``tidyr`` gives you tools
 for this and more sophisticated data manipulation.
 
+First, `download the data file we're going to use, which can be found here 
+<https://github.com/jhill1/SEPwC/raw/master/code_examples/surveys.csv>`_.
+
 We'll read in our data using the `read_csv()` function from the
-tidyverse package ``readr``.
+tidyverse package ``readr``. 
 
 .. code-block:: R
 
-    surveys <- read_csv("data_raw/portal_data_joined.csv")
+    surveys <- read_csv("surveys.csv")
 
     ## inspect the data
     str(surveys)
     ## preview the data
     view(surveys)
+
+.. note::
+    Make sure you're in the same directory as the data you've downloaded or give the
+    full path. See :ref:`the section on filenames and paths <Absolute vs Relative paths>` for more
+    info.
+    
 
 Next, we're going to learn some of the most common ``dplyr`` functions:
 
