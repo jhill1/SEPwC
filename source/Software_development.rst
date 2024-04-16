@@ -308,3 +308,5 @@ description of the warning/error.
 
     Running the `pylint` command on that should return nothing.
 
+.. youtube:: Wogad7fNZlY
+   :align: center
