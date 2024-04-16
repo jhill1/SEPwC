@@ -115,7 +115,7 @@ There is also a function to print a datetime object into a specific format:
 
     import datetime
 
-    now = datetime.now()
+    now = datetime.datetime.now()
 
     t = now.strftime("%H:%M:%S")
     print("Time:", t)
