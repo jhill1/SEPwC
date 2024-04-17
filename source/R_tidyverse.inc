@@ -526,7 +526,7 @@ transitions between these layouts more straightforward than you might think! The
 shows how these two formats relate to each other, and gives you an idea of how we can use R
 to shift from one format to the other.
 
-.. image:: ../images/tidyr-pivot_wider_longer.gif
+.. image:: ../images/tidyr-pivot_wider_longer.*
     :alt: animation of pivot from wide to long
 
 Pivoting from long to wide format
