@@ -51,7 +51,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.youtube',
-    'sphinxcontrib.googleanalytics'
+    'sphinxcontrib.googleanalytics',
+    'sphinx_favicon'
     ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -89,6 +90,16 @@ new_supported_image_types = [
     'image/gif',
     'image/png',
     'image/jpeg'
+]
+
+favicons = [
+    {"href": "images/sepwc_logo.svg"},  # => use `_static/icon.svg`
+    {"href": "https://raw.githubusercontent.com/jhill1/SEPwC/master/images/favicon-16x16.png"},
+    {"href": "https://raw.githubusercontent.com/jhill1/SEPwC/master/images/favicon-32x32.png"},
+    {
+        "rel": "apple-touch-icon",
+        "href": "https://raw.githubusercontent.com/jhill1/SEPwC/master/images/favicon-180x180.png",
+    },
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -163,7 +174,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SEPwC.tex', u'SEPwC Documentation',
+    (master_doc, 'SEPwC.tex', u'SEPwC : Solving Environmental Problems with Code',
      u'Jon Hill', 'manual'),
 ]
 
@@ -173,7 +184,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sepwc', u'SEPwC Documentation',
+    (master_doc, 'sepwc', u'SEPwC : Solving Environmental Problems with Code',
      [author], 1)
 ]
 
@@ -184,7 +195,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'SEPwC', u'SEPwC Documentation',
+    (master_doc, 'SEPwC', u'SEPwC : Solving Environmental Problems with Code',
      author, 'SEPwC', 'One line description of project.',
      'Miscellaneous'),
 ]

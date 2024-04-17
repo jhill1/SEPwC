@@ -1,5 +1,5 @@
 Acknowledgements
-=================
+------------------
 
 This course was developed in my mind over many years. I jumped at the opportunity to make it real. It is influenced
 by a number of collaborators and colleagues. Thanks to the Software Carpentry initiative for their courses, training
