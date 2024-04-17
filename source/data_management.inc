@@ -67,7 +67,7 @@ Analysis friendly data
 
 The above two steps will always need to be done in some way. This step heavily depends on what your script is going to do and may be able 
 to be done programmitically in your script. Examples of this step are to make each column a variable, so for example if your data records
-``female_treated``, ``female_untreated``, ``male_treated``, ``male_untrested``, split this into ``sex` and ``treated``. This 
+``female_treated``, ``female_untreated``, ``male_treated``, ``male_untrested``, split this into ``sex`` and ``treated``. This 
 will enable easier analysis later. 
 
 It is also advised to remove any units frm the data and either add it to the column header/label or as a seperate column (the latter is

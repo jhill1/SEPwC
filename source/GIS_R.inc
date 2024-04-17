@@ -20,10 +20,10 @@ Let's look at rasters first.
     my_raster <- raster("gis_data/tidal_range.tif")
     my_raster
 
-R will print out some basic info on the raster. This incluudes the extent, the projection 
+R will print out some basic info on the raster. This includes the extent, the projection 
 space and min and max values.
 
-You can summerise the raster too:
+You can summarise the raster too:
 
 .. code-block:: R
 
@@ -31,7 +31,7 @@ You can summerise the raster too:
 
 For this raster dataset, there is a single band. Rasters can store multiple
 bands in a single file. It's common, for example, to store the R, G and B 
-colours seperately. You can check this using the `nlyr` function:
+colours separately. You can check this using the `nlyr` function:
 
 .. code-block:: R
 
@@ -50,13 +50,13 @@ and what the coordinates mean (metres, degrees, etc). You can also change that
 projection space using the `project()` function. When you project onto another
 CRS you will change your data. By default the projection will use
 bilinear interpolation to generate the data at the new coordinates. You can
-chnage this to cubic, or cubicspline or use another algorithm. Stick with
+change this to cubic, or cubicspline or use another algorithm. Stick with
 bilinear unless you have a reason to change this.
 
 .. admonition:: Thought exercise
 
     Have a search using a popular search engine to see if you can figure out
-    why biliner interpolation is default.
+    why bilinear interpolation is default.
 
 
 ..  admonition:: Solution
@@ -66,7 +66,7 @@ bilinear unless you have a reason to change this.
     new data maximum value will be equal to, or slightly less, than the old data; 
     and likewise, the minimum will be the same or slightly greater. Cubic or cubicspline
     can *overshoot* the limits of the old data, but can also produce smoother data, 
-    without abrupt changes. Whenever you project onto a new coordinate syste, you 
+    without abrupt changes. Whenever you project onto a new coordinate system you 
     are altering the data.
 
 .. code-block:: R
@@ -79,7 +79,7 @@ bilinear unless you have a reason to change this.
 
 The raster is transformed from the original project space (UTM 31N) to a lat/lon 
 projection space: WGS84. I've also thrown in the `ext()` function which gives
-you the extent of the raster in the corrdinate space.
+you the extent of the raster in the coordinate space.
 
 When dealing with raster data you often need the rasters to be identical; 
 same resolution, same extents, same projection space. Once identical, then
@@ -112,7 +112,7 @@ vector data.
 The `sf` library
 ~~~~~~~~~~~~~~~~~
 
-R also have another popular library fpr dealing with shapefiles/vector data; `sf`. 
+R also have another popular library for dealing with shapefiles/vector data; `sf`. 
 This library has more features than `terra` so is worth learning. 
 
 .. code-block:: R
@@ -124,7 +124,7 @@ Vector data can be points, lines or polygons. We can find out which using:
 
 .. code-block:: R
 
-    st_geomoetry_type(tide_gauges)
+    st_geometry_type(tide_gauges)
 
 We can then find out the CRS and extennt:
 
@@ -133,7 +133,7 @@ We can then find out the CRS and extennt:
     st_crs(tide_gauges)
     st_bbox(tide_gauges)
 
-We can also use `sf` to create a shapefil on the fly:
+We can also use `sf` to create a shapefile on the fly:
 
 .. code-block:: R
 
@@ -157,7 +157,7 @@ easy to switch a vector dataset between the two.
 
     sf::st_as_sf(terra::vect("gis_data/tide_gauges.shp"))
     
-Will convert a `terra` vector to the `sf` format. Normall, `terra` can deal with 
+Will convert a `terra` vector to the `sf` format. Normally, `terra` can deal with 
 `sf` objects, but you sometimes need to wrap the `sf` object in the `st_zm` function:
 
 .. code-block:: R

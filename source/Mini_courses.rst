@@ -13,6 +13,5 @@ Mini-courses
 
 .. include:: GIS_R.inc
 
-GIS - Python
--------------
+.. include:: GIS_python.inc
 
