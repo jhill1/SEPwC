@@ -19,6 +19,8 @@ The table below contains suggestions of which blocks of works to cover in each w
 to help guide you. However, you can forge ahead, but equally, don't worry if you
 slip behind a little.
 
+.. include:: acknowledgements.inc
+
 .. list-table:: Suggested work
    :header-rows: 1
 
@@ -52,7 +54,6 @@ slip behind a little.
     :maxdepth: 1
     :caption: Contents:
 
-    acknowledgements
     How_a_computer_works
     Licences
     Code_basics
