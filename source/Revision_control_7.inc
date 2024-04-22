@@ -210,7 +210,7 @@ If you are using a legacy system that doesn't support the Ed25519 algorithm, use
    Generating public/private ed25519 key pair.
    Enter file in which to save the key (/c/Users/jh1889/.ssh/id_ed25519):
 
-We want to use the default file, so just press :kbd: `Enter`.
+We want to use the default file, so just press :kbd:`Enter`.
 
 .. code-block:: output
 

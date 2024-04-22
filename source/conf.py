@@ -102,6 +102,23 @@ favicons = [
     },
 ]
 
+rst_prolog = """
+.. |R| image:: ../images/R_logo.png
+   :height: 12
+.. |python| image:: ../images/Python-logo-notext.png
+   :height: 12
+.. |mac| image:: ../images/Apple_logo.png
+   :height: 12
+.. |linux| image:: ../images/Linux_logo.png
+   :height: 12
+.. |win| image:: ../images/Windows_logo.png
+   :height: 12
+.. |maclin| image:: ../images/linux_mac_logo.png
+   :height: 12
+.. |all| image:: ../images/win_linux_mac_logo.png
+   :height: 12
+"""
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

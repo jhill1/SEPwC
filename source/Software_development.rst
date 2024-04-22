@@ -247,6 +247,7 @@ and you should see the following output:
 Each line of the output contains the line and column of the file, along with a 
 description of the warning/error. 
 
+
 .. admonition:: Practical exercise
 
     **Fix the errors!**
@@ -257,6 +258,7 @@ description of the warning/error.
     :class: toggle
 
     .. code-block:: Python
+       :caption: |python|
 
         #!/user/bin/env python3
         """
