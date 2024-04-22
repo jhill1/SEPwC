@@ -6,6 +6,12 @@
 Welcome to Solving Environmental Problems with Code (SEPwC)
 ===========================================================
 
+
+.. image:: ../images/favicon-180x180.png
+   :alt: SEPwC logo
+   :align: center
+
+
 The aim of this module is to teach you the basics of writing simple computer scripts so 
 that you can analyse data to help solve problems. These data may be spatial (i.e. like GIS)
 or text (e.g. transcripts of interviews) or collected in the field (so you can do some stats).
@@ -51,7 +57,7 @@ slip behind a little.
 
     
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Contents:
 
     How_a_computer_works

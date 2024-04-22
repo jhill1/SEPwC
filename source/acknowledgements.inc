@@ -1,5 +1,4 @@
-Acknowledgements
-------------------
+**Acknowledgements**
 
 This course was developed in my mind over many years. I jumped at the opportunity to make it real. It is influenced
 by a number of collaborators and colleagues. Thanks to the Software Carpentry initiative for their courses, training
@@ -8,7 +7,7 @@ and Lawrence Mitchel who created courses at their institutions which influenced 
 College London for making his Python course open. I borrowed material from there for the Python and R sections. I also
 borrowed ideas from Hadley Wickham's various R books and websites.
 
-Thanks need to go to Katie Lee and Holly Smith for recording a large number of the videos on this website; thanks both!
+Thanks need to go to Katie Lee and Holly Smith for recording a large number of the videos on this website; thanks both! also thanks to Sofia Foster, an undergrad student in the first year this course ran, who inspired the current logo design.
 
 Thanks also to the fantastic group of developers that have made all the software used here. R, Python, Sphinx, Linux, 
 matplotlib, ggplot2, numpy, gdal, etc. The list should go on, but there is simply too much. The fact that so much of this

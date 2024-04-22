@@ -152,7 +152,6 @@ youtube_cmd = r"\newcommand{\sphinxcontribyoutube}[3]{\begin{figure}\sphinxinclu
 
 
 latex_elements = {
-    #"preamble": youtube_cmd,
     # The paper size ('letterpaper' or 'a4paper').
     #
     'papersize': 'a4paper',
@@ -163,11 +162,13 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    'preamble': youtube_cmd,
 
     # Latex figure (float) alignment
     #
     'figure_align': 'htbp',
+
+    #"maketitle": "\\input{cover.tex}"
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
