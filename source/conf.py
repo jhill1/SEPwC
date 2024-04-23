@@ -104,19 +104,21 @@ favicons = [
 
 rst_prolog = """
 .. |R| image:: ../images/R_logo.png
-   :height: 12
+   :height: 16
 .. |python| image:: ../images/Python-logo-notext.png
-   :height: 12
+   :height: 16
 .. |mac| image:: ../images/Apple_logo.png
-   :height: 12
+   :height: 16
 .. |linux| image:: ../images/Linux_logo.png
-   :height: 12
+   :height: 16
 .. |win| image:: ../images/Windows_logo.png
-   :height: 12
+   :height: 16
 .. |maclin| image:: ../images/linux_mac_logo.png
-   :height: 12
+   :height: 16
 .. |all| image:: ../images/win_linux_mac_logo.png
-   :height: 12
+   :height: 16
+.. |cli| image:: ../images/cli.png
+   :height: 16
 """
 
 # -- Options for HTML output -------------------------------------------------
