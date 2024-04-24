@@ -119,6 +119,9 @@ rst_prolog = """
    :height: 16
 .. |cli| image:: ../images/cli.png
    :height: 16
+.. |pc| image:: ../images/pcode.png
+   :height: 16
+
 """
 
 # -- Options for HTML output -------------------------------------------------

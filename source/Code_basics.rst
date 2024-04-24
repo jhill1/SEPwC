@@ -43,30 +43,35 @@ including the type of data they store.
 Some examples:
 
 .. code-block::
+   :caption: |pc|
 
    my_data = [1, 2, 3, 5, 19, 18]
    
 I've create a variable called ``my_data`` which contains a list of numbers.
 
 .. code-block::
+   :caption: |pc|
 
    my_favourite_number = 7
 
 This variable contains a single number, 7.
 
 .. code-block::
+   :caption: |pc|
 
    pi = 3.14159
 
 This variable contains the number for \pi to five decimal places.
 
 .. code-block::
+   :caption: |pc|
 
    name = "Jon"
 
 This variable contains text.
 
 .. code-block::
+   :caption: |pc|
 
    loaded_data = load_csv_file("mega_data_set.csv")
 
@@ -75,7 +80,8 @@ This variable contains whatever the "mega_data_set.csv" file contains.
 What about changing what's in a variable? Just set it:
 
 .. code-block::
-   
+   :caption: |pc|
+
    my_name = "Jon"
    print(my_name)
    my_name="Fred"
@@ -85,6 +91,7 @@ What the above code will do is set the variable "my_name" to Jon, print it to sc
 What the users sees is:
 
 .. code-block:: output
+   :caption: |pc|
 
     Jon
     Fred
@@ -92,12 +99,14 @@ What the users sees is:
 All the above examples require the variable to be known up front (hard-coded). What if we don't know?
 
 .. code-block::
+   :caption: |pc|
 
    filename = ask_user_for_file()
 
 Assuming the function (see below) works, filename will contain whatever the user tells us. We can then do something like:
 
 .. code-block::
+   :caption: |pc|
 
    data = load_file(filename)
 
@@ -113,7 +122,8 @@ separate words). Whichever way you choose, be consistent!
 Good variables:
 
 .. code-block::
-   
+   :caption: |pc|
+
    users_name
    temperature
    input_filename
@@ -126,6 +136,7 @@ Good variables:
 Bad variables:
 
 .. code-block::
+   :caption: |pc|
 
    x
    temp
@@ -222,6 +233,7 @@ Operations
 Operations are how to start to manipulate data. For example:
 
 .. code-block::
+   :caption: |pc|
 
    user_input = get_user_number()
    print("You gave me" user_input)
@@ -238,6 +250,7 @@ specialist ones like "modulus" which gives you the reminder of a division. We ca
 operations so "add" works on multiple data types, for example:
 
 .. code-block::
+   :caption: |pc|
 
    my_string = "hello"
    ending = " world"
@@ -254,6 +267,7 @@ symbol is used depends on the language and not all languages can do this.
     What is the answer to the following operations?
 
     .. code-block:: 
+       :caption: |pc|
 
         var_1 = 5
         var_2 = 10
@@ -281,6 +295,7 @@ A boolean is either `true` or `false`. In code this is very important as it allo
 to make decisions based on the value of variables.
 
 .. code-block::
+   :caption: |pc|
 
    3 < 5
    15 == 15
@@ -296,6 +311,7 @@ So either 4 must be less than 5 (`true`) *or* 6 must be less than 3 (`false`).
 If we then add some variables into the mix.
 
 .. code-block:: 
+   :caption: |pc|
 
    i = 5
    print(i<10)
@@ -304,6 +320,7 @@ If we then add some variables into the mix.
 Will print:
 
 .. code-block:: output
+   :caption: |pc|
 
    True
    False
@@ -316,6 +333,7 @@ Will print:
     What is the answer to the following boolean operations?
 
     .. code-block:: 
+       :caption: |pc|
 
         var_1 = 5
         var_2 = 10
@@ -349,6 +367,7 @@ The output is something you, the programmer decides. It might be a text file, a 
 may just be the result printed to screen.
 
 .. code-block::
+   :caption: |pc|
    
    my_secret = "I'm Batman..."
    print(my_secret)
@@ -365,6 +384,7 @@ Input are, unsurprisingly, the opposite of outputs. Like the outputs of a progra
 The simplest are the *hard-coded* inputs.
 
 .. code-block::
+   :caption: |pc|
 
    my_file = "top_secret_data.csv"
    secret_data = load.csv(my_file)
@@ -377,6 +397,7 @@ Neither is particularly convenient to a user and would need explaining. A better
 which file to use. So how can we do this? We can use the command-line argument idea we learnt last week:
 
 .. code-block::
+   :caption: |pc|
 
    command_line_arguments = get_command_line_args("--input_file", "--output_file")
    input_file = command_line_argument[input_file]
@@ -385,6 +406,7 @@ which file to use. So how can we do this? We can use the command-line argument i
 Or we could pop-up a little box, which you'll be familiar to you:
 
 .. code-block::
+   :caption: |pc|
 
    input_file = ask_file_pop_up()
    data = load.csv(input_file)
@@ -398,6 +420,7 @@ huge list of files we need to extract a single bit of data from each of these. W
 (parse and extract the files) a lot of times. To do this we can loop over the files:
 
 .. code-block::
+   :caption: |pc|
 
    storage = StorageContainer
    list_of_files = ["file1.csv", "file2.csv", ..... "file3.csv"]
@@ -411,6 +434,7 @@ This is a really powerful concept and one of the main things we do when process 
 another example looping over cells in a raster (DEM or topography) file
 
 .. code-block::
+   :caption: |pc|
 
    raster = load.raster("my_raster_file.tif")
    for each x in raster.x_direction
@@ -493,6 +517,7 @@ So our raster grid now contains.
     What's the largest number printed out in this code?
 
     .. code-block:: 
+       :caption: |pc|
 
         max_x = 3
         max_y = 4
@@ -539,6 +564,7 @@ perform actions based on some criteria.
 For example, only take a square root if the number if > than 0
 
 .. code-block::
+   :caption: |pc|
 
    if number > 0
      square_root = square_root(number)
@@ -547,6 +573,7 @@ This means the square root will only be calculated if our number is greater than
 less than zero? We may need to add another condition or catch all the other possibilities, so:
 
 .. code-block::
+   :caption: |pc|
 
    if number > 0
       square_root = square_root(number)
@@ -559,6 +586,7 @@ Here, if the condition is not met, the program prints an error message and exits
 We can nest conditions too, like we did with the loops.
 
 .. code-block::
+   :caption: |pc|
 
    if number > 0
       if number < 100
@@ -567,6 +595,7 @@ We can nest conditions too, like we did with the loops.
 The above can also be written using logic:
 
 .. code-block::
+   :caption: |pc|
 
    if number > 0 and number < 100
       print("Your number is > 0 and < 100)
@@ -574,6 +603,7 @@ The above can also be written using logic:
 You can negate conditionals too:
 
 .. code-block::
+   :caption: |pc|
 
    if not number <= 0
       square_root = square_root(number)
@@ -591,6 +621,7 @@ Most languages have some form of "or" and "and" operations.
     Which statement will be printed out?
 
     .. code-block:: 
+       :caption: |pc|
 
         max_x = 3
         max_y = 4
@@ -620,8 +651,10 @@ Functions
 Function are for bits of code you run lots or complex code that can be wrapped up so the main code is easier to read. 
 Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is easier to read.
 Functions also make a code much easier to test.
-.. code-block::
 
+.. code-block::
+   :caption: |pc|
+   
    a_list_of_numbers = [1,4,2,3,6,4]
    sorted_list = sort(a_list_of_numbers)
    print(sorted_list)
@@ -629,7 +662,8 @@ Functions also make a code much easier to test.
 Is much easier to read than:
 
 .. code-block::
-
+   :caption: |pc|
+   
    a_list_of_numbers = [1,4,2,3,6,4]
    n = length(a_list_of_numbers) 
    for i in range(n):
@@ -701,6 +735,7 @@ The algorithm above is a bubble sort.
 So we would then create the sort algorithm into a function
 
 .. code-block::
+   :caption: |pc|
 
    function sort(numbers)
       
@@ -756,6 +791,7 @@ Each `Dog` should then be able to:
 We would create a class something like:
 
 .. code-block::
+   :caption: |pc|
 
     Class Dog
         self.name = ""
@@ -785,6 +821,7 @@ We would create a class something like:
 You could then have a pack of dogs:
 
 .. code-block::
+   :caption: |pc|
 
     Dog1 = new Dog("Bob", 2, "white")
     Dog2 = new Dog("Fluffy", "5", "black")

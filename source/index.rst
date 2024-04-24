@@ -128,6 +128,16 @@ For example:
 
 Type in the ``pwd`` command only into the command line.
 
+Finally, I also use psuedo-code in the early stages. This is not a real language so can't be run or compiled! 
+All psuedo-code is labelled with this symbol:
+
+.. code-block:: 
+   :caption: |pc|
+
+    variable = 23.432
+
+
+
 .. toctree::
     :maxdepth: 2
     :caption: Contents:
