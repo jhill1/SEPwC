@@ -27,7 +27,7 @@ CSV files are handled in R without an additional libraries. `The full documentat
 <https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html>`_ but some brief examples:
 
 .. code-block:: R
-
+    :caption: |R|
 
     # Read CSV into DataFrame
     read_csv = read.csv('/Users/admin/file.csv')
@@ -56,6 +56,7 @@ the `full documentation for the CSV module online <https://docs.python.org/3/lib
 but briefly we can load data in using code like this:
 
 .. code-block:: python
+    :caption: |python|
 
     import csv
     
@@ -72,6 +73,7 @@ Alternatively, you can read the data as a dictionary. Here we assume the CSV has
 
 
 .. code-block:: python
+    :caption: |python|
 
     import csv
 

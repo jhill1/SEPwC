@@ -43,13 +43,13 @@ Try the following exercises. For any of the exercises, feel free to type out the
 
    The number 13 is printed only. However, this is only the case after we've fixed the code!
 
-    .. code-block:: Python
-       :caption: |python|
+   .. code-block:: Python
+      :caption: |python|
        
-        limit = 15
+       limit = 15
         
-        for i in range(13,limit,2):
-            print(i)
+       for i in range(13,limit,2):
+           print(i)
 
    The range goes in steps of 2, so hits 15 on the second
    iteration, which is equal to the upper limit of range, so the loop terminates.
@@ -87,13 +87,13 @@ Try the following exercises. For any of the exercises, feel free to type out the
 .. admonition:: Solution
    :class: toggle
 
-    .. code-block:: Python
-       :caption: |python|
+   .. code-block:: Python
+      :caption: |python|
     
-        conversion = 0.092903
-        for sqft in range(2,21,2):
-            sqm = sqft * conversion
-            print(sqft, sqm)
+      conversion = 0.092903
+      for sqft in range(2,21,2):
+          sqm = sqft * conversion
+          print(sqft, sqm)
 
 .. youtube:: KTQ2r287cvY
     :align: center

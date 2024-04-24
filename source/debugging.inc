@@ -11,6 +11,7 @@ If I'm not sure why code is not working, and perhaps more importantly, where,
 I first add "programming noise"; print statements like:
 
 .. code-block::
+    :caption: |pc|
 
     print("PN: 1")
 
@@ -32,6 +33,7 @@ that can be be as hard to decipher as the error you're trying to fix.
 .. admonition:: Practical exercise - Python
 
    .. code-block:: python 
+        :caption: |python|
     
         # If number is even, print the sum of all even numbers from
         # 1 to N, inclusive
@@ -61,6 +63,7 @@ that can be be as hard to decipher as the error you're trying to fix.
     can be found too.
         
     .. code-block:: python 
+        :caption: |python|
 
         # If number is even, print the sum of all even numbers from
         # 1 to N, inclusive
@@ -90,6 +93,7 @@ that can be be as hard to decipher as the error you're trying to fix.
 .. admonition:: Practical exercise - R
 
     .. code-block:: R
+        :caption: |R|
     
         # If number is even, print the sum of all even numbers from
         # 1 to N, inclusive
@@ -121,6 +125,7 @@ that can be be as hard to decipher as the error you're trying to fix.
     can be found too.
         
     .. code-block:: R
+        :caption: |R|
 
         # If number is even, print the sum of all even numbers from
         # 1 to N, inclusive
@@ -169,6 +174,7 @@ console (in Spyder or RStudio is fine).
 .. admonition:: Practical exercise - Python
 
     .. code-block:: python 
+        :caption: |python|
     
         # Print each combo of description-animal combinations
         # If you are about to print "funny dog", break out of the loop
@@ -187,7 +193,8 @@ console (in Spyder or RStudio is fine).
     My first error was:
 
     .. code-block:: python
-
+        :caption: |cli| |python|
+        
         File "<ipython-input-2-c3f93577d321>", line 4
             descriptions = ['funny`, 'cute', 'friendly']
                                  ^
@@ -196,12 +203,14 @@ console (in Spyder or RStudio is fine).
     I then tried to fix that line alone in the console:
 
     .. code-block:: python
+        :caption: |python|
 
         descriptions = ['funny', 'cute', 'friendly']
 
     That works, so now I can try the next line by itself. That also gives an error:
 
     .. code-block:: python
+        :caption: |cli| |python|
 
         In [4]: animals = ['koala", 'cat', 'dog', 'panda']
            ...: 
@@ -215,6 +224,7 @@ console (in Spyder or RStudio is fine).
     Got that done, so now I can copy and paste the loop only. Yet another error:
 
     .. code-block:: python
+        :caption: |cli| |python|
 
         NameError                                 Traceback (most recent call last)
         <ipython-input-6-ca6d0650fc82> in <module>()
@@ -229,6 +239,7 @@ console (in Spyder or RStudio is fine).
     of the code block and press return to re-run. An now the code produces something!
 
     .. code-block:: python
+        :caption: |cli| |python|
 
         In [7]:         for d in descriptions:
            ...:             for a in animals:
@@ -254,7 +265,9 @@ console (in Spyder or RStudio is fine).
     My final code is:
 
     .. code-block:: python 
+        :caption: |cli| |python|
            
+
         # Print each combo of description-animal combinations
         # If you are about to print "funny dog", break out of the loop
         
@@ -278,6 +291,7 @@ console (in Spyder or RStudio is fine).
 .. admonition:: Practical exercise - R
 
     .. code-block:: R 
+        :caption: |R|
     
         # Print each combo of description-animal combinations
         # If you are about to print "funny dog", break out of the loop
@@ -298,6 +312,7 @@ console (in Spyder or RStudio is fine).
     My first error was, copying and pasting the code in the R console:
 
     .. code-block:: 
+        :caption: |cli| |R|
 
         >         # Print each combo of description-animal combinations
         >         # If you are about to print "funny dog", break out of the loop
@@ -318,15 +333,16 @@ console (in Spyder or RStudio is fine).
     A lot of errors. We can probably fix them from top to bottom. So let's
     try dealing with the first error by editing the `descriptions` variable.
     We can try in the console to get it to work. Pressing up in the R console until 
-    we get to the line. Then edit the line; note the backtick vs `'`. so
-    `descriptions = c('funny', 'cute', 'friendly')`. That works! Do the same 
-    for the `animals` variable too.
+    we get to the line. Then edit the line; note the backtick vs ``'``. so
+    ``descriptions = c('funny', 'cute', 'friendly')``. That works! Do the same 
+    for the ``animals`` variable too.
 
 
     Now let's deal with the loops error; once we have the two vectors set-up
     properly, copy and paste the loop:
 
     .. code-block:: R
+        :caption: |cli| |R|
 
         >         for (d in description) {
         +             for (a in animals) {
@@ -335,10 +351,11 @@ console (in Spyder or RStudio is fine).
         +         }
         Error: object 'description' not found
     
-    Typo! It should be `descriptions`. Fix that by pressing up, and editing the code; you'll then
+    Typo! It should be ``descriptions``. Fix that by pressing up, and editing the code; you'll then
     need to copy and paste the rest of the loop in. Success! Running code!
 
     .. code-block:: R
+        :caption: |cli| |R|
 
         >         for (d in descriptions) {
         +             for (a in animals) {
@@ -363,6 +380,7 @@ console (in Spyder or RStudio is fine).
     My final code is:
 
     .. code-block:: R
+        :caption: |R|
            
         # Print each combo of description-animal combinations
         # If you are about to print "funny dog", break out of the loop

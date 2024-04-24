@@ -44,12 +44,14 @@ I get that to be:
 using a calculator. So let's do that in R:
 
 .. code-block:: R
+   :caption: |R|
 
    print(5*0.5 - 0.5*9.81*0.5**2)
    
 Great! Our first R code! Let's build this up to use variables. Type the following code and execute:
 
 .. code-block:: R
+   :caption: |R|
 
    time <- 0.5
    initial_velocity <- 5
@@ -64,6 +66,7 @@ separate the terms for readability. Not that exciting yet. What if we want to ca
 bunch of times? Let's add a loop!
 
 .. code-block:: R
+   :caption: |R|
 
    times <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)
    initial_velocity <- 5
@@ -80,6 +83,7 @@ at time 0 to 0.9 in steps of 0.1.
 Shall we plot this?
 
 .. code-block:: R
+   :caption: |R|
 
    # set up the problem
    times = c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)

@@ -112,7 +112,7 @@ the command line icon:
     print("Hello World!")
 
 .. code-block:: bash
-   :caption: |python| |cli|
+   :caption: |cli| |python| 
 
     Hello World!
     
