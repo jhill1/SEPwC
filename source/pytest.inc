@@ -8,6 +8,7 @@ Python has a few testing packages. ``pytest`` is a very common one. It
 We're going to test our Fahrenheit to Celsius and vice-versa functions from the first Python chapter. Let's get these two functions in an Python test file and save it:
 
 .. code-block:: Python
+   :caption: |python|
 
    def toFahrenheit(Centigrade):
 
@@ -27,6 +28,7 @@ We can then use a separate file to create our tests. ``pytest`` is largely autom
 
 
 .. code-block:: Python
+    :caption: |python|
 
 
     import pytest
@@ -55,12 +57,14 @@ We can then use a separate file to create our tests. ``pytest`` is largely autom
 We can run that from the command line:
 
 .. code-block:: bash
+    :caption: |cli|
 
     pytest test_temperature_conversion.py
 
 which gives the output:
 
 .. code-block:: bash
+    :caption: |cli|
 
     ================================= test session starts =================================
     platform linux -- Python 3.6.9, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
@@ -91,6 +95,7 @@ This gives a summary of the system, including the version of Python and pytest; 
 You may not want to run all the tests; just a specific test. We can tell pytest to do just that:
 
 .. code-block:: bash
+   :caption: |cli|
 
    pytest test_temperature_conversion.py::TestTemperatureConversion::test_that_will_fail
 

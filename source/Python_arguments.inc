@@ -9,6 +9,7 @@ The CLI allows the user to pass options to a script as they execute. We have alr
 in the course, for example:
 
 .. code-block:: bash
+   :caption: |cli|
 
    ls -l
 
@@ -16,7 +17,8 @@ which is the command to list things, ``ls``, in a Unix shell with the option sup
 Similarly, we've covered:
 
 .. code-block:: bash
-
+   :caption: |cli|
+   
    cp -r dir1 dir2
 
 Here, there are three options. The ``-r`` flag, the directory to copy ``dir1``, and where to copy it to, ``dir2``.
@@ -33,12 +35,14 @@ Python and the command line
 When you run a Python script, with some arbitrary text after:
 
 .. code-block:: bash
+   :caption: |cli|
 
    python arg_script.py arg1 arg2 arg3
 
 that text is passed to the ``sys`` module in Python. Let's create this simple script, named ``arg_script.py``
 
 .. code-block:: python
+   :caption: |python|
 
    import sys
 
@@ -48,12 +52,14 @@ that text is passed to the ``sys`` module in Python. Let's create this simple sc
 Now run that on the command line.
 
 .. code-block:: bash
+   :caption: |cli|
 
    python arg_script.py arg1 arg2 arg3
 
 Your output is:
 
 .. code-block:: bash
+    :caption: |cli|
 
     Length: 4 
     Argument List: ['arg_script.py', 'arg1', 'arg2', 'arg3']
@@ -63,6 +69,7 @@ are what the user has given. These could be files or options of some kind (e.g. 
 Within our script we access them as we would any other list:
 
 .. code-block:: python
+   :caption: |python|
 
    import sys
 
@@ -85,6 +92,7 @@ Within our script we access them as we would any other list:
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         import sys
 
@@ -109,6 +117,7 @@ the module will help with error messages, etc when the user gives incorrect argu
 The core functionality of ``argparse`` is the ``ArgumentParser``
 
 .. code-block:: python
+   :caption: |python|
 
    import argparse
 
@@ -121,6 +130,7 @@ The core functionality of ``argparse`` is the ``ArgumentParser``
 Once an ArgumentParser is set-up you can then add optional and positional arguments to that.
 
 .. code-block:: python
+    :caption: |python|
 
     parser.add_argument("filename"
                         help="the file to read the data from") # a positional argument
@@ -137,6 +147,7 @@ and a lot more too.
 You then parse the argument and put them in variables as you see fit
 
 .. code-block:: python
+    :caption: |python|
 
     args = parser.parse_args()
     boundary_file = args.filename
@@ -161,6 +172,7 @@ You then parse the argument and put them in variables as you see fit
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         import argparse
         import sys
@@ -201,6 +213,7 @@ If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``input`` function.
 
 .. code-block:: python
+    :caption: |python|
 
     answer = input("Do you wish to continue (Y/N)?")
     if answer == "Y":

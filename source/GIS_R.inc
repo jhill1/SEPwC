@@ -16,6 +16,7 @@ The `terra` library is based around two key classes: `SpatRatser` and `SpatVecto
 Let's look at rasters first.
 
 .. code-block:: R
+    :caption: |R|
 
     my_raster <- raster("gis_data/tidal_range.tif")
     my_raster
@@ -26,6 +27,7 @@ space and min and max values.
 You can summarise the raster too:
 
 .. code-block:: R
+    :caption: |R|
 
     summary(my_raster)
 
@@ -34,6 +36,7 @@ bands in a single file. It's common, for example, to store the R, G and B
 colours separately. You can check this using the `nlyr` function:
 
 .. code-block:: R
+    :caption: |R|
 
     nlyr(my_raster)
 
@@ -70,6 +73,7 @@ bilinear unless you have a reason to change this.
     are altering the data.
 
 .. code-block:: R
+    :caption: |R|
 
     raster_in_latlon <- project(my_raster, "+init=EPSG:4326")
     crs(raster_in_latlon)
@@ -88,6 +92,7 @@ simple calculations (and indeed more complex ones!) can be carried out.
 To write any raster to file, use the `writeRaster` function:
 
 .. code-block:: R
+    :caption: |R|
 
     writeRaster(raster_in_latlon, "UK_tidal_range.tiff",
                 filetype = "GTiff",
@@ -103,6 +108,7 @@ raster).
 The `terra` library can also load vector data:
 
 .. code-block:: R
+    :caption: |R|
 
     tidal_gauges <- vect("gis_data/tide_gauges.shp")
 
@@ -116,6 +122,7 @@ R also have another popular library for dealing with shapefiles/vector data; `sf
 This library has more features than `terra` so is worth learning. 
 
 .. code-block:: R
+    :caption: |R|
 
     library(sf)
     tide_gauges <- st_read("gis_data/tide_gauges.shp")
@@ -123,12 +130,14 @@ This library has more features than `terra` so is worth learning.
 Vector data can be points, lines or polygons. We can find out which using:
 
 .. code-block:: R
+    :caption: |R|
 
     st_geometry_type(tide_gauges)
 
 We can then find out the CRS and extennt:
 
 .. code-block:: R
+    :caption: |R|
 
     st_crs(tide_gauges)
     st_bbox(tide_gauges)
@@ -136,6 +145,7 @@ We can then find out the CRS and extennt:
 We can also use `sf` to create a shapefile on the fly:
 
 .. code-block:: R
+    :caption: |R|
 
     aoi <- as.polygons(terra::ext(my_raster), crs=terra::crs(my_raster))
 
@@ -154,6 +164,7 @@ Using two different libraries for shapefiles can be a pain, but it is fairly
 easy to switch a vector dataset between the two.
 
 .. code-block:: R
+    :caption: |R|
 
     sf::st_as_sf(terra::vect("gis_data/tide_gauges.shp"))
     
@@ -161,6 +172,7 @@ Will convert a `terra` vector to the `sf` format. Normally, `terra` can deal wit
 `sf` objects, but you sometimes need to wrap the `sf` object in the `st_zm` function:
 
 .. code-block:: R
+    :caption: |R|
 
     points_as_raster <- rasterize(st_zm(tide_gauges), my_raster, field=1)
 

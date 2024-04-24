@@ -25,6 +25,7 @@ XML (eXtensible Markup Language) is a tree-structed, tag-based format that is hu
 contain binary data. An example:
 
 .. code-block:: xml
+    :caption: |cli|
     
     <employees>
       <employee>
@@ -47,6 +48,7 @@ JSON (JavaScript Object Notation) is another text-based format that is human and
 similar in structure to a dictionary.
 
 .. code-block:: json
+    :caption: |cli|
 
     {"employees":[
       { "firstName":"John", "lastName":"Doe" },

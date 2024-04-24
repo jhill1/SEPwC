@@ -15,6 +15,7 @@ The `rasterio` library is used to load, manipulate and plot raster
 data. 
 
 .. code-block:: Python
+    :caption: |python|
 
     import rasterio
 
@@ -26,6 +27,7 @@ and the read/write status. `rasterio` uses a number of attributes to contain inf
 about the raster:
 
 .. code-block:: python
+    :caption: |python|
 
     my_raster.width
     my_raster.height
@@ -36,6 +38,7 @@ bands in a single file. It's common, for example, to store the R, G and B
 colours separately. You can check this using the `count` attribute:
 
 .. code-block:: python
+    :caption: |python|
 
     my_raster.count
 
@@ -72,7 +75,8 @@ bilinear unless you have a reason not to. The algorithms are in
     without abrupt changes. Whenever you project onto a new coordinate syste, you 
     are altering the data.
 
-.. code-block:: R
+.. code-block:: Python
+    :caption: |python|
 
     from rasterio.warp import calculate_default_transform, reproject, Resampling
 
@@ -120,6 +124,7 @@ but those dataframes have a `geometry` component. It therefore maps onto GIS Vec
 data very well.
 
 .. code-block:: python
+    :caption: |python|
 
     import geopandas
 
@@ -131,6 +136,7 @@ in fact, a `shapely` object. `geopandas` can carry out a number of geometric cal
 distances:
 
 .. code-block:: python
+    :caption: |python|
 
     whitby = tide_gauges["geometry"].iloc[40]
     tide_gauges["distance"] = tide_gauges.distance(whitby)
@@ -151,6 +157,7 @@ as `geopandas` is built on top of `shapely`. It's often needed for creating new
 vector data though.
 
 .. code-block:: python
+    :caption: |python|
 
     from shapely.geometry import box
 

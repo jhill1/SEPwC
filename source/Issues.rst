@@ -50,6 +50,7 @@ R warning examples
 ''''''''''''''''''
 
 .. code-block:: R
+    :caption: |R|
 
     cor( c( 1 , 1 ), c( 2 , 3 ) )
     [1] NA
@@ -65,7 +66,8 @@ Python warning example
 In this example I divide by zero; mathmatically producing infinity.
 
 .. code-block:: Python
- 
+    :caption: |python|
+
     import numpy as np
     np.array([1])/0
     <ipython-input-2-f6baf8772c4a>:1: RuntimeWarning: divide by zero encountered in divide
@@ -83,6 +85,7 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
     Try the following codes and check you understand the warning or error.
 
     .. code-block:: Python
+        :caption: |python|
 
         list_of_URLs = (
          'https://example.com/1',
@@ -92,6 +95,7 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
         print(list_of_URLs)
 
     .. code-block:: R
+        :caption: |R|
 
         list_of_URLs = c(
          'https://example.com/1',
@@ -101,20 +105,24 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
         print(list_of_URLs)
 
     .. code-block:: Python
+       :caption: |python|
 
         user = 'username1'
         pass = 'password1'
 
     .. code-block:: R
+        :caption: |R|
 
         first = 'Mercedes'
         next = 'Aston Martin'
 
     .. code-block:: Python
+        :caption: |python|
 
         print(100 is 100)
 
     .. code-block:: R
+        :caption: |R|
 
         x <- 1:10000
         x      
@@ -225,6 +233,7 @@ error message on the internet. Copy and paste the error removing any filepaths.
 Try the following:
 
 .. code-block:: Python
+    :caption: |cli| |python|
 
     import pandas as pd
     df = pd.DataFrame({'x':['1.0692e+06']})
@@ -237,6 +246,7 @@ engine and you will hopefully find a page with some answers on what the error is
 Note that I have not copied any of the specific parts of the error in a search, e.g.:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     File ~/.local/lib/python3.8/site-packages/pandas/core/dtypes/cast.py:1154, in astype_nansafe(arr, dtype, copy, skipna)
        1150 elif is_object_dtype(arr.dtype):
@@ -260,6 +270,7 @@ The code creates a number as a string that cannot be converted into an int (as i
 Let's do an example in R now.
 
 .. code-block:: R
+    :caption: |cli| |R|
 
     df <- data.frame(Date=as.Date(character()),
                  country=factor(), 
