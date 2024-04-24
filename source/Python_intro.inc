@@ -44,12 +44,14 @@ I get that to be:
 using a calculator. So let's do that in python:
 
 .. code-block:: python
+   :caption: |python|
 
    print(5*0.5 - 0.5*9.81*0.5**2)
    
 Great! Our first python code! Let's build this up to use variables. Type the following code and execute:
 
 .. code-block:: python
+   :caption: |python|
 
    time = 0.5
    initial_velocity = 5
@@ -64,6 +66,7 @@ separate the terms for readability. Not that exciting yet. What if we want to ca
 bunch of times? Let's add a loop!
 
 .. code-block:: python
+   :caption: |python|
 
    times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
    initial_velocity = 5
@@ -88,6 +91,7 @@ code will not run.
    Take the code here:
 
    .. code-block:: python
+      :caption: |python|
 
       times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
       initial_velocity = 5
@@ -100,7 +104,8 @@ code will not run.
    Let's edit that to produce some weird indentation:
 
    .. code-block:: python
-
+      :caption: |python|
+    
       times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
       initial_velocity = 5
       gravity = 9.81
@@ -114,7 +119,8 @@ code will not run.
    What about this code? What will it print?
 
    .. code-block:: python
-
+      :caption: |python|
+      
       times = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
       initial_velocity = 5
       gravity = 9.81
@@ -142,6 +148,8 @@ code will not run.
 Shall we plot this?
 
 .. code-block:: python
+   :caption: |python|
+    
 
    from matplotlib import pyplot
 

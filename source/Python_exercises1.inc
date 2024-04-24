@@ -8,6 +8,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     Will the code below work?
 
     .. code-block:: Python
+       :caption: |python|
     
         a = 45
         name = "Fred"
@@ -30,6 +31,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     What is printed here?
 
     .. code-block:: Python
+       :caption: |python|
     
         limit = 15
         
@@ -42,7 +44,8 @@ Try the following exercises. For any of the exercises, feel free to type out the
    The number 13 is printed only. However, this is only the case after we've fixed the code!
 
     .. code-block:: Python
-    
+       :caption: |python|
+       
         limit = 15
         
         for i in range(13,limit,2):
@@ -59,6 +62,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     What is printed here?
 
     .. code-block:: Python
+       :caption: |python|
     
         for C in range(-20,41,5):
             F = 9.0/5.0*C + 32
@@ -84,6 +88,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
    :class: toggle
 
     .. code-block:: Python
+       :caption: |python|
     
         conversion = 0.092903
         for sqft in range(2,21,2):

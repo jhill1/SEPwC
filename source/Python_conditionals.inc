@@ -50,6 +50,7 @@ statement can be used to capture the situation where everything is ``False``.
 In general, we can put together multiple conditions. Only the first condition that is ``True`` is executed.
 
 .. code-block:: python
+   :caption: |python|
 
     if condition1:
         <block of statements, executed if condition1 is True>
@@ -65,6 +66,7 @@ In general, we can put together multiple conditions. Only the first condition th
 Let's do one of the conditions of our table above.
 
 .. code-block:: python
+   :caption: |python|
 
    humidity = "high"
    temperature = "high"
@@ -75,6 +77,7 @@ Let's do one of the conditions of our table above.
 Here, we've check the value of humidity. If the value is "high", the following is printed:
 
 .. code-block:: output
+   :caption: |cli| |python|
 
    Either temperate or tropical rainforest
 
@@ -93,6 +96,7 @@ Not the best of code, engineering-wise, but it will work. Try it out.
    :class: toggle
 
    .. code-block:: python
+      :caption: |python|
 
       humidity = "HIGH"
       temperature = "high"
@@ -106,6 +110,7 @@ Not the best of code, engineering-wise, but it will work. Try it out.
    so you should see:
 
    .. code-block:: output
+      :caption: |cli| |python|
 
       Don't understand HIGH
 
@@ -113,6 +118,7 @@ We now need to do all combinations, with some logic to decide a few things. Ther
 a number of ways of doing this. This is using ``elif`` and boolean operators:
 
 .. code-block:: python
+   :caption: |python|
 
    humidity = "high"
    temperature = "high"
@@ -155,6 +161,7 @@ The second way of working out the logic is by nested ``if`` statements. Here's a
     single: Nested If Statements; Python
 
 .. code-block:: python
+   :caption: |python|
 
     mark=71
 
@@ -202,19 +209,20 @@ if the first one is ``False``, ``mark`` must be less than 40 or greater than 100
    Then what does it do? You should see something like:
 
    .. code-block:: output
+      :caption: |cli| |python|
 
-        ---------------------------------------------------------------------------
-        TypeError                                 Traceback (most recent call last)
-        <ipython-input-3-aaf3cf3cd246> in <module>()
-        ----> 1 if mark >= 40 and mark <= 100:
-              2     if mark >= 70:
-              3         print("First!")
-              4     elif mark >= 60:
-              5         print("2:i!")
+      ---------------------------------------------------------------------------
+      TypeError                                 Traceback (most recent call last)
+      <ipython-input-3-aaf3cf3cd246> in <module>()
+      ----> 1 if mark >= 40 and mark <= 100:
+            2     if mark >= 70:
+            3         print("First!")
+            4     elif mark >= 60:
+            5         print("2:i!")
+      
+      TypeError: '>=' not supported between instances of 'str' and 'int'
 
-        TypeError: '>=' not supported between instances of 'str' and 'int'
-
-    which is because we can't compare a string and an integer!
+   which is because we can't compare a string and an integer!
 
 .. youtube:: WfO07chn53k
     :align: center
@@ -235,6 +243,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
    Your code should look something like the following:
 
    .. code-block:: python
+      :caption: |python|
 
        humidity = "high"
        temperature = "high"

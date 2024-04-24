@@ -23,6 +23,7 @@ Inline comments (Python)
 Inline comments occur within the line of code:
 
 .. code-block:: python
+   :caption: |python|
 
     x = x + 1                 # Increment x
 
@@ -30,6 +31,7 @@ This style of comment should be avoided if possible. The above example is distra
 and unnecessary. It may sometimes be useful, for example:
 
 .. code-block:: python
+   :caption: |python|
 
     x = x + 1                 # account for boundary cell
 
@@ -45,6 +47,8 @@ Block comments (Python)
 Block comments occupy one or more lines. In python they look like:
 
 .. code-block:: python
+   :caption: |python|
+
 
     # increment count to account for boundary cell
     x = x + 1
@@ -52,6 +56,7 @@ Block comments occupy one or more lines. In python they look like:
 Or if you want multiple lines:
 
 .. code-block:: python
+   :caption: |python|
 
     # increment count to 
     # account for boundary cell
@@ -73,6 +78,7 @@ underneath functions, classes and modules where public facing (i.e. where docume
 An example is something like this:
 
 .. code-block:: python
+   :caption: |python|
 
     def complex(real=0.0, imag=0.0):
         """Form a complex number.
@@ -101,6 +107,7 @@ It's often easier to say what *not* to do, so let's head in that direction...
 This is poor coding and commenting:
 
 .. code-block:: python
+   :caption: |python|
 
     # A dictionary of families who live in each city
     mydict = {
@@ -121,6 +128,7 @@ The comments really help understand the code and the intentions, but there are
 completely superfluous if the code was written well:
 
 .. code-block:: python
+   :caption: |python|
 
     families_by_city = {
         "York": ["Powell", "Brantley", "Young"],
@@ -139,6 +147,7 @@ can't compensate for poor style by adding comments...
 You should also avoid comments that simply repeat the code:
 
 .. code-block:: python
+   :caption: |python|
 
     return a  # Returns a
 
@@ -148,6 +157,7 @@ redundant. Add a docstring to the top of a function and there is no need at all 
 The best hint for comments is to write them at the top of code blocks:
 
 .. code-block:: python
+   :caption: |python|
 
     # we now extend this mask - we only need to do this, if the
     # no data occurs (i.e. no contiguous data)

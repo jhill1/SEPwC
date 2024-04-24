@@ -35,6 +35,7 @@ How do we write a program that prints out such a table? We know that
 and a single line in this table is:
 
 .. code-block:: python
+   :caption: |python|
 
     C = -20
     F = 9.0/5.0*C + 32
@@ -44,6 +45,7 @@ and a single line in this table is:
 We could therefore write:
 
 .. code-block:: python
+   :caption: |python|
 
     C = -20; F = 9.0/5.0*C + 32; print(C, F)
     C = -15; F = 9.0/5.0*C + 32; print(C, F)
@@ -77,6 +79,7 @@ we can iterate over a list or a counter with the same construct. This is all
 a bit abstract, so let's do some examples.
 
 .. code-block:: python
+   :caption: |python|
 
    my_list = [1, 2, 3, 6, 7, 10]
    for item in my_list:
@@ -87,6 +90,7 @@ with the control variable being the individual item in the list. You should
 see the following:
 
 .. code-block:: output
+   :caption: |cli| |python|
 
     1
     2
@@ -106,6 +110,7 @@ to be four spaces, rather than the `tab` character.
 Going back to loops...we can also iterate over the list using a counter.
 
 .. code-block:: python
+   :caption: |python|
 
    my_list = [1, 2, 3, 6, 7, 10]
    for i in range(0,len(my_list),1):
@@ -115,12 +120,14 @@ The output will be identical to the above, but we're accessing the list via the 
 (here, the variable ``i``). What does ``i`` do then? Let's edit the code and find out.
 
 .. code-block:: python
+   :caption: |python|
 
    my_list = [1, 2, 3, 6, 7, 10]
    for i in range(0,len(my_list),1):
       print(i)
 
 .. code-block:: output
+   :caption: |cli| |python|
 
     0
     1
@@ -153,6 +160,7 @@ For loops are a really useful way of doing the same thing to each item in a list
    :class: toggle
 
    .. code-block:: python
+      :caption: |python|
 
       for C in range(-20,41,5):
           F = 9.0/5.0*C + 32
@@ -179,6 +187,7 @@ Python ``while`` loop
 A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``
 
 .. code-block:: python
+   :caption: |python|
 
     while condition:
         <statement 1>
@@ -190,6 +199,7 @@ A while-loop executes repeatedly a set of statements as long as a boolean condit
 We can write code to do a simple counter:
 
 .. code-block:: python
+   :caption: |python|
 
     counter = 0
     while counter <= 10:
@@ -199,6 +209,7 @@ We can write code to do a simple counter:
 This will loop until the counter is greater than 10. So we will see:
 
 .. code-block:: output
+   :caption: |cli| |python|
 
     1
     2
@@ -226,6 +237,7 @@ can be any conditional statement, including key presses (but that requires some 
    :class: toggle
 
    .. code-block:: python
+      :caption: |python|
 
       C = -20
       while C <= 40:
