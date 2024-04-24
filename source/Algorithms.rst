@@ -71,6 +71,8 @@ The game is as follows:
     My code would be something like this.
 
     .. code-block:: 
+       :caption: |pc|
+    
 
         print("Welcome to the number guessing game!")
         print("I have thought of a number between 1 and 100")
@@ -111,6 +113,7 @@ Write a list of steps and have a go at psuedo-code to do this.
     * loop over the list and add the numbers together
 
     .. code-block:: 
+       :caption: |pc|
 
         number = 10456
 
@@ -143,6 +146,8 @@ Write down the steps to find the location (index) of a value in that list, let's
     * if the match isn't found, exit with a negative number to indicate failure
 
     .. code-block:: 
+       :caption: |pc|
+    
 
         list = [1, 4, 5, 2, 6, 7, 8, 9, 10]
         target = 9
@@ -183,6 +188,7 @@ Let's start writing the pseudo-code. A possible solution is below.
     :class: toggle
 
     .. code-block::
+       :caption: |pc|   
 
        text = load_textfile("our text_file.txt")
        words = split_into_words(text)
