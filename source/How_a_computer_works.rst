@@ -219,7 +219,7 @@ change directory command:
 We saw this already for Windows, but we need to give an argument (this is the directory we want to move into). 
 
 .. code-block::
-   :caption: |all|
+   :caption: |cli| |all|
 
    cd Documents
 
@@ -297,14 +297,14 @@ a subfolder:
     In a new command line:
 
     .. code-block:: bat
-       :caption: |win|
+       :caption: |cli| |win|
 
         cd cli_example
         dir
         pwd
 
     .. code-block:: bash
-       :caption: |maclin|
+       :caption: |cli| |maclin|
 
         cd cli_example
         ls
@@ -324,14 +324,14 @@ a subfolder:
     Let's do the the same in the command line:
 
     .. code-block:: bat
-       :caption: |win|
+       :caption: |cli| |win|
 
         cd data_files\sedimentary_data\site1
         dir
         pwd
 
     .. code-block:: bash
-       :caption: |maclin|
+       :caption: |cli| |maclin|
 
         cd data_files/sedimentary_data/site1
         ls
@@ -340,14 +340,14 @@ a subfolder:
     Note that we can put several directories together. We can do the same to go up, then back down directories:
 
     .. code-block:: bat
-       :caption: |win|
+       :caption: |cli| |win|
 
         cd ..\..\gis_data\site_locations
         dir
         pwd
 
     .. code-block:: bash
-       :caption: |maclin|
+       :caption: |cli| |maclin|
 
         cd ../../gis_data/site_locations
         ls
@@ -550,8 +550,10 @@ command.
 CLIs work by running the command you type, plus the arguments you give it. Arguments can be
 mandatory or optional (and therefore called options). A typical command might look like:
 
-|maclin|
-``cp -r my_dir my_dir2``
+.. code-block:: bash
+   :caption: |cli| |maclin|
+   
+    cp -r my_dir my_dir2
 
 This copies (``cp``) ``my_dir`` to ``my_dir2`` recursively ``-r``. The two 
 directory names are mandatory arguments. The ``-r`` is optional. 
@@ -609,7 +611,7 @@ So what are the basic commands you should know? Here's a list:
 
 .. Attention::
    
-   ``rm``, ``del``, and ``rmdir`` delete files permanently. They do *not* move the into Trash or similar. 
+   ``rm``, ``del``, and ``rmdir`` delete files/directories permanently. They do *not* move the into Trash or similar. 
 
 
 ..  youtube:: WUlRxCAYHTY
@@ -666,7 +668,7 @@ So what are the basic commands you should know? Here's a list:
     :class: toggle
     
     .. code-block:: bash
-       :caption: |maclin|
+       :caption: |cli| |maclin|
 
         cd cli_example/data_files/gid_data/site_locations
         mkdir site_2
@@ -687,7 +689,7 @@ So what are the basic commands you should know? Here's a list:
         mv cli_example cli_example_cli
 
     .. code-block:: bat
-       :caption: |win|
+       :caption: |cli| |win|
 
         cd cli_example\data_files\gid_data\site_locations
         md site_2
