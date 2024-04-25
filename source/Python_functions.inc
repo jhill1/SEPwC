@@ -18,6 +18,7 @@ Using a Python function
 We've used a number of Python functions already. 
 
 .. code-block:: python
+   :caption: |python|
 
    print("Hello")
    range(0,len(my_list),1)
@@ -30,12 +31,14 @@ So using, or calling, a Python function is easy. Give the function name, open th
 close your brackets, if you are expecting a number back, store it:
 
 .. code-block:: python
+   :caption: |python|
 
    return_value = function_name(arg1, arg2, arg3)
 
 As we've seen already you can nest functions within other functions!
 
 .. code-block:: python
+   :caption: |python|
 
    range(0,len(my_list),1)
 
@@ -46,6 +49,7 @@ Here, we're calling the `range` function to go from `0` to the length of my_list
 also a function. The return value of `len(my_list)` gets put in place of that bit of code. This is exactly equivalent of doing:
 
 .. code-block:: python
+   :caption: |python|
 
    length = len(my_list)
    range(0,length,1)
@@ -65,6 +69,7 @@ where we store the length in a variable, then use it.
    :class: toggle
 
    .. code-block:: python
+      :caption: |python|
 
       print(len(my_list))
 
@@ -82,7 +87,8 @@ Whilst it's all well and good to use functions, you will need to write them too.
 They follow this pattern:
 
 .. code-block:: python
-
+   :caption: |python|
+   
    def function_name(arg1, arg2, arg3):
 
        # do what you need to do
@@ -96,6 +102,7 @@ to return something).
 Rather than staying abstract, let's do something more concrete. Let's write a function to convert from Centigrade to Fahrenheit. 
 
 .. code-block:: python
+   :caption: |python|
 
    def toFahrenheit(Centigrade):
 
@@ -107,6 +114,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
 
 .. code-block:: python
+   :caption: |python|
 
    def toFahrenheit(Centigrade):
 
@@ -130,6 +138,7 @@ Above we used a keyword argument, which gave us the variable name inside the fun
 two keyword arguments:
 
 .. code-block:: python
+   :caption: |python|
 
    def print_greeting(greeting, name):
 
@@ -144,6 +153,7 @@ What happens if the user supplies only a single argument, not two as we've asked
 
 
 .. code-block:: python
+   :caption: |python|
 
    def print_greeting(greeting, name):
 
@@ -160,6 +170,7 @@ What error message did you get?
 
 
    .. code-block:: python
+     :caption: |cli| |python|
      
       TypeError     Traceback (most recent call last)
       Cell In [1], line 7
@@ -176,6 +187,7 @@ We can also write functions that have default values.
    single: Default Value Functions; Python
 
 .. code-block:: python
+   :caption: |python|
 
    def print_greeting(name, greeting="Hello"):
 
@@ -188,6 +200,7 @@ We can also write functions that have default values.
 When running this, we can give the ``name`` argument and we get a default ``greeting``. We could also set the ``greeting`` ourselves:
 
 .. code-block:: python
+   :caption: |python|
 
    def print_greeting(name, greeting="Hello"):
 
@@ -200,6 +213,7 @@ When running this, we can give the ``name`` argument and we get a default ``gree
 However, you may note I've switched the order of the arguments around. What happens if we didn't?
 
 .. code-block:: python
+   :caption: |python|
 
    def print_greeting(greeting="Hello", name):
 
@@ -214,7 +228,8 @@ However, you may note I've switched the order of the arguments around. What happ
 
 
    .. code-block:: python
-     
+      :caption: |cli| |python|
+      
       Cell In [5], line 1
         def print_greeting(greeting="Hello", name):
                        ^
@@ -226,6 +241,7 @@ I mentioned earlier that you could pass an arbitrary number of arguments into a 
 in a few places when using Python. Let's think about a function to add some numbers together:
 
 .. code-block:: python
+   :caption: |python|
 
    def sum_numbers(x,y,z):
       print("sum:",x+y+z)
@@ -241,6 +257,7 @@ This prints:
 What if we wanted to add 9 numbers together? Or 1 million? This is where ``*args`` comes in. ``*args`` gives us an argument list of any length:
 
 .. code-block:: python
+   :caption: |python|
 
    def sum_numbers(*numbers):
       
@@ -255,6 +272,7 @@ What if we wanted to add 9 numbers together? Or 1 million? This is where ``*args
 This gives us the same result as last time, but we can also do:
 
 .. code-block:: python
+   :caption: |python|
 
    def sum_numbers(*numbers):
       
@@ -272,7 +290,8 @@ Inside the function, the argument is represented by a tuple. We can therefore it
 keyword arguments using a similar approach called ``**kwargs``.
 
 .. code-block:: python
-
+    :caption: |python|
+    
     def intro(**data):
         print("\nData type of argument:",type(data))
 
