@@ -10,7 +10,8 @@ that helps us deal with these issues. It provides a variety of functions
 to work out duration, samples and deal with leap years and timezones.
 
 .. code-block:: Python
-
+    :caption: |python|
+    
     import datetime
 
     now = datetime.datetime.now()
@@ -20,6 +21,7 @@ to work out duration, samples and deal with leap years and timezones.
 This prints the current date and time based on your computers clock:
 
 .. code-block:: bash
+    :caption: |cli|
 
     2024-02-15 09:07:34.636548
 
@@ -27,6 +29,7 @@ However, this has hidden a few things. Instead of placing the ``now()`` output
 into a variable, print it directly using the console Python
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     In [1]: import datetime
 
@@ -41,6 +44,7 @@ The datetime class allows us to create an arbitrary date, time or datetime, rath
 on ``now()``:
 
 .. code-block:: python
+    :caption: |python|
 
     import datetime
 
@@ -67,6 +71,7 @@ Representing dates and times as these object then allows calculations to be carr
 out, for example, creating a duration:
 
 .. code-block:: python
+    :caption: |python|
 
     import datetime
 
@@ -92,6 +97,7 @@ need to parse a string to create a datetime object. For example out data might b
 CSV with dates listed as:
 
 .. code-block:: bash
+    :caption: |cli|
 
     1984-1-1, 4
     1984-1-1, 5
@@ -102,6 +108,7 @@ There is no minute or second data.
 We can use datetime's ``strptime()`` method to parse these strings:
 
 .. code-block:: python
+    :caption: |python|
 
     import datetime
 
@@ -112,6 +119,7 @@ We can use datetime's ``strptime()`` method to parse these strings:
 There is also a function to print a datetime object into a specific format:
 
 .. code-block:: python
+    :caption: |python|
 
     import datetime
 
@@ -129,6 +137,7 @@ timezones and can convert times for you (and takes care of duration over differe
 However, we need another python module ``pytz`` to handle the actual timezones.
 
 .. code-block:: python
+    :caption: |python|
 
     # note I've only import the datetime object, not the whole datetime module
     from datetime import datetime

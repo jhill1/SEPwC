@@ -11,18 +11,21 @@ Dictionaries are linked lists; rather than accessing items via a numerical index
 Python has dictionaries as an in-built datatype, set up using the ``{}`` braces:
 
 .. code-block:: Python
+   :caption: |python|
 
    telephone = {'Bob': 3452345, 'Mildred': 532354}
    
 You can then access using the keys, much like in a list:
 
 .. code-block:: Python
+   :caption: |python|
 
    telephone['Bob']
 
 You can add to a dictionary by using the ``[]`` notation:
 
 .. code-block:: Python
+   :caption: |python|
 
    telephone['Grenville'] = 435353
    print(telephone)
@@ -30,6 +33,7 @@ You can add to a dictionary by using the ``[]`` notation:
 To check if a key is used in a dictionary, you can use the ``in`` keyword:
 
 .. code-block:: Python
+   :caption: |python|
 
    'Bob' in telephone
    'Jack' in telephone
@@ -38,6 +42,7 @@ To check if a key is used in a dictionary, you can use the ``in`` keyword:
 In addition to the ``{}`` construction you can also use ``dict`` construction:
 
 .. code-block:: Python
+   :caption: |python|
 
    telephone = dict([('Bob', 3452345), ('Mildred', 53235)])
    # or even
@@ -52,6 +57,7 @@ Looping with Python dictionaries
 Like lists, dictionaries are at their most powerful in loops. Also like lists there are a number of ways of looping over them.
 
 .. code-block:: Python
+    :caption: |python|
 
     knights = {'gallahad': 'the pure', 'robin': 'the brave'}
     for k, v in knights.items():
@@ -77,6 +83,7 @@ Dictionaries also come with a number of useful functions. Commonly used ones are
 which can be looped over, e.g.
 
 .. code-block:: Python
+    :caption: |python|
  
     knights = {'gallahad': 'the pure', 'robin': 'the brave'}
     names = knights.keys()
@@ -94,6 +101,7 @@ is a common idiom you will see in Python code.
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         capitals = {
             "Germany": "Berlin",
@@ -112,6 +120,7 @@ is a common idiom you will see in Python code.
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         capitals["Italy"] = "Rome"
         capitals["Mexico"] = "Mexico City"
@@ -126,6 +135,7 @@ is a common idiom you will see in Python code.
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         del capitals["UK"]
 
@@ -137,6 +147,7 @@ is a common idiom you will see in Python code.
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         capitals["Burkina Faso"] = "Wagadugu"
 
@@ -153,6 +164,7 @@ is a common idiom you will see in Python code.
     :class: toggle
 
     .. code-block:: Python
+        :caption: |python|
 
         if ("UK" in captials):
             print(capitals["UK"])
