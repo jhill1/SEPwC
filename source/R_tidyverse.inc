@@ -60,6 +60,7 @@ We'll read in our data using the `read_csv()` function from the
 tidyverse package ``readr``. 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys <- read_csv("surveys.csv")
 
@@ -96,6 +97,7 @@ to this function is the data frame (``surveys``), and the subsequent
 arguments are the columns to keep.
 
 .. code-block:: R
+    :caption: |R|
     
     select(surveys, plot_id, species_id, weight)
 
@@ -103,6 +105,7 @@ To select all columns *except* certain ones, put a "-" in front of
 the variable to exclude it.
 
 .. code-block:: R
+    :caption: |R|
     
     select(surveys, -record_id, -species_id)
 
@@ -112,6 +115,7 @@ and ``species_id``.
 To choose rows based on a specific criterion, use ``filter()``:
 
 .. code-block:: R
+    :caption: |R|
     
     filter(surveys, year == 1995)
 
@@ -127,6 +131,7 @@ With intermediate steps, you create a temporary data frame and use
 that as input to the next function, like this:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys2 <- filter(surveys, weight < 5)
     surveys_sml <- select(surveys2, species_id, sex, weight)
@@ -137,6 +142,7 @@ you have to name individually. With multiple steps, that can be hard to keep tra
 You can also nest functions (i.e. one function inside of another), like this:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_sml <- select(filter(surveys, weight < 5), species_id, sex, weight)
 
@@ -151,6 +157,7 @@ with ``dplyr``. If you use RStudio, you can type the pipe with :kbd:`Ctrl` +
 :kbd:`Shift` + :kbd:`M` if you have a PC or :kbd:`Cmd` + :kbd:`Shift` + :kbd:`M`: if you have a Mac.
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(weight < 5) %>%
@@ -174,6 +181,7 @@ If we want to create a new object with this smaller version of the data, we
 can assign it a new name:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_sml <- surveys %>%
         filter(weight < 5) %>%
@@ -194,6 +202,7 @@ Note that the final data frame is the leftmost part of this expression.
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
     
         surveys %>%
             filter(year < 1995) %>%
@@ -211,6 +220,7 @@ columns. For this we'll use ``mutate()``.
 To create a new column of weight in kg:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
       mutate(weight_kg = weight / 1000)
@@ -218,6 +228,7 @@ To create a new column of weight in kg:
 You can also create a second new column based on the first new column within the same call of `mutate()`:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
       mutate(weight_kg = weight / 1000,
@@ -228,6 +239,7 @@ can use a pipe to view the `head()` of the data. (Pipes work with non-``dplyr``
 functions, too, as long as the ``dplyr`` or `magrittr` package is loaded).
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
        mutate(weight_kg = weight / 1000) %>%
@@ -237,6 +249,7 @@ The first few rows of the output are full of `NA`s, so if we wanted to remove
 those we could insert a `filter()` in the chain:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -261,6 +274,7 @@ symbol negates the result, so we're asking for every row where weight *is not* a
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys_hindfoot_cm <- surveys %>%
             filter(!is.na(hindfoot_length)) %>%
@@ -291,6 +305,7 @@ the column names that contain the **categorical** variables for which you want
 to calculate the summary statistics. So to compute the mean `weight` by sex:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         group_by(sex) %>%
@@ -302,6 +317,7 @@ screen anymore. It's one of the advantages of `tbl_df` over data frame.
 You can also group by multiple columns:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         group_by(sex, species_id) %>%
@@ -319,6 +335,7 @@ statistics on weight. Because the missing values are removed first, we can omit
 ``na.rm = TRUE`` when computing the mean:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -331,6 +348,7 @@ at the end of your chain with the argument `n` specifying the number of rows to
 display:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -343,6 +361,7 @@ time (and not necessarily on the same variable). For instance, we could add a
 column indicating the minimum weight for each species for each sex:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -354,6 +373,7 @@ It is sometimes useful to rearrange the result of a query to inspect the values.
 sort on ``min_weight`` to put the lighter species first:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -365,7 +385,7 @@ sort on ``min_weight`` to put the lighter species first:
 To sort in descending order, we need to add the `desc()` function. If we want to sort the results by decreasing order of mean weight:
 
 .. code-block:: R
-
+    :caption: |R|
 
     surveys %>%
         filter(!is.na(weight)) %>%
@@ -386,6 +406,7 @@ for each factor or combination of factors. For this task, ``dplyr`` provides
 each sex, we would do:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         count(sex)
@@ -395,6 +416,7 @@ and summarizing it by counting the number of observations in that group.
 In other words, ``surveys %>% count()`` is equivalent to:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         group_by(sex) %>%
@@ -403,6 +425,7 @@ In other words, ``surveys %>% count()`` is equivalent to:
 For convenience, ``count()`` provides the ``sort`` argument:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         count(sex, sort = TRUE)
@@ -413,6 +436,7 @@ such as ``sex`` and ``species``, we would specify the first and the second facto
 as the arguments of ``count()``:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         count(sex, species)
@@ -423,6 +447,7 @@ For instance, we might want to arrange the table above in (i) an alphabetical or
 the levels of the species and (ii) in descending order of the count:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys %>%
         count(sex, species) %>%
@@ -439,6 +464,7 @@ the *albigula* species that are not specified for its sex (i.e. ``NA``).
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys %>%
             count(plot_type)
@@ -453,6 +479,7 @@ the *albigula* species that are not specified for its sex (i.e. ``NA``).
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys %>%
             filter(!is.na(hindfoot_length)) %>%
@@ -473,6 +500,7 @@ the *albigula* species that are not specified for its sex (i.e. ``NA``).
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys %>%
             filter(!is.na(weight)) %>%
@@ -548,6 +576,7 @@ interest, and create a new variable for the ``mean_weight``.
 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_gw <- surveys %>%
         filter(!is.na(weight)) %>%
@@ -564,6 +593,7 @@ Using ``pivot_wider()`` with the names from `genus` and with values from ``mean_
 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_wide <- surveys_gw %>%
         pivot_wider(names_from = genus, values_from = mean_weight)
@@ -580,6 +610,7 @@ although we may wish to fill in the missing values first.
 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_gw %>%
         pivot_wider(names_from = genus, values_from = mean_weight, values_fill = 0) %>%
@@ -610,6 +641,7 @@ In pivoting longer, we also need to specify what columns to reshape. If the colu
 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_long <- surveys_wide %>%
         pivot_longer(names_to = "genus", values_to = "mean_weight", cols = -plot_id)
@@ -629,6 +661,7 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
 
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_wide %>%
         pivot_longer(names_to = "genus", values_to = "mean_weight", cols = -plot_id) %>%
@@ -647,6 +680,7 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys_wide_genera <- surveys %>%
             group_by(plot_id, year) %>%
@@ -664,6 +698,7 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
     
         surveys_wide_genera %>%
             pivot_longer(names_to = "year", values_to = "n_genera", cols = -plot_id)
@@ -697,6 +732,7 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         surveys_long %>%
             group_by(year, measurement, plot_type) %>%
@@ -732,6 +768,7 @@ Let's start by removing observations of animals for which ``weight`` and
 ``hindfoot_length`` are missing, or the ``sex`` has not been determined:
 
 .. code-block:: R
+    :caption: |R|
 
     surveys_complete <- surveys %>%
         filter(!is.na(weight),          # remove missing weight
@@ -747,6 +784,7 @@ observations for these more common species:
 
 
 .. code-block:: R
+    :caption: |R|
 
     ## Extract the most common species_id
     species_counts <- surveys_complete %>%
@@ -759,6 +797,7 @@ observations for these more common species:
 
 
 .. code-block:: R
+    :caption: |R|
 
     ### Create the dataset for exporting:
     ##  Start by removing observations for which the `species_id`, `weight`,
@@ -788,6 +827,7 @@ Now that our data set is ready, we can save it as a CSV file in our ``data``
 folder.
 
 .. code-block:: R
+    :caption: |R|
 
     if (!dir.exists("data")) dir.create("data")
     write_csv(surveys_complete, file = "data/surveys_complete.csv")

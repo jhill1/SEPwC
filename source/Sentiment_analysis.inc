@@ -40,6 +40,7 @@ The `bing` lexicon categorises words into positive or negative. The `AFINN` lexi
 Let's get these lexicons and see what they contain.
 
 .. code-block:: R
+    :caption: |R|
 
     library(tidytext)
 
@@ -59,6 +60,7 @@ We can use the Jane Austen book database as our text. Let's first see which word
 `unnest_tokens()`. When we do this, we can also set up some other columns to help keep track of chapters, etc.
 
 .. code-block:: R
+    :caption: |R|
 
     library(janeaustenr)
     library(dplyr)
@@ -82,6 +84,7 @@ Let's do that, but first we need to filter for the book *Emma*, then we can do t
 at the output:
 
 .. code-block:: R
+    :caption: |R|
 
     nrc_joy <- get_sentiments("nrc") %>%
                filter(sentiment == "joy")
@@ -100,6 +103,7 @@ lines of text to form a section. This will depend what text you are analysing.
 
 
 .. code-block:: R
+    :caption: |R|
 
     library(tidyr)
 
@@ -119,6 +123,7 @@ dataframe. Also look at the original `tidy_books` frame. Note that columns `line
 dropped during the processing. We can quickly plot these data:
 
 .. code-block:: R
+    :caption: |R|
 
     library(ggplot2)
 
@@ -141,6 +146,7 @@ dropped during the processing. We can quickly plot these data:
     :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         jane_austen_sentiment_afinn <- tidy_books %>%
             inner_join(get_sentiments("afinn")) %>%
@@ -152,6 +158,7 @@ dropped during the processing. We can quickly plot these data:
     over the index (i.e. every 80 lines).
 
     .. code-block:: R
+        :caption: |R|
 
         jane_austen_sentiment_nrc <- tidy_books %>%
             inner_join(get_sentiments("nrc") %>%
