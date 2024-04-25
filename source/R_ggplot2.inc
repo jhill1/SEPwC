@@ -25,6 +25,7 @@ with R. You can download the data we are using during this tutorial here (but yo
 We can import the data into our R session for example with read_csv() from the {readr} package.
 
 .. code-block:: R
+    :caption: |R|
 
     chic <- readr::read_csv("https://cedricscherer.com/data/chicago-nmmaps-custom.csv")
     tibble::glimpse(chic)
@@ -49,6 +50,7 @@ ggplot the data, e.g. ``ggplot(data = df)``. We then tell it which variables to 
 and then we need to say what kind of plot via the geometry: ``geom_point()``:
 
 .. code-block:: R
+    :caption: |R|
 
     g <- ggplot(chic, aes(x = date, y = temp))
     g + geom_line()
@@ -65,12 +67,14 @@ I've added  line geometry too. You can add other things to `g` on the fly:
 You can maniuplate aspects of the geometry directly in the geometry function:
 
 .. code-block:: R
+    :caption: |R|
 
     g + geom_point(color = "firebrick", shape="diamond", size=2)
 
 Note that ggplot2 understand ``colour``, ``color`` and ``col`` and, of course, you can add more geometries:
 
 .. code-block:: R
+    :caption: |R|
 
     g + geom_point(color = "firebrick", shape = "diamond", size = 2) +
         geom_line(color = "firebrick", linetype = "dotted", lwd = .3)
@@ -82,6 +86,7 @@ Themes allow the setting up of axes, grids, fonts etc in a consistant way. ``ggp
 number of built-in themes.
 
 .. code-block:: R
+    :caption: |R|
 
     theme_set(theme_bw())
 
@@ -99,6 +104,7 @@ The default axes titles use the variable names. Let’s add some well-written la
 For this, we add labs() providing a character string for each label we want to change (here x and y):
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -112,6 +118,7 @@ text elements. We can change the properties of all or particular text elements (
 by overwriting the default ``element_text()`` within the ``theme()`` call:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -126,6 +133,7 @@ the crucial ones to know about.
 The font axes text can also be altered:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -135,8 +143,8 @@ The font axes text can also be altered:
 
 This includes rotating the labels:
 
-
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -146,6 +154,7 @@ This includes rotating the labels:
 And removing ticks and text (not advised!):
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -163,6 +172,7 @@ data are plotted correctly, e.g. on log-log axes or the key part of the data can
 subset your data to do this, but you can also 
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
            geom_point(color = "firebrick") +
@@ -193,6 +203,7 @@ This is even more pronounced on a box-whisker plot:
 You can force R to plot starting from some coordinates, e.g. the (0,0) origin:
 
 .. code-block::
+    :caption: |R|
 
     chic_high <- dplyr::filter(chic, temp > 25, o3 > 20)
 
@@ -205,6 +216,7 @@ You can force R to plot starting from some coordinates, e.g. the (0,0) origin:
 But we can also force it to literally start at the origin!
 
 .. code-block::
+    :caption: |R|
 
     ggplot(chic_high, aes(x = temp, y = o3)) +
            geom_point(color = "darkcyan") +
@@ -224,6 +236,7 @@ representing the number of units on the y-axis equivalent to one unit on the x-a
 ensures that one unit on the x-axis is the same length as one unit on the y-axis:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = temp, y = temp + rnorm(nrow(chic), sd = 20))) +
            geom_point(color = "sienna") +
@@ -235,6 +248,7 @@ Ratios larger than 1 make the units on the y-axis long thatn those on the x, and
 vice-versa:
 
 .. code-block::
+    :caption: |R|
 
     ggplot(chic, aes(x = temp, y = temp + rnorm(nrow(chic), sd = 20))) +
            geom_point(color = "sienna") +
@@ -252,6 +266,7 @@ default when mapping a variable to an aesthetic. You can see that by default the
 what we specified in the ``color`` argument:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic,
            aes(x = date, y = temp, color = season)) +
@@ -261,6 +276,7 @@ what we specified in the ``color`` argument:
 How can you remove the legend if it's added by default?
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic,
            aes(x = date, y = temp, color = season)) +
@@ -273,6 +289,7 @@ the specific case. While the change of the theme element removes all legends at 
 you can remove particular legends with the latter options while keeping some others:
 
 .. code-block:: R
+    :caption: |R|
     
     ggplot(chic,
            aes(x = date, y = temp,
@@ -287,6 +304,7 @@ we map shape and colour. If we do it outside the aesthetic we don't get a legend
 We can remove titles for legend using the ``element_blank()``:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
            geom_point() +
@@ -296,6 +314,7 @@ We can remove titles for legend using the ``element_blank()``:
 And also chnage the position:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -306,6 +325,7 @@ The possible options are "top", "right", "left" and "bottom". You can also speci
 a coordinate for the legend to be from 0 to 1 (0 is the left/bottom, 1 is the right/top):
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -318,6 +338,7 @@ The legend also has a transparent background here to make sure no points are hid
 direction:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -330,6 +351,7 @@ The default title is dictated by the variable name, just as the axes. To change 
 to something more readable use the ``labs()`` function:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -342,6 +364,7 @@ have to alter the variable in the dataframe itself. We alter the ``levels`` in t
 column:
 
 .. code-block:: R
+    :caption: |R|
 
     chic$season <-
         factor(chic$season,
@@ -354,6 +377,7 @@ column:
 You can alter the labels though easily in ``ggplot2``:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -366,6 +390,7 @@ You can alter the labels though easily in ``ggplot2``:
 If you add multiple geometries you will find the legend has them all on too, for example:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -376,6 +401,7 @@ Note the line in the legend symbols? This comes from the ``geom_rug()``. To turn
 you add the ``show.legend = FALSE`` to the ``geom_*()`` call:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp, color = season)) +
     geom_point() +
@@ -386,6 +412,7 @@ The examples above are for discrete or categorical data. ``ggplot2`` also shows 
 for continuous data, such as the temperature:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic,
            aes(x = date, y = temp, color = temp)) +
@@ -403,6 +430,7 @@ or assigned to a variable. For a specified colour add the colour to the ``geomet
 function:
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
     geom_point(shape = 21, size = 2, stroke = 1,
@@ -421,6 +449,7 @@ colour to a variable. You can alter these using the ``scale_color_*`` and ``scal
 functions. You can also manually create a palette.
 
 .. code-block:: R
+    :caption: |R|
 
     (ga <- ggplot(chic, aes(x = date, y = temp, color = season)) +
            geom_point() +
@@ -430,12 +459,14 @@ We've created a ``ggplot2`` object, ``ga`` with the default palette. Now lets
 alter this:
 
 .. code-block:: R
+    :caption: |R|
 
     ga + scale_color_brewer(palette = "Set1")
 
 To use the ``Set1`` scheme from R Color Brewer. If we wanted to set our own colours:
 
 .. code-block:: R
+    :caption: |R|
 
     ga + scale_color_manual(values = c("dodgerblue4",
                                        "darkolivegreen4",
@@ -446,6 +477,7 @@ For continuous variables we need the ``scale_*_gradient()`` or ``scale_*_continu
 functions:
 
 .. code-block:: R
+    :caption: |R|
 
     gb <- ggplot(chic, aes(x = date, y = temp, color = temp)) +
                  geom_point() +
@@ -456,12 +488,16 @@ functions:
 We can use a diverging colour scheme:
 
 .. code-block:: R
+    :caption: |R|
 
     mid <- mean(chic$temp)  ## midpoint
     gb + scale_color_gradient2(midpoint = mid)
 
 It is possible to specify your own colour palette, but I would recommend sticking to 
 pre-defined ones, espesially the ``viridis`` set, which are colour-blind safe. 
+
+.. code-block::R
+    :caption: |R|
 
     p1 <- gb + scale_color_viridis_c() + ggtitle("'viridis' (default)")
     p2 <- gb + scale_color_viridis_c(option = "inferno") + ggtitle("'inferno'")
@@ -486,6 +522,7 @@ There are two ways to do this using either ``facet_grid`` or ``facet_wrap``. The
 can produce a grid based on one or two variables. The latter produces a "ribbon" of plots.
 
 .. code-block:: R
+    :caption: |R|
 
     ggplot(chic, aes(x = date, y = temp)) +
     geom_point(color = "orangered", alpha = .3) +
@@ -496,6 +533,7 @@ can produce a grid based on one or two variables. The latter produces a "ribbon"
 Try the above with ``facet_grid(season ~ year)`` too. The ``facet_wrap`` produces something similar:
 
 .. code-block:: R
+    :caption: |R|
 
     g <- ggplot(chic, aes(x = date, y = temp)) +
          geom_point(color = "chartreuse4", alpha = .3) +
@@ -509,12 +547,14 @@ example, the wrap uses the same axis (this is generally what you would want!), b
 We can alter using the ``scales = "free"``:
 
 .. code-block:: R
+    :caption: |R|
 
     g + facet_wrap(~ year, nrow = 2, scales = "free")
 
 If we use two variables with ``facet_wrap`` we can a slightly different view:
 
 .. code-block:: R
+    :caption: |R|
 
     g + facet_wrap(year ~ season, nrow = 4, scales = "free_x")
 
@@ -525,6 +565,7 @@ Assuming you have saved your plot into an object you can save the plot to a file
 the ``ggsave()`` function:
 
 .. code-block:: R
+    :caption: |R|
 
     ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")
 
@@ -534,6 +575,7 @@ When using ``patchwork`` (or ``ggarange`` or any other package to place multiple
 object is the output of the ``patchwork`` call:
 
 .. code-block:: R
+    :caption: |R|
 
     final_plot <- (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
     ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")

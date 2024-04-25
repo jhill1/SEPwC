@@ -28,6 +28,7 @@ the previous one is the parent to that...
 We can use the ``rlang`` packge to explore this.
 
 .. code-block:: R
+   :caption: |R|
 
    library(rlang)
 
@@ -49,6 +50,7 @@ You can see the ultimate parent is the ``empty`` environment, then we have ``bas
 then load another package:
 
 .. code-block:: R
+    :caption: |R|
 
     library(ggpubr)
 
@@ -73,6 +75,7 @@ This ordering then dictates the search path when a variable or function is asked
 as to which function gets called if there are more than one of the same name. In a new R session, run the following:
 
 .. code-block:: R
+   :caption: |R|
 
     library(rlang)
 
@@ -93,6 +96,7 @@ called, not the function of the same name in the ``rlang`` package.
    :class: toggle
 
    .. code-block:: R
+     :caption: |R|
 
      rlang::env_parents(global_env())
      

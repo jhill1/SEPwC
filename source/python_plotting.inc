@@ -34,6 +34,7 @@ part of a figure and not the strict mathematical term for more than one axis).
 Generating visualizations with pyplot is very quick:
 
 .. code-block:: Python
+    :caption: |python|
 
     import matplotlib.pyplot as plt
 
@@ -53,6 +54,7 @@ same length as y but starts with 0; therefore, the x data are
 arguments.  For example, to plot x versus y, you can write:
 
 .. code-block:: Python
+    :caption: |python|
 
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
@@ -69,7 +71,7 @@ The default format string is 'b-', which is a solid blue line.  For
 example, to plot the above with red circles, you would issue
 
 .. code-block:: Python
-
+    :caption: |python|
 
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
     plt.axis((0, 6, 0, 20))
@@ -89,7 +91,7 @@ plotting several lines with different format styles in one function call
 using arrays.
 
 .. code-block:: Python
-
+    :caption: |python|
 
     import numpy as np
 
@@ -117,7 +119,7 @@ the ``data`` keyword argument. If provided, then you may generate plots with
 the strings corresponding to these variables.
 
 .. code-block:: Python
-
+    :caption: |python|
 
     data = {'a': np.arange(50),
             'c': np.random.randint(0, 50, 50),
@@ -141,7 +143,7 @@ Matplotlib allows you to pass categorical variables directly to
 many plotting functions. For example:
 
 .. code-block:: Python
-
+    :caption: |python|
 
     names = ['group_a', 'group_b', 'group_c']
     values = [1, 10, 100]
@@ -236,6 +238,7 @@ To get a list of settable line properties, call the
 `~.pyplot.setp` function with a line or lines as argument
 
 .. sourcecode:: ipython
+    :caption: |cli| |python|
 
     In [69]: lines = plt.plot([1, 2, 3])
 
@@ -262,8 +265,7 @@ worry about this, because it is all taken care of behind the scenes.  Below
 is a script to create two subplots.
 
 .. code-block:: Python
-
-
+    :caption: |python|
 
     def f(t):
         return np.exp(-t) * np.cos(2*np.pi*t)
@@ -298,16 +300,18 @@ coordinates.
 You can create multiple figures by using multiple
 `~.pyplot.figure` calls with an increasing figure
 number.  Of course, each figure can contain as many axes and subplots
-as your heart desires::
+as your heart desires:
 
+.. code-block:: python
+    :caption: |python|
+    
     import matplotlib.pyplot as plt
     plt.figure(1)                # the first figure
     plt.subplot(211)             # the first subplot in the first figure
     plt.plot([1, 2, 3])
     plt.subplot(212)             # the second subplot in the first figure
     plt.plot([4, 5, 6])
-
-
+    
     plt.figure(2)                # a second figure
     plt.plot([4, 5, 6])          # creates a subplot() by default
 
@@ -345,7 +349,7 @@ Working with text
 text in the indicated locations 
 
 .. code-block:: Python
-
+    :caption: |python|
 
     mu, sigma = 100, 15
     x = mu + sigma * np.random.randn(10000)
@@ -365,9 +369,12 @@ text in the indicated locations
 
 All of the `~.pyplot.text` functions return a `matplotlib.text.Text`
 instance.  Just as with lines above, you can customize the properties by
-passing keyword arguments into the text functions or using `~.pyplot.setp`::
+passing keyword arguments into the text functions or using `~.pyplot.setp`:
 
-  t = plt.xlabel('my data', fontsize=14, color='red')
+.. code-block:: python
+    :caption: |python|
+
+    t = plt.xlabel('my data', fontsize=14, color='red')
 
 
 Using mathematical expressions in text
@@ -377,7 +384,10 @@ Using mathematical expressions in text
 
 Matplotlib accepts TeX equation expressions in any text expression.
 For example to write the expression :math:`\sigma_i=15` in the title,
-you can write a TeX expression surrounded by dollar signs::
+you can write a TeX expression surrounded by dollar signs:
+
+.. code-block:: python
+    :caption: |python|
 
     plt.title(r'$\sigma_i=15$')
 
@@ -405,7 +415,7 @@ the argument ``xy`` and the location of the text ``xytext``.  Both of
 these arguments are ``(x, y)`` tuples.
 
 .. code-block:: Python
-
+    :caption: |python|
 
     ax = plt.subplot()
 
@@ -436,7 +446,10 @@ Logarithmic and other nonlinear axes
 
 :mod:`matplotlib.pyplot` supports not only linear axis scales, but also
 logarithmic and logit scales. This is commonly used if data spans many orders
-of magnitude. Changing the scale of an axis is easy::
+of magnitude. Changing the scale of an axis is easy:
+
+.. code-block:: python
+    :caption: |python|
 
     plt.xscale('log')
 
@@ -444,7 +457,7 @@ An example of four plots with the same data and different scales for the y-axis
 is shown below.
 
 .. code-block:: Python
-
+    :caption: |python|
 
     # Fixing random state for reproducibility
     np.random.seed(19680801)
@@ -492,8 +505,6 @@ is shown below.
 
     plt.show()
 
-
 It is also possible to add your own scale, see `matplotlib.scale` for
 details.
-
 

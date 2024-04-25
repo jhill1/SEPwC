@@ -15,6 +15,7 @@ Using a R function
 We've used a number of R functions already. 
 
 .. code-block:: R
+   :caption: |R|
 
    print("Hello")
    print(paste(time, vert_position))
@@ -27,12 +28,14 @@ So using, or calling, a R function is easy. Give the function name, open the bra
 close your brackets, if you are expecting a number back, store it:
 
 .. code-block:: R
+   :caption: |R|
 
    return_value = function_name(arg1, arg2, arg3)
 
 As we've seen already you can nest functions within other functions!
 
 .. code-block:: R
+   :caption: |R|
 
    print(paste("hola",length(my_list),"long")
 
@@ -40,6 +43,7 @@ Here, we're calling the `print` function to print out the result of the ``paste`
 and another string. Three functions nested within each ohter. This is equivalent of:
 
 .. code-block:: R
+   :caption: |R|
 
    len <- length(my_list)
    message <- paste("hola",len,"long")
@@ -55,6 +59,7 @@ and another string. Three functions nested within each ohter. This is equivalent
    :class: toggle
 
    .. code-block:: R
+      :caption: |R|
 
       print(log10(1000))
 
@@ -71,6 +76,7 @@ Whilst it's all well and good to use functions, you will need to write them too.
 They follow this pattern:
 
 .. code-block:: R
+   :caption: |R|
 
    print_hello <- function() {
       print("Hello!")
@@ -81,6 +87,7 @@ The name of of the function above is ``print_hello``. The function keyword tells
 We can then call this function in out main code:
 
 .. code-block:: R
+   :caption: |R|
 
     my_function <- function() {
         print("Hello World!")
@@ -93,6 +100,7 @@ We type the name of the function, followed by parentheses.
 Functions are useful when we can pass data into them. We do this via arguments:
 
 .. code-block:: R
+   :caption: |R|
 
     greetings <- function(fname) {
         paste0("Hello ",fname,"!")
@@ -106,6 +114,7 @@ Functions are useful when we can pass data into them. We do this via arguments:
 Rather than staying abstract, let's do something more concrete. Let's write a function to convert from Centigrade to Farenheit. 
 
 .. code-block:: R
+   :caption: |R|
 
    toFahrenheit <- function(Centigrade) {
 
@@ -118,6 +127,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 
 
 .. code-block:: R
+   :caption: |R|
 
    toFahrenheit <- function(Centigrade) {
 
@@ -144,6 +154,7 @@ Above we used a keyword argument, which gave us the variable name inside the fun
 two keyword arguments:
 
 .. code-block:: R
+   :caption: |R|
 
    print_greeting <- function(greeting, name) {
 
@@ -158,6 +169,7 @@ What happens if the user supplies only a single argument, not two as we've asked
 
 
 .. code-block:: R
+   :caption: |R|
 
    print_greeting <- function(greeting, name) {
 
@@ -174,13 +186,15 @@ What error message did you get?
    :class: toggle
 
    .. code-block:: R
-     
+      :caption: |R|
+      
       Error in print_greeting("Hello") : 
       argument "name" is missing, with no default 
 
 We can also write function that have default values.
 
 .. code-block:: R
+   :caption: |R|
 
    print_greeting <- function(name, greeting="Hello") {
 
@@ -193,6 +207,7 @@ We can also write function that have default values.
 When running this, we can give the ``name`` argument and we get a default ``greeting``. We could also set the ``greeting`` ourselves:
 
 .. code-block:: R
+   :caption: |R|
 
    print_greeting <- function(name, greeting="Hello") {
 
@@ -204,6 +219,7 @@ When running this, we can give the ``name`` argument and we get a default ``gree
 However, you may note I've switched the order of the arguments around. What happens if we didn't?
 
 .. code-block:: R
+   :caption: |R|
 
    print_greeting <- function(greeting="Hello", name) {
 
@@ -217,6 +233,7 @@ However, you may note I've switched the order of the arguments around. What happ
    :class: toggle
 
    .. code-block:: R
+      :caption: |cli| |R|
      
       Error in print_greeting("Hello") : 
       argument "name" is missing, with no default 
