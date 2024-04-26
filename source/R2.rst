@@ -2,9 +2,9 @@ R: part 2
 ====================
 
 
-.. include:: R_functions.inc
-.. include:: R_libraries.inc
-.. include:: R_dictionaries.inc
-.. include:: R_files.inc
-.. include:: R_arguments.inc
-.. include:: R_exercises2.inc
+.. include:: R_functions.inc.rst
+.. include:: R_libraries.inc.rst
+.. include:: R_dictionaries.inc.rst
+.. include:: R_files.inc.rst
+.. include:: R_arguments.inc.rst
+.. include:: R_exercises2.inc.rst

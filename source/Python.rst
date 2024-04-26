@@ -8,10 +8,10 @@ Computer languages are much simpler than natural languages, but much
 stricter. We have to get the syntax correct or things won't work. However
 interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
-.. include:: Python_intro.inc
-.. include:: Python_loops.inc
-.. include:: Python_conditionals.inc
-.. include:: Python_comments.inc
-.. include:: Python_exercises1.inc
+.. include:: Python_intro.inc.rst
+.. include:: Python_loops.inc.rst
+.. include:: Python_conditionals.inc.rst
+.. include:: Python_comments.inc.rst
+.. include:: Python_exercises1.inc.rst
 
 

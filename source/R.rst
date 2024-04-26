@@ -8,9 +8,9 @@ Computer languages are much simpler than natural languages, but much
 stricter. We have to get the syntax correct or things won't work. However
 interpreted languages tell you what is wrong, so it's not as bad as it sounds.
 
-.. include:: R_intro.inc
-.. include:: R_loops.inc
-.. include:: R_conditionals.inc
-.. include:: R_comments.inc
-.. include:: R_exercises1.inc
+.. include:: R_intro.inc.rst
+.. include:: R_loops.inc.rst
+.. include:: R_conditionals.inc.rst
+.. include:: R_comments.inc.rst
+.. include:: R_exercises1.inc.rst
 

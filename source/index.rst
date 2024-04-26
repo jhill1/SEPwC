@@ -24,7 +24,7 @@ The table below contains suggestions of which blocks of works to cover in each w
 to help guide you. However, you can forge ahead, but equally, don't worry if you
 slip behind a little.
 
-.. include:: acknowledgements.inc
+.. include:: acknowledgements.inc.rst
 
 .. list-table:: Suggested work
    :header-rows: 1

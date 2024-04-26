@@ -35,8 +35,8 @@ will get used to. In addition, it's very easy to type a ``[`` instead of a ``{``
 What makes these errors simple though is that you are told about them when you run the code!
 Sometimes a bit obscurely, but once you can decipher the error message they are easy to fix.
 
-.. include:: R_syntax_errors.inc
-.. include:: python_syntax_errors.inc
+.. include:: R_syntax_errors.inc.rst
+.. include:: python_syntax_errors.inc.rst
 
 
 Warning examples
@@ -286,5 +286,5 @@ I would copy and paste the error, replacing some terms, something like
 ``Error in `$<-.data.frame`(`*tmp*`, total, replacement has 1 row, data has 0``
 a number of website come up which help understand the error message a bit more. 
 
-.. include:: debugging.inc
+.. include:: debugging.inc.rst
 

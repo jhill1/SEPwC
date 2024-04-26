@@ -8,8 +8,8 @@ When loading data into a program you are **parsing** the data from a file into v
 can be done manually, there are libraries and tools to help us do this for most common
 data formats. 
 
-.. include:: data_management.inc
-.. include:: using_excel.inc
-.. include:: csv.inc
-.. include:: other_data.inc
+.. include:: data_management.inc.rst
+.. include:: using_excel.inc.rst
+.. include:: csv.inc.rst
+.. include:: other_data.inc.rst
 

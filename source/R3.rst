@@ -1,10 +1,10 @@
 R: part 3 
 ================
 
-.. include:: R_namespace.inc
-.. include:: R_objects.inc
-.. include:: R_datetime.inc
-.. include:: R_dataframes.inc
-.. include:: R_tidyverse.inc
+.. include:: R_namespace.inc.rst
+.. include:: R_objects.inc.rst
+.. include:: R_datetime.inc.rst
+.. include:: R_dataframes.inc.rst
+.. include:: R_tidyverse.inc.rst
 
 
