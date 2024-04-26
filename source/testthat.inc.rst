@@ -4,6 +4,7 @@ R: testthat
 The first thing that you need to do is install the testthat R package. This can be done from CRAN using the code below.
 
 .. code-block:: R
+   :caption: |R|
 
    install.packages("testthat")
 
@@ -11,12 +12,14 @@ The first thing that you need to do is install the testthat R package. This can 
 Once testthat is installed, you can load it into your R sessions just like any other R package.
 
 .. code-block:: R
+   :caption: |R|
 
    library(testthat)
 
 We're going to test our Fahrenheit to Celsius and vice-versa functions from the first R chapter. Let's get these two functions in an R test file and save it:
 
 .. code-block:: R
+    :caption: |R|
 
     F_to_C <- function(F_temp){
         C_temp <- (F_temp - 32) * 5/9;
@@ -35,6 +38,7 @@ We use the ``test_that`` function of the testthat package to write sime simple t
 Within the bracketed code to be tested, one or more ``expect_that`` functions are run; each call to ``expect_that`` is an independent test. The ``expect_that`` function takes two arguments: ``object`` is the object that is being examined by the function and ``condition`` is the condition that the object is meant to satisfy.
 
 .. code-block:: R
+    :caption: |R|
 
     test_that(desc = "Fahrenheit to Celsius", code = {
       
@@ -50,6 +54,7 @@ Within the bracketed code to be tested, one or more ``expect_that`` functions ar
 We can create the same test for the ``C_to_F`` function:
 
 .. code-block:: R
+    :caption: |R|
 
     test_that(desc = "Celsius to Fahrenheit", code = {
       
@@ -68,6 +73,7 @@ The better idea is to simply run all the tests at once. So let's create a test f
 
 
 .. code-block:: R
+    :caption: |R|
 
     library(testthat);
     context("Temperature function testing");
@@ -106,12 +112,14 @@ Save that as ``test-temperature_conversion.R`` (note the convention here; use th
 We can run that from the command line:
 
 .. code-block:: bash
+    :caption: |cli|
 
     Rscript test-temperature_conversion.R 
 
 which gives the output:
 
 .. code-block:: R
+    :caption: |cli| |R|
 
     Test passed 🎊
     Test passed 🥳
@@ -132,6 +140,7 @@ which gives the output:
 If you're in an R session you can run all tests in a directory:
 
 .. code-block:: R
+   :caption: |R|
 
    test_dir(".")
 
@@ -139,6 +148,7 @@ If you're in an R session you can run all tests in a directory:
 which gives the output:
 
 .. code-block:: R
+    :caption: |cli| |R|
 
     ✔ | F W S  OK | Context
     ✖ | 1       4 | Temperature function testing                                                                          

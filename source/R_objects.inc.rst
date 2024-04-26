@@ -14,11 +14,13 @@ definition of the class and integrates the methods within the class in a more
 Object-Oriented way. 
 
 .. code-block:: R
+    :caption: |R|
 
     Person <- setRefClass("Person",
         fields = list(name = "character", age = "numeric"))
 
 .. code-block:: R
+    :caption: |R|
 
     alice <- Person$new(name="Alice",age=41)
     print(alice)
@@ -27,6 +29,7 @@ This is not a particularly useful object, but shows the basic principles. You ca
 the fields using the ``$`` notation:
 
 .. code-block:: R
+    :caption: |R|
 
     alice$name
     alice$age
@@ -38,6 +41,7 @@ We need to add some methods/functions to go along with our class.
 Let's create the dog class we thought about previously:
 
 .. code-block:: R
+    :caption: |R|
 
     Dog <- setRefClass("Dog",
 
@@ -81,6 +85,7 @@ One of the key things about classes is that they can inherit other classes. We c
 build complex stacks of classes using base classes. Let's create a class for a Guide Dog:
 
 .. code-block:: R
+    :caption: |R|
 
     GuideDog <- setRefClass("GuideDog",
 
@@ -104,6 +109,7 @@ build complex stacks of classes using base classes. Let's create a class for a G
 So here we've added a new function ``complete_trianing`` and overridden the ``bark`` function. 
 
 .. code-block:: R
+    :caption: |R|
 
     buddy <- GuideDog$new(name="Buddy",age=3,colour="tan",training=F)
     buddy$bark()

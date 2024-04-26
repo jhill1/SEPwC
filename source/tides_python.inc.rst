@@ -10,11 +10,13 @@ Alternatively, save as a script and run from the command line.
 Some modules you will need to install are *uptide* and *wget*
 
 .. code-block:: bash
+    :caption: |cli|
 
     pip install uptide
     pip install wget
 
 .. code-block:: Python
+    :caption: |python|
 
     # import the modules we need
     import pandas as pd
@@ -30,6 +32,7 @@ Some modules you will need to install are *uptide* and *wget*
 Now we have out environment set up. We can create a couple of "helper" functions to make life easier later!
 
 .. code-block:: Python
+    :caption: |python|
 
     def read_and_process_data(filename):
         tide_data = pd.read_csv(filename, header=None)
@@ -58,6 +61,7 @@ go back over 100 years. We're going to download data for three locations in Aust
 Freemantle, WA; Booby Island, QLD; and Fort Denison, NSW.
 
 .. code-block:: Python
+    :caption: |python|
 
     FortDenison_url = "https://uhslc.soest.hawaii.edu/data/csv/fast/hourly/h333.csv"
     BoobyIsland_url = "https://uhslc.soest.hawaii.edu/data/csv/fast/hourly/h336.csv"
@@ -75,6 +79,7 @@ We now have three csv files which should be stored in your current directory (wh
 running this code from ).
 
 .. code-block:: Python
+    :caption: |python|
 
     # load and store as a pandas dataframe
     Fort_Denison = read_and_process_data("h333.csv")
@@ -84,6 +89,7 @@ running this code from ).
 Now let's plot these, choosing an arbitrary year to plot (rather than the whole dataset!)
 
 .. code-block:: Python
+    :caption: |python|
 
     # Let's plot 1 years' worth of tidal data
     fig_summary=plt.figure()
@@ -112,6 +118,7 @@ also have to be careful comparing raw data from one tide gauge to another.
 Let's now look at one month in detail:
 
 .. code-block:: Python
+    :caption: |python|
 
     fig_june=plt.figure()
     ax=fig_june.add_subplot(111)
@@ -192,6 +199,7 @@ vertical shift. We know the period (from the table above) for each constiuent an
 so we have two parameters to find: :math:`A` and :math:`C`. 
 
 .. code-block:: Python
+    :caption: |python|
 
     A_m2 = 0.53
     B_m2 = 12.4206012 # hours
@@ -208,6 +216,7 @@ so we have two parameters to find: :math:`A` and :math:`C`.
 That's the M2 curve; let's now add S2:
 
 .. code-block:: Python
+    :caption: |python|
 
     A_s2 = 0.23
     B_s2 = 12
@@ -228,6 +237,7 @@ regression analysis to work out what the tidal constiuents are. Let's do that no
 out the common consituents from our tidal data.
 
 .. code-block:: Python
+    :caption: |python|
 
     # let's first pull out a single year's worth of data
     # and remove the mean value so the tides oscillate across zero
@@ -264,6 +274,7 @@ We also need to account for the timezone of the data. The phase is measured rela
 UTC/GMT. We therefore need to tell the analysis the time data is in the Sydney timezone.
 
 .. code-block:: Python
+    :caption: |python|
 
     tz = pytz.timezone("Australia/Sydney")
     tide.set_initial_time(datetime.datetime(2008,1,1,0,0,0))
@@ -283,6 +294,7 @@ UTC/GMT. We therefore need to tell the analysis the time data is in the Sydney t
    :class: toggle
 
    .. code-block:: Python
+      :caption: |python|
 
       tz = pytz.timezone("Australia/Lindeman")
       tide.set_initial_time(datetime.datetime(2008,1,1,0,0,0))
@@ -304,6 +316,7 @@ dataset to be able to seperate them out. We can use something called the Rayleig
 to work out how long a record we need.
 
 .. code-block:: Python
+    :caption: |python|
 
     constituents  = ['M2', 'S2', 'N2', 'K2', 'O1', 'P1', 'Q1', 'M4']
     print(uptide.select_constituents(constituents,15*24*60*60)) # This is 15 days in seconds
@@ -312,6 +325,7 @@ What we get back is that we can't resolve the N2, K2 and Q1 from the list with 1
 What if we had 30 days?
 
 .. code-block:: Python
+    :caption: |python|
 
     constituents  = ['M2', 'S2', 'N2', 'K2', 'O1', 'P1', 'Q1', 'M4']
     print(uptide.select_constituents(constituents,30*24*60*60))
@@ -319,6 +333,7 @@ What if we had 30 days?
 Nope! K2 is still not able to be resolved from 30 days worth of data. How many days would we need?
 
 .. code-block:: Python
+    :caption: |python|
 
     tide = uptide.Tides(constituents)
     print(tide.get_minimum_Rayleigh_period()/86400.)
@@ -326,6 +341,7 @@ Nope! K2 is still not able to be resolved from 30 days worth of data. How many d
 82.6 days worth of data to be able to work out the constituents listed above. So with our year of data we should be fine!
 
 .. code-block:: Python
+    :caption: |python|
 
     tz = pytz.timezone("Australia/Sydney")
     tide.set_initial_time(datetime.datetime(2008,1,1,0,0,0))
@@ -349,6 +365,7 @@ We could plot those using sine curves. However, `uptide` also has functionality 
 give us a total tidal signal from the amplitudes and phases.
 
 .. code-block:: Python
+    :caption: |python|
 
     t = np.arange(0, 365*24*3600, 1800) # 1 year in 1800 second intervals
     eta = tide.from_amplitude_phase(amp, pha, t)
@@ -376,6 +393,7 @@ give us a total tidal signal from the amplitudes and phases.
    :class: toggle
 
    .. code-block:: Python
+     :caption: |python|
 
      tz = pytz.timezone("Australia/Lindeman")
      tide.set_initial_time(datetime.datetime(2008,1,1,0,0,0))

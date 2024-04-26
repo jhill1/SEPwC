@@ -27,6 +27,7 @@ Most of the time when using R you end up reading data from CSV
 something other than a comma!). The syntax for these function is very similar.
 
 .. code-block:: R
+    :caption: |R|
 
     data<-read.table("data.txt",sep=",",header = TRUE)
     data<-read.csv("data.txt",header = TRUE)
@@ -42,6 +43,7 @@ Similarly if we have data in a variable, we can get R to write this out
 in a CSV or table, easily:
 
 .. code-block:: R
+    :caption: |R|
 
     write.csv(df,file='new_file.csv')
 
@@ -64,6 +66,7 @@ It's worth finding the R manuals online to see these and experiment a little.
     :class: toggle
  
     .. code-block:: R
+        :caption: |R|
 
         capitals = {
             "Germany": "Berlin",

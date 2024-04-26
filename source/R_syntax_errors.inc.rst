@@ -6,12 +6,14 @@ R examples
 If we make an error in our R code we will receive a message like:
 
 .. code-block:: R
+    :caption: |R|
 
     libary(ggplot2)
     
 gives
 
 .. code-block:: bash
+    :caption: |R|
 
     Error in libary(ggplot2) : could not find function "libary"
 
@@ -32,6 +34,7 @@ So if R is a bit annoying and doesn't tell you where the error is precisely, can
 R does contain a function called ``traceback`` that goes back up your code to the error.
 
 .. code-block:: R
+    :caption: |R|
 
     f <- function(x) x + 1
     g <- function(x) f(x)
@@ -40,12 +43,14 @@ R does contain a function called ``traceback`` that goes back up your code to th
 Will give a "non-numeric" error. Try typing ``traceback()``
 
 .. code-block:: R
+    :caption: |R|
 
     traceback()
 
 to give:
 
 .. code-block:: bash
+    :caption: |cli| |R|
 
     2: f(x) at #1
     1: g("a")

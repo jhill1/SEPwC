@@ -8,7 +8,8 @@ Try the following exercises. For any of the exercises, feel free to type out the
     Will the code below work?
 
     .. code-block:: R
-    
+        :caption: |R|
+
         a <- 45
         name <- "Fred"
 
@@ -32,6 +33,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     What is printed here?
 
     .. code-block:: R
+        :caption: |R|
     
         limit = 15
         
@@ -52,6 +54,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     What is printed here?
 
     .. code-block:: R
+        :caption: |R|
     
         for (C in seq(-20,41,5)) {
             F = 9.0/5.0*C + 32
@@ -76,6 +79,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
    :class: toggle
 
     .. code-block:: R
+        :caption: |R|
     
         conversion = 0.092903
         for (sqft in seq(2,20,2)) {

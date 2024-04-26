@@ -135,6 +135,7 @@ package is called `lintr`, for Python it's `pylint`. Let's deal with these in tu
 Create a file (e.g. `test_lint.R`) contining the following:
 
 .. code-block:: R
+    :caption: |R|
 
     T_and_F_symbol_linter=function(){
         list()
@@ -143,6 +144,7 @@ Create a file (e.g. `test_lint.R`) contining the following:
 Now open R and type the following:
 
 .. code-block:: R
+    :caption: |R|
 
     library(lintr)
 
@@ -151,6 +153,7 @@ Now open R and type the following:
 You should see something like the following output:
 
 .. code-block:: R
+    :caption: |cli| |R|
 
     >     lintr::lint("test_lint.R")
     test_lint.R:1:1: style: [object_name_linter] Variable and function name style should match snake_case or symbols.
@@ -184,6 +187,7 @@ You should see something like the following output:
     :class: toggle
  
     .. code-block:: R
+       :caption: |R|
 
        true_and_false_symbol_linter <- function() {
          list()
@@ -198,6 +202,7 @@ You should see something like the following output:
 file called "circle.py" with the following contents:
 
 .. code-block:: Python
+    :caption: |python|
 
     #!/user/bin/env python3
 
@@ -224,12 +229,13 @@ file called "circle.py" with the following contents:
 Run pylint on that file in the command line:
 
 .. code-block:: bash
+    :caption: |cli|
 
     pylint circle.py
 
 and you should see the following output:
 
-.. code-block:: bash
+.. code-block:: output
 
     ************* Module circle
     circle.py:5:9: C0303: Trailing whitespace (trailing-whitespace)
@@ -308,7 +314,7 @@ description of the warning/error.
             def __repr__(self):
                 return f"{self.__class__.__name__}(radius={self.radius})"
 
-    Running the `pylint` command on that should return nothing.
+    Running the ``pylint`` command on that should return nothing.
 
 .. youtube:: Wogad7fNZlY
    :align: center
