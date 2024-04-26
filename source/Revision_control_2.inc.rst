@@ -1,6 +1,10 @@
 Setting up git
 ---------------
 
+For all the command-line examples below using either the `git bash` application (|win|) or the terminal (|maclin|). 
+On linux you can access the terminal via the Start Menu equivalent on most systems. On Macs, the terminal may be 
+hidden in the Utilities folder under Applications. 
+
 When we use Git on a new computer for the first time, we need to configure a few things. Below are a few examples
 of configurations we will set as we get started with Git:
 
@@ -13,6 +17,7 @@ where ``verb`` is what we actually want to do and ``options`` is additional opti
 needed for the ``verb``. So here is how I might setup my new laptop:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git config --global user.name "Jon Hill"
    git config --global user.email "jon.hill@york.ac.uk"
@@ -49,12 +54,14 @@ please review `GitHub's instructions for keeping your email address private <git
    On macOS and Linux:
     
    .. code-block:: bash
+      :caption: |cli|
    
       git config --global core.autocrlf input
 
    And on Windows:
 
-   .. code-block:: bat
+   .. code-block:: bash
+      :caption: |cli|
 
       git config --global core.autocrlf false
 
@@ -113,6 +120,7 @@ initialize any new repository.  We should use that feature to set it to `main` s
 it matches Gihub
 
 .. code-block:: bash
+   :caption: |cli|
 
    git config --global init.defaultBranch main
 
@@ -122,6 +130,7 @@ to use the settings for every project, in your user account, on this computer.
 You can check your settings at any time:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git config --list
 
@@ -137,6 +146,7 @@ same commands to choose another editor or update your email address.
    ``git <command> --help``, e.g.:
 
    .. code-block:: bash
+      :caption: |cli|
    
       git config -h
       git config --help
@@ -145,6 +155,7 @@ same commands to choose another editor or update your email address.
    More generally, you can get the list of available ``git`` commands and further resources of the Git manual typing:
  
    .. code-block:: bash
+      :caption: |cli|
 
       git help
 

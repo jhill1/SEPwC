@@ -117,7 +117,8 @@ the command line icon:
     Hello World!
     
 If a command and the output are shown in the same block, the command will be prefixed
-by either a ``$`` (|maclin|) or a ``>`` (|win|) symbol. *Do not copy or type those symbols in*.
+by either a ``$`` (|maclin|), a ``>`` (|win|) or a ``>>>`` (|python|) symbol. 
+*Do not copy or type those symbols in*.
 For example:
 
 .. code-block:: bash

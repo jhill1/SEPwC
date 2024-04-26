@@ -35,6 +35,7 @@ How to import NumPy
 Numpy is generally imported into Python code like this:
 
 .. code-block:: python
+    :caption: |python|
 
     import numpy as np
 
@@ -50,6 +51,7 @@ One way to initialize an array is using a Python sequence, such as a list.
 For example:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a = np.array([1, 2, 3, 4, 5, 6])
     >>> a
@@ -60,6 +62,7 @@ individual element of this array as we would access an element in the original
 list: using the integer index of the element within square brackets.
 
 .. code-block:: python
+    :caption: |cli| |python|
     
     >>> a[0]
     1
@@ -67,6 +70,7 @@ list: using the integer index of the element within square brackets.
 Like the original list, the array is mutable.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a[0] = 10
     >>> a
@@ -75,6 +79,7 @@ Like the original list, the array is mutable.
 Also like the original list, Python slice notation can be used for indexing.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a[:3]
     array([10, 2, 3])
@@ -84,6 +89,7 @@ a new list, but slicing a NumPy array returns a *view*: an object that refers to
 data in the original array. The original array can be mutated using the view.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> b = a[3:]
     >>> b
@@ -98,9 +104,10 @@ data in the original array. The original array can be mutated using the view.
     >>> d
 
 Two- and higher-dimensional arrays can be initialised from nested Python
-sequences::
+sequences:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
     >>> a
@@ -120,6 +127,7 @@ axis within a *single* set of square brackets, separated by commas.
 For instance, the element ``8`` is in row ``1`` and column ``3``:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a[1, 3]
     8
@@ -157,6 +165,7 @@ Numpy array attributes
 The number of dimensions of an array is contained in the ``ndim`` attribute.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a.ndim
     2
@@ -165,6 +174,7 @@ The shape of an array is a tuple of non-negative integers that specify the
 number of elements along each dimension.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a.shape
     (3, 4)
@@ -175,6 +185,7 @@ The fixed, total number of elements in array is contained in the ``size``
 attribute.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a.size
     12
@@ -186,6 +197,7 @@ Arrays are typically "homogeneous", meaning that they contain elements of
 only one "data type". The data type is recorded in the ``dtype`` attribute.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
     >>> a.dtype
     dtype('int64')  # "int" for integer, "64" for 64-bit
@@ -197,53 +209,59 @@ How to create a basic array
   single: Arrays; Python
 
 Besides creating an array from a sequence of elements, you can easily create an
-array filled with ``0``'s::
+array filled with ``0``'s:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.zeros(2)
-  array([0., 0.])
+    >>> np.zeros(2)
+    array([0., 0.])
 
-Or an array filled with ``1``'s::
+Or an array filled with ``1``'s:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.ones(2)
-  array([1., 1.])
+    >>> np.ones(2)
+    array([1., 1.])
 
 Or even an empty array! The function ``empty`` creates an array whose initial
 content is random and depends on the state of the memory. The reason to use
 ``empty`` over ``zeros`` (or something similar) is speed - just make sure to
-fill every element afterwards! ::
+fill every element afterwards!:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> # Create an empty array with 2 elements
-  >>> np.empty(2) #doctest: +SKIP
-  array([3.14, 42.  ])  # may vary
+    >>> # Create an empty array with 2 elements
+    >>> np.empty(2) 
+    array([3.14, 42.  ])  # may vary
 
-You can create an array with a range of elements::
+You can create an array with a range of elements:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.arange(4)
-  array([0, 1, 2, 3])
+    >>> np.arange(4)
+    array([0, 1, 2, 3])
 
 And even an array that contains a range of evenly spaced intervals. To do this,
 you will specify the **first number**, **last number**, and the **step size**.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.arange(2, 9, 2)
-  array([2, 4, 6, 8])
+    >>> np.arange(2, 9, 2)
+    array([2, 4, 6, 8])
 
 You can also use ``np.linspace()`` to create an array with values that are
 spaced linearly in a specified interval:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.linspace(0, 10, num=5)
-  array([ 0. ,  2.5,  5. ,  7.5, 10. ])
+    >>> np.linspace(0, 10, num=5)
+    array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 
 **Specifying your data type**
 
@@ -251,10 +269,11 @@ While the default data type is floating point (``np.float64``), you can explicit
 specify which data type you want using the ``dtype`` keyword.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> x = np.ones(2, dtype=np.int64)
-  >>> x
-  array([1, 1])
+    >>> x = np.ones(2, dtype=np.int64)
+    >>> x
+    array([1, 1])
 
 
 Adding, removing, and sorting elements
@@ -268,15 +287,17 @@ and order when you call the function.
 If you start with this array:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> arr = np.array([2, 1, 5, 3, 7, 4, 6, 8])
+    >>> arr = np.array([2, 1, 5, 3, 7, 4, 6, 8])
 
 You can quickly sort the numbers in ascending order with:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.sort(arr)
-  array([1, 2, 3, 4, 5, 6, 7, 8])
+    >>> np.sort(arr)
+    array([1, 2, 3, 4, 5, 6, 7, 8])
 
 In addition to sort, which returns a sorted copy of an array, you can use:
 
@@ -290,32 +311,36 @@ To read more about sorting an array, see: `sort`.
 If you start with these arrays:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> a = np.array([1, 2, 3, 4])
-  >>> b = np.array([5, 6, 7, 8])
+    >>> a = np.array([1, 2, 3, 4])
+    >>> b = np.array([5, 6, 7, 8])
 
 You can concatenate them with ``np.concatenate()``.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.concatenate((a, b))
-  array([1, 2, 3, 4, 5, 6, 7, 8])
+    >>> np.concatenate((a, b))
+    array([1, 2, 3, 4, 5, 6, 7, 8])
 
 Or, if you start with these arrays:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> x = np.array([[1, 2], [3, 4]])
-  >>> y = np.array([[5, 6]])
+    >>> x = np.array([[1, 2], [3, 4]])
+    >>> y = np.array([[5, 6]])
 
 You can concatenate them with:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.concatenate((x, y), axis=0)
-  array([[1, 2],
-         [3, 4],
-         [5, 6]])
+    >>> np.concatenate((x, y), axis=0)
+    array([[1, 2],
+          [3, 4],
+          [5, 6]])
 
 In order to remove elements from an array, it's simple to use indexing to select
 the elements that you want to keep.
@@ -342,36 +367,40 @@ elements stored along each dimension of the array. If, for example, you have a
 For example, if you create this array:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> array_example = np.array([[[0, 1, 2, 3],
-  ...                            [4, 5, 6, 7]],
-  ...
-  ...                           [[0, 1, 2, 3],
-  ...                            [4, 5, 6, 7]],
-  ...
-  ...                           [[0 ,1 ,2, 3],
-  ...                            [4, 5, 6, 7]]])
+    >>> array_example = np.array([[[0, 1, 2, 3],
+    ...                            [4, 5, 6, 7]],
+    ...
+    ...                           [[0, 1, 2, 3],
+    ...                            [4, 5, 6, 7]],
+    ...
+    ...                           [[0 ,1 ,2, 3],
+    ...                            [4, 5, 6, 7]]])
 
 To find the number of dimensions of the array, run:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> array_example.ndim
-  3
+    >>> array_example.ndim
+    3
 
 To find the total number of elements in the array, run:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> array_example.size
-  24
+    >>> array_example.size
+    24
 
 And to find the shape of your array, run:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> array_example.shape
-  (3, 2, 4)
+    >>> array_example.shape
+    (3, 2, 4)
 
 
 Can you reshape an array?
@@ -390,28 +419,31 @@ array also has a total of 12 elements.
 If you start with this array:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> a = np.arange(6)
-  >>> print(a)
-  [0 1 2 3 4 5]
+    >>> a = np.arange(6)
+    >>> print(a)
+    [0 1 2 3 4 5]
 
 You can use ``reshape()`` to reshape your array. For example, you can reshape
 this array to an array with three rows and two columns:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> b = a.reshape(3, 2)
-  >>> print(b)
-  [[0 1]
-   [2 3]
-   [4 5]]
+    >>> b = a.reshape(3, 2)
+    >>> print(b)
+    [[0 1]
+    [2 3]
+    [4 5]]
 
 With ``np.reshape``, you can specify a few optional parameters:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> np.reshape(a, newshape=(1, 6), order='C')
-  array([[0, 1, 2, 3, 4, 5]])
+    >>> np.reshape(a, newshape=(1, 6), order='C')
+    array([[0, 1, 2, 3, 4, 5]])
 
 ``a`` is the array to be reshaped.
 
@@ -452,36 +484,40 @@ when used once. This means that a **1D** array will become a **2D** array, a
 For example, if you start with this array:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> a = np.array([1, 2, 3, 4, 5, 6])
-  >>> a.shape
-  (6,)
+    >>> a = np.array([1, 2, 3, 4, 5, 6])
+    >>> a.shape
+    (6,)
 
 You can use ``np.newaxis`` to add a new axis:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> a2 = a[np.newaxis, :]
-  >>> a2.shape
-  (1, 6)
+    >>> a2 = a[np.newaxis, :]
+    >>> a2.shape
+    (1, 6)
 
 You can explicitly convert a 1D array to either a row vector or a column
 vector using ``np.newaxis``. For example, you can convert a 1D array to a row
 vector by inserting an axis along the first dimension:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> row_vector = a[np.newaxis, :]
-  >>> row_vector.shape
-  (1, 6)
+    >>> row_vector = a[np.newaxis, :]
+    >>> row_vector.shape
+    (1, 6)
 
 Or, for a column vector, you can insert an axis along the second dimension:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> col_vector = a[:, np.newaxis]
-  >>> col_vector.shape
-  (6, 1)
+    >>> col_vector = a[:, np.newaxis]
+    >>> col_vector.shape
+    (6, 1)
 
 You can also expand an array by inserting a new axis at a specified position
 with ``np.expand_dims``.
@@ -489,26 +525,29 @@ with ``np.expand_dims``.
 For example, if you start with this array:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> a = np.array([1, 2, 3, 4, 5, 6])
-  >>> a.shape
-  (6,)
+    >>> a = np.array([1, 2, 3, 4, 5, 6])
+    >>> a.shape
+    (6,)
 
 You can use ``np.expand_dims`` to add an axis at index position 1 with:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> b = np.expand_dims(a, axis=1)
-  >>> b.shape
-  (6, 1)
+    >>> b = np.expand_dims(a, axis=1)
+    >>> b.shape
+    (6, 1)
 
 You can add an axis at index position 0 with:
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> c = np.expand_dims(a, axis=0)
-  >>> c.shape
-  (1, 6)
+    >>> c = np.expand_dims(a, axis=0)
+    >>> c.shape
+    (1, 6)
 
 
 Indexing and slicing
@@ -520,17 +559,18 @@ You can index and slice NumPy arrays in the same ways you can slice Python
 lists.
 
 .. code-block:: python
+    :caption: |cli| |python|
 
-  >>> data = np.array([1, 2, 3])
+    >>> data = np.array([1, 2, 3])
 
-  >>> data[1]
-  2
-  >>> data[0:2]
-  array([1, 2])
-  >>> data[1:]
-  array([2, 3])
-  >>> data[-2:]
-  array([2, 3])
+    >>> data[1]
+    2
+    >>> data[0:2]
+    array([1, 2])
+    >>> data[1:]
+    array([2, 3])
+    >>> data[-2:]
+    array([2, 3])
 
 You can visualize it this way:
 
@@ -549,41 +589,46 @@ it's straightforward with NumPy.
 For example, if you start with this array
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+   >>> a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can easily print all of the values in the array that are less than 5.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> print(a[a < 5])
-  [1 2 3 4]
+   >>> print(a[a < 5])
+   [1 2 3 4]
 
 You can also select, for example, numbers that are equal to or greater than 5,
 and use that condition to index an array.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> five_up = (a >= 5)
-  >>> print(a[five_up])
-  [ 5  6  7  8  9 10 11 12]
+   >>> five_up = (a >= 5)
+   >>> print(a[five_up])
+   [ 5  6  7  8  9 10 11 12]
 
 You can select elements that are divisible by 2:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> divisible_by_2 = a[a%2==0]
-  >>> print(divisible_by_2)
-  [ 2  4  6  8 10 12]
+   >>> divisible_by_2 = a[a%2==0]
+   >>> print(divisible_by_2)
+   [ 2  4  6  8 10 12]
 
 Or you can select elements that satisfy two conditions using the ``&`` and ``|``
 operators:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> c = a[(a > 2) & (a < 11)]
-  >>> print(c)
-  [ 3  4  5  6  7  8  9 10]
+   >>> c = a[(a > 2) & (a < 11)]
+   >>> print(c)
+   [ 3  4  5  6  7  8  9 10]
 
 You can also make use of the logical operators **&** and **|** in order to
 return boolean values that specify whether or not the values in an array fulfill
@@ -591,29 +636,32 @@ a certain condition. This can be useful with arrays that contain names or other
 categorical values.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> five_up = (a > 5) | (a == 5)
-  >>> print(five_up)
-  [[False False False False]
-   [ True  True  True  True]
-   [ True  True  True True]]
+   >>> five_up = (a > 5) | (a == 5)
+   >>> print(five_up)
+   [[False False False False]
+    [ True  True  True  True]
+    [ True  True  True True]]
 
 You can also use ``np.nonzero()`` to select elements or indices from an array.
 
 Starting with this array:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+   >>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can use ``np.nonzero()`` to print the indices of elements that are, for
 example, less than 5:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> b = np.nonzero(a < 5)
-  >>> print(b)
-  (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
+   >>> b = np.nonzero(a < 5)
+   >>> print(b)
+   (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
 
 In this example, a tuple of arrays was returned: one for each dimension. The
 first array represents the row indices where these values are found, and the
@@ -624,33 +672,36 @@ zip the arrays, iterate over the list of coordinates, and print them. For
 example:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> list_of_coordinates= list(zip(b[0], b[1]))
+   >>> list_of_coordinates= list(zip(b[0], b[1]))
 
-  >>> for coord in list_of_coordinates:
-  ...     print(coord)
-  (np.int64(0), np.int64(0))
-  (np.int64(0), np.int64(1))
-  (np.int64(0), np.int64(2))
-  (np.int64(0), np.int64(3))
+   >>> for coord in list_of_coordinates:
+   ...     print(coord)
+   (np.int64(0), np.int64(0))
+   (np.int64(0), np.int64(1))
+   (np.int64(0), np.int64(2))
+   (np.int64(0), np.int64(3))
 
 
 You can also use ``np.nonzero()`` to print the elements in an array that are less
 than 5 with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> print(a[b])
-  [1 2 3 4]
+   >>> print(a[b])
+   [1 2 3 4]
 
 If the element you're looking for doesn't exist in the array, then the returned
 array of indices will be empty. For example:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> not_there = np.nonzero(a == 42)
-  >>> print(not_there)
-  (array([], dtype=int64), array([], dtype=int64))
+   >>> not_there = np.nonzero(a == 42)
+   >>> print(not_there)
+   (array([], dtype=int64), array([], dtype=int64))
 
 
 How to create an array from existing data
@@ -663,17 +714,19 @@ You can easily create a new array from a section of an existing array.
 Let's say you have this array:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> a = np.array([1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+   >>> a = np.array([1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
 
 You can create a new array from a section of your array any time by specifying
 where you want to slice your array.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr1 = a[3:8]
-  >>> arr1
-  array([4, 5, 6, 7, 8])
+   >>> arr1 = a[3:8]
+   >>> arr1
+   array([4, 5, 6, 7, 8])
 
 Here, you grabbed a section of your array from index position 3 through index
 position 8.
@@ -682,30 +735,33 @@ You can also stack two existing arrays, both vertically and horizontally. Let's
 say you have two arrays, ``a1`` and ``a2``
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> a1 = np.array([[1, 1],
-  ...                [2, 2]])
-
-  >>> a2 = np.array([[3, 3],
-  ...                [4, 4]])
+   >>> a1 = np.array([[1, 1],
+   ...                [2, 2]])
+ 
+   >>> a2 = np.array([[3, 3],
+   ...                [4, 4]])
 
 You can stack them vertically with ``vstack``
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> np.vstack((a1, a2))
-  array([[1, 1],
-         [2, 2],
-         [3, 3],
-         [4, 4]])
-
+   >>> np.vstack((a1, a2))
+   array([[1, 1],
+          [2, 2],
+          [3, 3],
+          [4, 4]])
+ 
 Or stack them horizontally with ``hstack``
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> np.hstack((a1, a2))
-  array([[1, 1, 3, 3],
-         [2, 2, 4, 4]])
+   >>> np.hstack((a1, a2))
+   array([[1, 1, 3, 3],
+          [2, 2, 4, 4]])
 
 You can split an array into several smaller arrays using ``hsplit``. You can
 specify either the number of equally shaped arrays to return or the columns
@@ -714,32 +770,35 @@ specify either the number of equally shaped arrays to return or the columns
 Let's say you have this array
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> x = np.arange(1, 25).reshape(2, 12)
-  >>> x
-  array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
-         [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
+   >>> x = np.arange(1, 25).reshape(2, 12)
+   >>> x
+   array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
+          [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
 
 If you wanted to split this array into three equally shaped arrays, you would
 run
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> np.hsplit(x, 3)
-    [array([[ 1,  2,  3,  4],
-           [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
-           [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
-           [21, 22, 23, 24]])]
+   >>> np.hsplit(x, 3)
+     [array([[ 1,  2,  3,  4],
+            [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
+            [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
+            [21, 22, 23, 24]])]
 
 If you wanted to split your array after the third and fourth column, you'd run
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> np.hsplit(x, (3, 4))
-    [array([[ 1,  2,  3],
-           [13, 14, 15]]), array([[ 4],
-           [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
-           [17, 18, 19, 20, 21, 22, 23, 24]])]
+   >>> np.hsplit(x, (3, 4))
+     [array([[ 1,  2,  3],
+            [13, 14, 15]]), array([[ 4],
+            [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
+            [17, 18, 19, 20, 21, 22, 23, 24]])]
 
 
 You can use the ``view`` method to create a new array object that looks at the
@@ -754,29 +813,34 @@ original array!
 Let's say you create this array
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+   >>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 Now we create an array ``b1`` by slicing ``a`` and modify the first element of
 ``b1``. This will modify the corresponding element in ``a`` as well!
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> b1 = a[0, :]
-  >>> b1
-  array([1, 2, 3, 4])
-  >>> b1[0] = 99
-  >>> b1
-  array([99,  2,  3,  4])
-  >>> a
-  array([[99,  2,  3,  4],
-         [ 5,  6,  7,  8],
-         [ 9, 10, 11, 12]])
+   >>> b1 = a[0, :]
+   >>> b1
+   array([1, 2, 3, 4])
+   >>> b1[0] = 99
+   >>> b1
+   array([99,  2,  3,  4])
+   >>> a
+   array([[99,  2,  3,  4],
+          [ 5,  6,  7,  8],
+          [ 9, 10, 11, 12]])
 
 Using the ``copy`` method will make a complete copy of the array and its data (a
-*deep copy*). To use this on your array, you could run::
+*deep copy*). To use this on your array, you could run:
 
-  >>> b2 = a.copy()
+.. code-block:: python
+   :caption: |cli| |python|
+
+   >>> b2 = a.copy()
 
 
 Basic array operations
@@ -793,24 +857,26 @@ for example, that you've created two arrays, one called "data" and one called
 You can add the arrays together with the plus sign.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> data = np.array([1, 2])
-  >>> ones = np.ones(2, dtype=int)
-  >>> data + ones
-  array([2, 3])
+   >>> data = np.array([1, 2])
+   >>> ones = np.ones(2, dtype=int)
+   >>> data + ones
+   array([2, 3])
 
 .. image:: ../images/np_data_plus_ones.png
 
 You can, of course, do more than just addition!
 
 .. code-block:: python
+   :caption: |cli| |python|
 
- >>> data - ones
-  array([0, 1])
-  >>> data * data
-  array([1, 4])
-  >>> data / data
-  array([1., 1.])
+   >>> data - ones
+   array([0, 1])
+   >>> data * data
+   array([1, 4])
+   >>> data / data
+   array([1., 1.])
 
 .. image:: ../images/np_sub_mult_divide.png
 
@@ -819,35 +885,37 @@ elements in an array, you'd use ``sum()``. This works for 1D arrays, 2D arrays,
 and arrays in higher dimensions.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
- >>> a = np.array([1, 2, 3, 4])
+   >>> a = np.array([1, 2, 3, 4])
 
-  >>> a.sum()
-  10
+   >>> a.sum()
+   10
 
 To add the rows or the columns in a 2D array, you would specify the axis.
 
 If you start with this array:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> b = np.array([[1, 1], [2, 2]])
+   >>> b = np.array([[1, 1], [2, 2]])
 
 You can sum over the axis of rows with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> b.sum(axis=0)
-  array([3, 3])
+   >>> b.sum(axis=0)
+   array([3, 3])
 
 You can sum over the axis of columns with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> b.sum(axis=1)
-  array([2, 4])
-
-
+   >>> b.sum(axis=1)
+   array([2, 4])
 
 Transposing and reshaping a matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -865,14 +933,15 @@ different from your dataset. This is where the ``reshape`` method can be useful.
 You simply need to pass in the new dimensions that you want for the matrix.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> data.reshape(2, 3)
-  array([[1, 2, 3],
-         [4, 5, 6]])
-  >>> data.reshape(3, 2)
-  array([[1, 2],
-         [3, 4],
-         [5, 6]])
+   >>> data.reshape(2, 3)
+   array([[1, 2, 3],
+          [4, 5, 6]])
+   >>> data.reshape(3, 2)
+   array([[1, 2],
+          [3, 4],
+          [5, 6]])
 
 .. image:: ../images/np_reshape.png
 
@@ -882,20 +951,22 @@ according to the values you specify.
 If you start with this array:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr = np.arange(6).reshape((2, 3))
-  >>> arr
-  array([[0, 1, 2],
-         [3, 4, 5]])
+   >>> arr = np.arange(6).reshape((2, 3))
+   >>> arr
+   array([[0, 1, 2],
+          [3, 4, 5]])
 
 You can transpose your array with ``arr.transpose()``.
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr.transpose()
-  array([[0, 3],
-         [1, 4],
-         [2, 5]])
+   >>> arr.transpose()
+   array([[0, 3],
+          [1, 4],
+          [2, 5]])
 
 .. index::
    pair: Reshaping; Matrix; Python
@@ -903,11 +974,12 @@ You can transpose your array with ``arr.transpose()``.
 You can also use ``arr.T``
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-    >>> arr.T
-    array([[0, 3],
-           [1, 4],
-           [2, 5]])
+     >>> arr.T
+     array([[0, 3],
+            [1, 4],
+            [2, 5]])
 
 To learn more about transposing and reshaping arrays, see `transpose` and
 `reshape`.
@@ -922,21 +994,24 @@ contents along all of the axes of your input array.
 If you begin with a 1D array like this one
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+   >>> arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
 You can reverse it with
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> reversed_arr = np.flip(arr)
+   >>> reversed_arr = np.flip(arr)
 
 If you want to print your reversed array, you can run:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> print('Reversed Array: ', reversed_arr)
-  Reversed Array:  [8 7 6 5 4 3 2 1]
+   >>> print('Reversed Array: ', reversed_arr)
+   Reversed Array:  [8 7 6 5 4 3 2 1]
 
 **Reversing a 2D array**
 
@@ -945,59 +1020,65 @@ A 2D array works much the same way.
 If you start with this array:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+   >>> arr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can reverse the content in all of the rows and all of the columns with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> reversed_arr = np.flip(arr_2d)
-  >>> print(reversed_arr)
-  [[12 11 10  9]
-   [ 8  7  6  5]
-   [ 4  3  2  1]]
+   >>> reversed_arr = np.flip(arr_2d)
+   >>> print(reversed_arr)
+   [[12 11 10  9]
+    [ 8  7  6  5]
+    [ 4  3  2  1]]
 
 You can easily reverse only the *rows* with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> reversed_arr_rows = np.flip(arr_2d, axis=0)
-  >>> print(reversed_arr_rows)
-  [[ 9 10 11 12]
-   [ 5  6  7  8]
-   [ 1  2  3  4]]
+   >>> reversed_arr_rows = np.flip(arr_2d, axis=0)
+   >>> print(reversed_arr_rows)
+   [[ 9 10 11 12]
+    [ 5  6  7  8]
+    [ 1  2  3  4]]
 
 Or reverse only the *columns* with:
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> reversed_arr_columns = np.flip(arr_2d, axis=1)
-  >>> print(reversed_arr_columns)
-  [[ 4  3  2  1]
-   [ 8  7  6  5]
-   [12 11 10  9]]
+   >>> reversed_arr_columns = np.flip(arr_2d, axis=1)
+   >>> print(reversed_arr_columns)
+   [[ 4  3  2  1]
+    [ 8  7  6  5]
+    [12 11 10  9]]
 
 You can also reverse the contents of only one column or row. For example, you
 can reverse the contents of the row at index position 1 (the second row):
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr_2d[1] = np.flip(arr_2d[1])
-  >>> print(arr_2d)
-  [[ 1  2  3  4]
-   [ 8  7  6  5]
-   [ 9 10 11 12]]
+   >>> arr_2d[1] = np.flip(arr_2d[1])
+   >>> print(arr_2d)
+   [[ 1  2  3  4]
+    [ 8  7  6  5]
+    [ 9 10 11 12]]
 
 You can also reverse the column at index position 1 (the second column):
 
 .. code-block:: python
+   :caption: |cli| |python|
 
-  >>> arr_2d[:,1] = np.flip(arr_2d[:,1])
-  >>> print(arr_2d)
-  [[ 1 10  3  4]
-   [ 8  7  6  5]
-   [ 9  2 11 12]]
+   >>> arr_2d[:,1] = np.flip(arr_2d[:,1])
+   >>> print(arr_2d)
+   [[ 1 10  3  4]
+    [ 8  7  6  5]
+    [ 9  2 11 12]]
 
 
 *Image credits: `Jay Alammar <https://jalammar.github.io/>`_*.

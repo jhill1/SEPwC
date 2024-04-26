@@ -8,6 +8,7 @@ The CLI allows the user to pass options to a script as they execute. We have alr
 in the course, for example:
 
 .. code-block:: bash
+   :caption: |cli|
 
    ls -l
 
@@ -15,6 +16,7 @@ which is the command to list things, ``ls``, in a Unix shell with the option sup
 Similarly, we've covered:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cp -r dir1 dir2
 
@@ -29,12 +31,14 @@ R and the command line
 When you run a R script via the Rscript command, with some arbitrary text after:
 
 .. code-block:: bash
+   :caption: |cli|
 
    Rscript arg_script.R arg1 arg2 arg3
 
 that text is passed to the `script for you to access. Let's create this simple script, named ``arg_script.R``
 
 .. code-block:: R
+   :caption: |R|
 
     args = commandArgs(trailingOnly=TRUE)
     print(args)
@@ -43,27 +47,30 @@ that text is passed to the `script for you to access. Let's create this simple s
 Now run that on the command line.
 
 .. code-block:: bash
+   :caption: |cli|
 
    Rscript arg_script.R arg1 arg2 arg3
 
 Your output is:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    jh1889@thalassa:~/work/teaching/SEPwC/code_examples$ Rscript command_args.R arg1 arg2 arg3
-    [1] "arg1" "arg2" "arg3"
-    [1] "Length: 3"
+   jh1889@thalassa:~/work/teaching/SEPwC/code_examples$ Rscript command_args.R arg1 arg2 arg3
+   [1] "arg1" "arg2" "arg3"
+   [1] "Length: 3"
 
 The arguments are stored in ``args``. The first is always the name of the script, however, we 
 automatically removed that by using the `trainlingOnly=True` argument. Try it without:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    jh1889@thalassa:~/work/teaching/SEPwC/code_examples$ Rscript command_args.R arg1 arg2 arg3
-    [1] "/usr/lib/R/bin/exec/R" "--no-echo"             "--no-restore"         
-    [4] "--file=command_args.R" "--args"                "arg1"                 
-    [7] "arg2"                  "arg3"                 
-    [1] "Length: 8"
+   jh1889@thalassa:~/work/teaching/SEPwC/code_examples$ Rscript command_args.R arg1 arg2 arg3
+   [1] "/usr/lib/R/bin/exec/R" "--no-echo"             "--no-restore"         
+   [4] "--file=command_args.R" "--args"                "arg1"                 
+   [7] "arg2"                  "arg3"                 
+   [1] "Length: 8"
 
 Oh! That's not quite what we were expecting. You can see what `Rscript` actually does under the hood; it calls
 the R command with `--no-echo`, `--no-restore` and the `--file` arguments, with the further `--args` argument. Only
@@ -72,6 +79,7 @@ then do we see our actual arguments. So best to leave `trailingOnly=TRUE`.
 Within our script we access them as we would any other list:
 
 .. code-block:: R
+    :caption: |R|
 
     args = commandArgs(trailingOnly=TRUE)
     copy_from = args[1]
@@ -94,6 +102,7 @@ Within our script we access them as we would any other list:
    :class: toggle
 
     .. code-block:: R
+        :caption: |R|
 
         args = commandArgs(trailingOnly=TRUE)
         count = 1
@@ -117,19 +126,20 @@ function. Moreover, the library will help with error messages, etc when the user
 The core functionality of ``argparse`` is the ``ArgumentParser``
 
 .. code-block:: R
+   :caption: |R|
 
-        library("argparse")
-           
+   library("argparse")        
 
-        parser = ArgumentParser(
-                            prog="Name",
-                            description="Brief one line of what the program does",
-                            epilog="Any text at the bottom of help, e.g. copyright"
-                            )
+   parser = ArgumentParser(
+              prog="Name",
+              description="Brief one line of what the program does",
+              epilog="Any text at the bottom of help, e.g. copyright"
+              )
 
 Once an OptionParser is set-up you can then add optional and positional arguments to that.
 
 .. code-block:: R
+    :caption: |cli|
 
     parser$add_option("filename"
                       help="the file to read the data from") # a positional argument
@@ -146,6 +156,7 @@ and a lot more too.
 You then parse the argument and put them in variables as you see fit
 
 .. code-block:: R
+    :caption: |cli|
 
     args = parser$parse_args()
     intput_file = args$filename
@@ -170,6 +181,7 @@ You then parse the argument and put them in variables as you see fit
    :class: toggle
 
     .. code-block:: R
+        :caption: |cli|
 
         library(argparse)
 
@@ -224,6 +236,7 @@ reference to the ``scan``, ``readline`` and ``readlines`` functions. They all wo
 well in an interactive environment, but not when running as a batch script via ``Rscript``.
 
 .. code-block:: R
+    :caption: |cli|
 
     answer <- readLines(file("stdin"),1)
     if (answer == "Y") {

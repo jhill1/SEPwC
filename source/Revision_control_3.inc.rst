@@ -9,6 +9,7 @@ is possible to send a planetary lander to Mars.
 First, let's create a new directory in the :file:`Desktop/` folder for our work and then change the current working directory to the newly created one:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cd ~/Desktop
    mkdir planets
@@ -18,6 +19,7 @@ Then we tell Git to make :file:`planets/` a repository -- a place where Git can 
 
 
 .. code-block:: bash
+   :caption: |cli|
 
    git init
 
@@ -32,6 +34,7 @@ If we use ``ls`` to show the directory's contents,
 it appears that nothing has changed:
 
 .. code-block:: bash
+   :caption: |cli|
 
    ls
 
@@ -39,10 +42,12 @@ But if we add the ``-a`` flag to show everything,
 we can see that Git has created a hidden directory within :file:`planets` called :file:`.git`:
 
 .. code-block:: bash
+   :caption: |cli|
  
    ls -a
 
 .. code-block:: output
+   :caption: |cli|
 
    .    ..    .git
 
@@ -55,6 +60,7 @@ This might be the default branch depending on your settings and version
 of git. See the :ref:`Setting up git` section above for more information on this change.
 
 .. code-block:: bash
+   :caption: |cli|
    
    git checkout -b main
 
@@ -67,6 +73,7 @@ We can check that everything is set up correctly
 by asking Git to tell us the status of our project:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git status
 
@@ -91,6 +98,7 @@ wording of the output might be slightly different.
   project with the following sequence of commands:
   
   .. code-block:: bash
+    :caption: |cli|
 
     cd ~/Desktop   # return to Desktop directory
     cd planets     # go into planets directory, which is already a Git repository
@@ -123,6 +131,7 @@ wording of the output might be slightly different.
     above:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git status
 
@@ -148,6 +157,7 @@ wording of the output might be slightly different.
    that are not tracked by Git can easily be removed like any other "ordinary" files with
 
    .. code-block:: bash
+      :caption: |cli|
    
       rm filename
 
@@ -162,6 +172,7 @@ wording of the output might be slightly different.
    folder in the moons subdirectory by running the following command from inside the `planets` directory:
 
    .. code-block:: bash
+      :caption: |cli|
    
       rm -rf moons/.git
 

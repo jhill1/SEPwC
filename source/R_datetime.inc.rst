@@ -21,6 +21,7 @@ rare to have only time!
 Let's get some times and dates:
 
 .. code-block:: R
+    :caption: |R|
 
     library(lubridate)
 
@@ -38,6 +39,7 @@ We can therefore create arbitrary dates, times or datetime, rather than relying
 on ``now()``:
 
 .. code-block:: R
+    :caption: |R|
 
     ymd("2017-01-31")
     mdy("January 31st, 2017")
@@ -47,6 +49,7 @@ on ``now()``:
 To create datetimes:
 
 .. code-block:: R
+    :caption: |R|
 
     ymd_hms("2017-01-31 20:11:59")
     mdy_hm("01/31/2017 08:01")
@@ -56,6 +59,7 @@ Representing dates and times as these object then allows calculations to be carr
 out, for example, creating a duration:
 
 .. code-block:: R
+    :caption: |R|
 
     date1 = ymd(20240228)
     date2 = ymd(20230228)
@@ -74,6 +78,7 @@ However, the difftime class which is the outcome of a duration depends on what t
 form of weeks, days, seconds. Not that useful, so ``lubridate`` comes with a function to force it to seconds:
 
 .. code-block:: R
+    :caption: |R|
 
     date1 = ymd(20240228)
     date2 = ymd(20230228)
@@ -88,7 +93,7 @@ This all assumes that a datetime can be constructed from user input easily. Ofte
 need to parse a string to create a datetime object. For example out data might be a
 CSV with dates listed as:
 
-.. code-block:: bash
+.. code-block:: output
 
     1984-1-0, 4
     1984-1-1, 5
@@ -101,6 +106,7 @@ We can use the ``make_datetime`` (or ``make_date``) method to parse these
 when in different columns
 
 .. code-block:: R
+    :caption: |R|
 
     year = c(2013, 2013, 2013)
     month = c(1, 2, 3)
@@ -115,6 +121,7 @@ Within ``tidyverse`` we can use the filter operator to do this over a whole data
 We can use the NYC filght data from ``tidyverse`` to try this (you may need to install this).
 
 .. code-block:: R
+    :caption: |R|
 
     library(nycflights13)
     head(flights)
@@ -129,6 +136,7 @@ Note there is now a ``<dttm>`` column that is a datetime object.
 You can switch between dates and times using the ``as_date()`` and ``as_datetime()`` functions:
 
 .. code-block:: R
+    :caption: |R|
 
     as_datetime(today())
     [1] "2024-03-07 UTC"
@@ -142,7 +150,8 @@ timezones and can convert times for you (and takes care of duration over differe
 
 Some timezone functions:
 
-.. code-block::
+.. code-block:: R
+    :caption: |cli| |R|
 
     # the system timezone
     Sys.timezone()

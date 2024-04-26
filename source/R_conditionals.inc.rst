@@ -51,6 +51,7 @@ statement can be used to capture the situation where everything is `FALSE`.
 In general, we can put together multiple conditions. Only the first condition that is `TRUE` is executed.
 
 .. code-block:: R
+    :caption: |R|
 
     if (condition1) {
         <block of statements, executed if condition1 is TRUE>
@@ -67,6 +68,7 @@ In general, we can put together multiple conditions. Only the first condition th
 Let's do one of the conditions of our table above.
 
 .. code-block:: R
+   :caption: |R|
 
    humidity <- "high"
    temperature <- "high"
@@ -78,6 +80,7 @@ Let's do one of the conditions of our table above.
 Here, we've check the value of humidity. If the value is "high", the following is printed:
 
 .. code-block:: output
+   :caption: |cli| |R|
 
    [1] "Either temperate or tropical rainforest"
    
@@ -95,6 +98,7 @@ Not the best of code, engineering-wise, but it will work. Try it out.
    :class: toggle
 
    .. code-block:: R
+      :caption: |R|
 
       humidity <- "HIGH"
       temperature <- "high"
@@ -116,6 +120,7 @@ We now need to do all combinations, with some logic to decide a few things. Ther
 a number of ways of doing this. This is using `else if` and boolean operators:
 
 .. code-block:: R
+   :caption: |R|
 
    humidity <- "high"
    temperature <- "high"
@@ -161,6 +166,7 @@ The second way of working out the logic is by nested `if` statements. Here's an 
    single: nested if statements; R  
 
 .. code-block:: R
+    :caption: |R|
 
     mark <- 71
 
@@ -213,11 +219,11 @@ if the first one is `FALSE`, `mark` must be less than 40 or greater than 100.
 
       [1] "This mark is too high."
 
-    which is because 100 is converted to a string by R to do the comparison. "test" is > than "100" ("t" is
-    after "1" in the alphabet). You need to be careful of this when doing comparisons!
+   which is because 100 is converted to a string by R to do the comparison. "test" is > than "100" ("t" is
+   after "1" in the alphabet). You need to be careful of this when doing comparisons!
 
-..  youtube:: Czeh0-sUgtM
-    :align: center
+.. youtube:: Czeh0-sUgtM
+   :align: center
 
 Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
 
@@ -234,6 +240,7 @@ Now you've seen nested `if` statements in action. Try the final practical exerci
    Your code should look something like the following:
 
    .. code-block:: R
+       :caption: |R|
 
        humidity <- "high"
        temperature <- "high"

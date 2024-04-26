@@ -20,6 +20,7 @@ Inline comments (R)
 Inline comments occur within the line of code:
 
 .. code-block:: R
+   :caption: |R|
 
     x = x + 1                 # Increment x
 
@@ -27,6 +28,7 @@ This style of comment should be avoided if possible. The above example is distra
 and unnecessary. It may sometimes be useful, for example:
 
 .. code-block:: R
+   :caption: |R|
 
     x = x + 1                 # account for boundary cell
 
@@ -43,6 +45,7 @@ Block comments (R)
 Block comments occupy one or more lines. In python they look like:
 
 .. code-block:: R
+   :caption: |R|
 
     # increment count to account for boundary cell
     x = x + 1
@@ -50,6 +53,7 @@ Block comments occupy one or more lines. In python they look like:
 Or if you want multiple lines:
 
 .. code-block:: R
+   :caption: |R|
 
     # increment count to 
     # account for boundary cell
@@ -67,6 +71,7 @@ It's often easier to say what *not* to do, so let's head in that direction...
 This is poor coding and commenting:
 
 .. code-block:: R
+    :caption: |R|
 
     # A dictionary of families who live in each city
     mydict = c(
@@ -90,6 +95,7 @@ The comments really help understand the code and the intentions, but there are
 completely superfluous if the code was written well:
 
 .. code-block:: R
+    :caption: |R|
 
     families_by_city = c(
         "York" = c("Powell", "Brantley", "Young"),
@@ -111,6 +117,7 @@ can't compensate for poor style by adding comments...
 You should also avoid comments that simply repeat the code:
 
 .. code-block:: R
+    :caption: |R|
 
     return(a)  # Returns a
 
@@ -120,6 +127,7 @@ redundant. Add a block comment to the top of a function with details of the func
 The best hint for comments is to write them at the top of code blocks:
 
 .. code-block:: R
+    :caption: |R|
 
     # load in our layers. They have the same extents and resolution
     dem <- raster('test_dem_clipped.tif')

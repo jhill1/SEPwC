@@ -12,6 +12,7 @@ To see how we can resolve conflicts, we must first create one. The file
 repository:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cat mars.txt
 
@@ -24,6 +25,7 @@ repository:
 Let's add a line to the collaborator's copy only:
 
 .. code-block:: bash
+   :caption: |cli|
 
    nano mars.txt
    cat mars.txt
@@ -38,6 +40,7 @@ Let's add a line to the collaborator's copy only:
 and then push the change to GitHub:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add mars.txt
    git commit -m "Add a line in our home copy"
@@ -48,8 +51,9 @@ and then push the change to GitHub:
     1 file changed, 1 insertion(+)
 
 .. code-block:: bash
+   :caption: |cli|
 
-   $ git push origin main
+   git push origin main
 
 .. code-block:: bash
 
@@ -67,6 +71,7 @@ Now let's have the owner make a different change to their copy
 *without* updating from GitHub:
 
 .. code-block:: bash
+   :caption: |cli|
 
    nano mars.txt
    cat mars.txt
@@ -81,6 +86,7 @@ Now let's have the owner make a different change to their copy
 We can commit the change locally:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add mars.txt
    git commit -m "Add a line in my copy"
@@ -93,6 +99,7 @@ We can commit the change locally:
 but Git won't let us push it to GitHub:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git push origin main
 
@@ -117,6 +124,7 @@ merge them into the copy we're currently working in, and then push that.
 Let's start by pulling:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git pull origin main
 
@@ -142,6 +150,7 @@ stop us from trampling on our previous work. The conflict is marked in
 in the affected file:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cat mars.txt
 
@@ -170,6 +179,7 @@ or get rid of the change entirely.
 Let's replace both so that the file looks like this:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cat mars.txt
 
@@ -184,6 +194,7 @@ To finish merging, we add ``mars.txt`` to the changes being made by the merge
 and then commit:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add mars.txt
    git status
@@ -199,6 +210,7 @@ and then commit:
        modified:   mars.txt
 
 .. code-block:: bash
+   :caption: |cli|
 
    git commit -m "Merge changes from GitHub"
 
@@ -209,6 +221,7 @@ and then commit:
 Now we can push our changes to GitHub:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git push origin main
 
@@ -229,6 +242,7 @@ so we don't have to fix things by hand again
 when the collaborator who made the first change pulls again:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git pull origin main
 
@@ -287,6 +301,7 @@ Conflicts can also be minimized with project management strategies:
     a dummy binary file like this:
 
     .. code-block:: bash
+        :caption: |cli|
 
         head -c 1024 /dev/urandom > mars.jpg
         ls -lh mars.jpg
@@ -301,6 +316,7 @@ Conflicts can also be minimized with project management strategies:
     Now, suppose I add ``mars.jpg`` to my repository:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git add mars.jpg
         git commit -m "Add picture of Martian surface"
@@ -316,6 +332,7 @@ Conflicts can also be minimized with project management strategies:
     When I try to push, I get a familiar message:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git push origin main
 
@@ -333,6 +350,7 @@ Conflicts can also be minimized with project management strategies:
     We've learned that we must pull first and resolve any conflicts:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git pull origin main
 
@@ -370,6 +388,7 @@ Conflicts can also be minimized with project management strategies:
     ``git checkout``\ :
 
     .. code-block:: bash
+         :caption: |cli|
 
          git checkout HEAD mars.jpg
          git add mars.jpg
@@ -383,6 +402,7 @@ Conflicts can also be minimized with project management strategies:
     the other commit identifier, ``439dc8c0``\ :
 
     .. code-block:: bash
+        :caption: |cli|
 
         git checkout 439dc8c0 mars.jpg
         git add mars.jpg
@@ -398,6 +418,7 @@ Conflicts can also be minimized with project management strategies:
     image and rename it:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git checkout HEAD mars.jpg
         git mv mars.jpg mars-surface.jpg
@@ -407,6 +428,7 @@ Conflicts can also be minimized with project management strategies:
     Then, remove the old ``mars.jpg`` and add the two new files:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git rm mars.jpg
         git add mars-surface.jpg

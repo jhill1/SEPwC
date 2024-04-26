@@ -13,6 +13,7 @@ Creating data frames
 We can use the ``data.frame()`` function to create the data frame:
 
 .. code-block:: R
+    :caption: |R|
 
     name <- c("Tom", "Jerry", "Spike")
     age <- c(10, 20, 11)
@@ -24,6 +25,7 @@ Here, the data frame has been created using existing vectors. The column names
 have been taken from the variable names. You can create a more usable version:
 
 .. code-block:: R
+    :caption: |R|
 
     name <- c("Tom", "Jerry", "Spike")
     age <- c(10, 20, 11)
@@ -34,6 +36,7 @@ have been taken from the variable names. You can create a more usable version:
 You can then access data using either indexing or using the ``$`` notation:
 
 .. code-block:: R
+    :caption: |R|
 
     # Accessing element at 3rd row and 2nd column
     print(df[3, 2])
@@ -47,6 +50,7 @@ You can then access data using either indexing or using the ``$`` notation:
 You can also add columns easily:
 
 .. code-block:: R
+    :caption: |R|
 
     df$animal <- c("Mouse","Cat","Dog")
     print(df)
@@ -54,6 +58,7 @@ You can also add columns easily:
 You can also use logicals to select data:
 
 .. code-block:: R
+    :caption: |R|
 
     df[df$animal == "Cat",]
 
@@ -63,6 +68,7 @@ want to access rows. Without the trailing comma we access a column. The ``df$ani
 as we wanted. Try this code:
 
 .. code-block:: R
+    :caption: |R|
 
     df[df$animal == "Mouse",]
     df[df$animal == "Mouse"]

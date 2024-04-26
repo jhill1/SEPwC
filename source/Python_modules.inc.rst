@@ -21,6 +21,7 @@ Let's create a small script and save the file:
 
 
 .. code-block:: python
+    :caption: |python|
 
     # Fibonacci numbers module
 
@@ -42,6 +43,7 @@ Let's create a small script and save the file:
 Write the above into a file called ``fibo.py`` and save it. In that same directory, open your interpreter and do:
 
 .. code-block:: python
+   :caption: |python|
 
    import fibo
 
@@ -56,6 +58,7 @@ A function is referred to via the original module ``.`` function name. This sepa
 You can assign this to a local variable is you wish:
 
 .. code-block:: python
+   :caption: |python|
 
    import fibo
 
@@ -66,6 +69,7 @@ You can assign this to a local variable is you wish:
 You can also import single functions or items from a module, rather than the whole module:
 
 .. code-block:: python
+   :caption: |python|
 
    from fibo import write_fibonacci
 
@@ -74,6 +78,7 @@ You can also import single functions or items from a module, rather than the who
 Note that I no longer need to use the ``.`` format to access that function. The function is imported into my current namespace. You can import the whole module into your namespace too:
 
 .. code-block:: python
+   :caption: |python|
 
    from fibo import *
 
@@ -85,6 +90,7 @@ We can also rename the module as we ``import`` it. This is very common for a num
 
 
 .. code-block:: python
+   :caption: |python|
 
    import fibo as fib
 
@@ -93,6 +99,7 @@ We can also rename the module as we ``import`` it. This is very common for a num
 You will often see:
 
 .. code-block:: python
+   :caption: |python|
 
    import numpy as np
 
@@ -111,6 +118,7 @@ Python is a versatile language, so modules can also be scripts! Python has a spe
 Running something like this in the command line:
 
 .. code-block:: bash
+   :caption: |cli|
 
    python fibo.py
 
@@ -121,6 +129,7 @@ Exercise: try this
 We can make use of this to write a script within our module. Add the following code to the bottom of ``fibo.py``
 
 .. code-block:: python
+   :caption: |python|
 
    if __name__ == "__main__":
       import sys
@@ -129,6 +138,7 @@ We can make use of this to write a script within our module. Add the following c
 The call the script directly via the command line:
 
 .. code-block:: bash
+   :caption: |cli|
 
    python fibo.py 10
 
@@ -149,6 +159,7 @@ Where does Python look for modules? Python will look for modules in the followin
 However, you can modify this as a programmer too. We can use the ``sys.path`` variable:
 
 .. code-block:: python
+   :caption: |python|
 
    import sys
    sys.path.append("/home/jhill1/python/")
@@ -164,6 +175,7 @@ Seeing what is in a module
 The built-in function ``dir()`` is used to find out which names a module defines. It returns a sorted list of strings:
 
 .. code-block:: python
+    :caption: |cli| |python|
     
     import fibo, sys
     dir(fibo)

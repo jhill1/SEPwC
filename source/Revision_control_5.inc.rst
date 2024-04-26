@@ -21,6 +21,7 @@ let's make a change to :file:`mars.txt`, adding yet another line.
 Now, let's see what we get.
 
 .. code-block:: bash
+    :caption: |cli|
 
     git diff HEAD mars.txt
 
@@ -43,6 +44,7 @@ that by adding ``~1``
 to refer to the commit one before ``HEAD``.
 
 .. code-block:: bash
+    :caption: |cli|
 
     git diff HEAD~1 mars.txt
 
@@ -50,6 +52,7 @@ If we want to see the differences between older commits we can use ``git diff``
 again, but with the notation ``HEAD~1``, ``HEAD~2``, and so on, to refer to them:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git diff HEAD~3 mars.txt
 
@@ -71,6 +74,7 @@ well as the commit message, rather than the _differences_ between a commit and o
 working directory that we see by using ``git diff``.
 
 .. code-block:: bash
+    :caption: |cli|
 
     git show HEAD~3 mars.txt
 
@@ -97,6 +101,7 @@ has a unique 40-character identifier. Our first commit was given the ID
 ``f22b25e3233b4645dabd0d81e651fe074bd8e73b``, so let's try this:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
 
@@ -116,6 +121,7 @@ That's the right answer, but typing out random 40-character strings is annoying,
 so Git lets us use just the first few characters (typically seven for normal size projects):
 
 .. code-block:: bash
+    :caption: |cli|
 
     git diff f22b25e mars.txt
 
@@ -140,6 +146,7 @@ Let's suppose we change our mind about the last update to ``mars.txt`` (the "ill
 ``git status`` now tells us that the file has been changed, but those changes haven't been staged:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git status
 
@@ -157,6 +164,7 @@ Let's suppose we change our mind about the last update to ``mars.txt`` (the "ill
 We can put things back the way they were by using ``git checkout``:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git checkout HEAD mars.txt
     cat mars.txt
@@ -173,6 +181,7 @@ which is the last saved commit. If we want to go back even further,
 we can use a commit identifier instead:
 
 .. code-block:: bash
+    :caption: |cli|
     
     git checkout f22b25e mars.txt
     cat mars.txt
@@ -182,6 +191,7 @@ we can use a commit identifier instead:
     Cold and dry, but everything is my favourite colour
 
 .. code-block:: bash
+    :caption: |cli|
 
     git status
 
@@ -198,6 +208,7 @@ Again, we can put things back the way they were
 by using ``git checkout``:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git checkout HEAD mars.txt
 
@@ -208,6 +219,7 @@ by using ``git checkout``:
     Above we used
     
     .. code-block:: bash
+        :caption: |cli|
 
         git checkout f22b25e mars.txt
     
@@ -217,6 +229,7 @@ by using ``git checkout``:
     if you forget `mars.txt` in the previous command.
     
     .. code-block:: bash
+        :caption: |cli|
 
         git checkout f22b25e
    
@@ -232,6 +245,7 @@ by using ``git checkout``:
     do so (now or later) by using ``-b`` with the checkout command again. Example:
     
     .. code-block:: bash
+        :caption: |cli|
 
         git checkout -b <new-branch-name
     
@@ -361,6 +375,7 @@ on the other hand, moving backward and forward in time becomes much easier.
     **Understanding Workflow and History**
 
     .. code-block:: bash
+        :caption: |cli|
 
         cd planets
         echo "Venus is beautiful and full of love" > venus.txt
@@ -437,6 +452,7 @@ on the other hand, moving backward and forward in time becomes much easier.
     e.g., ``git diff mars.txt``. We can apply a similar idea here.
 
     .. code-block:: bash
+        :caption: |cli|
 
         git log mars.txt
 
@@ -447,6 +463,7 @@ on the other hand, moving backward and forward in time becomes much easier.
     for you. Is it possible to combine both? Let's try the following:
 
     .. code-block:: bash
+        :caption: |cli|
 
         git log --patch mars.txt
 
@@ -456,6 +473,7 @@ on the other hand, moving backward and forward in time becomes much easier.
     Question: What does the following command do?
 
     .. code-block:: bash
+        :caption: |cli|
 
         git log --patch HEAD~9 *.txt
 

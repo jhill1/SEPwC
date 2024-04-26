@@ -51,10 +51,11 @@ information on how to configure your local repository:
 This effectively does the following on GitHub's servers:
 
 .. code-block:: bash
+   :caption: |cli|
 
-   $ mkdir planets
-   $ cd planets
-   $ git init
+   mkdir planets
+   cd planets
+   git init
 
 If you remember back to the earlier `episode <../04-changes/>`_ where we added and
 committed our earlier work on ``mars.txt``\ , we had a diagram of the local repository
@@ -113,8 +114,9 @@ Copy that URL from the browser, go into the local ``planets`` repository, and ru
 this command:
 
 .. code-block:: bash
+    :caption: |cli|
 
-   $ git remote add origin git@github.com:jh1889/planets.git
+    git remote add origin git@github.com:jh1889/planets.git
 
 Make sure to use the URL for your repository rather than mine: the only
 difference should be your username instead of ``jh1889``.
@@ -126,8 +128,9 @@ and GitHub, so it's helpful to stick with this unless there's a reason not to.
 We can check that the command has worked by running ``git remote -v``\ :
 
 .. code-block:: bash
+    :caption: |cli|
 
-   $ git remote -v
+    git remote -v
 
 
 .. code-block:: output
@@ -175,8 +178,9 @@ Because generally speaking, this setup only needs to happen once and then you ca
 We will run the list command to check what key pairs already exist on your computer.
 
 .. code-block:: bash
+    :caption: |cli|
 
-   ls -al ~/.ssh
+    ls -al ~/.ssh
 
 Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using. 
 
@@ -199,8 +203,9 @@ To create an SSH key pair we use this command, where the ``-t`` option specifies
 algorithm to use and ``-C`` attaches a comment to the key (here, our email):  
 
 .. code-block:: bash
+    :caption: |cli|
 
-   ssh-keygen -t ed25519 -C "jon.hill@york.ac.uk"
+    ssh-keygen -t ed25519 -C "jon.hill@york.ac.uk"
 
 If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
 ``$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"``
@@ -254,8 +259,9 @@ is a shorter version of a public key.
 Now that we have generated the SSH keys, we will find the SSH files when we check.
 
 .. code-block:: bash
+    :caption: |cli|
 
-   ls -al ~/.ssh
+    ls -al ~/.ssh
 
 .. code-block:: output
 
@@ -270,8 +276,9 @@ Now that we have generated the SSH keys, we will find the SSH files when we chec
 Now we have a SSH key pair and we can run this command to check if GitHub can read our authentication.  
 
 .. code-block:: bash
+    :caption: |cli|
 
-   ssh -T git@github.com
+    ssh -T git@github.com
 
 .. code-block::
 
@@ -288,8 +295,9 @@ Right, we forgot that we need to give GitHub our public key!
 First, we need to copy the public key.  Be sure to include the ``.pub`` at the end, otherwise you’re looking at the private key. 
 
 .. code-block:: bash
+    :caption: |cli|
 
-   cat ~/.ssh/id_ed25519.pub
+    cat ~/.ssh/id_ed25519.pub
 
 .. code-block:: output
 
@@ -302,8 +310,9 @@ you can add the title (use the name of your computer, e.g. "laptop"), paste your
 Now that we’ve set that up, let’s check our authentication again from the command line. 
 
 .. code-block:: bash
+    :caption: |cli|
 
-   $ ssh -T git@github.com
+    ssh -T git@github.com
 
 .. code-block:: output
 
@@ -318,6 +327,7 @@ Now that authentication is setup, we can return to the remote. This command will
 our local repository to the repository on GitHub:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git push origin main
 
@@ -360,6 +370,7 @@ Our local and remote repositories are now in this state:
 We can pull changes from the remote repository to the local one as well:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git pull origin main
 
@@ -466,6 +477,7 @@ GitHub, though, this command would download them to our local repository.
     common origin and refuses to merge.
 
     .. code-block:: bash
+        :caption: |cli|
 
         git pull origin main
 
@@ -486,6 +498,7 @@ GitHub, though, this command would download them to our local repository.
     repositories before merging.
 
     .. code-block:: bash
+        :caption: |cli|
 
         git pull --allow-unrelated-histories origin main
 

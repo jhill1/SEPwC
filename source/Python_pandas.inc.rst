@@ -19,7 +19,7 @@ Basically, if you are handling data, pandas is useful!
 
 We normally import as follows:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    import numpy as np
@@ -45,7 +45,7 @@ Object creation
 Creating a :class:`Series` by passing a list of values, letting pandas create
 a default :class:`RangeIndex`.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    s = pd.Series([1, 3, 5, np.nan, 6, 8])
@@ -54,7 +54,7 @@ a default :class:`RangeIndex`.
 Creating a :class:`DataFrame` by passing a NumPy array with a datetime index using :func:`date_range`
 and labelled columns:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    dates = pd.date_range("20130101", periods=6)
@@ -65,7 +65,7 @@ and labelled columns:
 Creating a :class:`DataFrame` by passing a dictionary of objects where the keys are the column
 labels and the values are the column values.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df2 = pd.DataFrame(
@@ -83,7 +83,7 @@ labels and the values are the column values.
 The columns of the resulting :class:`DataFrame` have different
 datatypes:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df2.dtypes
@@ -121,7 +121,7 @@ Viewing data
 Use :meth:`DataFrame.head` and :meth:`DataFrame.tail` to view the top and bottom rows of the frame
 respectively:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.head()
@@ -129,7 +129,7 @@ respectively:
 
 Display the :attr:`DataFrame.index` or :attr:`DataFrame.columns`:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.index
@@ -138,7 +138,7 @@ Display the :attr:`DataFrame.index` or :attr:`DataFrame.columns`:
 Return a NumPy representation of the underlying data with :meth:`DataFrame.to_numpy`
 without the index or column labels:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.to_numpy()
@@ -151,7 +151,7 @@ without the index or column labels:
    If the common data type is ``object``, :meth:`DataFrame.to_numpy` will require
    copying data.
 
-   .. code-block::python
+   .. code-block:: python
       :caption: |python|
 
       df2.dtypes
@@ -159,7 +159,7 @@ without the index or column labels:
 
 :func:`~DataFrame.describe` shows a quick statistic summary of your data:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.describe()
@@ -169,21 +169,21 @@ Transposing your data:
 .. index::
    pair: Pandas; Transposing
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.T
 
 :meth:`DataFrame.sort_index` sorts by an axis:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.sort_index(axis=1, ascending=False)
 
 :meth:`DataFrame.sort_values` sorts by values:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.sort_values(by="B")
@@ -207,14 +207,14 @@ Getitem (``[]``)
 For a :class:`DataFrame`, passing a single label selects a columns and
 yields a :class:`Series` equivalent to ``df.A``:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df["A"]
 
 For a :class:`DataFrame`, passing a slice ``:`` selects matching rows:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df[0:3]
@@ -225,35 +225,35 @@ Selection by label
 
 Selecting a row matching a label:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.loc[dates[0]]
 
 Selecting all rows (``:``) with a select column labels:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.loc[:, ["A", "B"]]
 
 For label slicing, both endpoints are *included*:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.loc["20130102":"20130104", ["A", "B"]]
 
 Selecting a single row and column label returns a scalar:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.loc[dates[0], "A"]
 
 For getting fast access to a scalar (equivalent to the prior method):
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.at[dates[0], "A"]
@@ -263,49 +263,49 @@ Selection by position
 
 Select via the position of the passed integers:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[3]
 
 Integer slices acts similar to NumPy/Python:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[3:5, 0:2]
 
 Lists of integer position locations:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[[1, 2, 4], [0, 2]]
 
 For slicing rows explicitly:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[1:3, :]
 
 For slicing columns explicitly:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[:, 1:3]
 
 For getting a value explicitly:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iloc[1, 1]
 
 For getting fast access to a scalar (equivalent to the prior method):
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iat[1, 1]
@@ -317,21 +317,21 @@ Boolean indexing
 
 Select rows where ``df.A`` is greater than ``0``.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df[df["A"] > 0]
 
 Selecting values from a :class:`DataFrame` where a boolean condition is met:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df[df > 0]
 
 Using :func:`~Series.isin` method for filtering:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df2 = df.copy()
@@ -344,7 +344,7 @@ Setting
 
 Setting a new column automatically aligns the data by the indexes:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    s1 = pd.Series([1, 2, 3, 4, 5, 6], index=pd.date_range("20130102", periods=6))
@@ -353,36 +353,35 @@ Setting a new column automatically aligns the data by the indexes:
 
 Setting values by label:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.at[dates[0], "A"] = 0
 
 Setting values by position:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.iat[0, 1] = 0
 
 Setting by assigning with a NumPy array:
 
-.. code-block::python
-   :okwarning:
+.. code-block:: python
    :caption: |python|
 
    df.loc[:, "D"] = np.array([5] * len(df))
 
 The result of the prior setting operations:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df
 
 A ``where`` operation with setting:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df2 = df.copy()
@@ -401,7 +400,7 @@ default not included in computations.
 Reindexing allows you to change/add/delete the index on a specified axis. This
 returns a copy of the data:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df1 = df.reindex(index=dates[0:4], columns=list(df.columns) + ["E"])
@@ -410,21 +409,21 @@ returns a copy of the data:
 
 :meth:`DataFrame.dropna` drops any rows that have missing data:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df1.dropna(how="any")
 
 :meth:`DataFrame.fillna` fills missing data:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df1.fillna(value=5)
 
 :func:`isna` gets the boolean mask where values are ``nan``:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    pd.isna(df1)
@@ -442,14 +441,14 @@ Operations in general *exclude* missing data.
 
 Calculate the mean value for each column:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.mean()
 
 Calculate the mean value for each row:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.mean(axis=1)
@@ -458,7 +457,7 @@ Operating with another :class:`Series` or :class:`DataFrame` with a different in
 will align the result with the union of the index or column labels. In addition, pandas
 automatically broadcasts along the specified dimension and will fill unaligned labels with ``np.nan``.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    s = pd.Series([1, 3, 5, np.nan, 6, 8], index=dates).shift(2)
@@ -474,7 +473,7 @@ User defined functions
 :meth:`DataFrame.agg` and :meth:`DataFrame.transform` applies a user defined function
 that reduces or broadcasts its result respectively.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.agg(lambda x: np.mean(x) * 5.6)
@@ -485,7 +484,7 @@ Value Counts
 .. index::
   pair: Pandas; Value Counts
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    s = pd.Series(np.random.randint(0, 7, size=10))
@@ -501,7 +500,7 @@ String Methods
 attribute that make it easy to operate on each element of the array, as in the
 code snippet below. 
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    s = pd.Series(["A", "B", "C", "Aaba", "Baca", np.nan, "CABA", "dog", "cat"])
@@ -524,7 +523,7 @@ operations.
 
 Concatenating pandas objects together row-wise with :func:`concat`:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df = pd.DataFrame(np.random.randn(10, 4))
@@ -549,7 +548,7 @@ Join
 
 :func:`merge` enables SQL style join types along specific columns.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    left = pd.DataFrame({"key": ["foo", "foo"], "lval": [1, 2]})
@@ -560,7 +559,7 @@ Join
 
 :func:`merge` on unique keys:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    left = pd.DataFrame({"key": ["foo", "bar"], "lval": [1, 2]})
@@ -581,7 +580,7 @@ following steps:
 * **Applying** a function to each group independently
 * **Combining** the results into a data structure
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df = pd.DataFrame(
@@ -598,14 +597,14 @@ Grouping by a column label, selecting column labels, and then applying the
 :meth:`.DataFrameGroupBy.sum` function to the resulting
 groups:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.groupby("A")[["C", "D"]].sum()
 
 Grouping by multiple columns label forms :class:`MultiIndex`.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df.groupby(["A", "B"]).sum()
@@ -620,7 +619,7 @@ Stack
 .. index::
   pair: Pandas; Stack
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    arrays = [
@@ -635,7 +634,7 @@ Stack
 The :meth:`~DataFrame.stack` method "compresses" a level in the DataFrame's
 columns:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    stacked = df2.stack()
@@ -645,7 +644,7 @@ With a "stacked" DataFrame or Series (having a :class:`MultiIndex` as the
 ``index``), the inverse operation of :meth:`~DataFrame.stack` is
 :meth:`~DataFrame.unstack`, which by default unstacks the **last level**:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    stacked.unstack()
@@ -657,7 +656,7 @@ Pivot tables
 .. index::
   pair: Pandas; Pivot table
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df = pd.DataFrame(
@@ -673,7 +672,7 @@ Pivot tables
 
 :func:`pivot_table` pivots a :class:`DataFrame` specifying the ``values``, ``index`` and ``columns``
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    pd.pivot_table(df, values="D", index=["A", "B"], columns=["C"])
@@ -689,7 +688,7 @@ resampling operations during frequency conversion (e.g., converting secondly
 data into 5-minute splices of data). This is extremely common in, but not limited to,
 financial applications.
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    rng = pd.date_range("1/1/2012", periods=100, freq="s")
@@ -698,7 +697,7 @@ financial applications.
 
 :meth:`Series.tz_localize` localizes a time series to a time zone:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    rng = pd.date_range("3/6/2012 00:00", periods=5, freq="D")
@@ -709,14 +708,14 @@ financial applications.
 
 :meth:`Series.tz_convert` converts a timezones aware time series to another time zone:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    ts_utc.tz_convert("US/Eastern")
 
 Adding a non-fixed duration (:class:`~pandas.tseries.offsets.BusinessDay`) to a time series:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    rng
@@ -730,7 +729,7 @@ Categoricals
 pandas can include categorical data in a :class:`DataFrame`.
 
 
-.. code-block::python
+.. code-block:: python
     :caption: |python|
 
     df = pd.DataFrame(
@@ -739,7 +738,7 @@ pandas can include categorical data in a :class:`DataFrame`.
 
 Converting the raw grades to a categorical data type:
 
-.. code-block::python
+.. code-block:: python
    :caption: |python|
 
    df["grade"] = df["raw_grade"].astype("category")
@@ -747,14 +746,15 @@ Converting the raw grades to a categorical data type:
 
 Rename the categories to more meaningful names:
 
-.. code-block::python
+.. code-block:: python
+    :caption: |python|
 
     new_categories = ["very good", "good", "very bad"]
     df["grade"] = df["grade"].cat.rename_categories(new_categories)
 
 Reorder the categories and simultaneously add the missing categories (methods under :meth:`Series.cat` return a new :class:`Series` by default):
 
-.. code-block::python
+.. code-block:: python
     :caption: |python|
 
     df["grade"] = df["grade"].cat.set_categories(
@@ -764,14 +764,14 @@ Reorder the categories and simultaneously add the missing categories (methods un
 
 Sorting is per order in the categories, not lexical order:
 
-.. code-block::python
+.. code-block:: python
     :caption: |python|
 
     df.sort_values(by="grade")
 
 Grouping by a categorical column with ``observed=False`` also shows empty categories:
 
-.. code-block::python
+.. code-block:: python
     :caption: |python|
 
     df.groupby("grade", observed=False).size()

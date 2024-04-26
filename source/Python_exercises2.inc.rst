@@ -13,6 +13,7 @@ Python Exercises 2
     This is my code
     
     .. code-block:: python
+        :caption: |python|
 
         import random
         import sys
@@ -51,6 +52,7 @@ Python Exercises 2
     This is my code
     
     .. code-block:: python
+        :caption: |python|
 
         import random
         import sys

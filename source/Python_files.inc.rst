@@ -26,6 +26,7 @@ Before reading or writing data to a file we must first open that
 file and specify if we are going to read from it, or write to it. 
 
 .. code-block:: python
+    :caption: |python|
 
     file = open('my_file.txt', 'r')
 
@@ -45,6 +46,7 @@ The various modes are:
  A file, once finished with, needs closing too.
 
  .. code-block:: python
+    :caption: |python|
 
     file = open('my_file.txt', 'r')
     # do things
@@ -56,6 +58,7 @@ a file as often the data is "buffered" by the system and only gets written once
 the file handle is lost (i.e. `.close()` is called or the variable goes out of scope). 
 
 .. code-block:: python
+    :caption: |python|
 
     with open("my_file.txt", "r") as file:
         # do things
@@ -76,6 +79,7 @@ binary files have a Python module to read them, so are more specialist in nature
 We can read text files line-by-line or in one go. To read line-by-line:
 
 .. code-block:: python
+    :caption: |python|
 
     file = open('my_file.txt', 'r')
      
@@ -90,6 +94,7 @@ to read the text line-by-line.
 If we want to read in all the text at once:
 
 .. code-block:: python
+    :caption: |python|
 
     file = open('my_file.txt', 'r')
      
@@ -100,6 +105,7 @@ be stored in a variable). The ``read()`` function can also take an argument for 
 for example this reads the first 5 characters:
 
 .. code-block:: python
+    :caption: |python|
 
     file = open('my_file.txt', 'r')
      
@@ -110,6 +116,7 @@ works for most files as data in text files tends to be organised that way. I use
 to make this very clear. For example:
 
 .. code-block:: python
+    :caption: |python|
 
     with open("datafile.txt", "r") as file:
         data = file.readlines()
@@ -140,6 +147,7 @@ into words (separated by spaces) and creating a list of those.
     This is my code, wrapping both parts into one code.
     
     .. code-block:: python
+        :caption: |python|
 
         with open("depth_data.csv","r") as f:
             all_file = f.read()
@@ -154,6 +162,7 @@ into words (separated by spaces) and creating a list of those.
     which produces:
     
     .. code-block:: bash
+        :caption: |cli| |python|
 
         File,Top,Bottom
         core_13.xlsx,22.75,30
@@ -179,6 +188,7 @@ Writing files
 Writing files is a bit different to reading files. You are in charge of putting the line breaks in!
 
 .. code-block:: python
+    :caption: |python|
 
     with open("file.txt", "w") as f: 
         f.write("Hello World!!!")
@@ -193,6 +203,7 @@ of doing this!
 Let's add some newlines to the example above first.
 
 .. code-block:: python
+    :caption: |python|
 
     with open("file.txt", "w") as f: 
         f.write("Hello World!!!\n")
@@ -201,6 +212,7 @@ Let's add some newlines to the example above first.
 Notice the ``\n`` character - this is a newline character. So you will now have a file that contains:
 
 .. code-block:: bash
+   :caption: |cli| |python|
 
    Hellow World!!!
    No, really, hello!
@@ -208,6 +220,7 @@ Notice the ``\n`` character - this is a newline character. So you will now have 
 We could achieve the same thing using ``writelines()`` but we are still responsible for adding the newlines:
 
 .. code-block:: python
+    :caption: |python|
 
     contents = ["Hello World!!!\n", "No, really, hello!\n"]
     with open("file.txt", "w") as f: 
@@ -218,6 +231,7 @@ this works well:
 
 
 .. code-block:: python
+    :caption: |python|
 
     contents = ["Hello World!!!\n", "No, really, hello!\n"]
     with open("file.txt", "w") as f: 
@@ -226,6 +240,7 @@ this works well:
 Here, we join each element of contents with a newline character. We could also do:
 
 .. code-block:: python
+    :caption: |python|
 
     contents = ["Hello World!!!\n", "No, really, hello!\n"]
     with open("file.txt", "w") as f: 
@@ -247,6 +262,7 @@ others, but your job is to write clear code so use whichever is clearest for you
     :class: toggle
 
     .. code-block:: python
+        :caption: |python|
 
         capitals = {
             "Germany": "Berlin",
