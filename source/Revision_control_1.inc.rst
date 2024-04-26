@@ -95,4 +95,10 @@ collaboration among different people.
        Google Docs or Microsoft Office Online do not fully resolve these
        problems.
 
+Installing Git
+---------------
 
+Git is easily installed on all systems. On linux, use your package manager. On MacOS
+install `via HomeBrew <https://git-scm.com/download/mac>_`. On Windows install the
+`standalone installer <https://git-scm.com/download/win>_`, which provides
+the ``git`` executable and the ``git bash`` tool. 
