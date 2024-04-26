@@ -72,7 +72,7 @@ Let's create the dog class we thought about previously:
     wilf$state
 
 There are a few things here that are worth pointing out. First is the structure; note that the
-fields are ``list``ed and then the functions are also ``list``ed. It's easy to forget a comma 
+fields are ``list`` -ed and then the functions are also ``list`` -ed. It's easy to forget a comma 
 in there! Next is the use of ``<<-``. You'll learn more about this in the namespaces section, 
 but this is to make it clear which ``state`` you are referring to. Finally, note that both the
 functions and fields are accessed using the ``$`` notation. 

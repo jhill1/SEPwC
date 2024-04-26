@@ -46,7 +46,7 @@ A ggplot is built up from a few basic elements:
 #. Visual themes ``theme()``: The overall visual defaults of a plot, such as background, grids, axes, default typeface, sizes and colors.
 
 You need to specify the ``data``, ``geometry`` and ``aesthetics`` as a minimum. To build up a ggplot we tell 
-ggplot the data, e.g. ``ggplot(data = df)``. We then tell it which variables to plot i nthe aesthetics: ``aes(x=var1, y=var2)
+ggplot the data, e.g. ``ggplot(data = df)``. We then tell it which variables to plot i nthe aesthetics: ``aes(x=var1, y=var2)``
 and then we need to say what kind of plot via the geometry: ``geom_point()``:
 
 .. code-block:: R

@@ -76,9 +76,9 @@ We can use the Jane Austen book database as our text. Let's first see which word
       ungroup() %>% # now we've done that, ungroup
       unnest_tokens(word, text) # and finally seperate out the words!
 
-For `unnest_tokens` we chose the column `word`; this is very helpful - look at the output
-from the sentiment lexiconcs before; note they also have a column`word`. This means we can easy
-to an `inner_join` on our data and the lexicon to get the sentiment.
+For ``unnest_tokens`` we chose the column ``word`` ; this is very helpful - look at the output
+from the sentiment lexiconcs before; note they also have a column ``word``. This means we can easy
+to an ``inner_join`` on our data and the lexicon to get the sentiment.
 
 Let's do that, but first we need to filter for the book *Emma*, then we can do the join and look
 at the output:

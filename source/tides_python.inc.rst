@@ -145,7 +145,7 @@ particular frequency as given in the table below.
      - Darwin symbol
      - Period (h)
      - Speed (°/h)
-   * - Principal lunar semidiurnal	
+   * - Principal lunar semidiurnal
      - M2
      - 12.4206012
      - 28.9841042

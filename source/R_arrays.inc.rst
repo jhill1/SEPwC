@@ -84,7 +84,9 @@ Vectors come into their own when you can loop over them, performing the same tas
       print(a_vector[i])
    }
 
-Here, we've used the ``:``operator to create a temporary vector of indices that goes from 1 to the length of the vector we want to iterate over. Index notation is useful as it allows you to loop over several vectors simultaneously using the same indexing (assuming they are the same length or you handle the ``NA`` returned for out-of-bounds access). 
+Here, we've used the ``:`` operator to create a temporary vector of indices that goes from 1 to the length of the vector
+we want to iterate over. Index notation is useful as it allows you to loop over several vectors simultaneously using the 
+same indexing (assuming they are the same length or you handle the ``NA`` returned for out-of-bounds access). 
 
 We can also simply iterate over the vector items themselves:
 

@@ -114,7 +114,7 @@ Running something like this in the command line:
 
    python fibo.py
 
-will set this ``__name__`` variable to `__main__``.
+will set this ``__name__`` variable to ``__main__``.
 
 Exercise: try this
 

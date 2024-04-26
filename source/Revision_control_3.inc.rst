@@ -44,7 +44,7 @@ we can see that Git has created a hidden directory within :file:`planets` called
 
 .. code-block:: output
 
-    .	..	.git
+   .    ..    .git
 
 Git uses this special subdirectory to store all the information about the project, 
 including the tracked files and sub-directories located within the project's directory.
