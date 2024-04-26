@@ -23,6 +23,7 @@ available every time you run any Python. We can
 look at this:
 
 .. code-block:: Python
+    :caption: |python|
 
     dir(__builtins__)
     Out[1]: 
@@ -67,6 +68,7 @@ If you look for ``max()`` function, Python will look in the local, then enclosin
 then the built-in namespaces. 
 
 .. code-block:: python
+    :caption: |python|
 
     x = "global"
 
@@ -84,6 +86,7 @@ then the built-in namespaces.
 Before you run this, what will be printed? Now let's add another ``x``:
 
 .. code-block:: python
+    :caption: |python|
 
     x = "global"
 
@@ -103,7 +106,8 @@ Before you run this, what will be printed? Now let's add another ``x``:
 See if you can work out what will be printed this time. Our final exercise:
 
 .. code-block:: python
-
+    :caption: |python|
+   
     def func1():
         x = "enclosing"
 
@@ -122,7 +126,8 @@ What happens this time? Did you use a fresh ipython or script?
 So how do you modify variables that aren't in the current scope?
 
 .. code-block:: python
-
+    :caption: |python|
+    
     x = 20
     def func1():
         x = 40
@@ -137,6 +142,7 @@ is deleted. The ``print(x)`` then uses the ``x`` in the global namespace.
 What if ``x`` is a list and we try and modify it?
 
 .. code-block:: python
+    :caption: |python|
 
     x = [20, 40, 60]
 
@@ -152,6 +158,7 @@ the function. However, if we create a list of the same variable name, we'll have
 behaviour to the previous example:
 
 .. code-block:: python
+    :caption: |python|
 
     x = [20, 40, 60]
 
@@ -165,6 +172,7 @@ behaviour to the previous example:
 If we want ``func1`` to actually modify the global variable we have to tell Python explicitly:
 
 .. code-block:: python
+    :caption: |python|
 
     x = [20, 40, 60]
 
@@ -179,6 +187,7 @@ If we want ``func1`` to actually modify the global variable we have to tell Pyth
 If you create a global variable within a function it will be available to the global namespace:
 
 .. code-block:: python
+    :caption: |python|
 
     def func1():
         global x

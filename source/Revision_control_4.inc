@@ -5,6 +5,7 @@ First let's make sure we're still in the right directory.
 You should be in the `planets` directory.
 
 .. code-block:: bash
+   :caption: |cli|
 
    cd ~/Desktop/planets
 
@@ -16,6 +17,7 @@ the bash command to create or edit a new file will depend on the
 editor you choose (it might not be `nano`).
 
 .. code-block:: bash
+   :caption: |cli|
 
    nano mars.txt
 
@@ -28,6 +30,7 @@ Type the text below into the `mars.txt` file:
 Let's first verify that the file was properly created by running the list command (`ls`):
 
 .. code-block:: bash
+   :caption: |cli|
 
    ls
 
@@ -38,6 +41,7 @@ Let's first verify that the file was properly created by running the list comman
 ``mars.txt`` contains a single line, which we can see by running:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cat mars.txt
 
@@ -49,6 +53,7 @@ If we check the status of our project again,
 Git tells us that it's noticed the new file:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git status
 
@@ -70,12 +75,14 @@ that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add mars.txt
 
 and then check that the right thing happened:
 
 .. code-block:: bash
+   :caption: |cli|
    
    git status
 
@@ -96,6 +103,7 @@ but it hasn't recorded these changes as a commit yet.
 To get it to do that, we need to run one more command:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git commit -m "Start notes on Mars as a base"
 
@@ -124,6 +132,7 @@ so that we can write a longer message.
 If we run ``git status`` now:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git status
 
@@ -136,6 +145,7 @@ it tells us everything is up to date. If we want to know what we've done recentl
 we can ask Git to show us the project's history using `git log`:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git log
 
@@ -175,6 +185,7 @@ Now suppose we adds more information to the file.
 you may use a different editor, and don't need to ``cat``.)
 
 .. code-block:: bash
+   :caption: |cli|
 
    nano mars.txt
    cat mars.txt
@@ -188,6 +199,7 @@ When we run ``git status`` now,
 it tells us that a file it already knows about has been modified:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git status
 
@@ -211,6 +223,7 @@ This shows us the differences between the current state
 of the file and the most recently saved version:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git diff
 
@@ -243,6 +256,7 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git commit -m "Add concerns about effects of Mars' moons on werewolves"
 
@@ -262,6 +276,7 @@ Git won't commit because we didn't use ``git add`` first.
 Let's fix that:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add mars.txt
    git commit -m "Add concerns about effects of Mars' moons on werewolves"
@@ -318,6 +333,7 @@ to the staging area and into long-term storage.
 First, we'll add another line to the file:
 
 .. code-block:: bash
+   :caption: |cli|
 
    nano mars.txt
    cat mars.txt
@@ -329,8 +345,9 @@ First, we'll add another line to the file:
     But the Mummy will appreciate the lack of humidity
 
 .. code-block:: bash
+   :caption: |cli|
 
-  git diff
+   git diff
 
 .. code-block:: output
 
@@ -348,17 +365,19 @@ So far, so good: we've added one line to the end of the file
 and see what ``git diff`` reports:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    git add mars.txt
-    git diff
+   git add mars.txt
+   git diff
 
 There is no output: as far as Git can tell,
 there's no difference between what it's been asked to save permanently
 and what's currently in the directory. However, if we do this:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    git diff --staged
+   git diff --staged
 
 .. code-block:: output
 
@@ -376,8 +395,9 @@ it shows us the difference between the last committed change
 and what's in the staging area. Let's save our changes:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    git commit -m "Discuss concerns about Mars' climate for Mummy"
+   git commit -m "Discuss concerns about Mars' climate for Mummy"
 
 .. code-block:: output
 
@@ -387,8 +407,9 @@ and what's in the staging area. Let's save our changes:
 check our status:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    git status
+   git status
 
 .. code-block:: output
 
@@ -398,8 +419,9 @@ check our status:
 and look at the history of what we've done so far:
 
 .. code-block:: bash
+   :caption: |cli|
 
-    git log
+   git log
 
 .. code-block:: output
 
@@ -458,6 +480,7 @@ and look at the history of what we've done so far:
     the last commit you can use:
 
     .. code-block:: bash
+       :caption: |cli|
         
         git log -1
 
@@ -472,6 +495,7 @@ and look at the history of what we've done so far:
     You can also reduce the quantity of information using the ``--oneline`` option:
 
     .. code-block:: bash
+       :caption: |cli|
     
         git log --oneline
 
@@ -488,6 +512,7 @@ and look at the history of what we've done so far:
     [other Git references][git-references]:
 
     .. code-block:: bash
+       :caption: |cli|
     
         git log --oneline --graph
 
@@ -507,11 +532,12 @@ and look at the history of what we've done so far:
     1. Git does not track directories on their own, only files within them. Try it for yourself:
       
     .. code-block:: bash
-    
-        mkdir spaceships
-        git status
-        git add spaceships
-        git status
+       :caption: |cli|
+       
+       mkdir spaceships
+       git status
+       git add spaceships
+       git status
     
     Note, our newly created empty directory `spaceships` does not appear in
     the list of untracked files even if we explicitly add it (*via* ``git add``) to our
@@ -524,23 +550,26 @@ and look at the history of what we've done so far:
        you can add all files in the directory at once by:
     
     .. code-block:: bash
+       :caption: |cli|
           
-           git add <directory-with-files>
+       git add <directory-with-files>
     
     Try it for yourself:
     
-     .. code-block:: bash
+    .. code-block:: bash
+       :caption: |cli|
                 
-         touch spaceships/apollo-11 spaceships/sputnik-1
-         git status
-         git add spaceships
-         git status
+       touch spaceships/apollo-11 spaceships/sputnik-1
+       git status
+       git add spaceships
+       git status
      
     Before moving on, we will commit these changes.
     
-     .. code-block:: bash
+    .. code-block:: bash
+       :caption: |cli|
          
-        git commit -m "Add some initial thoughts on spaceships"
+       git commit -m "Add some initial thoughts on spaceships"
 
 
 To recap, when we want to add changes to our repository,
@@ -615,6 +644,7 @@ repository (``git commit``):
     First we make our changes to the `mars.txt` and `venus.txt` files:
 
     .. code-block:: bash
+        :caption: |cli|
 
         nano mars.txt
         cat mars.txt
@@ -624,6 +654,7 @@ repository (``git commit``):
         Maybe I should start with a base on Venus.
 
     .. code-block:: bash
+       :caption: |cli|
     
         nano venus.txt
         cat venus.txt
@@ -635,12 +666,14 @@ repository (``git commit``):
     Now you can add both files to the staging area. We can do that in one line:
     
     .. code-block:: bash
+       :caption: |cli|
         
         git add mars.txt venus.txt
 
     Or with multiple commands:
 
     .. code-block:: bash
+       :caption: |cli|
 
         git add mars.txt
         git add venus.txt
@@ -648,6 +681,7 @@ repository (``git commit``):
     Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
     
     .. code-block:: bash
+       :caption: |cli|
     
         git commit -m "Write plans to start a base on Venus"
 
@@ -679,36 +713,41 @@ repository (``git commit``):
     If needed, move out of the `planets` folder:
 
     .. code-block:: bash
+       :caption: |cli|
 
-        cd ..
+       cd ..
 
     Create a new folder called `bio` and 'move' into it:
 
     .. code-block:: bash
+       :caption: |cli|
 
-        mkdir bio
-        cd bio
+       mkdir bio
+       cd bio
 
     Initialise git:
 
     .. code-block:: bash
+       :caption: |cli|
 
-        git init
+       git init
 
     Create your biography file `me.txt` using `nano` or another text editor.
     Once in place, add and commit it to the repository:
 
     .. code-block:: bash
+       :caption: |cli|
 
-        git add me.txt
-        git commit -m "Add biography file" 
+       git add me.txt
+       git commit -m "Add biography file" 
 
     Modify the file as described (modify one line, add a fourth line).
     To display the differences between its updated state and its original state, use `git diff`:
 
     .. code-block:: bash
+       :caption: |cli|
     
-        git diff me.txt
+       git diff me.txt
 
 ..  youtube:: OX6jt7_rMfw
    :align: center

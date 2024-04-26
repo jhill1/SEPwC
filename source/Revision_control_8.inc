@@ -39,8 +39,9 @@ repository with the same name.
 To clone the Owner's repo into her ``Desktop`` folder, the Collaborator enters:
 
 .. code-block:: bash
+   :caption: |cli|
 
-   $ git clone git@github.com:jh1889/planets.git ~/Desktop/jh1889-planets
+   git clone git@github.com:jh1889/planets.git ~/Desktop/jh1889-planets
 
 Replace 'jh1889' with the Owner's username.
 
@@ -59,6 +60,7 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 .. code-block:: bash
+   :caption: |cli|
 
    cd ~/Desktop/jh1889-planets
    nano pluto.txt
@@ -71,6 +73,7 @@ exactly the same way as we've been doing before:
 
 
 .. code-block:: bash
+   :caption: |cli|
 
    git add pluto.txt
    git commit -m "Add notes about Pluto"
@@ -84,6 +87,7 @@ exactly the same way as we've been doing before:
 Then push the change to the *Owner's repository* on GitHub:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git push origin main
 
@@ -146,6 +150,7 @@ your browser to see the new commit.
 To download the Collaborator's changes from GitHub, the Owner now enters:
 
 .. code-block:: bash
+   :caption: |cli|
 
    git pull origin main
 
@@ -229,6 +234,6 @@ GitHub) are back in sync.
 
     The Collaborator posts her comments and suggestions using the GitHub interface.
 
-:: youtube: lsEOUnM8WPo
-    :align: center
+.. youtube:: lsEOUnM8WPo
+   :align: center
     

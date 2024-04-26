@@ -10,14 +10,16 @@ Python has support for objects and almost everything in Python is actually an ob
 create your own object you must first create a ``Class``.
 
 .. code-block:: python
-
-    class MyClass:
-        variable = 5
+   :caption: |python|
+   
+   class MyClass:
+       variable = 5
 
 .. code-block:: python
-
-    obj = MyClass()
-    print(obj.variable)
+   :caption: |python|
+   
+   obj = MyClass()
+   print(obj.variable)
 
 This is not a particularly useful object! All objects in python come with a special
 function which is called when you make a new object: ``__init__()``. This function
@@ -26,6 +28,7 @@ allows you to set up anything when a new object is made from you ``Class``.
 Let's create the dog class we thought about previously:
 
 .. code-block:: python
+    :caption: |python|
 
     class Dog:
 
@@ -63,6 +66,7 @@ One of the key things about classes is that they can inherit other classes. We c
 build complex stacks of classes using base classes. Let's create a class for a Guide Dog:
 
 .. code-block:: python
+    :caption: |python|
 
     class GuideDog(Dog)
         pass
@@ -71,6 +75,7 @@ This creates a new class from the Dog class previously. It doesn't add anything 
 all of the variables and functions from the ``Dog`` class. We can add to or override any of these.
 
 .. code-block:: python
+    :caption: |python|
 
     class GuideDog(Dog):
         
@@ -87,6 +92,7 @@ all of the variables and functions from the ``Dog`` class. We can add to or over
 So here we've added a new function ``complete_trianing`` and overridden the ``bark`` function. 
 
 .. code-block:: python
+    :caption: |python|
 
     buddy=GuideDog("Buddy","3","tan")
     buddy.bark()
