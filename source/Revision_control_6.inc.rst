@@ -6,6 +6,7 @@ like backup files created by our editor or intermediate files created during dat
 Let's create a few dummy files:
 
 .. code-block:: bash
+    :caption: |cli|
 
     mkdir results
     touch a.dat b.dat c.dat results/a.out results/b.out
@@ -13,6 +14,7 @@ Let's create a few dummy files:
 and see what Git says:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git status
 
@@ -36,6 +38,7 @@ so let's tell Git to ignore them.
 We do this by creating a file in the root directory of our project called ``.gitignore``:
 
 .. code-block:: bash
+    :caption: |cli|
 
     nano .gitignore
     cat .gitignore
@@ -53,6 +56,7 @@ Git would continue to track them.)
 Once we have created this file, the output of ``git status`` is much cleaner:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git status
 
@@ -71,6 +75,7 @@ You might think we wouldn't want to track it, but everyone we're sharing our rep
 the same things that we're ignoring. Let's add and commit ``.gitignore``:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git add .gitignore
     git commit -m "Ignore data files and the results folder."
@@ -85,6 +90,7 @@ the same things that we're ignoring. Let's add and commit ``.gitignore``:
 As a bonus, using ``.gitignore`` helps us avoid accidentally adding files to the repository that we don't want to track:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git add a.dat
 
@@ -98,6 +104,7 @@ If we really want to override our ignore settings, we can use ``git add -f`` to 
 ``git add -f a.dat``. We can also always see the status of ignored files if we want:
 
 .. code-block:: bash
+    :caption: |cli|
 
     git status --ignored
 

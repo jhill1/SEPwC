@@ -9,6 +9,7 @@ is fairly simple; a set of containers that contain data in an ordered way.
 A list is set up with something like:
 
 .. code-block:: Python
+   :caption: |python|
 
    a_list = [1, 2, "hello", 3.464356]
 
@@ -17,6 +18,7 @@ The list does not have to contain the same kind of data in each container (here 
 How do we access the items of the list later? We use the index. 
 
 .. code-block:: Python
+   :caption: |python|
 
    print(a_list[0])
    print(a_list[1])
@@ -26,6 +28,7 @@ How do we access the items of the list later? We use the index.
 will print:
 
 .. code-block:: bash
+   :caption: |cli| |python|
 
     1
     2
@@ -35,6 +38,7 @@ will print:
 Note that Python starts counting from 0, not 1. Also note how we access each container in the list - via the ``[ ]`` brackets. Python will tell us if we overstep the length of a list:
 
 .. code-block:: Python
+   :caption: |python|
 
    print(a_list[5])
 
@@ -48,6 +52,7 @@ Note that Python starts counting from 0, not 1. Also note how we access each con
 Python has some tricks up its sleeve though. What if we want the last item of the list, but we don't know how long it is?
 
 .. code-block:: Python
+   :caption: |python|
 
    print(a_list[-1])
 
@@ -63,6 +68,7 @@ What is a tuple then?
 There is a single difference between a list and tuple. A list can be modified; you can append items to it, remove items and generally do what you want with it. A tuple on the other hand is *immutable*. You cannot chnage it at all. Once it's made it is made. 
 
 .. code-block:: Python
+   :caption: |python|
 
    a_tuple = (1,2,3,4,5)
 
@@ -86,12 +92,14 @@ items/containers in that list:
 
 
 .. code-block:: Python
+   :caption: |python|
 
    print(len(a_list))
 
 will return 4. ``len()`` is actually a generic function that works on other datatypes too, but is used a lot with lists:
 
 .. code-block:: Python
+   :caption: |python|
 
    print(len("Hello"))
 
@@ -112,6 +120,7 @@ Python then has a number of functions associated with only lists:
 You use them like this:
 
 .. code-block:: Python
+   :caption: |python|
 
    a_list = [1, 2, "hello", 3.464356]
    print(a_list)
@@ -128,6 +137,7 @@ Iterating over lists
 As we saw above and in the introductory chapters, lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
 
 .. code-block:: Python
+   :caption: |python|
 
    a_list = [1,2,3,4,5,6,7,8,9]
 
@@ -143,6 +153,7 @@ This is a common design template in Python code as it can give some good flexibi
 An alternative way is to use the fact that a list is an ``Iterable`` object. Here, we specify the list after the ``in`` keyword in the loop. 
 
 .. code-block:: Python
+   :caption: |python|
 
    a_list = [1,2,3,4,5,6,7,8,9]
 
@@ -154,6 +165,7 @@ Now ``item`` is a variable (so you can name it how you see fit), not an index, c
 If you have multiple lists of the same length you can integrate them over them simultaneously using the ``zip()`` functions:
 
 .. code-block:: Python
+   :caption: |python|
 
    a_list = [1,2,3,4,5,6,7,8,9]
    second_list = [11,12,13,14,15,16,17,18,19]

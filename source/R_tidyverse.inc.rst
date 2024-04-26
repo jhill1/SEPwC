@@ -171,8 +171,8 @@ its right, we don't need to explicitly include the data frame as an argument
 to the ``filter()`` and ``select()`` functions any more.
 
 Some may find it helpful to read the pipe like the word "then." For instance,
-in the example above, we took the data frame ``surveys``, *then* we ``filter``ed
-for rows with ``weight < 5``, *then* we ``select``ed columns ``species_id``, ``sex``,
+in the example above, we took the data frame ``surveys``, *then* we ``filter`` -ed
+for rows with ``weight < 5``, *then* we ``select`` -ed columns ``species_id``, ``sex``,
 and ``weight``. The ``dplyr`` functions by themselves are somewhat simple,
 but by combining them into linear workflows with the pipe we can accomplish
 more complex manipulations of data frames.

@@ -6,12 +6,14 @@ Python examples
 If we make an error in our Python code we will receive a message like:
 
 .. code-block:: Python
+    :caption: |python|
 
     impot numpy
     
 gives
 
-.. code-block:: bash
+.. code-block:: output
+    :caption: |cli| |python|
 
     impot numpy
           ^
@@ -21,6 +23,7 @@ Python generally tells you what the error is and even points to it in a small re
 Consider the following simple code.
 
 .. code-block:: Python
+    :caption: |python|
 
     def calculate_sum(a, b):
         total = a + b
@@ -34,6 +37,7 @@ Consider the following simple code.
 will give you:
 
 .. code-block:: bash
+    :caption: |cli| |python|
 
           5 x = 5
           6 y = 10
@@ -55,6 +59,7 @@ In more complex code, Python will also give a *stack trace* where you can see th
 functions that eventually lead to where the error is. Let's look at this simple code:
 
 .. code-block:: Python
+    :caption: |python|
 
     # example.py
     def say(name):
@@ -65,6 +70,7 @@ functions that eventually lead to where the error is. Let's look at this simple 
 There's an error here (``nam`` instead of ``name``). When we run this:
 
 .. code-block:: bash
+    :caption: |cli| |python|
 
 
     Traceback (most recent call last):

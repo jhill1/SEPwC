@@ -16,6 +16,7 @@ Loading libraries
 Libraries are loaded via either the ``library`` or ``require`` functions.
 
 .. code-block:: R
+    :caption: |R|
 
     library(ggplot2)
 
@@ -24,6 +25,7 @@ will load the ggplot2 library and namespace into your current code. It will also
 R then allows you to call any functions within that library. Technically R does a search for functions so you may have two functions of the same name (e.g. ``sum()``) so R has syntax to make sure it uses the correct one; the ``::`` notation. For example both ``dplyr`` and ``base`` contain a function ``intersect()``. To make sure you call the correct one:
 
 .. code-block:: R
+    :caption: |R|
 
     library(dplyr)
 
@@ -39,6 +41,7 @@ Sourcing other code
 You can also include the contents of another script directly into your own using the ``source`` function.
 
 .. code-block:: R
+   :caption: |R|
 
    source("common_funcs.R")
 
