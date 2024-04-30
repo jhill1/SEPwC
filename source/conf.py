@@ -52,6 +52,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinxcontrib.youtube',
     'sphinxcontrib.googleanalytics',
+    'sphinx_copybutton',
     'sphinx_favicon'
     ]
 
