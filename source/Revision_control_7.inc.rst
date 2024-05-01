@@ -224,7 +224,8 @@ We want to use the default file, so just press :kbd:`Enter`.
 
 Now, it is prompting us for a passphrase.  Since we are using computers that other people sometimes have access to, 
 we want to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere,
-as there is no "reset my password" option. 
+as there is no "reset my password" option. Also note that nothing will appear as you type your password; it is working
+just keep typing and then press :kbd:`Enter`.
 
 .. code-block:: output
 
