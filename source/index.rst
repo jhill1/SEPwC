@@ -8,7 +8,7 @@ Welcome to Solving Environmental Problems with Code (SEPwC)
 
 .. image:: ../images/favicon-180x180.png
    :alt: SEPwC logo
-   :width: 400px
+   :width: 180px
    :align: center
 
 
