@@ -53,7 +53,8 @@ extensions = [
     'sphinxcontrib.youtube',
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton',
-    'sphinx_favicon'
+    'sphinx_favicon',
+    'sphinxcontrib.quizdown',
     ]
 
 # Add any paths that contain templates here, relative to this directory.
