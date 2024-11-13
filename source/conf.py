@@ -173,7 +173,7 @@ htmlhelp_basename = 'SEPwCdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
-latex_engine = 'xelatex'
+latex_engine = 'lualatex'
 youtube_cmd = r"\newcommand{\sphinxcontribyoutube}[3]{\begin{figure}\sphinxincludegraphics{{#2}.jpg}\caption{\url{#1#2#3}}\end{figure}}" + "\n"
 
 
@@ -188,7 +188,12 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    'preamble': youtube_cmd,
+    'preamble': r"""
+\directlua{ luaotfload.add_fallback("emoji", {"[TwemojiMozilla.ttf]:mode=harf"}) }
+\setmainfont{LatinModernRoman}[RawFeature={fallback=emoji},SmallCapsFont={* Caps}]
+\setsansfont{LatinModernSans}[RawFeature={fallback=emoji}]
+\setmonofont{DejaVuSansMono}[RawFeature={fallback=emoji},Scale=0.8]
+"""+youtube_cmd,
 
     # Latex figure (float) alignment
     #
