@@ -318,3 +318,44 @@ description of the warning/error.
 
 .. youtube:: Wogad7fNZlY
    :align: center
+
+
+Using AI in development
+------------------------
+
+AI has great potential to help with a number of software development
+tasks such as refactoring, creating function templates, etc. It can also
+help read and understand documents, as well as help you understand code. 
+
+A number of IDEs (Integrated Development Environment) has some form of AI 
+integrated in. However, you often need to pay for these...or pay for the AI.
+We can use free versions of AI to help us though. Both ChatGPT and Google's Gemini
+are pretty good. We're going to focus on ChatGPT here.
+
+Using it a document explainer or searcher
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's try using AI to understand some `git` commands. Let's imagine we've been
+working but want to throw all our changes away and revert the code back
+to the last commit. Let's ask ChatGPT
+
+.. code-block:: bash
+   :caption: |ai|
+
+   how do i revert a git repo to the last commit state?
+
+Which should return four different options:
+ - `git checkout .`
+ - `git reset --hard HEAD`
+ - `git stash`
+ - `git revert HEAD`
+
+This gives us a good start, but actually doesn't fully answer my question. 
+`git stash` doesn't revert any chnages, it stashes them away on a psuedo-branch 
+so we can recover them later. That might be useful to do, but doesn't revert the changes.
+The last option of `git revert` reverts the last commit! It does not undo any staged
+or unstaged changes. The first two commands do the trick but have some subtleties
+about exactly what they will do. 
+
+So AI helped us a bit here, but didn't give a full answer straight off. But you can 
+keep asking it questions to get the clarificaiton needed. 
