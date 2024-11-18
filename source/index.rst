@@ -41,11 +41,11 @@ slip behind a little.
    * - 4 
      - :ref:`Revision control<Revision control with Git>`,
    * - 5
-     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2, :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3, 
+     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2,  :ref:`Testing code<Testing code>`,
    * - 6
-     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
+     - :ref:`Software development<Software development>`, :ref:`formative exercise<Our first coding exercise>`
    * - 7
-     - :ref:`Testing code<Testing code>`, :ref:`Software development<Software development>`
+     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 8
      - :ref:`Mini-courses<Mini-courses>`
    * - 9
@@ -154,11 +154,12 @@ All psuedo-code is labelled with this symbol:
     Revision_control   
     Python2
     R2
+    Software_development
+    a_first_coding_exercise    
     Python3
     R3
     Spreadsheets_data
     Testing_code
-    Software_development
     Mini_courses
     genindex
 

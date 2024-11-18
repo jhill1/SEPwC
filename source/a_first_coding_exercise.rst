@@ -21,8 +21,8 @@ What to do
 `cd` into a directory where you want to do this work. Then go to the repository
 and fork it. Then run:
 
-.. code-block:: cli
-   :caption: |cli|
+.. code-block:: bash
+   :caption: |CLI|
    
    git clone git@github.com:[USERNAME]/SEPwC_formative.git
 
@@ -91,5 +91,44 @@ and for R:
 
 You can run the tests now; they should fail as you have no code, but go ahead:
 
-.. code-block:: python
+.. code-block:: bash
+   :caption: |CLI| |python|
+
+   pytest
+
+.. code-block:: bash
+   :caption: |CLI| |R|
+
+   cd test
+   Rscript test_script.R
+
+And you see some failures, like this:
+
+.. code-block:: bash
+   :caption: |CLI| |R|
+
+   jh1889@envpc467:~/work/teaching/SEPwC/SEPwC_formative/R/test$ Rscript test_script.R 
+   ── Failure: list_tasks works correctly ─────────────────────────────────────────
+   `task_list` not equal to `expected_list`.
+   target is NULL, current is character
    
+   Error:
+   ! Test failed
+   Backtrace:
+       ▆
+    1. ├─testthat::test_that(...)
+    2. │ └─withr (local) `<fn>`()
+    3. └─reporter$stop_if_needed()
+    4.   └─rlang::abort("Test failed", call = NULL)
+   Execution halted
+   
+  
+Your task is to complete the functions and pass all the tests. It's a "simple"
+as that. Start by writing the `list` function, running the test each time. Remember
+to commit your changes as you go (even if the tests don't work fully). Use 
+the internet, AI and your peers to help you complete this as you see fit. This
+is a practice for the full assessment, but is not marked in any way.
+
+Once you're happy with it (and by the week 9) session, add me (`jhill1`) as a collaborator
+and I will add comments on your coding style.
+
