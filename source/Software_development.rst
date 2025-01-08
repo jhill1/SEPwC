@@ -330,7 +330,7 @@ help read and understand documents, as well as help you understand code.
 A number of IDEs (Integrated Development Environment) has some form of AI 
 integrated in. However, you often need to pay for these...or pay for the AI.
 We can use free versions of AI to help us though. Both ChatGPT and Google's Gemini
-are pretty good. We're going to focus on ChatGPT here.
+are pretty good. We're going to focus on Gemini here.
 
 Using it a document explainer or searcher
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -344,18 +344,150 @@ to the last commit. Let's ask ChatGPT
 
    how do i revert a git repo to the last commit state?
 
-Which should return four different options:
- - `git checkout .`
- - `git reset --hard HEAD`
- - `git stash`
- - `git revert HEAD`
+Which should return two different options:
+ - `git reset --hard`
+ - `git revert`
 
 This gives us a good start, but actually doesn't fully answer my question. 
-`git stash` doesn't revert any chnages, it stashes them away on a psuedo-branch 
-so we can recover them later. That might be useful to do, but doesn't revert the changes.
 The last option of `git revert` reverts the last commit! It does not undo any staged
-or unstaged changes. The first two commands do the trick but have some subtleties
-about exactly what they will do. 
+or unstaged changes. The first command does the trick but have some subtleties
+about exactly what it'll do. There are context though.
 
 So AI helped us a bit here, but didn't give a full answer straight off. But you can 
-keep asking it questions to get the clarificaiton needed. 
+keep asking it questions to get the clarificaiton needed. So let's ask another question:
+
+.. code-block:: bash
+   :caption: |ai|
+
+   does git reset --hard remove unstaged changes?
+
+And read the answer. On my answer, it also recommends looking at ``git stash``. Let's
+continue and see what that's about...ask about ``git stash``
+
+You can export your chat to Google docs or email to store it, but it will also appear on the left-hand
+side menu.
+
+Let's try this again, but let's learn about the R package ``tidyverse`` or the Python package ``pandas``. 
+First let's explain what a dataframe is:
+
+.. code-block:: bash
+   :caption: |ai|
+
+   In tidyverse, what is a dataframe?
+
+And then, let's compare to pandas:
+
+.. code-block:: bash
+   :caption: |ai|
+
+   How does it differ from a pandas dataframe?
+
+Ai is a powerful tool for researching the basic concepts of new modules/libraries or ideas. It can 
+summerise these easily and quickly to give you a good overview. 
+
+It can also help with specific questions too:
+
+.. code-block:: bash
+   :caption: |ai| 
+
+   How do I use pandas to load a csv file?
+
+Try asking that? You should get something like the following code:
+
+.. code-block:: python
+   :caption: |python|
+
+   import pandas as pd
+   
+   # Load the CSV file into a pandas DataFrame
+   df = pd.read_csv('path/to/your/file.csv') 
+   
+   # Example with optional parameters:
+   df = pd.read_csv('data.csv', 
+                    header=0,  # Specify the row number for the column names (default is 0)
+                    names=['col1', 'col2', 'col3'],  # Provide custom column names
+                    index_col='col1',  # Set 'col1' as the index column
+                    usecols=['col1', 'col3'],  # Read only specific columns
+                    nrows=5  # Read only the first 5 rows
+                   )
+   
+   # Print the first few rows of the DataFrame
+   print(df.head())
+
+Which is a pretty clear simple example, with a more complex one.
+
+Code generation
+~~~~~~~~~~~~~~~
+
+One of the more powerful features of AI is that it can generate code. We can set specific prompts
+to write code to accomplish a task. Let's try the following:
+
+.. code-block:: bash
+   :caption: |ai|
+
+   write an R function to convert centigrade to fareheit
+
+Note, I have deliberately spelled ``farenheit`` incorrectly to demonstrate that AI understands some typos, etc.
+I got the following code back:
+
+.. code-block:: 
+   :caption: |ai|
+   
+   celsius_to_fahrenheit <- function(celsius) {
+       fahrenheit <- (celsius * 9/5) + 32
+       return(fahrenheit)
+   }
+
+Compare that to the code you wrote in :ref:`R functions`. The formula is correct etc.
+
+.. admonition:: Practical exercise
+
+    We can try something more complex. Get Gemini to write out code for the 
+    random number guessing game from :ref:`R Exercises 2` or :ref:`Python Exercises 2`.
+
+    Does it work straight off? How does it compare to your hand written code?
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: bash
+       :caption: |ai|
+    
+       in R can you write a number guessing game where the user has to guess a generated random number between 0 and 100. The user should have 5 tries.
+
+    .. code-block:: R
+       :caption: |R|
+
+        # Function to play the number guessing game
+        play_guessing_game <- function() {
+          # Generate a random number between 0 and 100
+          target_number <- sample(0:100, 1) 
+
+          # Initialize number of attempts
+          attempts <- 0
+
+          # Game loop
+          while (attempts < 5) {
+            attempts <- attempts + 1
+
+            # Get user input
+            guess <- as.integer(readline("Enter your guess: "))
+
+            # Check if the guess is correct
+            if (guess == target_number) {
+              cat("Congratulations! You guessed the number in", attempts, "attempts.\n")
+              return()
+            } else if (guess < target_number) {
+              cat("Too low. Try again.\n")
+            } else {
+              cat("Too high. Try again.\n")
+            }
+          }
+
+          # If the user runs out of attempts
+          cat("Sorry, you ran out of attempts. The number was", target_number, ".\n")
+        }
+
+        # Start the game
+        play_guessing_game()
+

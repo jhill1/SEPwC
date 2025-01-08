@@ -123,7 +123,8 @@ rst_prolog = """
    :height: 16
 .. |pc| image:: ../images/pcode.png
    :height: 16
-
+.. |ai| image:: ../images/ai.png
+   :height: 16
 """
 
 exclude_patterns = ['*.inc.rst']

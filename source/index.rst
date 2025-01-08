@@ -128,7 +128,14 @@ For example:
    $ pwd
    /home/jh1889/work/teaching/SEPwC/source
 
-Type in the ``pwd`` command only into the command line.
+Type in the ``pwd`` command only into the command line. 
+
+Where I've used an AI prompt, this will be labelled with this symbol:
+
+.. code-block:: bash
+   :caption: |ai|
+
+   How do I load a csv file using numpy?
 
 Finally, I also use psuedo-code in the early stages. This is not a real language so can't be run or compiled! 
 All psuedo-code is labelled with this symbol:
