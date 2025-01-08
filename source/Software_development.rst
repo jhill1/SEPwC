@@ -339,7 +339,7 @@ Let's try using AI to understand some `git` commands. Let's imagine we've been
 working but want to throw all our changes away and revert the code back
 to the last commit. Let's ask ChatGPT
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    how do i revert a git repo to the last commit state?
@@ -356,7 +356,7 @@ about exactly what it'll do. There are context though.
 So AI helped us a bit here, but didn't give a full answer straight off. But you can 
 keep asking it questions to get the clarificaiton needed. So let's ask another question:
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    does git reset --hard remove unstaged changes?
@@ -370,14 +370,14 @@ side menu.
 Let's try this again, but let's learn about the R package ``tidyverse`` or the Python package ``pandas``. 
 First let's explain what a dataframe is:
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    In tidyverse, what is a dataframe?
 
 And then, let's compare to pandas:
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    How does it differ from a pandas dataframe?
@@ -387,7 +387,7 @@ summerise these easily and quickly to give you a good overview.
 
 It can also help with specific questions too:
 
-.. code-block:: bash
+.. code-block:: 
    :caption: |ai| 
 
    How do I use pandas to load a csv file?
@@ -422,7 +422,7 @@ Code generation
 One of the more powerful features of AI is that it can generate code. We can set specific prompts
 to write code to accomplish a task. Let's try the following:
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    write an R function to convert centigrade to fareheit
@@ -430,8 +430,8 @@ to write code to accomplish a task. Let's try the following:
 Note, I have deliberately spelled ``farenheit`` incorrectly to demonstrate that AI understands some typos, etc.
 I got the following code back:
 
-.. code-block:: 
-   :caption: |ai|
+.. code-block:: R
+   :caption: |R|
    
    celsius_to_fahrenheit <- function(celsius) {
        fahrenheit <- (celsius * 9/5) + 32
@@ -450,7 +450,7 @@ Compare that to the code you wrote in :ref:`R functions`. The formula is correct
 ..  admonition:: Solution
     :class: toggle
 
-    .. code-block:: bash
+    .. code-block::
        :caption: |ai|
     
        in R can you write a number guessing game where the user has to guess a generated random number between 0 and 100. The user should have 5 tries.

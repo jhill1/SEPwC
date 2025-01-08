@@ -132,7 +132,7 @@ Type in the ``pwd`` command only into the command line.
 
 Where I've used an AI prompt, this will be labelled with this symbol:
 
-.. code-block:: bash
+.. code-block::
    :caption: |ai|
 
    How do I load a csv file using numpy?
