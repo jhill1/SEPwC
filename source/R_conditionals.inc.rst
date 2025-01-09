@@ -38,7 +38,7 @@ How do we write a program that prints out such a statement, based on that input?
      - Arctic desert
 
 So we need to be able to make a decision, based on those the variables, temperature and humidity. 
-This is where `if` statements come in.
+This is where ``if`` statements come in.
 
 R `if` statement
 ~~~~~~~~~~~~~~~~~~~~
@@ -46,9 +46,9 @@ R `if` statement
 .. index:: 
    single: if statement; R
 
-The `if` statement consists of an `if` condition, followed by zero or more `else if` conditions. A final `else`
-statement can be used to capture the situation where everything is `FALSE`.
-In general, we can put together multiple conditions. Only the first condition that is `TRUE` is executed.
+The ``if`` statement consists of an ``if`` condition, followed by zero or more ``else if`` conditions. A final ``else``
+statement can be used to capture the situation where everything is ``FALSE``.
+In general, we can put together multiple conditions. Only the first condition that is ``TRUE`` is executed.
 
 .. code-block:: R
     :caption: |R|
@@ -117,7 +117,7 @@ Not the best of code, engineering-wise, but it will work. Try it out.
       [1] "Don't understand HIGH"
 
 We now need to do all combinations, with some logic to decide a few things. There are (as always!) 
-a number of ways of doing this. This is using `else if` and boolean operators:
+a number of ways of doing this. This is using ``else if`` and boolean operators:
 
 .. code-block:: R
    :caption: |R|
@@ -140,14 +140,14 @@ a number of ways of doing this. This is using `else if` and boolean operators:
       print("Both should be `high` or `low`")
    }
 
-Here, we've used the `&` operator (and) to check that *both* temperature and humidity are
+Here, we've used the ``&`` operator (and) to check that *both* temperature and humidity are
 set appropriately. If the user supplies anything other than "high" or "low" it should print
 an message.
 
 ..  admonition:: Learn more
     :class: toggle
 
-    Note the error message we gave in the `else` block contains what the user
+    Note the error message we gave in the ``else`` block contains what the user
     had supplied us with. It often helps to print out the variables in question
     when you do the else like this. It helps you, the programmer, to debug and it helps
     the user possibly see what to change to fix. Here, we've also told the user what they should be
@@ -160,7 +160,7 @@ an message.
     :align: center
 
 
-The second way of working out the logic is by nested `if` statements. Here's an example:
+The second way of working out the logic is by nested ``if`` statements. Here's an example:
 
 .. index:: 
    single: nested if statements; R  
@@ -200,19 +200,19 @@ The above code will do the following:
  * or less than 0
  * otherwise the mark is between 0 and 39 (inclusive), which is a fail mark.
 
-Check you understand the flow of the code and note that the `if` statements are done in order, so 
-if the first one is `FALSE`, `mark` must be less than 40 or greater than 100.
+Check you understand the flow of the code and note that the ``if`` statements are done in order, so 
+if the first one is ``FALSE``, ``mark`` must be less than 40 or greater than 100.
 
 .. admonition:: Practical exercise
 
    **Test the code**
 
-    Try the code above with different values of `mark`. Does it work as expected?
+    Try the code above with different values of ``mark``. Does it work as expected?
 
 .. admonition:: Solution
    :class: toggle
 
-   It should work for all floating point and integer values of mark. What if you set `mark = "test"`?
+   It should work for all floating point and integer values of mark. What if you set ``mark = "test"``?
    Then what does it do? You should see:
 
    .. code-block:: output
@@ -225,13 +225,13 @@ if the first one is `FALSE`, `mark` must be less than 40 or greater than 100.
 .. youtube:: Czeh0-sUgtM
    :align: center
 
-Now you've seen nested `if` statements in action. Try the final practical exercise of this section.
+Now you've seen nested ``if`` statements in action. Try the final practical exercise of this section.
 
 .. admonition:: Practical exercise
 
    **Nested `if` version**
 
-   Re-write the environment code using nested `if` statements
+   Re-write the environment code using nested ``if`` statements
 
 
 .. admonition:: Solution

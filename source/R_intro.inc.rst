@@ -13,7 +13,7 @@ for fancy plotting (ggplot2), scientific algorithms (e.g. deSolve), AI (dnn) and
 Let's get a simple R code running!
 
 
-We want to calculate the height of a ball after time, t, which we can do using this formula
+We want to calculate the height of a ball after time, :math:`t`, which we can do using this formula
 
 .. math::
    

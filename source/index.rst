@@ -25,8 +25,6 @@ The table below contains suggestions of which blocks of works to cover in each w
 to help guide you. However, you can forge ahead, but equally, don't worry if you
 slip behind a little.
 
-.. include:: acknowledgements.inc.rst
-
 .. list-table:: Suggested work
    :header-rows: 1
 
@@ -55,7 +53,9 @@ slip behind a little.
    * - 11
      - Assessment
 
-Conventions used. Any code will be in a block, with an icon showing the language:
+**Conventions used.**
+
+Any code will be in a block, with an icon showing the language:
 
 .. code-block:: R
    :caption: |R|
@@ -145,6 +145,7 @@ All psuedo-code is labelled with this symbol:
 
     variable = 23.432
 
+.. include:: acknowledgements.inc.rst
 
 
 .. toctree::

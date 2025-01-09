@@ -13,7 +13,7 @@ for plotting (matplotlib), scientific algorithms (scipy), numerical algorithms
 Let's get a simple python code running!
 
 
-We want to calculate the height of a ball after time, t, which we can do using this formula
+We want to calculate the height of a ball after time, :math:`t`, which we can do using this formula
 
 .. math::
    
@@ -81,7 +81,7 @@ bunch of times? Let's add a loop!
 
 This is not the most elegant way to do this, but it works. You now have the height of the ball
 at time 0 to 0.9 in steps of 0.1. Note the indentation. In Python *whitespace* matters. It signifies 
-which statements are part of the `for` loop. You must be consistent with indentation or your
+which statements are part of the ``for`` loop. You must be consistent with indentation or your
 code will not run.
 
 .. admonition:: Practical exercise

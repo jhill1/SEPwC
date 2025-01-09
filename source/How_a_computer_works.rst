@@ -223,7 +223,7 @@ There are two ways to navigate your files; some form of graphic interface (all t
 command line. We're going to explore using both. Before we do this, we need a few basic command line tools to move around the files.
 
 To access the terminal or command line depends on the systems you're using. On Linux, you need to find the ``terminal`` application. 
-On Windows you need to find the the Command Prompt (``cmd``). On MacOs you need the ``Terminal`` application. Most OSes have some form
+On Windows you need to find the Command Prompt (``cmd``). On MacOs you need the ``Terminal`` application. Most OSes have some form
 of search function to find these. Once open, try the commands below.
 
 The first is to list which directory you are in.

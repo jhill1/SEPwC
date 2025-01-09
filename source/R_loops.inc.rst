@@ -96,9 +96,9 @@ see the following:
    [1] 7
    [1] 10
 
-The loop is made using the `for` command, which is then followed by the loop conditions
-in parenthesis `(  )`. The loop itself is delimited using curly braces `{  }`. R doesn't care
-about indentation as long as the `{ }` contains the statements within the loop. So this code
+The loop is made using the ``for`` command, which is then followed by the loop conditions
+in parenthesis ``(  )``. The loop itself is delimited using curly braces ``{  }``. R doesn't care
+about indentation as long as the ``{ }`` contains the statements within the loop. So this code
 works just as well:
 
 .. code-block:: R
@@ -122,7 +122,7 @@ Going back to loops...we can also iterate over the list using a counter.
    }
 
 The output will be identical to the above, but we're accessing the list via the index 
-(here, the variable `i`). What does `i` do then? Let's edit the code and find out.
+(here, the variable ``i``). What does ``i`` do then? Let's edit the code and find out.
 
 .. code-block:: R
    :caption: |R|
@@ -141,13 +141,13 @@ The output will be identical to the above, but we're accessing the list via the 
     5
     6
 
-`i` goes from 1 (R starts counting from 1, Python from 0) to the length of the list. The `seq` function
+``i`` goes from 1 (R starts counting from 1, Python from 0) to the length of the list. The `seq` function
 creates a list containing those numbers. So although this loops looks different to the first one we created,
 it's actually identical in terms of it's construction.
 
-The `seq` function is `seq(start, stop, increment)`
-which generates a list of integers: `start`, `start+increment`, `start+2*increment`, and so on up to, and including, `stop`. 
-We can also write `seq(stop)` as an abbreviation for `seq(1, stop, 1)`, or `seq(start,stop)` to assume an increment
+The ``seq`` function is ``seq(start, stop, increment)``
+which generates a list of integers: ``start``, ``start+increment``, ``start+2*increment``, and so on up to, and including, ``stop``. 
+We can also write ``seq(stop)`` as an abbreviation for ``seq(1, stop, 1)``, or ``seq(start,stop)`` to assume an increment
 of 1.
 
 For loops are a really useful way of doing the same thing to each item in a list. 
@@ -173,8 +173,8 @@ For loops are a really useful way of doing the same thing to each item in a list
    and calculates F, before printing C and F. Note the use of `paste` to join the
    two number together on one line.
 
-In a `for` loop we always know how many times we should iterate that loop. What if we don't know in advance?
-R also has a `while` loop which will keep going as long as some condition is true.
+In a ``for`` loop we always know how many times we should iterate that loop. What if we don't know in advance?
+R also has a ``while`` loop which will keep going as long as some condition is true.
 
 
 .. youtube:: i98WjaITzNk
@@ -186,7 +186,7 @@ R `while` loop
 .. index:: 
    single: loops; while loops (R)
 
-A while-loop executes repeatedly a set of statements as long as a boolean condition is `True`
+A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``
 
 .. code-block:: R
    :caption: |R|
@@ -226,7 +226,7 @@ This will loop until the counter is greater than 10. So we will see:
     [1] 10
     [1] 11
 
-Note the counter started from 0 and the while loop kept going until it was `>10`. The condition
+Note the counter started from 0 and the while loop kept going until it was ``>10``. The condition
 can be any conditional statement, including key presses (but that requires some knowledge we don't have yet).
 
 
