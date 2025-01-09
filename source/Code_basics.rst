@@ -10,6 +10,8 @@ we can focus on the language, rather than also learning the jargon!  In this cha
 This is code-like text that is easier to read. 
 There is no fixed syntax (you can make up your own!) and it's designed for us to read. 
 
+This is a list of terms we will use throughout:
+
 **Variable**: a variable is a container where you store something. You decide what that variable is called and what you put in it.
 
 **Constant**: a bit of data that never changes throughout the code, unlike a variable.
@@ -38,7 +40,7 @@ Defining a variable
 
 A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time.
 In compiled language you need to decide up-front which variables you need. Variables can change what they store throughout the code, 
-including the type of data they store.
+including the type of data they store in most interpreted langaugaes.
 
 Some examples:
 
@@ -47,35 +49,35 @@ Some examples:
 
    my_data = [1, 2, 3, 5, 19, 18]
    
-I've create a variable called ``my_data`` which contains a list of numbers.
+I've create a variable called ``my_data`` which contains a list of integers.
 
 .. code-block::
    :caption: |pc|
 
    my_favourite_number = 7
 
-This variable contains a single number, 7.
+This variable contains a single integer, 7.
 
 .. code-block::
    :caption: |pc|
 
    pi = 3.14159
 
-This variable contains the number for \pi to five decimal places.
+This variable contains the real (or floating point) number for \pi to five decimal places.
 
 .. code-block::
    :caption: |pc|
 
    name = "Jon"
 
-This variable contains text.
+This variable contains text or a string.
 
 .. code-block::
    :caption: |pc|
 
    loaded_data = load_csv_file("mega_data_set.csv")
 
-This variable contains whatever the "mega_data_set.csv" file contains.
+This variable contains whatever the "mega_data_set.csv" file contains, which was loaded via the ``load_csv_file`` function.
 
 What about changing what's in a variable? Just set it:
 
@@ -87,7 +89,7 @@ What about changing what's in a variable? Just set it:
    my_name="Fred"
    print(my_name)
 
-What the above code will do is set the variable "my_name" to Jon, print it to screen, then set "my_name" to Fred and print that to screen. 
+What the above code will do is set the variable ``my_name`` to Jon, print it to screen, then set ``my_name`` to Fred and print that to screen. 
 What the users sees is:
 
 .. code-block:: output
@@ -148,10 +150,10 @@ Bad variables:
    mrgr
 
 The first list is clear with little doubt what that variable contains. The second list is not that helpful.
-Is `temp` "temporary" or "temperature"? `chemdat` might be OK, but a bit hard 
-to read. `top` is not helpful, topography or the top of something? `x` and `rs` could be anything! In 
-5 year's time you will not remember what `mrgr` is, but `max_reef_growth_rate` will
-always make sense. Note I've not typed `maximum_reef_growth_rate` as I feel max is reasonable shorthand 
+Is ``temp`` "temporary" or "temperature"? ``chemdat`` might be OK, but a bit hard 
+to read. ``top`` is not helpful, topography or the top of something? ``x`` and ``rs`` could be anything! In 
+5 year's time you will not remember what ``mrgr`` is, but ``max_reef_growth_rate`` will
+always make sense. Note I've not typed ``maximum_reef_growth_rate`` as I feel max is reasonable shorthand 
 for maximum, but others would disagree with me on that!
 
 .. admonition:: Thought exercise
@@ -192,14 +194,14 @@ to fix the kind of data up front. The kind of data is the datatype.
 Common datatypes are float (for a floating point number, 1.23412), integer (1, for example), 
 a string ("like this one") a boolean (true or false). We can also make up 
 our own datatypes! We can take the basic kinds and join them together, so for example, we can have a "list" datatype, which can contain
-a fixed number of floats, e.g. `[1.1, 23.5, 12321.2343242, 582.11]`. We could then make lists of lists, which we can think of as a table:
+a fixed number of floats, e.g. ``[1.1, 23.5, 12321.2343242, 582.11]``. We could then make lists of lists, which we can think of as a table:
 
 | 1   2   3   4   5
 | 5   4   3   2   1
 | 2   4   5   6   7 
 
 We can even make datatypes that mix all of these together (along with some functions to operate on them) to create
-objects. 
+objects (we'll come to those later). 
 
 .. admonition:: Thought exercise
 
@@ -246,7 +248,7 @@ So the above, if the user put in 2, the user would see
   You now have 7
 
 Operations cover any mathematical operation (multiply, divide, subtract), but also some more
-specialist ones like "modulus" which gives you the reminder of a division. We can also "overload"
+specialist ones like "modulus" which gives you the reminder of a division. We can also `overload`
 operations so "add" works on multiple data types, for example:
 
 .. code-block::
@@ -291,7 +293,7 @@ symbol is used depends on the language and not all languages can do this.
 Booleans and Logic
 ------------------
 
-A boolean is either `true` or `false`. In code this is very important as it allows our code
+A boolean is either ``true`` or ``false``. In code this is very important as it allows our code
 to make decisions based on the value of variables.
 
 .. code-block::
@@ -303,10 +305,10 @@ to make decisions based on the value of variables.
    4 < 5 && 5 < 6
    4 < 5 || 6 < 3
 
-All the above will return `true`. 3 is less than 5, etc. The `&&` means *and*, so *both* boolean must
+All the above will return ``true``. 3 is less than 5, etc. The ``&&`` means *and*, so *both* booleans must
 be true for that statement to also be true; so 4 must be less than 5 *and* 5 must be less than 6. The 
-`||` means *or*. In this case only 1 of the boolean must be true for the statement to also return `true`.
-So either 4 must be less than 5 (`true`) *or* 6 must be less than 3 (`false`). 
+``||`` means *or*. In this case only 1 of the boolean must be true for the statement to also return `true`.
+So either 4 must be less than 5 (``true``) *or* 6 must be less than 3 (``false``). 
 
 If we then add some variables into the mix.
 
@@ -769,20 +771,20 @@ object-oriented programming. An object is a collection of data *and* functions t
 Objects are widely used in both Python and R modules/libraries, so it's worth getting our head
 around them now.
 
-An object is a single instance of a class. Think of the the `Class` as the template. You can 
-make multiple instances of that `Class` and each one is an `Object`.
+An object is a single instance of a class. Think of the the ``Class`` as the template. You can 
+make multiple instances of that ``Class`` and each one is an ``Object``.
 
-Let's make a `Dog` class. Each `Dog` has a set of attributes and some actions. Those will depend
+Let's make a ``Dog`` class. Each ``Dog`` has a set of attributes and some actions. Those will depend
 on what we need this class to do, but as this is a thought exercise for now, let's 
 keep it simple.
 
-Each `Dog` should have
+Each ``Dog`` should have
 
   * a name
   * age
   * a colour
 
-Each `Dog` should then be able to:
+Each ``Dog`` should then be able to:
 
   * bark
   * go for walkies
