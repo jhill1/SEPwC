@@ -1,7 +1,7 @@
 R: testthat
 ~~~~~~~~~~~~
 
-The first thing that you need to do is install the testthat R package. This can be done from CRAN using the code below.
+The first thing that you need to do is install the ``testthat`` R package. This can be done from CRAN using the code below.
 
 .. code-block:: R
    :caption: |R|
@@ -9,7 +9,7 @@ The first thing that you need to do is install the testthat R package. This can 
    install.packages("testthat")
 
 
-Once testthat is installed, you can load it into your R sessions just like any other R package.
+Once ``testthat`` is installed, you can load it into your R sessions just like any other R package.
 
 .. code-block:: R
    :caption: |R|
@@ -33,7 +33,7 @@ We're going to test our Fahrenheit to Celsius and vice-versa functions from the 
 
 Save the contents as ``temperature_conversion.R``.
 
-We use the ``test_that`` function of the testthat package to write sime simple tests for our two functions. The ``test_that`` function follows a simple structure with two arguments: ``desc`` provides a description (in quotes) of whatever is being tested, and ``code`` provides whatever code (within curly brackets) to test.
+We use the ``test_that`` function of the ``testthat`` package to write some simple tests for our two functions. The ``test_that`` function follows a simple structure with two arguments: ``desc`` provides a description (in quotes) of whatever is being tested, and ``code`` provides whatever code (within curly brackets) to test.
 
 Within the bracketed code to be tested, one or more ``expect_that`` functions are run; each call to ``expect_that`` is an independent test. The ``expect_that`` function takes two arguments: ``object`` is the object that is being examined by the function and ``condition`` is the condition that the object is meant to satisfy.
 
@@ -67,7 +67,7 @@ We can create the same test for the ``C_to_F`` function:
       expect_that( object = is.numeric(temp_F), condition = equals(TRUE) );
     })
 
-You can run those two tests if you've compied them into your R session (along with the ``temperature_conversion.R`` file: hint ``source``).
+You can run those two tests if you've copied them into your R session (along with the ``temperature_conversion.R`` file: hint ``source``).
 
 The better idea is to simply run all the tests at once. So let's create a test file with the following contents (including a fake test that will fail).
 

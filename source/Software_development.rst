@@ -14,7 +14,7 @@ Revision control
 We've already learnt one of the key tools (or if you've skipped to this bit, you can go back and learn about it), 
 which is :ref:`revision control <Revision control with Git>`.
 Rather than keep separate versions of code in separate files (which would be a nightmare for any reasonable sized application), 
-we keep versions of files in a revision control system. In this course we've learnt about `git`, but there are other 
+we keep versions of files in a revision control system. In this course we've learnt about ``git``, but there are other 
 tools, jut not as popular. 
 
 However, revision control is a tool to help development; it does not solve all problems. You can use it in a number of ways depending on the project, the number of people and the aims of the code. There is no single right way to do this and any development tools helps set up a process, but it's humans that actually devise and use (or not!) any processes.
@@ -161,19 +161,19 @@ Linting your code
 -------------------
 
 *Linting* refers to running your code through software that checks the syntax and layout/formatting of your code. The
-term comes from the fluff shed by clothing, i.e. `lint` removes the extraneous fluff from your code. It often
+term comes from the fluff shed by clothing, i.e. ``lint`` removes the extraneous fluff from your code. It often
 points our better ways of writing functions, sylistic issues with your code and, when working in a team, checks
 things are consistant across the whole team (e.g. using 4 spaces to indent, rather than some people using 3 or 2).
 
 Both R and Python (and most other languages) have some form of lint software available. For R the 
-package is called `lintr`, for Python it's `pylint`. Let's deal with these in turn.
+package is called ``lintr``, for Python it's ``pylint``. Let's deal with these in turn.
 
-`lintr`
-~~~~~~~~
+``lintr``
+~~~~~~~~~
 
-`lintr` is used inside an R environment. 
+``lintr`` is used inside an R environment. 
 
-Create a file (e.g. `test_lint.R`) contining the following:
+Create a file (e.g. :file:`test_lint.R`) containing the following:
 
 .. code-block:: R
     :caption: |R|
@@ -236,11 +236,11 @@ You should see something like the following output:
 
     Running the lint function on that should return nothing.
 
-`pylint`
-~~~~~~~~
+``pylint``
+~~~~~~~~~~
 
-`pylint` is run from the command line (e.g. your Anaconda bash or the terminal emulator). Create a 
-file called "circle.py" with the following contents:
+``pylint`` is run from the command line (e.g. your Anaconda bash or the terminal emulator). Create a 
+file called :file:`circle.py` with the following contents:
 
 .. code-block:: Python
     :caption: |python|
@@ -267,7 +267,7 @@ file called "circle.py" with the following contents:
         def __repr__(self):
             return f"{self.__class__.__name__}(radius={self.radius})"
 
-Run pylint on that file in the command line:
+Run ``pylint`` on that file in the command line:
 
 .. code-block:: bash
     :caption: |cli|
@@ -376,7 +376,7 @@ are pretty good. We're going to focus on Gemini here.
 Using it a document explainer or searcher
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let's try using AI to understand some `git` commands. Let's imagine we've been
+Let's try using AI to understand some ``git`` commands. Let's imagine we've been
 working but want to throw all our changes away and revert the code back
 to the last commit. Let's ask ChatGPT
 
@@ -386,16 +386,16 @@ to the last commit. Let's ask ChatGPT
    how do i revert a git repo to the last commit state?
 
 Which should return two different options:
- - `git reset --hard`
- - `git revert`
+ - ``git reset --hard``
+ - ``git revert``
 
 This gives us a good start, but actually doesn't fully answer my question. 
-The last option of `git revert` reverts the last commit! It does not undo any staged
+The last option of ``git revert`` reverts the last commit! It does not undo any staged
 or unstaged changes. The first command does the trick but have some subtleties
 about exactly what it'll do. There are context though.
 
 So AI helped us a bit here, but didn't give a full answer straight off. But you can 
-keep asking it questions to get the clarificaiton needed. So let's ask another question:
+keep asking it questions to get the clarification needed. So let's ask another question:
 
 .. code-block::
    :caption: |ai|

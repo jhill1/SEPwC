@@ -361,7 +361,7 @@ At Fort Denison our amplitudes and phases are:
  - Q1: 0.020 m and 1.016 radians
  - M4: 0.003 m and 2.09 radians
 
-We could plot those using sine curves. However, `uptide` also has functionality to 
+We could plot those using sine curves. However, ``uptide`` also has functionality to 
 give us a total tidal signal from the amplitudes and phases.
 
 .. code-block:: Python

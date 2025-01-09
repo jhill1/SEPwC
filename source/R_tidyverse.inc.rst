@@ -710,7 +710,7 @@ in the ``cols`` argument, we omit ``plot_id`` from being reshaped
     difficult to do things like look at the relationship between mean values of
     each measurement per year in different plot types. Let's walk through a
     common solution for this type of problem. First, use ``pivot_longer()`` to create a
-    dataset where we have a names column called `measurement` and a
+    dataset where we have a names column called ``measurement`` and a
     ``value`` column that takes on the value of either ``hindfoot_length`` or
     ``weight``. *Hint*: You'll need to specify which columns will be part of the reshape.
 
@@ -800,8 +800,8 @@ observations for these more common species:
     :caption: |R|
 
     ### Create the dataset for exporting:
-    ##  Start by removing observations for which the `species_id`, `weight`,
-    ##  `hindfoot_length`, or `sex` data are missing:
+    ##  Start by removing observations for which the 'species_id', 'weight',
+    ##  'hindfoot_length', or 'sex' data are missing:
     surveys_complete <- surveys %>%
            filter(species_id != "",        # remove missing species_id
            !is.na(weight),                 # remove missing weight

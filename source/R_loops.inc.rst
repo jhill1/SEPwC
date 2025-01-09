@@ -66,7 +66,7 @@ is very boring and repetitive. The entire idea of writing code it to remove the
 repetitive, boring stuff and let the computer do that work. This is where loops come in.
 
 R ``for`` Loops
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 .. index:: 
    single: loops; for loops (R)
 
@@ -182,7 +182,7 @@ R also has a ``while`` loop which will keep going as long as some condition is t
 
 
 R ``while`` loop
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 .. index:: 
    single: loops; while loops (R)
 
