@@ -115,6 +115,47 @@ Test-driven development turns the development cycle around to put testing up-fro
 
 The tests are written immediately after requirements capture and before any code is written (so the test will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
 
+Development tools
+-----------------
+
+One of the amazing thing about writing software is there is no "right way" to do it. You do it however you
+feel comfortable and productive. I use a text editor and the command line. Others use an Integrated
+Development Environment (IDE) which comes in various levels of complexity and features.
+
+All IDEs are essentially a text editor with some form of hook to a compiler or runtime environment. For R
+and Python, which don't need compiling, its the runtime environment option. Most IDEs have a debugger built in, 
+along with syntax highlighting and variable/function completion.
+
+I don't use these tools as I often write code on HPC (High Performance Computing) platforms which generally 
+don't have them or they are very slow when used over internet connections. I therefore prefer to use more
+basic tools which will be on any computer I use. However, once you know how to use them well, they can make
+ou more productive. 
+
+Spyder
+~~~~~~
+
+Spyder is an open-source cross-platform IDE. The Python Spyder IDE is written completely in Python and is designed by scientists,
+so is ideal for us. The interface is dvided into a few windows. On the left is the editor window where you can type code and save 
+as a python file. On the right are two sub windows. The lower half is the Python interpreter. You can run python code directly in here. 
+The upper part is where plots, docs and other info appears. There's also a variable inspector and file browser you can use in this window; 
+click the tabs at the bottom to see.
+
+.. image:: ../images/spyder-default-layout-main.png
+
+Spyder has a bunch of useful tools, including github integration and code analysis, which can make your life easier. It is worth
+spending a bit of time to go through `the Spyder documentation <https://docs.spyder-ide.org/current/videos/index.html>`_
+and getting things set up as you want them. 
+
+RStudio
+~~~~~~~
+
+RStudio is a free and open-source IDE for R (and Python). There are also commerical versions available. Like Spyder it
+includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, 
+history, debugging, and workspace management.
+
+.. image:: ../images/rstudio-panes-labeled.jpeg
+
+You can integrate with git and, again, like Spyder, `it's worth reading through the docs to get things set up <https://docs.posit.co/ide/user/>`_.
 
 Linting your code
 -------------------
