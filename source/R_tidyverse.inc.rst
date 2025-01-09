@@ -12,7 +12,7 @@ especially for complicated operations. Enter ``dplyr``. ``dplyr`` is a package f
 helping with tabular data manipulation. It pairs nicely with ``tidyr`` which 
 enables you to swiftly convert between different data formats for plotting and analysis.
 
-The `tidyverse` package is an "umbrella-package" that installs ``tidyr``, ``dplyr``, 
+The ``tidyverse`` package is an "umbrella-package" that installs ``tidyr``, ``dplyr``, 
 and several other useful packages for data analysis, such as  ``ggplot2``, ``tibble``, etc.
 
 The ``tidyverse`` package tries to address 3 common issues that arise when
@@ -56,7 +56,7 @@ for this and more sophisticated data manipulation.
 First, `download the data file we're going to use, which can be found here 
 <https://github.com/jhill1/SEPwC/raw/master/code_examples/surveys.csv>`_.
 
-We'll read in our data using the `read_csv()` function from the
+We'll read in our data using the ``read_csv()`` function from the
 tidyverse package ``readr``. 
 
 .. code-block:: R
@@ -235,8 +235,8 @@ You can also create a second new column based on the first new column within the
              weight_lb = weight_kg * 2.2)
 
 If this runs off your screen and you just want to see the first few rows, you
-can use a pipe to view the `head()` of the data. (Pipes work with non-``dplyr``
-functions, too, as long as the ``dplyr`` or `magrittr` package is loaded).
+can use a pipe to view the ``head()`` of the data. (Pipes work with non-``dplyr``
+functions, too, as long as the ``dplyr`` or ``magrittr`` package is loaded).
 
 .. code-block:: R
     :caption: |R|
@@ -245,8 +245,8 @@ functions, too, as long as the ``dplyr`` or `magrittr` package is loaded).
        mutate(weight_kg = weight / 1000) %>%
        head()
 
-The first few rows of the output are full of `NA`s, so if we wanted to remove
-those we could insert a `filter()` in the chain:
+The first few rows of the output are full of ``NA``'s, so if we wanted to remove
+those we could insert a ``filter()`` in the chain:
 
 .. code-block:: R
     :caption: |R|
@@ -289,7 +289,7 @@ Split-apply-combine data analysis and the ``summarize()`` function
 Many data analysis tasks can be approached using the *split-apply-combine*
 paradigm: split the data into groups, apply some analysis to each group, and
 then combine the results. Key functions of ``dplyr`` for this workflow are
-`group_by()` and `summarize()`.
+``group_by()`` and ``summarize()``.
 
 The ``group_by()`` and ``summarize()`` functions
 ..................................................
@@ -302,7 +302,7 @@ The ``group_by()`` and ``summarize()`` functions
 ``group_by()`` is often used together with ``summarize()``, which collapses each
 group into a single-row summary of that group.  ``group_by()`` takes as arguments
 the column names that contain the **categorical** variables for which you want
-to calculate the summary statistics. So to compute the mean `weight` by sex:
+to calculate the summary statistics. So to compute the mean ``weight`` by sex:
 
 .. code-block:: R
     :caption: |R|
@@ -312,7 +312,7 @@ to calculate the summary statistics. So to compute the mean `weight` by sex:
         summarize(mean_weight = mean(weight, na.rm = TRUE))
 
 You may also have noticed that the output from these calls doesn't run off the
-screen anymore. It's one of the advantages of `tbl_df` over data frame.
+screen anymore. It's one of the advantages of ``tbl_df`` over data frame.
 
 You can also group by multiple columns:
 
@@ -325,7 +325,7 @@ You can also group by multiple columns:
         tail()
 
 Here, we used ``tail()`` to look at the last six rows of our summary. Before, we had
-used `head()` to look at the first six rows. We can see that the ``sex`` column contains
+used ``head()`` to look at the first six rows. We can see that the ``sex`` column contains
 ``NA`` values because some animals had escaped before their sex and body weights
 could be determined. The resulting ``mean_weight`` column does not contain ``NA`` but
 ``NaN`` (which refers to "Not a Number") because ``mean()`` was called on a vector of
@@ -344,7 +344,7 @@ statistics on weight. Because the missing values are removed first, we can omit
 
 Here, again, the output from these calls doesn't run off the screen
 anymore. If you want to display more data, you can use the ``print()`` function
-at the end of your chain with the argument `n` specifying the number of rows to
+at the end of your chain with the argument ``n`` specifying the number of rows to
 display:
 
 .. code-block:: R
@@ -382,7 +382,7 @@ sort on ``min_weight`` to put the lighter species first:
                   min_weight = min(weight)) %>%
     arrange(min_weight)
 
-To sort in descending order, we need to add the `desc()` function. If we want to sort the results by decreasing order of mean weight:
+To sort in descending order, we need to add the ``desc()`` function. If we want to sort the results by decreasing order of mean weight:
 
 .. code-block:: R
     :caption: |R|
@@ -441,7 +441,7 @@ as the arguments of ``count()``:
     surveys %>%
         count(sex, species)
 
-With the above code, we can proceed with `arrange()` to sort the table
+With the above code, we can proceed with ``arrange()`` to sort the table
 according to a number of criteria so that we have a better comparison.
 For instance, we might want to arrange the table above in (i) an alphabetical order of
 the levels of the species and (ii) in descending order of the count:
@@ -515,9 +515,8 @@ Reshaping with pivot\_longer and pivot\_wider
 .. index:: 
    single: tidyverse; pivot
 
-In the [spreadsheet
-lesson](https://datacarpentry.org/spreadsheet-ecology-lesson/01-format-data/),
-we discussed how to structure our data leading to the four rules defining a tidy
+In the :ref:`Moving from spreadsheets to data`,
+we discuss how to structure our data leading to the four rules defining a tidy
 dataset:
 
  1. Each variable has its own column
@@ -534,7 +533,7 @@ wanted to compare the different mean weight of each genus between plots? (Ignori
 
 We'd need to create a new table where each row (the unit) is comprised of values of variables
 associated with each plot. In practical terms this means the values
-in `genus` would become the names of column variables and the cells would contain the
+in ``genus`` would become the names of column variables and the cells would contain the
 values of the mean weight observed on each plot.
 
 Having created a new table, it is therefore straightforward to explore the
@@ -546,7 +545,7 @@ average genus weight per plot instead of recordings per date.
 The opposite transformation would be to transform column names into values of
 a variable.
 
-We can do both these of transformations with two `tidyr` functions, ``pivot_wider()``
+We can do both these of transformations with two ``tidyr`` functions, ``pivot_wider()``
 and ``pivot_longer()``.
 
 These may sound like dramatically different data layouts, but there are some tools that make
@@ -588,7 +587,7 @@ interest, and create a new variable for the ``mean_weight``.
 
 This yields ``surveys_gw`` where the observations for each plot are distributed across
 multiple rows, 196 observations of 3 variables.
-Using ``pivot_wider()`` with the names from `genus` and with values from ``mean_weight`` this becomes
+Using ``pivot_wider()`` with the names from ``genus`` and with values from ``mean_weight`` this becomes
 24 observations of 11 variables, one row for each plot.
 
 
@@ -634,10 +633,11 @@ the other variable contains the values previously associated with the column nam
  3. the *values\_to* column variable we wish to create and fill with values.
  4. *cols* are the name of the columns we use to make this pivot (or to drop).
 
-To recreate `surveys_gw` from `surveys_wide` we would create a names variable called
-`genus` and value variable called `mean_weight`.
+To recreate ``surveys_gw`` from ``surveys_wide`` we would create a names variable called
+``genus`` and value variable called ``mean_weight``.
 
-In pivoting longer, we also need to specify what columns to reshape. If the columns are directly adjacent as they are here, we don't even need to list the all out: we can just use the `:` operator!
+In pivoting longer, we also need to specify what columns to reshape. If the columns are directly adjacent as 
+they are here, we don't even need to list the all out: we can just use the ``:`` operator!
 
 
 .. code-block:: R
@@ -656,8 +656,8 @@ and then longer can be a useful way to balance out a dataset so that every
 replicate has the same composition
 
 We could also have used a specification for what columns to exclude. In this example,
-we will use all columns *except* `plot_id` for the names variable. By using the minus sign
-in the ``cols`` argument, we omit `plot_id` from being reshaped
+we will use all columns *except* ``plot_id`` for the names variable. By using the minus sign
+in the ``cols`` argument, we omit ``plot_id`` from being reshaped
 
 
 .. code-block:: R
@@ -669,10 +669,10 @@ in the ``cols`` argument, we omit `plot_id` from being reshaped
 
 .. admonition:: Practical exercise
 
-    Reshape the `surveys` data frame with `year` as columns, `plot_id`
+    Reshape the ``surveys`` data frame with ``year`` as columns, ``plot_id``
     as rows, and the
     number of genera per plot as the values. You will need to summarize before
-    reshaping, and use the function `n_distinct()` to get the number of unique
+    reshaping, and use the function ``n_distinct()`` to get the number of unique
     genera within a particular chunk of data. It's a powerful function! See
     ``?n_distinct`` for more.
 
@@ -757,7 +757,7 @@ in our working directory that will store this generated dataset. We don't want
 to write generated datasets in the same directory as our raw data. It's good
 practice to keep them separate. The ``data_raw`` folder should only contain the raw,
 unaltered data, and should be left alone to make sure we don't delete or modify
-it. In contrast, our script will generate the contents of the `data`
+it. In contrast, our script will generate the contents of the ``data``
 directory, so even if the files it contains are deleted, we can always
 re-generate them.
 

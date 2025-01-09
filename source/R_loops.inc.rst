@@ -65,7 +65,7 @@ This is error prone though. What if we make a typo (likely)? How would we know? 
 is very boring and repetitive. The entire idea of writing code it to remove the 
 repetitive, boring stuff and let the computer do that work. This is where loops come in.
 
-R `for` Loops
+R ``for`` Loops
 ~~~~~~~~~~~~~~
 .. index:: 
    single: loops; for loops (R)
@@ -141,7 +141,7 @@ The output will be identical to the above, but we're accessing the list via the 
     5
     6
 
-``i`` goes from 1 (R starts counting from 1, Python from 0) to the length of the list. The `seq` function
+``i`` goes from 1 (R starts counting from 1, Python from 0) to the length of the list. The ``seq`` function
 creates a list containing those numbers. So although this loops looks different to the first one we created,
 it's actually identical in terms of it's construction.
 
@@ -154,9 +154,9 @@ For loops are a really useful way of doing the same thing to each item in a list
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a `for` loop?**
+   **Writing our table for conversion using a ``for`` loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a `for` loop.
+    Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
 
 .. admonition:: Solution
    :class: toggle
@@ -169,9 +169,9 @@ For loops are a really useful way of doing the same thing to each item in a list
           print(paste(C,F))
       }
       
-   This version uses the `seq` function to go from -20 to 40 in steps of 5
-   and calculates F, before printing C and F. Note the use of `paste` to join the
-   two number together on one line.
+   This version uses the ``seq`` function to go from -20 to 40 in steps of 5
+   and calculates F, before printing C and F. Note the use of ``paste`` to join the
+   two numbers together on one line.
 
 In a ``for`` loop we always know how many times we should iterate that loop. What if we don't know in advance?
 R also has a ``while`` loop which will keep going as long as some condition is true.
@@ -181,7 +181,7 @@ R also has a ``while`` loop which will keep going as long as some condition is t
     :align: center
 
 
-R `while` loop
+R ``while`` loop
 ~~~~~~~~~~~~~~~
 .. index:: 
    single: loops; while loops (R)
@@ -232,9 +232,9 @@ can be any conditional statement, including key presses (but that requires some 
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a `while` loop?**
+   **Writing our table for conversion using a ``while`` loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a `while` loop.
+    Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
 
 .. admonition:: Solution
    :class: toggle
