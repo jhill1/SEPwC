@@ -40,7 +40,7 @@ Defining a variable
 
 A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time.
 In compiled language you need to decide up-front which variables you need. Variables can change what they store throughout the code, 
-including the type of data they store in most interpreted langaugaes.
+including the type of data they store in most interpreted languages.
 
 Some examples:
 
@@ -771,7 +771,7 @@ object-oriented programming. An object is a collection of data *and* functions t
 Objects are widely used in both Python and R modules/libraries, so it's worth getting our head
 around them now.
 
-An object is a single instance of a class. Think of the the ``Class`` as the template. You can 
+An object is a single instance of a class. Think of the ``Class`` as the template. You can 
 make multiple instances of that ``Class`` and each one is an ``Object``.
 
 Let's make a ``Dog`` class. Each ``Dog`` has a set of attributes and some actions. Those will depend
@@ -819,8 +819,13 @@ We would create a class something like:
                 print(name + " is now clean")
                 self.state = "clean"
 
+So what does this class do? It contains four variables: ``name``, ``age``, ``colour`` and ``state``. This are initialised when 
+an object is created and that expects the name, age and colour to be set. The ``Dog`` class then had three methods: 
+``bark()``, ``walkies()`` and ``beCleaned()``. When you call bark on your ``Dog`` object, "Woof!" is printed to screen.
+When you call ``walkies()`` the ``state`` is set to "muddy" (even if the state is already "muddy"). If you call ``beCleaned()``
+then the ``state`` is checked and the altered accordingly, with a message. 
 
-You could then have a pack of dogs:
+You could then have a pack of dogs by creating multiple objects and they behave as separate ``Dogs``:
 
 .. code-block::
    :caption: |pc|
