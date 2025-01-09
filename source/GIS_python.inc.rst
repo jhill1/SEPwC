@@ -148,7 +148,7 @@ sampling within a polygon, geometry calculations (differences, unions, intersect
 and geometric calculations (area, distances, lengths). 
 
 The ``shapely`` library
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 ``shapely`` is a library designed to do geometry calculations. It uses GIS Vector data
 which can be loaded into a ``Geometry``. You can also create geometries very easily in

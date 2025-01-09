@@ -10,7 +10,7 @@ which contains the data required. Make sure you
 change your working directory to match where you've downloaded the data. 
 
 The ``terra`` library
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 The ``terra`` library is based around two key classes: ``SpatRatser`` and ``SpatVector``. 
 Let's look at rasters first.
@@ -116,7 +116,7 @@ The same functions as above (``crs()``, ``ext()``, ``project()``) work as expect
 vector data.
 
 The ``sf`` library
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 R also have another popular library for dealing with shapefiles/vector data; ``sf``. 
 This library has more features than ``terra`` so is worth learning. 

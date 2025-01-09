@@ -7,7 +7,8 @@ This is based on the ``pyplot`` tutorial from the Matplotlib Development Team
 
 
 An introduction to the pyplot interface. It's worth reading the
-extensive ``matplotlib`` documentation. 
+extensive ``matplotlib`` documentation. Run through the code below
+in an ipython or python terminal.
 
 Introduction to pyplot
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -44,13 +45,13 @@ Generating visualizations with pyplot is very quick:
 
 You may be wondering why the x-axis ranges from 0-3 and the y-axis
 from 1-4.  If you provide a single list or array to
-`~.pyplot.plot`, matplotlib assumes it is a
+``plot``, matplotlib assumes it is a
 sequence of y values, and automatically generates the x values for
 you.  Since python ranges start with 0, the default x vector has the
 same length as y but starts with 0; therefore, the x data are
 ``[0, 1, 2, 3]``.
 
-`~.pyplot.plot` is a versatile function, and will take an arbitrary number of
+``plot`` is a versatile function, and will take an arbitrary number of
 arguments.  For example, to plot x versus y, you can write:
 
 .. code-block:: Python
@@ -77,9 +78,9 @@ example, to plot the above with red circles, you would issue
     plt.axis((0, 6, 0, 20))
     plt.show()
 
-See the `~.pyplot.plot` documentation for a complete
+See the ``plot`` documentation for a complete
 list of line styles and format strings.  The
-`~.pyplot.axis` function in the example above takes a
+``axis`` function in the example above takes a
 list of ``[xmin, xmax, ymin, ymax]`` and specifies the viewport of the
 axes.
 
@@ -110,7 +111,7 @@ Plotting with keyword strings
 
 There are some instances where you have data in a format that lets you
 access particular variables with strings. For example, with `structured arrays`_
-or `pandas.DataFrame`.
+or ``pandas.DataFrame``.
 
 .. _structured arrays: https://numpy.org/doc/stable/user/basics.rec.html#structured-arrays
 
@@ -166,7 +167,7 @@ Controlling line properties
   pair: Pyploy; Line Properties
 
 Lines have many attributes that you can set: linewidth, dash style,
-antialiased, etc; see `matplotlib.lines.Line2D`.  There are
+antialiased, etc; see `matplotlib.lines.Line2D <https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html>`_.  There are
 several ways to set line properties
 
 * Use keyword arguments::
@@ -183,7 +184,7 @@ several ways to set line properties
       line, = plt.plot(x, y, '-')
       line.set_antialiased(False) # turn off antialiasing
 
-* Use `~.pyplot.setp`.  The example below
+* Use ``setp``.  The example below
   uses a MATLAB-style function to set multiple properties
   on a list of lines.  ``setp`` works transparently with a list of objects
   or a single object.  You can either use python keyword arguments or
@@ -196,7 +197,7 @@ several ways to set line properties
       plt.setp(lines, 'color', 'r', 'linewidth', 2.0)
 
 
-Here are the available `~.lines.Line2D` properties.
+Here are the available ``lines.Line2D`` properties.
 
 ======================  ==================================================
 Property                Value Type
@@ -235,7 +236,7 @@ zorder                  any number
 ======================  ==================================================
 
 To get a list of settable line properties, call the
-`~.pyplot.setp` function with a line or lines as argument
+``setp`` function with a line or lines as argument
 
 .. sourcecode:: ipython
     :caption: |cli| |python|
@@ -258,9 +259,9 @@ Working with multiple figures and axes
 
 MATLAB, and :mod:`.pyplot`, have the concept of the current figure
 and the current axes.  All plotting functions apply to the current
-axes.  The function `~.pyplot.gca` returns the current axes (a
-`matplotlib.axes.Axes` instance), and `~.pyplot.gcf` returns the current
-figure (a `matplotlib.figure.Figure` instance). Normally, you don't have to
+axes.  The function ``gca`` returns the current axes (a
+``matplotlib.axes.Axes`` instance), and ``gcf`` returns the current
+figure (a ``matplotlib.figure.Figure`` instance). Normally, you don't have to
 worry about this, because it is all taken care of behind the scenes.  Below
 is a script to create two subplots.
 
@@ -281,10 +282,10 @@ is a script to create two subplots.
     plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
     plt.show()
 
-The `~.pyplot.figure` call here is optional because a figure will be created
+The ``figure`` call here is optional because a figure will be created
 if none exists, just as an Axes will be created (equivalent to an explicit
 ``subplot()`` call) if none exists.
-The `~.pyplot.subplot` call specifies ``numrows,
+The ``subplot`` call specifies ``numrows,
 numcols, plot_number`` where ``plot_number`` ranges from 1 to
 ``numrows*numcols``.  The commas in the ``subplot`` call are
 optional if ``numrows*numcols<10``.  So ``subplot(211)`` is identical
@@ -292,13 +293,13 @@ to ``subplot(2, 1, 1)``.
 
 You can create an arbitrary number of subplots
 and axes.  If you want to place an Axes manually, i.e., not on a
-rectangular grid, use `~.pyplot.axes`,
+rectangular grid, use ``axes``,
 which allows you to specify the location as ``axes([left, bottom,
 width, height])`` where all values are in fractional (0 to 1)
 coordinates. 
 
 You can create multiple figures by using multiple
-`~.pyplot.figure` calls with an increasing figure
+``figure`` calls with an increasing figure
 number.  Of course, each figure can contain as many axes and subplots
 as your heart desires:
 
@@ -321,20 +322,14 @@ as your heart desires:
                                  # current
     plt.title('Easy as 1, 2, 3') # subplot 211 title
 
-You can clear the current figure with `~.pyplot.clf`
-and the current axes with `~.pyplot.cla`.  If you find
-it annoying that states (specifically the current image, figure and axes)
-are being maintained for you behind the scenes, don't despair: this is just a thin
-stateful wrapper around an object-oriented API, which you can use
-instead.
 
 If you are making lots of figures, you need to be aware of one
 more thing: the memory required for a figure is not completely
 released until the figure is explicitly closed with
-`~.pyplot.close`.  Deleting all references to the
+``close``.  Deleting all references to the
 figure, and/or using the window manager to kill the window in which
 the figure appears on the screen, is not enough, because pyplot
-maintains internal references until `~.pyplot.close`
+maintains internal references until ``close``
 is called.
 
 .. _working-with-text:
@@ -344,8 +339,8 @@ Working with text
 .. index::
   pair: Pyplot; Text; 
 
-`~.pyplot.text` can be used to add text in an arbitrary location, and
-`~.pyplot.xlabel`, `~.pyplot.ylabel` and `~.pyplot.title` are used to add
+``text`` can be used to add text in an arbitrary location, and
+``xlabel``, ``ylabel`` and ``title`` are used to add
 text in the indicated locations 
 
 .. code-block:: Python
@@ -367,9 +362,9 @@ text in the indicated locations
     plt.show()
 
 
-All of the `~.pyplot.text` functions return a `matplotlib.text.Text`
+All of the ``text`` functions return a ``matplotlib.text.Text``
 instance.  Just as with lines above, you can customize the properties by
-passing keyword arguments into the text functions or using `~.pyplot.setp`:
+passing keyword arguments into the text functions or using ``setp``:
 
 .. code-block:: python
     :caption: |python|
@@ -405,10 +400,10 @@ Annotating text
 .. index::
   pair: Pyplot; Annotating text 
 
-The uses of the basic `~.pyplot.text` function above
+The uses of the basic ``text`` function above
 place text at an arbitrary position on the Axes.  A common use for
 text is to annotate some feature of the plot, and the
-`~.pyplot.annotate` method provides helper
+``annotate`` method provides helper
 functionality to make annotations easy.  In an annotation, there are
 two points to consider: the location being annotated represented by
 the argument ``xy`` and the location of the text ``xytext``.  Both of
@@ -505,6 +500,6 @@ is shown below.
 
     plt.show()
 
-It is also possible to add your own scale, see `matplotlib.scale` for
+It is also possible to add your own scale, see `matplotlib.scale <https://matplotlib.org/stable/api/scale_api.html#module-matplotlib.scale>`_ for
 details.
 
