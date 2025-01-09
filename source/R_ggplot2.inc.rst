@@ -4,14 +4,14 @@ ggplot2 tutorial
   single: ggplot2
 
 ``ggplot2`` is a popular library for creating pretty graphs and figures in R. It
-works in a simialr way to the tidyverse in terms of using dataframes as the basic data
+works in a similar way to the tidyverse in terms of using dataframes as the basic data
 and then adding layers on top to create the final plot. 
 
 This section is based on the tutorial by 
 `Cedric Scherer <https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/>`_
 
 ``ggplot2`` is also used as a basis for other graphing packages, such as ``ggpubr`` which simplifies some
-of the syntax here to create publicaiton-level quality graphs. By learning ``ggplot2`` you should find
+of the syntax here to create publication-level quality graphs. By learning ``ggplot2`` you should find
 ``ggpubr`` very easy to use and have the knowledge to create more bespoke plots where needed.
 
 The dataset
@@ -22,7 +22,7 @@ To make the plots manageable we are limiting the data to Chicago and 1997–2000
 on this data set, consult Roger Peng’s book Statistical Methods in Environmental Epidemiology
 with R. You can download the data we are using during this tutorial here (but you don’t have to).
 
-We can import the data into our R session for example with read_csv() from the {readr} package.
+We can import the data into our R session for example with ``read_csv()`` from the ``{readr}`` package.
 
 .. code-block:: R
     :caption: |R|
@@ -55,8 +55,8 @@ and then we need to say what kind of plot via the geometry: ``geom_point()``:
     g <- ggplot(chic, aes(x = date, y = temp))
     g + geom_line()
 
-Note that we've stored the plot into an object, `g`. To display, we simply type `g` to the R console. However, here, 
-I've added  line geometry too. You can add other things to `g` on the fly:
+Note that we've stored the plot into an object, ``g``. To display, we simply type ``g`` to the R console. However, here, 
+I've added  line geometry too. You can add other things to ``g`` on the fly:
 
 .. code-block:: R
 
@@ -82,7 +82,7 @@ Note that ggplot2 understand ``colour``, ``color`` and ``col`` and, of course, y
 Themes
 ~~~~~~
 
-Themes allow the setting up of axes, grids, fonts etc in a consistant way. ``ggplot2`` comes with a 
+Themes allow the setting up of axes, grids, fonts etc in a consistent way. ``ggplot2`` comes with a 
 number of built-in themes.
 
 .. code-block:: R
@@ -94,8 +94,8 @@ number of built-in themes.
 
 Using ``theme_set`` alters all plots in your current R session (or script). You can apply a theme to a
 particular plot only too. Many aspects of the plot can be altered via the ``theme()`` function.
-To see which details of a ggplot theme can be modified have a look here — and take some time; it's a long list.
-https://ggplot2.tidyverse.org/reference/theme.html
+To see which details of a ggplot theme can be modified have a `look here — and take some time; it's a long list.
+<https://ggplot2.tidyverse.org/reference/theme.html>`_
 
 Axes
 ~~~~~
@@ -231,7 +231,7 @@ But we can also force it to literally start at the origin!
 
 Scaling is an important part of plotting. If you are expecting a 1:1 ratio between your variables, creating
 a plot with the axes scaled to that helps visualisation. For demonstrating purposes, let’s plot temperature 
-against temperature with some random noise. The coord_equal() is a coordinate system with a specified ratio
+against temperature with some random noise. The ``coord_equal(``) is a coordinate system with a specified ratio
 representing the number of units on the y-axis equivalent to one unit on the x-axis. The default, ratio = 1,
 ensures that one unit on the x-axis is the same length as one unit on the y-axis:
 
@@ -244,7 +244,7 @@ ensures that one unit on the x-axis is the same length as one unit on the y-axis
            xlim(c(0, 100)) + ylim(c(0, 150)) +
            coord_fixed()
 
-Ratios larger than 1 make the units on the y-axis long thatn those on the x, and
+Ratios larger than 1 make the units on the y-axis long than those on the x, and
 vice-versa:
 
 .. code-block::
@@ -273,7 +273,7 @@ what we specified in the ``color`` argument:
     geom_point() +
     labs(x = "Year", y = "Temperature (°F)")
 
-How can you remove the legend if it's added by default?
+How can you remove the legend if it is added by default?
 
 .. code-block:: R
     :caption: |R|
@@ -321,7 +321,7 @@ And also chnage the position:
     labs(x = "Year", y = "Temperature (°F)") +
     theme(legend.position = "top")
 
-The possible options are "top", "right", "left" and "bottom". You can also specify 
+The possible options are ``top``, ``right``, ``left`` and ``bottom``. You can also specify 
 a coordinate for the legend to be from 0 to 1 (0 is the left/bottom, 1 is the right/top):
 
 .. code-block:: R
@@ -494,7 +494,7 @@ We can use a diverging colour scheme:
     gb + scale_color_gradient2(midpoint = mid)
 
 It is possible to specify your own colour palette, but I would recommend sticking to 
-pre-defined ones, espesially the ``viridis`` set, which are colour-blind safe. 
+pre-defined ones, especially the ``viridis`` set, which are colour-blind safe. 
 
 .. code-block::R
     :caption: |R|
@@ -510,7 +510,7 @@ pre-defined ones, espesially the ``viridis`` set, which are colour-blind safe.
 Multiple plots
 ~~~~~~~~~~~~~~~
 
-In the last example I snuck in an example of adding multiple plots to a figure!
+In the last code I snuck in an example of adding multiple plots to a figure!
 There are two main ways to do this: using the built-in ``facet`` or using an external
 package, such as ``patchwork``. 
 

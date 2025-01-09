@@ -1,7 +1,7 @@
 Setting up git
 ---------------
 
-For all the command-line examples below using either the `git bash` application (|win|) or the terminal (|maclin|). 
+For all the command-line examples below using either the ``git bash`` application (|win|) or the terminal (|maclin|). 
 On linux you can access the terminal via the Start Menu equivalent on most systems. On Macs, the terminal may be 
 hidden in the Utilities folder under Applications. 
 
@@ -141,8 +141,8 @@ same commands to choose another editor or update your email address.
 
    **Git Help and Manual**
 
-   Always remember that if you forget the subcommands or options of a `git` command, you can access the
-   relevant list of options typing `git <command> -h` or access the corresponding Git manual by typing
+   Always remember that if you forget the subcommands or options of a ``git`` command, you can access the
+   relevant list of options typing ``git <command> -h`` or access the corresponding Git manual by typing
    ``git <command> --help``, e.g.:
 
    .. code-block:: bash

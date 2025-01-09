@@ -13,8 +13,8 @@ let's make a change to :file:`mars.txt`, adding yet another line.
 .. code-block:: output
 
     Cold and dry, but everything is my favourite colour
-    The two moons may be a problem for werewolves
-    But the Mummy will appreciate the lack of humidity
+    The two moons may be a problem for satellites
+    But Branston will appreciate the lack of humidity
     An ill-considered change
 
 
@@ -33,8 +33,8 @@ Now, let's see what we get.
     +++ b/mars.txt
     @@ -1,3 +1,4 @@
      Cold and dry, but everything is my favourite colour
-     The two moons may be a problem for werewolves
-     But the Mummy will appreciate the lack of humidity
+     The two moons may be a problem for satellites
+     But Branston will appreciate the lack of humidity
     +An ill-considered change.
 
 which is the same as what you would get if you leave out ``HEAD`` (try it).  The
@@ -64,8 +64,8 @@ again, but with the notation ``HEAD~1``, ``HEAD~2``, and so on, to refer to them
     +++ b/mars.txt
     @@ -1 +1,4 @@
      Cold and dry, but everything is my favourite colour
-    +The two moons may be a problem for werewolves
-    +But the Mummy will appreciate the lack of humidity
+    +The two moons may be a problem for satellites
+    +But Branston will appreciate the lack of humidity
     +An ill-considered change
 
 
@@ -113,8 +113,8 @@ has a unique 40-character identifier. Our first commit was given the ID
     +++ b/mars.txt
     @@ -1 +1,4 @@
      Cold and dry, but everything is my favourite colour
-    +The two moons may be a problem for werewolves
-    +But the Mummy will appreciate the lack of humidity
+    +The two moons may be a problem for satellites
+    +But Branston will appreciate the lack of humidity
     +An ill-considered change
 
 That's the right answer, but typing out random 40-character strings is annoying,
@@ -133,8 +133,8 @@ so Git lets us use just the first few characters (typically seven for normal siz
     +++ b/mars.txt
     @@ -1 +1,4 @@
      Cold and dry, but everything is my favourite colour
-    +The two moons may be a problem for werewolves
-    +But the Mummy will appreciate the lack of humidity
+    +The two moons may be a problem for satellites
+    +But Branston will appreciate the lack of humidity
     +An ill-considered change
 
 ..  youtube:: YBOmWfZvxRY
@@ -172,8 +172,8 @@ We can put things back the way they were by using ``git checkout``:
 .. code-block:: output
 
     Cold and dry, but everything is my favourite colour
-    The two moons may be a problem for werewolves
-    But the Mummy will appreciate the lack of humidity
+    The two moons may be a problem for satellites
+    But Branston will appreciate the lack of humidity
 
 As you might guess from its name, ``git checkout`` checks out (i.e. restores) an old version of a file.
 In this case, we're telling Git that we want to recover the version of the file recorded in ``HEAD``,
@@ -223,10 +223,10 @@ by using ``git checkout``:
 
         git checkout f22b25e mars.txt
     
-    to revert ``mars.txt`` to its state after the commit ``f22b25e``. But be careful! 
+    to revert :file:`mars.txt` to its state after the commit ``f22b25e``. But be careful! 
     The command ``checkout`` has other important functionalities and Git will misunderstand
     your intentions if you are not accurate with the typing. For example, 
-    if you forget `mars.txt` in the previous command.
+    if you forget :file:`mars.txt` in the previous command.
     
     .. code-block:: bash
         :caption: |cli|
@@ -278,7 +278,7 @@ retrieve the state from before the most recent commit (``HEAD~1``), which is com
         (use "git checkout -- <file>..." to discard changes in working directory)
     
     As it says, ``git checkout`` without a version identifier restores files to the state saved in ``HEAD``.
-    The double dash `--` is needed to separate the names of the files being recovered
+    The double dash ``--`` is needed to separate the names of the files being recovered
     from the command itself: without it,
     Git would try to use the name of the file as the commit identifier.
 
@@ -343,7 +343,7 @@ on the other hand, moving backward and forward in time becomes much easier.
     new commit that reverses the erroneous commit.
         
     The command ``git revert`` is different from ``git checkout [commit ID]`` 
-    because `git checkout` returns the files not yet committed within the local repository 
+    because ``git checkout`` returns the files not yet committed within the local repository 
     to a previous state, whereas ``git revert``
     reverses changes committed to the local and project repositories.   
       

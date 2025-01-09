@@ -3,11 +3,10 @@ R: files
 .. index:: 
    single: files; R
 
-Writing software for scientific/research purposes often invovles reading in 
+Writing software for scientific/research purposes often involves reading in 
 data from files. R file handling is very powerful, but surprisingly
 easy to use and manage, but there are a lot of overlapping functions
 that do very similar things.
-
 
 Files in computing have a very long history and there's a lot of baggage
 carried over from this history. Some of this creeps into the jargon
@@ -32,9 +31,9 @@ something other than a comma!). The syntax for these function is very similar.
     data<-read.table("data.txt",sep=",",header = TRUE)
     data<-read.csv("data.txt",header = TRUE)
 
-Those two lines of code produce identical results. The `read.csv` has
-the separator (`sep=`) set to `,` by default. In `read.table` we specify
-it. In other words `read.table` is more flexible in reading in data as it
+Those two lines of code produce identical results. The ``read.csv`` function has
+the separator (``sep=``) set to ``,`` by default. In ``read.table`` we specify
+it. In other words ``read.table`` is more flexible in reading in data as it
 can read in data separated by spaces, semi-colons, pipes, etc. Both
 functions return a data frame object (we'll learn more on this later), 
 with the columns labelled by the headers. 
@@ -58,7 +57,7 @@ It's worth finding the R manuals online to see these and experiment a little.
 
 .. admonition:: Practical exercise
 
-    Write your `capitals` dictionary into a file, separated by commas, so country in 
+    Write your ``capitals`` dictionary into a file, separated by commas, so country in 
     column 1 and the city in column 2. Each country is then on a new line.
     This creates a CSV file, which you can load into Excel, etc.
 
@@ -88,4 +87,4 @@ It's worth finding the R manuals online to see these and experiment a little.
         "France","Paris"
         "Burkina Faso","Ouagadougou"
     
-    Why did I use the `write.table` function? What happens if `write.csv` is used? 
+    Why did I use the ``write.table`` function? What happens if ``write.csv`` is used? 

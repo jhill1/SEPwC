@@ -20,7 +20,7 @@ We've used a number of R functions already.
    print("Hello")
    print(paste(time, vert_position))
 
-The first thing to note is that a function is called with `()` parentheses. Sometimes it gives back 
+The first thing to note is that a function is called with ``()`` parentheses. Sometimes it gives back 
 a value (called "returning a value"), sometimes it does not. Sometimes there are things in between the
 parentheses, sometimes not (these things are called "arguments").
 
@@ -39,7 +39,7 @@ As we've seen already you can nest functions within other functions!
 
    print(paste("hola",length(my_list),"long")
 
-Here, we're calling the `print` function to print out the result of the ``paste`` function, which pastes together a string, the ``length`` of a list
+Here, we're calling the ``print`` function to print out the result of the ``paste`` function, which pastes together a string, the ``length`` of a list
 and another string. Three functions nested within each ohter. This is equivalent of:
 
 .. code-block:: R

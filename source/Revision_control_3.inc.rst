@@ -85,7 +85,7 @@ by asking Git to tell us the status of our project:
     
     nothing to commit (create/copy files and use "git add" to track)
 
-If you are using a different version of `git`, the exact
+If you are using a different version of ``git``, the exact
 wording of the output might be slightly different.
 
 .. admonition:: Thought exercise
@@ -109,18 +109,18 @@ wording of the output might be slightly different.
     ls -a          # ensure the .git subdirectory is present indicating we have created a new Git repository
 
 
-  Is the `git init` command, run inside the `moons` subdirectory, required for 
-  tracking files stored in the `moons` subdirectory?
+  Is the ``git init`` command, run inside the ``moons`` subdirectory, required for 
+  tracking files stored in the ``moons`` subdirectory?
 
 
 .. admonition:: Solution
     :class: toggle
 
-    No. The worker does not need to make the `moons` subdirectory a Git repository 
-    because the `planets` repository can track any files, sub-directories, and 
+    No. The worker does not need to make the ``moons`` subdirectory a Git repository 
+    because the ``planets`` repository can track any files, sub-directories, and 
     subdirectory files under the `planets` directory.  Thus, in order to track 
-    all information about moons, The worker only needed to add the `moons` subdirectory
-    to the `planets` directory.
+    all information about moons, The worker only needed to add the ``moons`` subdirectory
+    to the ``planets`` directory.
  
     Additionally, Git repositories can interfere with each other if they are "nested":
     the outer repository will try to version-control
@@ -145,7 +145,7 @@ wording of the output might be slightly different.
   
   The project manager explains how a nested repository is redundant and may cause confusion
   down the road. We would like to remove the nested repository. How can we undo 
-  the last `git init` in the `moons` subdirectory?
+  the last ``git init`` in the ``moons`` subdirectory?
 
 .. admonition:: Solution
    :class: toggle
@@ -161,15 +161,15 @@ wording of the output might be slightly different.
    
       rm filename
 
-   Similarly a directory can be removed using `rm -r dirname` or `rm -rf dirname`.
+   Similarly a directory can be removed using ``rm -r dirname`` or ``rm -rf dirname``.
    If the files or folder being removed in this fashion are tracked by Git, then their removal 
    becomes another change that we will need to track, as we will see in the next section.
 
    **Solution**
    
-   Git keeps all of its files in the `.git` directory.
-   To recover from this little mistake, we can just remove the `.git`
-   folder in the moons subdirectory by running the following command from inside the `planets` directory:
+   Git keeps all of its files in the :file:`.git` directory.
+   To recover from this little mistake, we can just remove the ``.git``
+   folder in the moons subdirectory by running the following command from inside the ``planets`` directory:
 
    .. code-block:: bash
       :caption: |cli|
@@ -178,5 +178,5 @@ wording of the output might be slightly different.
 
    But be careful! Running this command in the wrong directory will remove
    the entire Git history of a project you might want to keep.
-   Therefore, always check your current directory using the command `pwd`.
+   Therefore, always check your current directory using the command ``pwd``.
 

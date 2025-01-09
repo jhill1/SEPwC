@@ -175,7 +175,7 @@ If we really want to override our ignore settings, we can use ``git add -f`` to 
 
     .. code-block:: output
 
-        \*.dat           # ignore all data files
+        \*.dat          # ignore all data files
         !final.dat      # except final.data
 
     The exclamation point operator will include a previously excluded entry.
@@ -264,8 +264,8 @@ If we really want to override our ignore settings, we can use ``git add -f`` to 
 .. admonition:: Solution
     :class: toggle
 
-    1. append either `log_*`  or  `log*`  as a new entry in your .gitignore
+    1. append either ``log_*``  or  ``log*``  as a new entry in your .gitignore
     
-    3. track `log_01` using   `git add -f log_01`
+    3. track ``log_01`` using   ``git add -f log_01``
 
 
