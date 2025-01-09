@@ -105,7 +105,7 @@ be indented to the same level, but there are no rules for how much. Most program
 use 4 spaces. Some use 8, some (rarely) use 3.
 
 I would recommend sticking to 4 spaces. In a text editor it's worth setting your :kbd:`Tab`
-to be four spaces, rather than the `tab` character.
+to be four spaces, rather than the ``tab`` character.
 
 Going back to loops...we can also iterate over the list using a counter.
 
@@ -166,7 +166,7 @@ For loops are a really useful way of doing the same thing to each item in a list
           F = 9.0/5.0*C + 32
           print(C, F)
       
-   This version uses the `range` function to go from -20 to 41 (note: not 40!) in steps of 5
+   This version uses the ``range`` function to go from -20 to 41 (note: not 40!) in steps of 5
    and calculates F, before printing C and F. You could do this in one line of code, which 
    we will come to later.
 
@@ -223,7 +223,7 @@ This will loop until the counter is greater than 10. So we will see:
     10
     11
 
-Note the counter started from 0 and the while loop kept going until it was `>10`. The condition
+Note the counter started from 0 and the while loop kept going until it was ``>10``. The condition
 can be any conditional statement, including key presses (but that requires some knowledge we don't have yet).
 
 

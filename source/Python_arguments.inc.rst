@@ -127,7 +127,7 @@ The core functionality of ``argparse`` is the ``ArgumentParser``
                         epilog="Any text at the bottom of help, e.g. copyright"
                         )
 
-Once an ArgumentParser is set-up you can then add optional and positional arguments to that.
+Once an ``ArgumentParser`` is set-up you can then add optional and positional arguments to that.
 
 .. code-block:: python
     :caption: |python|
@@ -141,7 +141,7 @@ Once an ArgumentParser is set-up you can then add optional and positional argume
                         help="Print progress")                 # on/off flag
 
 
-You can also specify which variable the argument is parsered into, the type, if an argument is required, if it should be a list
+You can also specify which variable the argument is parsed into, the type, if an argument is required, if it should be a list
 and a lot more too.
 
 You then parse the argument and put them in variables as you see fit
@@ -159,9 +159,9 @@ You then parse the argument and put them in variables as you see fit
 
     Write a simple python script that returns the square of a given number, 
     e.g. if the users give 2, the program returns 4 to screen. 
-    It must have the following arguments using `argparse`. 
+    It must have the following arguments using ``argparse``. 
 
-     - an optional ``verbose`` flag, which can take an `int` value of 0, 1 or 2.
+     - an optional ``verbose`` flag, which can take an ``int`` value of 0, 1 or 2.
        This increases the verbosity of the output from just the number (`verbosity==0`)
        to a full sentence (`verbosity==2`), with default of 0.
      - restrict the input number to an integer only

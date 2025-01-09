@@ -137,8 +137,8 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
     The second set of examples (R and Python) both use *reserved words*. You cannot use those
     for variable names.
 
-    The final two examples issue warnings. The Python example checks you meant `is` not `==`.
-    The R example prints a wanring about max.print (i.e. you've printed too much!). We can 
+    The final two examples issue warnings. The Python example checks you meant ``is`` not ``==``.
+    The R example prints a warning about max.print (i.e. you've printed too much!). We can 
     alter that.
 
 

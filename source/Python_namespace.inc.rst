@@ -153,7 +153,7 @@ What if ``x`` is a list and we try and modify it?
     func1()
     print(x)
 
-Here, both the global *and* `local` give the same answer. We've modified the global variable within
+Here, both the global *and* local versions of ``x`` give the same answer. We've modified the global variable within
 the function. However, if we create a list of the same variable name, we'll have similar
 behaviour to the previous example:
 

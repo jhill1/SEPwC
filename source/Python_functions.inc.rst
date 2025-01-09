@@ -23,7 +23,7 @@ We've used a number of Python functions already.
    print("Hello")
    range(0,len(my_list),1)
 
-The first thing to note is that a function is called with `()` parentheses. Sometimes it gives back 
+The first thing to note is that a function is called with ``()`` parentheses. Sometimes it gives back 
 a value (called "returning a value"), sometimes it does not. Sometimes there are things in between the
 parentheses, sometimes not (these are called "arguments").
 
@@ -45,8 +45,8 @@ As we've seen already you can nest functions within other functions!
 .. index::
   single: range(); Python
 
-Here, we're calling the `range` function to go from `0` to the length of my_list (`len(my_list)`) in steps of 1. But `len()` is 
-also a function. The return value of `len(my_list)` gets put in place of that bit of code. This is exactly equivalent of doing:
+Here, we're calling the ``range`` function to go from ``0`` to the length of my_list (``len(my_list)``) in steps of 1. But ``len()`` is 
+also a function. The return value of ``len(my_list)`` gets put in place of that bit of code. This is exactly equivalent of doing:
 
 .. code-block:: python
    :caption: |python|
@@ -95,8 +95,8 @@ They follow this pattern:
 
        return 
 
-The key thing are the keyword `def` followed by the name of your function and the arguments expected, then a a `:`. Next comes your
-function body (indented; remember whitespace matters!). At the end of your function, use the `return` keyword (with a value if you want
+The key thing are the keyword ``def`` followed by the name of your function and the arguments expected, then a ``:``. Next comes your
+function body (indented; remember whitespace matters!). At the end of your function, use the ``return`` keyword (with a value if you want
 to return something).
 
 Rather than staying abstract, let's do something more concrete. Let's write a function to convert from Centigrade to Fahrenheit. 
@@ -132,7 +132,7 @@ Function arguments in Python
 .. index::
   single: Function Arguments; Python
 
-A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (kwargs) or generic arguments (args).
+A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (``kwargs``) or generic arguments (``args``).
 
 Above we used a keyword argument, which gave us the variable name inside the function. Here is an example where the function takes
 two keyword arguments:

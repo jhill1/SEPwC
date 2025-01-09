@@ -2,15 +2,15 @@ CSV files
 ------------
 
 CSV files are text files. They contain data in text format, with columns seperated by a delimiter
-and rows seperated by a new line.
+and rows separated by a new line.
 
-The delimaiter is often a comma `,`, hence CSV (Comma Seperated Values). Other common delimiters
+The delimiter is often a comma `,`, hence CSV (Comma Separated Values). Other common delimiters
 are whitespace, :kbd:`Tab`, or pipe symbols :kbd:`|`. Data that contains the delimiter can be quoted
-using `"`. 
+using ``"``. 
 
 CSV is obviously a spreadsheet-based data storage format. Data will be in the form of a table with columns
-and rows. The first row may be a header contining the information about each column or that may be
-in a seperate file (e.g. a text file).
+and rows. The first row may be a header continuing the information about each column or that may be
+in a separate file (e.g. a text file).
 
 .. warning::
   

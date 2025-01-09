@@ -34,7 +34,7 @@ them well:
 From source code to programme
 ------------------------------
 
-You may have heard the term `source code`, but what is it?
+You may have heard the term *source code*, but what is it?
 Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
 computer can do billions of these every second (this is the clock speed so 1 Ghz can do 1 
 billion 'things' per second). The moving of these 
@@ -83,8 +83,8 @@ This is an example of assembler code for an x86 processor (i.e. what the type of
 
 .. [#] From: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
 
-Fortunately, things have moved on and we can write code in `higher level languages`. These 
-come in two broad types: `compiled` and `interpreted`. Compiled languages go through a two-step
+Fortunately, things have moved on and we can write code in *higher level languages*. These 
+come in two broad types: *compiled* and *interpreted*. Compiled languages go through a two-step
 process to be turned into a programme. Interpreted languages do not, and can be run (executed)
 immediately
 
@@ -534,7 +534,7 @@ mix and match; so pull data from an absolute path in one place and from a relati
 in another. Finally, you can ask the user where to get data from too (or pull data
 from the internet) saving all this hassle.
 
-However, when starting to write your own script you will `hard-code` the filenames and hence
+However, when starting to write your own script you will *hard-code* the filenames and hence
 you need to know the difference between relative and absolute paths.
 
 More command line functions
@@ -718,7 +718,7 @@ So what are the basic commands you should know? Here's a list:
 
     In the above example, the renaming of files with the same name, but different extensions is a little cumbersome. It was fine with six
     files, but what if there were 100 files. On the command line that's annoying. In the GUI it would be very annoying! In Linux there is the 
-    ``rename`` command that can do it in one go. You can also write a small ``bash`` script to do it in a loop. In windows you can download tools
+    ``rename`` command that can do it in one go. You can also write a small *bash* script to do it in a loop. In windows you can download tools
     that do this or, like Linux, write a short script to do it. This shows the power of the command line and scripting.
 
 

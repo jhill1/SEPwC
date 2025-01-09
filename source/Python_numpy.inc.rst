@@ -10,15 +10,15 @@ multidimensional array data structures, such as the homogeneous, N-dimensional
 data structures. 
 
 Python lists are general purpose containers. They can be
-"heterogeneous", meaning that they can contain elements of a variety of datatypes.
+*heterogeneous*, meaning that they can contain elements of a variety of datatypes.
 
-However, scientific data is often numerical and hence `homogeneous`. 
+However, scientific data is often numerical and hence *homogeneous*. 
 NumPy is designed to work on such data, rather than be more general.
 
 Most NumPy arrays have some restrictions. For instance:
 
 - All elements of the array must be of the same type of data.
-- Once created, the total size of the the array can't change.
+- Once created, the total size of the array can't change.
 - The shape must be "rectangular", not "jagged"; e.g., each row of
   a two-dimensional array must have the same number of columns.
 
@@ -27,7 +27,8 @@ make the array faster, more memory efficient, and more convenient to use than
 less restrictive data structures.
 
 For the remainder of this document, we will use the word "array" to refer to
-an instance of ``ndarray``.
+an instance of ``ndarray``. You should work through the examples below in 
+a ipython or python terminal.
 
 How to import NumPy
 ~~~~~~~~~~~~~~~~~~~
@@ -301,12 +302,12 @@ You can quickly sort the numbers in ascending order with:
 
 In addition to sort, which returns a sorted copy of an array, you can use:
 
-- `argsort`, which is an indirect sort along a specified axis,
-- `lexsort`, which is an indirect stable sort on multiple keys,
-- `searchsorted`, which will find elements in a sorted array, and
-- `partition`, which is a partial sort.
+- ``argsort``, which is an indirect sort along a specified axis,
+- ``lexsort``, which is an indirect stable sort on multiple keys,
+- ``searchsorted``, which will find elements in a sorted array, and
+- ``partition``, which is a partial sort.
 
-To read more about sorting an array, see: `sort`.
+To read more about sorting an array, see: `sort functions <https://numpy.org/doc/stable/reference/routines.sort.html#sorting>`_.
 
 If you start with these arrays:
 
@@ -345,7 +346,7 @@ You can concatenate them with:
 In order to remove elements from an array, it's simple to use indexing to select
 the elements that you want to keep.
 
-To read more about concatenate, see: `concatenate`.
+To read more about concatenate, see: `concatenate help <https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html>`_.
 
 
 How do you know the shape and size of an array?
@@ -981,8 +982,8 @@ You can also use ``arr.T``
             [1, 4],
             [2, 5]])
 
-To learn more about transposing and reshaping arrays, see `transpose` and
-`reshape`.
+To learn more about transposing and reshaping arrays, see `transpose <https://numpy.org/doc/stable/reference/generated/numpy.transpose.html#numpy-transpose>`_ and
+`reshape <https://numpy.org/doc/stable/reference/generated/numpy.reshape.html#numpy-reshape>`_ documents.
 
 NumPy's ``np.flip()`` function allows you to flip, or reverse, the contents of
 an array along an axis. When using ``np.flip()``, specify the array you would like

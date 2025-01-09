@@ -132,7 +132,7 @@ code will not run.
 .. admonition:: Solution
    :class: toggle
 
-   The code above will print a single `time`, `vert_position` pair which will
+   The code above will print a single ``time``, ``vert_position`` pair which will
    be the values at the final iteration of the loop.
 
    .. code-block:: output

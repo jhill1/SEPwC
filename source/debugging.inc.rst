@@ -234,7 +234,7 @@ console (in Spyder or RStudio is fine).
 
         NameError: name 'description' is not defined
     
-    I can see the issue (forgot an `s`). so fix that and try again. I can fix it by pressing up and 
+    I can see the issue (forgot an ``s``). so fix that and try again. I can fix it by pressing up and 
     navigating to the right place and fix the code. I can then use the arrows to go back to the bottom
     of the code block and press return to re-run. An now the code produces something!
 
@@ -258,7 +258,7 @@ console (in Spyder or RStudio is fine).
         friendlydog
         friendlypanda
 
-    Not quite right, but runs now at least. A little trick in ipython is to use the `%history` which gives
+    Not quite right, but runs now at least. A little trick in ipython is to use the ``%history`` which gives
     all the code I've run. I can grab that and re-write my base code. I can then debug as above or continue
     in the ipython console.
 
@@ -331,7 +331,7 @@ console (in Spyder or RStudio is fine).
 
 
     A lot of errors. We can probably fix them from top to bottom. So let's
-    try dealing with the first error by editing the `descriptions` variable.
+    try dealing with the first error by editing the ``descriptions`` variable.
     We can try in the console to get it to work. Pressing up in the R console until 
     we get to the line. Then edit the line; note the backtick vs ``'``. so
     ``descriptions = c('funny', 'cute', 'friendly')``. That works! Do the same 

@@ -40,7 +40,7 @@ How do we write a program that prints out such a statement, based on that input?
 So we need to be able to make a decision, based on those the variables, temperature and humidity. 
 This is where ``if`` statements come in.
 
-Python `if` statement
+Python ``if`` statement
 ~~~~~~~~~~~~~~~~~~~~~
 .. index::
   single: If statements; Python
@@ -205,7 +205,7 @@ if the first one is ``False``, ``mark`` must be less than 40 or greater than 100
 .. admonition:: Solution
    :class: toggle
 
-   It should work for all floating point and integer values of mark. What if you set `mark = "test"`?
+   It should work for all floating point and integer values of mark. What if you set ``mark = "test"``?
    Then what does it do? You should see something like:
 
    .. code-block:: output
@@ -265,7 +265,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
        else:
           print("I don't understand the humidity")
           print("Humidity: ", humidity)
-          print("Should be `high` or `low`")
+          print("Should be 'high' or 'low'")
       
    The advantage here is we can have more nuanced error messages (relating to temperature or humidity, rather than both), but
    there is repeated code and it might be harder to follow the logic. I prefer the previous version, but this works just fine.

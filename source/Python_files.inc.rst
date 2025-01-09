@@ -30,18 +30,18 @@ file and specify if we are going to read from it, or write to it.
 
     file = open('my_file.txt', 'r')
 
-The above opens the file with name `my_file.txt` (in the current directory) in `read` mode. 
-The variable `file` is the file handle. It's the variable by which you can access the file
+The above opens the file with name ``my_file.txt`` (in the current directory) in ``read`` mode. 
+The variable ``file`` is the file handle. It's the variable by which you can access the file
 on disk.
 
 The various modes are:
 
- * `r`: open an existing file for a read operation.
- * `w`: open an existing file for a write operation. If the file already contains some data, then it will be overridden but if the file is not present then it creates the file as well.
- * `a`: open an existing file for append operation. It won’t override existing data.
- * `r+`: To read and write data into the file. The previous data in the file will be overridden.
- * `w+`: To write and read data. It will override existing data.
- * `a+`: To append and read data from the file. It won’t override existing data.
+ * ``r``: open an existing file for a read operation.
+ * ``w``: open an existing file for a write operation. If the file already contains some data, then it will be overwritten but if the file is not present then it creates the file as well.
+ * ``a``: open an existing file for append operation. It won’t override existing data.
+ * ``r+``: To read and write data into the file. The previous data in the file will be overwritten.
+ * ``w+``: To write and read data. It will overwrite existing data.
+ * ``a+``: To append and read data from the file. It won’t overwrite existing data.
     
  A file, once finished with, needs closing too.
 
@@ -52,10 +52,10 @@ The various modes are:
     # do things
     file.close()
 
-It's useful to get into the habit of closing files or using the Python `with` statement
+It's useful to get into the habit of closing files or using the Python ``with`` statement
 to prevent files being left open. This is especially important when writing to 
 a file as often the data is "buffered" by the system and only gets written once 
-the file handle is lost (i.e. `.close()` is called or the variable goes out of scope). 
+the file handle is lost (i.e. ``.close()`` is called or the variable goes out of scope). 
 
 .. code-block:: python
     :caption: |python|
@@ -64,7 +64,7 @@ the file handle is lost (i.e. `.close()` is called or the variable goes out of s
         # do things
         file.close()
 
-The `file.close()` is now redundant, but can still be used in the code to make it clear if needed. What the
+The ``file.close()`` is now redundant, but can still be used in the code to make it clear if needed. What the
 ``with`` block does is call ``__enter__`` and ``__exit__`` functions, so files are automatically
 closed etc. 
 
@@ -175,7 +175,7 @@ into words (separated by spaces) and creating a list of those.
         ['core_17.xlsx', '27.75', '43\n']
         
 
-    Note how the second method has produced lists (due to the `split()` function) which
+    Note how the second method has produced lists (due to the ``split()`` function) which
     we could iterate over and do something sensible with, e.g. opening the file in the first
     element, perhaps.
 
@@ -254,7 +254,7 @@ others, but your job is to write clear code so use whichever is clearest for you
 
 .. admonition:: Practical exercise
 
-    Write your `capitals` dictionary into a file, separated by commas, so country in 
+    Write your ``capitals`` dictionary into a file, separated by commas, so country in 
     column 1 and the city in column 2. Each country is then on a new line.
     This creates a CSV file, which you can load into Excel, etc.
 

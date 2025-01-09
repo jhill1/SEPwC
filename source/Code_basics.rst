@@ -175,13 +175,13 @@ for maximum, but others would disagree with me on that!
 
     These are suggestions!
 
-    * `student_names`
-    * `name` (or `student_name`)
-    * `grain_size`
-    * `grain_sizes`
-    * `sea_surface_temperature` (or possibly `sst` as that is a standard acronym)
-    * `trajectory`
-    * `input_filename`
+    * ``student_names``
+    * ``name`` (or ``student_name``)
+    * ``grain_size``
+    * ``grain_sizes``
+    * ``sea_surface_temperature`` (or possibly ``sst`` as that is a standard acronym)
+    * ``trajectory``
+    * ``input_filename``
 
 
 Datatypes
@@ -248,7 +248,7 @@ So the above, if the user put in 2, the user would see
   You now have 7
 
 Operations cover any mathematical operation (multiply, divide, subtract), but also some more
-specialist ones like "modulus" which gives you the reminder of a division. We can also `overload`
+specialist ones like "modulus" which gives you the reminder of a division. We can also *overload*
 operations so "add" works on multiple data types, for example:
 
 .. code-block::
@@ -307,7 +307,7 @@ to make decisions based on the value of variables.
 
 All the above will return ``true``. 3 is less than 5, etc. The ``&&`` means *and*, so *both* booleans must
 be true for that statement to also be true; so 4 must be less than 5 *and* 5 must be less than 6. The 
-``||`` means *or*. In this case only 1 of the boolean must be true for the statement to also return `true`.
+``||`` means *or*. In this case only 1 of the boolean must be true for the statement to also return ``true``.
 So either 4 must be less than 5 (``true``) *or* 6 must be less than 3 (``false``). 
 
 If we then add some variables into the mix.

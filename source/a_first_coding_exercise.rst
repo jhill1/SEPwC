@@ -3,11 +3,11 @@ Our first coding exercise
 
 We are going to write a very simple application to keep track of 
 a to-do list. The application will be based around the CLI and take
-three commands: list, add and remove. You add an item to the list using the `add`
-option, remove using the `remove` option and print out the current list
-using `list`. 
+three commands: list, add and remove. You add an item to the list using the ``add``
+option, remove using the ``remove`` option and print out the current list
+using ``list``. 
 
-To keep tabs on what items are on the list we wil lsave the list to a 
+To keep tabs on what items are on the list we will save the list to a 
 text file (yes, this does mean you could just edit the text file...
 I didn't say this was a realistic application...).
 
@@ -18,8 +18,8 @@ and a test suite to check it's working OK.
 What to do
 ----------
 
-`cd` into a directory where you want to do this work. Then go to the repository
-and fork it. Then run:
+``cd`` into a directory where you want to do this work. Then go to the `repository
+and fork it <https://github.com/jhill1/SEPwC_formative>`_. Then run:
 
 .. code-block:: bash
    :caption: |CLI|
@@ -28,16 +28,16 @@ and fork it. Then run:
 
 With your username and (assuming you didn't change it) the repo name above.
 
-You should then see `python` and `R` folders with a `todo.py` or `todo.R` and the answers.
-`cd` into your language and open up the file. 
+You should then see ``python`` and ``R`` folders with a ``todo.py`` or ``todo.R`` and the answers.
+``cd`` into your language and open up the file. 
 
 In the file you'll see a skeleton code; three functions that need to be completed, 
 but their structure is ready for you. You'll also see some completed functions
 that parse command line arguments.
 
-Inside the folder you checked out there's also a `test` folder. In there you'll 
-find a `test_script` and a file called `test_list.txt`. These are the tests. Open
-the `test_script` file and have a look at the tests.
+Inside the folder you checked out there's also a ``test`` folder. In there you'll 
+find a ``test_script`` and a file called ``test_list.txt``. These are the tests. Open
+the ``test_script`` file and have a look at the tests.
 
 .. code-block:: python
    :caption: |python|
@@ -124,11 +124,11 @@ And you see some failures, like this:
    
   
 Your task is to complete the functions and pass all the tests. It's a "simple"
-as that. Start by writing the `list` function, running the test each time. Remember
+as that. Start by writing the ``list`` function, running the test each time. Remember
 to commit your changes as you go (even if the tests don't work fully). Use 
 the internet, AI and your peers to help you complete this as you see fit. This
 is a practice for the full assessment, but is not marked in any way.
 
-Once you're happy with it (and by the week 9) session, add me (`jhill1`) as a collaborator
+Once you're happy with it (and by the week 9) session, add me (``jhill1``) as a collaborator
 and I will add comments on your coding style.
 
