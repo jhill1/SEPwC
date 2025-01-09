@@ -1,5 +1,5 @@
-Sentiment Analysis
--------------------
+Mini course: Sentiment Analysis
+==================================
 
 Sentiment analysis or opinion mining is a way of extracting feelings from large amounts of text. When 
 we read text we can use our understanding of the words to derive an emotion from the text the
@@ -9,7 +9,7 @@ more nuanced emotions like *joy* or *anger*.
 This section is heavily based on `"Text Mining with R" <https://www.tidytextmining.com/sentiment.html>`_
 
 The pipeline in R
-~~~~~~~~~~~~~~~~~~
+--------------------
 
 We can use R's ``tidyverse``, along with ``tidytext``, data structures to perform these kinds of analyses quite easily, 
 building a pipeline, something like this:
@@ -53,7 +53,7 @@ Let's get these lexicons and see what they contain.
 Each one is a table of words (the unigram) and the sentiment, either as an emotion, positive/negative, or a score. 
 
 Using the ``inner join`` to get the sentiments from your data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------
 
 We can use the Jane Austen book database as our text. Let's first see which words are used to convey "joy" in 
 *Emma*. We first need to separate the words into rows in a dataframe, for which we can use

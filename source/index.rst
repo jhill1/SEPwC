@@ -45,9 +45,9 @@ slip behind a little.
    * - 7
      - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 8
-     - :ref:`Mini-courses<Mini-courses>`
+     - Mini-courses
    * - 9
-     - :ref:`Mini-courses<Mini-courses>`
+     - Mini-courses
    * - 10
      - Assessment
    * - 11
@@ -168,7 +168,11 @@ All psuedo-code is labelled with this symbol:
     R3
     Spreadsheets_data
     Testing_code
-    Mini_courses
+    R_ggplot2
+    python_plotting
+    Sentiment_analysis
+    tides_python
+    GIS
     genindex
 
 

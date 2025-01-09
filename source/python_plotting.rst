@@ -1,5 +1,5 @@
-Pyplot tutorial
-----------------
+Mini course: Pyplot tutorial
+============================
 .. index::
   single: Pyplot; python
 
@@ -11,7 +11,7 @@ extensive ``matplotlib`` documentation. Run through the code below
 in an ipython or python terminal.
 
 Introduction to pyplot
-~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 :mod:`matplotlib.pyplot` is a collection of functions that make matplotlib
 work like MATLAB.  Each ``pyplot`` function makes some change to a figure:
@@ -60,7 +60,7 @@ arguments.  For example, to plot x versus y, you can write:
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 
 Formatting the style of your plot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 .. index::
   pair: Pyplot; Formatting 
 
@@ -105,7 +105,7 @@ using arrays.
 
 
 Plotting with keyword strings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 .. index::
   pair: Pyplot; Keyword Strings
 
@@ -135,7 +135,7 @@ the strings corresponding to these variables.
 
 
 Plotting with categorical variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 .. index::
   pair: Pyplot; Categorical Variables
 
@@ -162,7 +162,7 @@ many plotting functions. For example:
 
 
 Controlling line properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 .. index::
   pair: Pyploy; Line Properties
 
@@ -250,7 +250,7 @@ To get a list of settable line properties, call the
       ...snip
 
 Working with multiple figures and axes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 .. index::
   pair: Pyplot; Multiple figures
 
@@ -335,7 +335,7 @@ is called.
 .. _working-with-text:
 
 Working with text
-~~~~~~~~~~~~~~~~~~
+------------------
 .. index::
   pair: Pyplot; Text; 
 
@@ -373,7 +373,7 @@ passing keyword arguments into the text functions or using ``setp``:
 
 
 Using mathematical expressions in text
-........................................
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
   pair: Pyplot; Mathematical expressions 
 
@@ -396,7 +396,7 @@ incorporate the output directly into your display figures or saved
 postscript. 
 
 Annotating text
-................
+~~~~~~~~~~~~~~~~~~
 .. index::
   pair: Pyplot; Annotating text 
 
@@ -432,7 +432,7 @@ variety of other coordinate systems one can choose.
 
 
 Logarithmic and other nonlinear axes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 .. index::
   pair: Pyplot; Logarithmic 
 

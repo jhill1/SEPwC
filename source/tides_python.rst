@@ -1,5 +1,5 @@
-Tidal analysis in Python
--------------------------
+Mini course: Tidal analysis in Python
+======================================
 
 Tides are a fundamental part of a number of coastal processes. As sea levels rise, tides will change, 
 and hence our flood risk, coastal geomorphology and ecological systems will also change as a consequence.
@@ -186,7 +186,7 @@ and phase will be different.
 Let's add up some sine curves to make something like the tide signals above.
 
 Sine Curves
-~~~~~~~~~~~
+------------
 
 Sine cuves can be generalised to the formula:
 

@@ -20,7 +20,7 @@ from sphinx.builders.html import StandaloneHTMLBuilder
 # -- Project information -----------------------------------------------------
 
 project = u'SEPwC'
-copyright = u'2024, Jon Hill'
+copyright = u'2025, Jon Hill'
 author = u'Jon Hill'
 
 # The short X.Y version

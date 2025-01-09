@@ -1,5 +1,5 @@
-ggplot2 tutorial
------------------
+Mini course: ggplot2 tutorial
+=============================
 .. index::
   single: ggplot2
 
@@ -15,7 +15,7 @@ of the syntax here to create publication-level quality graphs. By learning ``ggp
 ``ggpubr`` very easy to use and have the knowledge to create more bespoke plots where needed.
 
 The dataset
-~~~~~~~~~~~~
+------------
 
 We are using data from the National Morbidity and Mortality Air Pollution Study (NMMAPS). 
 To make the plots manageable we are limiting the data to Chicago and 1997–2000. For more detail 
@@ -32,7 +32,7 @@ We can import the data into our R session for example with ``read_csv()`` from t
     head(chic, 10)
 
 Plotting basics
-~~~~~~~~~~~~~~~~
+----------------
 
 A ggplot is built up from a few basic elements:
 
@@ -80,7 +80,7 @@ Note that ggplot2 understand ``colour``, ``color`` and ``col`` and, of course, y
         geom_line(color = "firebrick", linetype = "dotted", lwd = .3)
 
 Themes
-~~~~~~
+----------
 
 Themes allow the setting up of axes, grids, fonts etc in a consistent way. ``ggplot2`` comes with a 
 number of built-in themes.
@@ -98,7 +98,7 @@ To see which details of a ggplot theme can be modified have a `look here — and
 <https://ggplot2.tidyverse.org/reference/theme.html>`_
 
 Axes
-~~~~~
+------
 
 The default axes titles use the variable names. Let’s add some well-written labels to the axes. 
 For this, we add labs() providing a character string for each label we want to change (here x and y):
@@ -165,7 +165,7 @@ And removing ticks and text (not advised!):
 The ``element_blonk()`` functions allows to remove any aspect of the theme, e.g. axes labels, if you wish.
 
 Axes limits and scales
-.......................
+~~~~~~~~~~~~~~~~~~~~~~~
 
 A key part of producing attractive plots is the scale and limits of the axes. Using these you can ensure the
 data are plotted correctly, e.g. on log-log axes or the key part of the data can be shown. You can, of course,
@@ -257,7 +257,7 @@ vice-versa:
            coord_fixed(ratio = 1/5)
 
 Plot legends
-~~~~~~~~~~~~
+--------------
 
 We often colour code parts of our graphs, and then add a legend to show how the data are separated.
 We will ``color`` code the plot based on season. Or to phrase it in a more ``ggplot``’ish way: we map the 
@@ -422,7 +422,7 @@ for continuous data, such as the temperature:
 It is possible to force discrete legends or binned legends too.
 
 Colours
-..........
+~~~~~~~~
 
 A key part of the plot is the colour scheme chosen. There are two main
 colour elements to alter; ``color`` and ``fill``. These can be either a single colour
@@ -508,14 +508,14 @@ pre-defined ones, especially the ``viridis`` set, which are colour-blind safe.
     (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
 
 Multiple plots
-~~~~~~~~~~~~~~~
+---------------
 
 In the last code I snuck in an example of adding multiple plots to a figure!
 There are two main ways to do this: using the built-in ``facet`` or using an external
 package, such as ``patchwork``. 
 
 Facets
-.........
+~~~~~~~
 
 Facets act on a variable in your data so are an easy way to separate out components.
 There are two ways to do this using either ``facet_grid`` or ``facet_wrap``. The first
@@ -559,7 +559,7 @@ If we use two variables with ``facet_wrap`` we can a slightly different view:
     g + facet_wrap(year ~ season, nrow = 4, scales = "free_x")
 
 Saving the plot
-~~~~~~~~~~~~~~~~
+-----------------
 
 Assuming you have saved your plot into an object you can save the plot to a file using 
 the ``ggsave()`` function:
