@@ -66,7 +66,7 @@ reassigning the dictionary to the same variable. For example:
 
     telephone[names(telephone) != "Grenville"]
     
-Gives the `telephone` dictionary without `"Grenville"`. To make that change permanaent, 
+Gives the ``telephone`` dictionary without ``"Grenville"``. To make that change permanent, 
 you reassign the output back into telephone:
 
 
@@ -77,7 +77,7 @@ you reassign the output back into telephone:
 If any code you write makes extensive use of dictionaries, it is worth writing little
 helper functions to do this so you code is cleaner.
 
-R does have libraries that make proper dictionaries. `hash` is one such library. 
+R does have libraries that make proper dictionaries. ``hash`` is one such library. 
 If you are making heavy use of dictionaries, it may be better to use that library instead!
 
 .. admonition:: Practical exercise - capital cities

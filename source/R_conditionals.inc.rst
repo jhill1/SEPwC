@@ -40,8 +40,8 @@ How do we write a program that prints out such a statement, based on that input?
 So we need to be able to make a decision, based on those the variables, temperature and humidity. 
 This is where ``if`` statements come in.
 
-R `if` statement
-~~~~~~~~~~~~~~~~~~~~
+R ``if`` statement
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. index:: 
    single: if statement; R
@@ -90,9 +90,9 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 
 .. admonition:: Practical exercise
 
-   **Add an `else` block**
+   **Add an ``else`` block**
 
-    Amend the example below to add an `else` block to print something if humidity is not "high"
+    Amend the example below to add an ``else`` block to print something if humidity is not "high"
 
 .. admonition:: Solution
    :class: toggle
@@ -137,7 +137,7 @@ a number of ways of doing this. This is using ``else if`` and boolean operators:
       print("I don't understand the inputs")
       print(paste0("Temperature: ", temperature))
       print(paste0("Humidity: ", humidity))
-      print("Both should be `high` or `low`")
+      print("Both should be 'high' or 'low'")
    }
 
 Here, we've used the ``&`` operator (and) to check that *both* temperature and humidity are
@@ -219,7 +219,7 @@ if the first one is ``FALSE``, ``mark`` must be less than 40 or greater than 100
 
       [1] "This mark is too high."
 
-   which is because 100 is converted to a string by R to do the comparison. "test" is > than "100" ("t" is
+   which is because 100 is converted to a string by R to do the comparison. ``test`` is > than "100" ("t" is
    after "1" in the alphabet). You need to be careful of this when doing comparisons!
 
 .. youtube:: Czeh0-sUgtM
@@ -229,7 +229,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
 
 .. admonition:: Practical exercise
 
-   **Nested `if` version**
+   **Nested ``if`` version**
 
    Re-write the environment code using nested ``if`` statements
 
@@ -264,7 +264,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
        } else {
           print("I don't understand the humidity")
           print(paste0("Humidity: ", humidity))
-          print("Should be `high` or `low`")
+          print("Should be 'high' or 'low'")
        }
       
    The advantage here is we can have more nuanced error messages (relating to temperature or humidity, rather than both), but

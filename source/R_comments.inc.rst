@@ -121,7 +121,7 @@ You should also avoid comments that simply repeat the code:
 
     return(a)  # Returns a
 
-That comments adds nothing to the understanding. If `a` was a proper variable name, e.g. `list_of_cells` then even adding a comment becomes somewhat 
+That comments adds nothing to the understanding. If ``a`` was a proper variable name, e.g. ``list_of_cells`` then even adding a comment becomes somewhat 
 redundant. Add a block comment to the top of a function with details of the function and there is no need at all to comment the return statement.
 
 The best hint for comments is to write them at the top of code blocks:

@@ -31,11 +31,23 @@ R and the command line
 When you run a R script via the Rscript command, with some arbitrary text after:
 
 .. code-block:: bash
-   :caption: |cli|
+   :caption: |cli| |maclin|
 
    Rscript arg_script.R arg1 arg2 arg3
 
-that text is passed to the `script for you to access. Let's create this simple script, named ``arg_script.R``
+that text is passed to the script for you to access. On windows things are a bit different as 
+the ``Rscript.exe`` is not generally on the path, so ou have to give the full path, something 
+like:
+
+.. code-block:: bash
+   :caption: |cli| |win|
+
+   "C:\Program Files\R\R-3.6.0\bin\Rscript.exe" arg_script.R arg1 arg2 arg3
+
+Replacing the R version appropriately. You'll need to do this for the rest of this
+tutorial or add the ``Rscript`` exectuable to your ``PATH`` environment variable.
+
+Let's create this simple script, named ``arg_script.R``
 
 .. code-block:: R
    :caption: |R|
@@ -61,7 +73,7 @@ Your output is:
    [1] "Length: 3"
 
 The arguments are stored in ``args``. The first is always the name of the script, however, we 
-automatically removed that by using the `trainlingOnly=True` argument. Try it without:
+automatically removed that by using the ``trainlingOnly=True`` argument. Try it without:
 
 .. code-block:: bash
    :caption: |cli|
@@ -72,9 +84,9 @@ automatically removed that by using the `trainlingOnly=True` argument. Try it wi
    [7] "arg2"                  "arg3"                 
    [1] "Length: 8"
 
-Oh! That's not quite what we were expecting. You can see what `Rscript` actually does under the hood; it calls
-the R command with `--no-echo`, `--no-restore` and the `--file` arguments, with the further `--args` argument. Only
-then do we see our actual arguments. So best to leave `trailingOnly=TRUE`. 
+Oh! That's not quite what we were expecting. You can see what ``Rscript`` actually does under the hood; it calls
+the R command with ``--no-echo``, ``--no-restore`` and the ``--file`` arguments, with the further ``--args`` argument. Only
+then do we see our actual arguments. So best to leave ``trailingOnly=TRUE``. 
 
 Within our script we access them as we would any other list:
 
@@ -150,7 +162,7 @@ Once an OptionParser is set-up you can then add optional and positional argument
                       help="Print progress")                 # on/off flag
 
 
-You can also specify which variable the argument is parsered into, the type, if an argument is required, if it should be a list
+You can also specify which variable the argument is parsed into, the type, if an argument is required, if it should be a list
 and a lot more too.
 
 You then parse the argument and put them in variables as you see fit
@@ -168,11 +180,11 @@ You then parse the argument and put them in variables as you see fit
 
     Write a simple R script that returns the square of a given number, 
     e.g. if the users give 2, the program returns 4 to screen. 
-    It must have the following arguments using `argparse`. 
+    It must have the following arguments using ``argparse``. 
 
-     - an optional ``verbose`` flag, which can take an `int` value of 0, 1 or 2.
-       This increases the verbosity of the output from just the number (`verbosity==0`)
-       to a full sentence (`verbosity==2`), with default of 0.
+     - an optional ``verbose`` flag, which can take an ``int`` value of 0, 1 or 2.
+       This increases the verbosity of the output from just the number (``verbosity==0``)
+       to a full sentence (``verbosity==2``), with default of 0.
      - restrict the input number to an integer only
      - add a check for negative numbers as input
      - optional output to a file
