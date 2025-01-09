@@ -29,6 +29,101 @@ them well:
  you can then log on and start using it. There is a lot of jargon around computers. We will try and cover this
  as we go, but look up anything you come across that isn't explained.
 
+
+
+From source code to programme
+------------------------------
+
+You may have heard the term `source code`, but what is it?
+Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
+computer can do billions of these every second (this is the clock speed so 1 Ghz can do 1 
+billion 'things' per second). The moving of these 
+gates allow the computer to add two numbers or multiply two numbers or move data around, etc.
+These are called instructions. The CPU translate these instructions into moving those gates around
+to actually do something. Ultimately, all computer code does this. It is possible to write
+computer code at this level: assembler code. Back in the day (i.e. when I started programming),
+this is how you programmed computers, especially for games where you needed maximum performance.
+This is an example of assembler code for an x86 processor (i.e. what the type of processor you probably have):
+
+
+.. code-block::
+   :caption: Example of x86 assembler code [#]_
+
+    .486
+    .MODEL FLAT
+    .CODE
+    PUBLIC _myFunc
+    _myFunc PROC
+      ; Subroutine Prologue
+      push ebp     ; Save the old base pointer value.
+      mov ebp, esp ; Set the new base pointer value.
+      sub esp, 4   ; Make room for one 4-byte local variable.
+      push edi     ; Save the values of registers that the function
+      push esi     ; will modify. This function uses EDI and ESI.
+      ; (no need to save EBX, EBP, or ESP)
+
+      ; Subroutine Body
+      mov eax, [ebp+8]   ; Move value of parameter 1 into EAX
+      mov esi, [ebp+12]  ; Move value of parameter 2 into ESI
+      mov edi, [ebp+16]  ; Move value of parameter 3 into EDI
+
+      mov [ebp-4], edi   ; Move EDI into the local variable
+      add [ebp-4], esi   ; Add ESI into the local variable
+      add eax, [ebp-4]   ; Add the contents of the local variable
+                         ; into EAX (final result)
+
+      ; Subroutine Epilogue 
+      pop esi      ; Recover register values
+      pop  edi
+      mov esp, ebp ; Deallocate local variables
+      pop ebp ; Restore the caller's base pointer value
+      ret
+    _myFunc ENDP
+    END
+
+.. [#] From: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+
+Fortunately, things have moved on and we can write code in `higher level languages`. These 
+come in two broad types: `compiled` and `interpreted`. Compiled languages go through a two-step
+process to be turned into a programme. Interpreted languages do not, and can be run (executed)
+immediately
+
+Compiled languages
+^^^^^^^^^^^^^^^^^^
+.. index:: 
+   single: compiled languages
+
+Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
+an executable. You can then give someone else the executable and they can run the software. Most software is
+written in those kind of languages. Note that the user does not need the source code.
+Languages like Java are also compiled but at the time of execution 
+(called Just in Time or JIT) languages. Java bridges the gap between compiled and interpreted.
+
+Interpreted languages
+^^^^^^^^^^^^^^^^^^^^^
+.. index:: 
+   single: interpreted languages
+
+In contrast, interpreted languages are not compiled. You execute the source code. So you can write a text file
+with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
+You therefore need another user to have the python executable their system to be able to run your code. The user
+must also have your source code. This is the main difference between compiled and interpreted languages. 
+Compiled languages are a lot more flexible and require the user to do less. Interpreted languages are 
+easier (don't need to compile!) but need a user to set something up ahead of time.
+
+The line between these is getting blurred all the time as you can compile Python into an executable and use C
+within a Python programme without pre-compiling. However, for most users, the distinction is clear: if you
+must compile to run, then it's a compiled language. If you don't need to do that it's interpreted. 
+Some languages are both.
+
+So what happens during compiling or interpretation? Remember that assemble code above? That's what the compiler
+does to your source code. It turns it from human readable code to those CPU instructions. Modern compilers
+are very clever and can optimise your code very well to get the most out of your computer. Interpreters do the 
+same thing but as you execute the script. The python (or R) executable is therefore turning your code/script into those kind of 
+instructions as it's running. Interpreted languages are therefore generally slower than compiled code
+as the interpreter cannot optimise as well as a separate compiler.
+
+
 Filesystems
 -----------
 .. index:: 
@@ -98,15 +193,12 @@ MacOS
    single: filesystems; MacOS
 
 Mac is very similar to Linux (it is in fact based on Unix, which Linux is too). Unlike Linux, Apple added some
-standard folder names and moved a few things around compared to Linux. I'll note the differences only here.
+standard folder names and moved a few things around compared to Linux. I'll only note the differences here.
 
 User directories live in ``\Users`` rather than ``\home``. Applications are stored ``\Applications``, but there
 are some binaries (i.e. programmes) in ``\bin``, etc.
 
 Like Linux, MacOS is case sensitive.
-
-Exercises
-^^^^^^^^^
 
 As we have to deal with multiple OSes, from here we will designate sections with 
 symbols.
@@ -129,6 +221,10 @@ Navigating a filesystem
 
 There are two ways to navigate your files; some form of graphic interface (all three common OSes have a similar tool) or the
 command line. We're going to explore using both. Before we do this, we need a few basic command line tools to move around the files.
+
+To access the terminal or command line depends on the systems you're using. On Linux, you need to find the ``terminal`` application. 
+On Windows you need to find the the Command Prompt (``cmd``). On MacOs you need the ``Terminal`` application. Most OSes have some form
+of search function to find these. Once open, try the commands below.
 
 The first is to list which directory you are in.
 
@@ -234,7 +330,7 @@ one level we run the command:
     cd ..
 
 We can traverse up and down in quite complex ways using this. Let's imagine we want to go up two directories, then down into
-a subfolder:
+a subfolder (we'll try this for real later; if you try this now you'll get an error as this path won't exist):
 
 .. code-block:: bash
    :caption: |cli| |maclin|
@@ -441,101 +537,8 @@ from the internet) saving all this hassle.
 However, when starting to write your own script you will `hard-code` the filenames and hence
 you need to know the difference between relative and absolute paths.
 
-From source code to programme
-------------------------------
-
-You may have heard the term `source code` (I've probably used it already!), but what is it?
-Computers work by moving gates back and forth (0 or 1) to perform operations. A modern 
-computer can do billions of these every second (this is the clock speed so 1 Ghz can do 1 
-billion 'things' per second). The moving of these 
-gates allow the computer to add two numbers or multiple two numbers or move data around, etc.
-These are called instructions. The CPU translate these instructions into moving those gates around
-to actually do something. Ultimately, all computer code does this. It is possible to write
-computer code at this level: assembler code. Back in the day (i.e. when I started programming),
-this is how you programmed computers, especially for games where you needed maximum performance.
-This is an example of assembler code for an x86 processor (i.e. what the type of processor you probably have):
-
-
-.. code-block::
-   :caption: Example of x86 assembler code [#]_
-
-    .486
-    .MODEL FLAT
-    .CODE
-    PUBLIC _myFunc
-    _myFunc PROC
-      ; Subroutine Prologue
-      push ebp     ; Save the old base pointer value.
-      mov ebp, esp ; Set the new base pointer value.
-      sub esp, 4   ; Make room for one 4-byte local variable.
-      push edi     ; Save the values of registers that the function
-      push esi     ; will modify. This function uses EDI and ESI.
-      ; (no need to save EBX, EBP, or ESP)
-
-      ; Subroutine Body
-      mov eax, [ebp+8]   ; Move value of parameter 1 into EAX
-      mov esi, [ebp+12]  ; Move value of parameter 2 into ESI
-      mov edi, [ebp+16]  ; Move value of parameter 3 into EDI
-
-      mov [ebp-4], edi   ; Move EDI into the local variable
-      add [ebp-4], esi   ; Add ESI into the local variable
-      add eax, [ebp-4]   ; Add the contents of the local variable
-                         ; into EAX (final result)
-
-      ; Subroutine Epilogue 
-      pop esi      ; Recover register values
-      pop  edi
-      mov esp, ebp ; Deallocate local variables
-      pop ebp ; Restore the caller's base pointer value
-      ret
-    _myFunc ENDP
-    END
-
-.. [#] From: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
-
-Fortunately, things have moved on and we can write code in `higher level languages`. These 
-come in two broad types: `compiled` and `interpreted`. Compiled languages go through a two-step
-process to be turned into a programme. Interpreted languages do not, and can be run (executed)
-immediately
-
-Compiled languages
-^^^^^^^^^^^^^^^^^^
-.. index:: 
-   single: compiled languages
-
-Compiled languages are ones like FORTRAN, C, C++. You write code as text files, then compile these into 
-an executable. You can then give someone else the executable and they can run the software. Most software is
-written in those kind of languages. Note that the user does not need the source code.
-Languages like Java are also compiled but at the time of execution 
-(called Just in Time or JIT) languages. Java bridges the gap between compiled and interpreted.
-
-Interpreted languages
-^^^^^^^^^^^^^^^^^^^^^
-.. index:: 
-   single: interpreted languages
-
-In contrast, interpreted languages are not compiled. You execute the source code. So you can write a text file
-with your code and run it straight away. Examples of languages that are interpreted are R, Python, Matlab.
-You therefore need another user to have the python executable their system to be able to run your code. The user
-must also have your source code. This is the main difference between compiled and interpreted languages. 
-Compiled languages are a lot more flexible and require the user to do less. Interpreted languages are 
-easier (don't need to compile!) but need a user to set something up ahead of time.
-
-The line between these is getting blurred all the time as you can compile Python into an executable and use C
-within a Python programme without pre-compiling. However, for most users, the distinction is clear: if you
-must compile to run, then it's a compiled language. If you don't need to do that it's interpreted. 
-Some languages are both.
-
-So what happens during compiling or interpretation? Remember that assemble code above? That's what the compiler
-does to your source code. It turns it from human readable code to those CPU instructions. Modern compilers
-are very clever and can optimise your code very well to get the most out of your computer. Interpreters do the 
-same thing but as you execute the script. The python (or R) executable is therefore turning your code/script into those kind of 
-instructions as it's running. Interpreted languages are therefore generally slower than compiled code
-as the interpreter cannot optimise as well as a separate compiler.
-
-
-More basic command line functions
-----------------------------------
+More command line functions
+----------------------------
 .. index:: 
    single: command line functions
 
