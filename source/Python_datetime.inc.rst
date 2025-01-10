@@ -1,7 +1,7 @@
 Python: Datetimes
 ----------------------
 .. index::
-  single: Datetimes; Python
+  pair: datetime; python
 
 Dates and time are a common aspect of environmental data. We often need to 
 crop date/times to a specific range and compare or take samples from our

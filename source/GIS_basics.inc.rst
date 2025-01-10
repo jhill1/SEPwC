@@ -14,6 +14,8 @@ There are three things we need to learn about first:
 
 Vector data
 ~~~~~~~~~~~~
+.. index::
+  single: GIS; vector
 
 Vector data represent geometries via mathematicla objects. You can zoom
 into a vector infinitely at it will remain infintely small! There are
@@ -34,6 +36,8 @@ footprint might also contains the address, the price, the date built, etc.
 
 Raster data
 ~~~~~~~~~~~~~
+.. index::
+  single: GIS; raster
 
 Raster data are a grid of pixels of a resolution. Each pixel has a value, such as height
 temperature, land use category, etc. The data are stored in *bands*, so a raster can contain
@@ -56,8 +60,12 @@ lot of data very efficiently, e.g. land hieght data where you need continuous me
 
 
 
-Coredinate References System (CRS)
+Coordinate References System (CRS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: CRS
+  single: coordinate reference system
+  single: GIS; CRS
 
 GIS is a 2D system. But the Earth is 3D; almost a sphere in fact. To display the 
 3D surface to a 2D screen you need to project into a 2D space; the CRS. Any 

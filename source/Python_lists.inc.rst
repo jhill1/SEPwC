@@ -1,7 +1,7 @@
 Python: lists and tuples
 -------------------------------
 .. index::
-  single: Lists; Python
+  pair: list; python
 
 We have used Python lists in other lessons, but here we'll go into more detail. The idea of a list
 is fairly simple; a set of containers that contain data in an ordered way. 
@@ -63,7 +63,7 @@ Exercise: what does -2 and -3 give you? -5?
 What is a tuple then?
 ~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  single: Tuples; Python
+  pair: tuple; python
 
 There is a single difference between a list and tuple. A list can be modified; you can append items to it, remove items and generally do what you want with it. A tuple on the other hand is *immutable*. You cannot chnage it at all. Once it's made it is made. 
 
@@ -84,8 +84,6 @@ Note we create a tuple using ``( )`` brackets, not ``[ ]`` brackets. We access t
 
 Common functions with lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  single: Functions with lists; Python
 
 Lists come with a number of functions attached to them and used often with them. The obvious one is ``len()`` which tells us the numebr of 
 items/containers in that list:
@@ -131,8 +129,6 @@ Exercises...
 
 Iterating over lists
 ~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  single: Iterating over Lists; Python
 
 As we saw above and in the introductory chapters, lists can be accessed via their indecies ``a_list[0]`` etc. To loop over a list you can therefore loop over a range of numbers from 0 to the length of the list-1 (the -1 is because we start counting from zero). It's common the use the ``range()`` function to create that list of indecies:
 

@@ -1,7 +1,7 @@
 Python functions 
 --------------------
 .. index::
-  single: Functions; Python
+  pair: function; python
 
 Whenever you write some code you get tempted to copy and paste a block, change a variable, and have two nearly
 identical blocks of code, bar one variable. Might be OK with a single repeat, but what if you then need to
@@ -13,7 +13,7 @@ repeatedly. That might be within the same script; it might be part of many scrip
 Using a Python function
 ~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  single: len(); Python
+  single: python; len()
 
 We've used a number of Python functions already. 
 
@@ -43,7 +43,7 @@ As we've seen already you can nest functions within other functions!
    range(0,len(my_list),1)
 
 .. index::
-  single: range(); Python
+  single: python; range()
 
 Here, we're calling the ``range`` function to go from ``0`` to the length of my_list (``len(my_list)``) in steps of 1. But ``len()`` is 
 also a function. The return value of ``len(my_list)`` gets put in place of that bit of code. This is exactly equivalent of doing:
@@ -55,9 +55,6 @@ also a function. The return value of ``len(my_list)`` gets put in place of that 
    range(0,length,1)
 
 where we store the length in a variable, then use it.
-
-.. index::
-   single: Nested functions; Python
 
 .. admonition:: Practical exercise
 
@@ -130,7 +127,7 @@ This function takes a value (Centigrade) and converts it to Fahrenheit, returnin
 Function arguments in Python
 .............................
 .. index::
-  single: Function Arguments; Python
+  single: function; arguments (python)
 
 A function can take any number of inputs via arguments. You can even specify an unknown number of arguments. This are either keyword arguments (``kwargs``) or generic arguments (``args``).
 
@@ -182,9 +179,6 @@ What error message did you get?
       
 
 We can also write functions that have default values.
-
-.. index::
-   single: Default Value Functions; Python
 
 .. code-block:: python
    :caption: |python|

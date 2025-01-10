@@ -1,5 +1,7 @@
 Intro to Python
 ---------------
+.. index:: 
+   single: python
 
 Python is an interpreted language that has become incredibly popular. Due to that 
 there are modules that will do just about anything. This makes Python a really
@@ -77,7 +79,7 @@ bunch of times? Let's add a loop!
        print(time, vert_position)
 
 .. index::
-  single: Indentation; Python
+  single: indentation; python
 
 This is not the most elegant way to do this, but it works. You now have the height of the ball
 at time 0 to 0.9 in steps of 0.1. Note the indentation. In Python *whitespace* matters. It signifies 
@@ -143,7 +145,7 @@ code will not run.
     :align: center
 
 .. index::
-  single: Plotting; Python
+  single: plotting; python
 
 Shall we plot this?
 

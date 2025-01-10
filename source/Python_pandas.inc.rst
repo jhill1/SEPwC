@@ -1,7 +1,7 @@
 Python: Pandas module
 ----------------------
 .. index::
-  single: Pandas
+  pair: pandas; python
 
 pandas is a Python package providing fast, flexible, and expressive data structures 
 designed to make working with “relational” or “labelled” data both easy and intuitive.
@@ -28,7 +28,7 @@ We normally import as follows:
 Basic data structures in pandas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Pandas; Data Structures
+  pair: pandas; structures
 
 pandas provides two types of classes for handling data:
 
@@ -116,7 +116,7 @@ truncated for brevity.
 Viewing data
 ~~~~~~~~~~~~~~
 .. index::
-  pair: Pandas; Viewing Data
+  pair: pandas; viewing
 
 Use :meth:`DataFrame.head` and :meth:`DataFrame.tail` to view the top and bottom rows of the frame
 respectively:
@@ -167,7 +167,7 @@ without the index or column labels:
 Transposing your data:
 
 .. index::
-   pair: Pandas; Transposing
+  pair: pandas; transpose
 
 .. code-block:: python
    :caption: |python|
@@ -191,7 +191,7 @@ Transposing your data:
 Selection
 ~~~~~~~~~~
 .. index::
-  pair: Pandas; Selection
+  pair: pandas; selection
 
 .. note::
 
@@ -313,7 +313,7 @@ For getting fast access to a scalar (equivalent to the prior method):
 Boolean indexing
 .................
 .. index::
-  pair: Pandas; Boolean indexing
+  pair: pandas; index
 
 Select rows where ``df.A`` is greater than ``0``.
 
@@ -391,8 +391,6 @@ A ``where`` operation with setting:
 
 Missing data
 .............
-.. index::
-  pair: Pandas; Missing data
 
 For NumPy data types, ``np.nan`` represents missing data. It is by
 default not included in computations. 
@@ -432,7 +430,7 @@ returns a copy of the data:
 panda Operations
 ~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Panda; Operations
+  pair: pandas; operations
 
 Stats
 .......
@@ -468,7 +466,7 @@ automatically broadcasts along the specified dimension and will fill unaligned l
 User defined functions
 .......................
 .. index::
-  pair: Pandas; Functions
+  pair: pandas; functions
 
 :meth:`DataFrame.agg` and :meth:`DataFrame.transform` applies a user defined function
 that reduces or broadcasts its result respectively.
@@ -481,8 +479,6 @@ that reduces or broadcasts its result respectively.
 
 Value Counts
 .............
-.. index::
-  pair: Pandas; Value Counts
 
 .. code-block:: python
    :caption: |python|
@@ -493,8 +489,6 @@ Value Counts
 
 String Methods
 ...............
-.. index::
-  pair: Pandas; Strings
 
 :class:`Series` is equipped with a set of string processing methods in the ``str``
 attribute that make it easy to operate on each element of the array, as in the
@@ -509,12 +503,12 @@ code snippet below.
 Merge
 ~~~~~~~~
 .. index::
-  pair: Pandas; Merge
+  pair: pandas; merge
 
 Concat
 .........
 .. index::
-  pair: Pandas; Concat
+  pair: pandas; concatenation
 
 pandas provides various facilities for easily combining together :class:`Series` and
 :class:`DataFrame` objects with various kinds of set logic for the indexes
@@ -544,7 +538,7 @@ Concatenating pandas objects together row-wise with :func:`concat`:
 Join
 ......
 .. index::
-  pair: Pandas; Join
+  pair: pandas; join
 
 :func:`merge` enables SQL style join types along specific columns.
 
@@ -571,7 +565,7 @@ Join
 Grouping
 ...........
 .. index::
-  pair: Pandas; Grouping
+  pair: pandas; grouping
 
 By "group by" we are referring to a process involving one or more of the
 following steps:
@@ -612,12 +606,12 @@ Grouping by multiple columns label forms :class:`MultiIndex`.
 Reshaping
 ~~~~~~~~~~~
 .. index::
-  pair: Pandas; Reshaping
+  pair: pandas; reshape
 
 Stack
 .........
 .. index::
-  pair: Pandas; Stack
+  pair: pandas; stack
 
 .. code-block:: python
    :caption: |python|
@@ -654,7 +648,7 @@ With a "stacked" DataFrame or Series (having a :class:`MultiIndex` as the
 Pivot tables
 .............
 .. index::
-  pair: Pandas; Pivot table
+  pair: pandas; pivot
 
 .. code-block:: python
    :caption: |python|
@@ -681,7 +675,7 @@ Pivot tables
 Time series
 ~~~~~~~~~~~~
 .. index::
-  pair: Pandas; Time Series
+  pair: pandas; time
 
 pandas has simple, powerful, and efficient functionality for performing
 resampling operations during frequency conversion (e.g., converting secondly
@@ -723,8 +717,6 @@ Adding a non-fixed duration (:class:`~pandas.tseries.offsets.BusinessDay`) to a 
 
 Categoricals
 ~~~~~~~~~~~~~~
-.. index::
-  pair: Pandas; Categoricals
 
 pandas can include categorical data in a :class:`DataFrame`.
 

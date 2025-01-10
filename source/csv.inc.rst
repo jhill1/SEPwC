@@ -1,5 +1,8 @@
 CSV files
 ------------
+.. index::
+  single: csv
+
 
 CSV files are text files. They contain data in text format, with columns seperated by a delimiter
 and rows separated by a new line.
@@ -22,6 +25,8 @@ options.
 
 Reading CSV in R
 ~~~~~~~~~~~~~~~~~~
+.. index::
+  single: csv; reading; R
 
 CSV files are handled in R without an additional libraries. `The full documentation can be found online 
 <https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html>`_ but some brief examples:
@@ -49,6 +54,9 @@ function to read in CSV data..
 
 Reading CSV in Python
 ~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: csv; reading; python
+
 
 Python contains a useful ``csv`` library to help us here. It can handle different delimiters, 
 quotes and headers making it much easier than trying to parse data ourselves. You can find

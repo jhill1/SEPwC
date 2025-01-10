@@ -3,6 +3,11 @@ The fundamentals of code
 
 Some terminology
 ----------------
+.. index:: 
+   single: constant
+   single: operation
+   single: function
+
 
 Computer programming is full of jargon. Fortunately, most of the jargon is common across all
 languages. The idea of this chapter is to cover those basics so that when we get to a language
@@ -37,6 +42,8 @@ return data back to the main program (where you can store it in a variable, for 
 
 Defining a variable
 --------------------
+.. index:: 
+   single: variable
 
 A variable is a container to store your data. Most variables in interpreted languages are defined when you use them first time.
 In compiled language you need to decide up-front which variables you need. Variables can change what they store throughout the code, 
@@ -158,7 +165,7 @@ for maximum, but others would disagree with me on that!
 
 .. admonition:: Thought exercise
 
-    **Datatypes**
+    **Variables**
     
     What would make a good variable name for the following?
 
@@ -186,6 +193,8 @@ for maximum, but others would disagree with me on that!
 
 Datatypes
 ---------
+.. index:: 
+   single: datatype
 
 The variables we create can store any kind of data. In interpreted languages that can even change throughout the 
 code. In compiled language you often have 
@@ -231,6 +240,8 @@ objects (we'll come to those later).
 
 Operations
 ----------
+.. index:: 
+   single: operation
 
 Operations are how to start to manipulate data. For example:
 
@@ -264,7 +275,7 @@ symbol is used depends on the language and not all languages can do this.
 
 .. admonition:: Thought exercise
 
-    **Datatypes**
+    **Operations**
     
     What is the answer to the following operations?
 
@@ -292,6 +303,9 @@ symbol is used depends on the language and not all languages can do this.
 
 Booleans and Logic
 ------------------
+.. index:: 
+   single: boolean
+   single: logic
 
 A boolean is either ``true`` or ``false``. In code this is very important as it allows our code
 to make decisions based on the value of variables.
@@ -330,7 +344,7 @@ Will print:
 
 .. admonition:: Thought exercise
 
-    **Datatypes**
+    **Booleans**
     
     What is the answer to the following boolean operations?
 
@@ -364,6 +378,8 @@ Will print:
 
 Outputs
 -------
+.. index:: 
+   single: output
 
 The output is something you, the programmer decides. It might be a text file, a CSV file, a graphic, etc., etc., it
 may just be the result printed to screen.
@@ -381,6 +397,8 @@ Will output the contents of ``my_secret`` to the screen, to a file and say it. N
 
 Inputs
 ------
+.. index:: 
+   single: input
 
 Input are, unsurprisingly, the opposite of outputs. Like the outputs of a program they come in many forms.
 The simplest are the *hard-coded* inputs.
@@ -416,6 +434,8 @@ Or we could pop-up a little box, which you'll be familiar to you:
 
 Loops
 -----
+.. index:: 
+   single: loop
 
 A lot of time we need to repeat the same thing on bits of data. Imagine a scenario where we have a
 huge list of files we need to extract a single bit of data from each of these. We need to do the thing
@@ -559,6 +579,8 @@ So our raster grid now contains.
 
 Conditionals
 ------------
+.. index:: 
+   single: conditional
 
 Conditional statements run code based on a variable meeting some condition. They allow code to *branch* and
 perform actions based on some criteria.
@@ -649,6 +671,8 @@ Most languages have some form of "or" and "and" operations.
 
 Functions
 ---------
+.. index:: 
+   single: function
 
 Function are for bits of code you run lots or complex code that can be wrapped up so the main code is easier to read. 
 Rather than have a sorting algorithm in your code, you wrap that code into a function and then your code is easier to read.
@@ -765,6 +789,9 @@ then you can be more confident your whole code works.
 
 Objects and classes
 -------------------
+.. index:: 
+   single: class
+   single: object
 
 Modern programming uses objects to pass data around. This style of programming is called
 object-oriented programming. An object is a collection of data *and* functions that go together.

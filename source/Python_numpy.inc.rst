@@ -1,7 +1,7 @@
 Python: Numpy
 ----------------------
 .. index::
-   single: Numpy; Python
+   pair: numpy; python
 
 NumPy (**Num**\ erical **Py**\ thon) is an open source Python library that is
 widely used in science and engineering. The NumPy library contains
@@ -47,6 +47,8 @@ that have the same name (e.g. ``max()``)
 
 NumPy array fundamentals
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  pair: numpy; array
 
 One way to initialize an array is using a Python sequence, such as a list.
 For example:
@@ -161,7 +163,7 @@ If we used Python lists we would use ``a[1][3]``
 Numpy array attributes
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-   pair: Array; Attributes; Python
+   pair: numpy; attributes
 
 The number of dimensions of an array is contained in the ``ndim`` attribute.
 
@@ -206,8 +208,6 @@ only one "data type". The data type is recorded in the ``dtype`` attribute.
 
 How to create a basic array
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  single: Arrays; Python
 
 Besides creating an array from a sequence of elements, you can easily create an
 array filled with ``0``'s:
@@ -279,8 +279,6 @@ specify which data type you want using the ``dtype`` keyword.
 
 Adding, removing, and sorting elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  pair: Array; Elements; Python
 
 Sorting an element is simple with ``np.sort()``. You can specify the axis, kind,
 and order when you call the function.
@@ -352,9 +350,9 @@ To read more about concatenate, see: `concatenate help <https://numpy.org/doc/st
 How do you know the shape and size of an array?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Array; Shape; Python
+  pair: numpy; shape
 .. index::
-  pair: Array; Size; Python
+  pair: numpy; size
 
 ``ndarray.ndim`` will tell you the number of axes, or dimensions, of the array.
 
@@ -407,7 +405,7 @@ And to find the shape of your array, run:
 Can you reshape an array?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-   pair: Array; Reshape; Python
+   pair: numpy; reshape
 
 **Yes!**
 
@@ -473,7 +471,7 @@ to preserve the indexing convention or not reorder the data.
 How to convert a 1D array into a 2D array (how to add a new axis to an array)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Array; Axis; Python
+  pair: numpy; axis
 
 You can use ``np.newaxis`` and ``np.expand_dims`` to increase the dimensions of
 your existing array.
@@ -554,7 +552,9 @@ You can add an axis at index position 0 with:
 Indexing and slicing
 ~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Array; Indexing; Python
+  pair: numpy; index
+  pair: numpy; slice
+
 
 You can index and slice NumPy arrays in the same ways you can slice Python
 lists.
@@ -707,8 +707,6 @@ array of indices will be empty. For example:
 
 How to create an array from existing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  single: Array; Python
 
 You can easily create a new array from a section of an existing array.
 
@@ -846,8 +844,6 @@ Using the ``copy`` method will make a complete copy of the array and its data (a
 
 Basic array operations
 ~~~~~~~~~~~~~~~~~~~~~~~
-.. index::
-  single: iArray Operations; Python
 
 Once you've created your arrays, you can start to work with them.  Let's say,
 for example, that you've created two arrays, one called "data" and one called
@@ -921,7 +917,9 @@ You can sum over the axis of columns with:
 Transposing and reshaping a matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: Transposing; Matrix; Python
+  pair: numpy; matrix
+  pair: numpy; transpose
+
 
 It's common to need to transpose your matrices. NumPy arrays have the property
 ``T`` that allows you to transpose a matrix.

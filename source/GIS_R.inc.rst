@@ -1,5 +1,7 @@
 GIS - R
 --------
+.. index:: 
+   single: GIS; R
 
 R has a number of packages that can help with GIS analysis. We're going to focus on 
 two: ``terra`` and ``sf``. For most tasks ``terra`` might be enough as it can handle
@@ -11,6 +13,9 @@ change your working directory to match where you've downloaded the data.
 
 The ``terra`` library
 ~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: GIS; terra
+   single: R; terra
 
 The ``terra`` library is based around two key classes: ``SpatRatser`` and ``SpatVector``. 
 Let's look at rasters first.
@@ -117,6 +122,9 @@ vector data.
 
 The ``sf`` library
 ~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: GIS; sf
+   single: R; sf
 
 R also have another popular library for dealing with shapefiles/vector data; ``sf``. 
 This library has more features than ``terra`` so is worth learning. 

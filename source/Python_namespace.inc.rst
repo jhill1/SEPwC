@@ -1,7 +1,7 @@
 Python: namespace
 -------------------------------
 .. index::
-  single: namespace; Python
+  pair: namespace; python
 
 Namespace and scope are the section of code where your variables are valid. A namespace
 is a collection of currently defined symbolic names; basically a dictionary of variable
@@ -50,7 +50,7 @@ created only exist within that function.
 Python Scope
 ~~~~~~~~~~~~~
 .. index::
-  single: Scope; Python
+  pair: ccope; python
 
 These namespaces mean variables of the same name can exist at the same time. As long as they are
 in a different namespace they won't interfere with each other. But how does Python know which one

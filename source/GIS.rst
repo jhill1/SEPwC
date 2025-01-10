@@ -1,5 +1,7 @@
 Mini-course: GIS
 ==================
+.. index::
+  single: GIS
 
 .. include:: GIS_basics.inc.rst
 

@@ -1,5 +1,7 @@
 Thinking like a computer
 ========================
+.. index:: 
+   single: algorithm
 
 To write code, we have to think in terms of algorithms and logic flow. We have covered the basics of code structures above, so now
 we can arrange those to form algorithms and then into programs. We can think about this in terms of pseudo-code (like I wrote above).

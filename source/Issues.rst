@@ -41,6 +41,8 @@ Sometimes a bit obscurely, but once you can decipher the error message they are 
 
 Warning examples
 ~~~~~~~~~~~~~~~~
+.. index:: 
+   single: warning
 
 Warnings are noncritical messages, normally issued by a library or module you're using. However, most of the time
 they are an error (as in you're getting the wrong answer) but the code can still continue. You should therefore
@@ -48,6 +50,8 @@ pay attention and decide if you do need to care.
 
 R warning examples
 ''''''''''''''''''
+.. index:: 
+   pair: warning; R
 
 .. code-block:: R
     :caption: |R|
@@ -62,6 +66,8 @@ but the ``cor`` function could produce an answer (albeit ``NA``).
 
 Python warning example
 '''''''''''''''''''''''
+.. index:: 
+   pair: warning; python
 
 In this example I divide by zero; mathmatically producing infinity.
 
@@ -148,6 +154,8 @@ numbers were supplied by a user or in the data. The warnings can therefore be ve
 
 Bugs
 ------
+.. index:: 
+   single: bug
 
 Bugs are errors in the code that result in incorrect output or the program to fail. In other words
 they are unintentional behaviours of the code. With ever more complex software being developed which uses

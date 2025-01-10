@@ -4,7 +4,8 @@
 Software licences
 =================
 .. index:: 
-   single: software licences
+   single: licences
+   single: copyright
 
 Software needs a licence which tells your users or other developers what they are allowed
 to do with it. Most software you've heard of is commercial (Word, Windows, MacOs, 
@@ -26,7 +27,7 @@ create something you own the copyright. You don't have to do anything to get cop
 except be the author or creator of the content. Authors generally place a copyright
 notice on the work though, so something like:
 
-*Copyright 2024. Jon Hill*
+*Copyright 2025. Jon Hill*
 
 Copyright lasts for 50 years (or 75 for music) and protects the author from someone stealing their work.
 `This page has a simple explanation of UK copyright law. <https://www.gov.uk/copyright>`_
@@ -43,7 +44,7 @@ bunch of different licences, but let's focus on the two main types first.
 Copyleft
 --------
 .. index:: 
-   single: software licences; copyleft
+   single: software; copyleft
 
 Copyleft licences (a pun on copyright, geddit?) mean you can take 
 source-code, modify it, but can only re-release on a similar licence. For example,
@@ -130,7 +131,7 @@ If you write any code that is to be used by others you should always add a
 copyright notice and a licence. This protects you and the person using it.
 Try and get in the habit of writing both of these in your code, so something like:
 
-*Copyright 2023 by Jon Hill. CC-BY-SA.*
+*Copyright 2025 by Jon Hill. CC-BY-SA.*
 
 You then include the full licence in your distribution.
 

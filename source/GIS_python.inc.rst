@@ -1,5 +1,7 @@
 GIS - Python
 --------------
+.. index::
+  single: GIS; python
 
 Python has a number of packages that can help with GIS analysis. We're going to focus on 
 three: ``rasterio``, ``geopandas`` and ``shapely``. 
@@ -10,6 +12,9 @@ change your working directory to match where you've downloaded the data.
 
 The ``rasterio`` library
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: GIS; rasterio
+  single: python; rasterio
 
 The ``rasterio`` library is used to load, manipulate and plot raster
 data. 
@@ -118,6 +123,10 @@ simple calculations (and indeed more complex ones!) can be carried out.
 
 The ``geopandas`` library
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: GIS; geopandas
+  single: python; geopandas
+
 
 ``geopandas`` is the geographical equivalent to ``pandas``. It deals with dataframes
 but those dataframes have a ``geometry`` component. It therefore maps onto GIS Vector
@@ -149,6 +158,10 @@ and geometric calculations (area, distances, lengths).
 
 The ``shapely`` library
 ~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: GIS; shapely
+  single: python; shapely
+
 
 ``shapely`` is a library designed to do geometry calculations. It uses GIS Vector data
 which can be loaded into a ``Geometry``. You can also create geometries very easily in

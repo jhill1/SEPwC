@@ -1,11 +1,16 @@
 Data Management
 ---------------
+.. index::
+  single: data
+
 
 Given data is a key part of most research codes, it is really important data is properly managed. Like your code, 
 different versions need to be tracked and labelled to make sure any processing is clear.
 
 Data formats
 ~~~~~~~~~~~~~
+.. index::
+  single: data; formats
 
 Data comes in many formats. We need to think about what this is and how to read it.
 
@@ -92,6 +97,9 @@ These steps can be summerised into four rules:
 
 Create a DOI
 '''''''''''''
+.. index::
+  single: doi
+
 
 If your dataset is part of the research (e.g. collected by you) it might be a good idea to deposit the data in 
 a repository and obtain a DOI (Digital Object Identifier) to that others can use the data and cite you. Common 

@@ -1,5 +1,8 @@
 Debugging
 ----------
+.. index::
+  single: debugging
+
 
 Once you have some understanding of the error and the cause you can start to debug 
 your code. The easiest form of debugging is called "print debugging". You insert
@@ -163,6 +166,9 @@ that can be be as hard to decipher as the error you're trying to fix.
 
 Console debugging
 ~~~~~~~~~~~~~~~~~
+.. index::
+  single: debugging; console
+
 
 Another way, alluded to above, is within R (or Rstudio) or ipython (or Spyder) is
 to run your code. When you get to the error your variables are still available and

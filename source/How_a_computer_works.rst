@@ -537,10 +537,10 @@ from the internet) saving all this hassle.
 However, when starting to write your own script you will *hard-code* the filenames and hence
 you need to know the difference between relative and absolute paths.
 
-More command line functions
+More command line commands
 ----------------------------
 .. index:: 
-   single: command line functions
+   single: command line
 
 You were introduced to some basic command line functions earlier. We looked at those
 without really explaining them properly, so let's dig a little deeper into command lines.
@@ -585,10 +585,10 @@ more done when programming.
 So what are the basic commands you should know? Here's a list:
 
 .. index:: 
-   single: command line functions; MacOS
+   single: command line; MacOS
 
 .. index:: 
-   single: command line functions; Linux
+   single: command line; Linux
 
 |maclin|
 
@@ -601,7 +601,7 @@ So what are the basic commands you should know? Here's a list:
  - rmdir
 
 .. index:: 
-   single: command line functions; Windows
+   single: command line; Windows
 
 |win|
 
