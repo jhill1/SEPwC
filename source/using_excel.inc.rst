@@ -1,5 +1,7 @@
 Using Excel
 ------------
+.. index:: 
+   single: data; excel
 
 Excel is one of the most ubiquitous pieces of software in the world today. It's spawned many copies
 including Google Sheets, Libreoffice Sheets, etc and itself is based on previous spreadsheet packages

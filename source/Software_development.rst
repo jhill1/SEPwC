@@ -1,5 +1,7 @@
 Software development
 ====================
+.. index:: 
+   single: software development
 
 Software development (softdev) or engineering (softeng) are the process by which we write code. There is a subtle difference between these two titles, 
 with engineers being responsible for creating, designing, and testing the whole software application, whereas developers are responsible for a 
@@ -10,6 +12,8 @@ but we are going to learn some of the basics of the process, which helps us writ
 
 Revision control
 ----------------
+.. index:: 
+   single: revision control
 
 We've already learnt one of the key tools (or if you've skipped to this bit, you can go back and learn about it), 
 which is :ref:`revision control <Revision control with Git>`.
@@ -57,6 +61,8 @@ We've covered testing, bug fixing and writing code elsewhere, so let's focus on 
 
 Requirements capture
 ~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: software development; requirements capture
 
 If you are going to write code it is because you want to do something. You want to be able to analyse data, merge datasets together, create animations of outputs, etc., etc. Requirements capture is a process by which we lay out what code should be able to do (and perhaps what it won't be able to do). There are a number of ways this can happen including interviews, workshops, user observations, prototyping and use cases/scenarios. For the purposes of this course we're going to assume you are the developer and the user so not all of these methods will be useful (unless you want to interview yourself...).
 
@@ -70,6 +76,8 @@ The above takes time but helps you write better, cleaner, more readable code. Re
 
 Refactoring
 ~~~~~~~~~~~~
+.. index:: 
+   single: software development; refactor
 
 Refactoring is rewriting existing code into a new design or structure. Code ultimately goes out of date. Languages eventually die off for example and code will therefore need to be moved to a new language (or version of the same language as in Python 2 to Python 3) or the libraries we depend on may become obsolete. Sometimes, greater experience means we can see how an older code can be rewritten to be clearer or faster or use less memory. Regardless of the reason code will probably need rewriting at some point.
 
@@ -92,6 +100,8 @@ This is how traditional software was released; think Windows XP vs Windows 10 wi
 
 Agile development
 ~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: software development; agile
 
 Agile development takes the software development process and creates a tight, rapid loop of development, which is repeated often. Rather than create an overarching requirements capture and then a grand design, you start small. You would aim to create a single feature, design it, code it, test it and get approval within a short timeframe. You then move onto the next. 
 
@@ -104,6 +114,8 @@ This is how apps on phones tend to be managed, with small minor updates and feat
 
 Test-driven development
 ~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: software development; test-driven
 
 Test-driven development turns the development cycle around to put testing up-front:
 
@@ -133,6 +145,8 @@ ou more productive.
 
 Spyder
 ~~~~~~
+.. index:: 
+   pair: spyder; python
 
 Spyder is an open-source cross-platform IDE. The Python Spyder IDE is written completely in Python and is designed by scientists,
 so is ideal for us. The interface is dvided into a few windows. On the left is the editor window where you can type code and save 
@@ -148,6 +162,8 @@ and getting things set up as you want them.
 
 RStudio
 ~~~~~~~
+.. index:: 
+   pair: rstudio; R
 
 RStudio is a free and open-source IDE for R (and Python). There are also commerical versions available. Like Spyder it
 includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, 
@@ -159,6 +175,8 @@ You can integrate with git and, again, like Spyder, `it's worth reading through 
 
 Linting your code
 -------------------
+.. index:: 
+   single: lint
 
 *Linting* refers to running your code through software that checks the syntax and layout/formatting of your code. The
 term comes from the fluff shed by clothing, i.e. ``lint`` removes the extraneous fluff from your code. It often
@@ -170,6 +188,9 @@ package is called ``lintr``, for Python it's ``pylint``. Let's deal with these i
 
 ``lintr``
 ~~~~~~~~~
+.. index:: 
+   pair: lintr; R
+
 
 ``lintr`` is used inside an R environment. 
 
@@ -238,6 +259,8 @@ You should see something like the following output:
 
 ``pylint``
 ~~~~~~~~~~
+.. index:: 
+   pair: pylint; Python
 
 ``pylint`` is run from the command line (e.g. your Anaconda bash or the terminal emulator). Create a 
 file called :file:`circle.py` with the following contents:
@@ -363,6 +386,8 @@ description of the warning/error.
 
 Using AI in development
 ------------------------
+.. index:: 
+   single: software development; AI
 
 AI has great potential to help with a number of software development
 tasks such as refactoring, creating function templates, etc. It can also

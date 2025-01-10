@@ -1,7 +1,9 @@
 R vectors, lists, arrays 
 ----------------------------
 .. index:: 
-   triple: vectors; lists; arrays; r
+   pair: vector; R
+   pair: list; R
+   pair: array; R
 
 We have used R vectors in other lessons, but here we'll go into more detail. The idea of a vector
 is fairly simple; a set of containers that contain data in an ordered way. 

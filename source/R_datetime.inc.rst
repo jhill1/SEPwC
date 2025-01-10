@@ -1,7 +1,7 @@
 R: Datetimes
 ----------------------
 .. index:: 
-   single: datetimes; R
+   pair: datetime; R
 
 Dates and time are a common aspect of environmental data. We often need to 
 crop date/times to a specific range and compare or take samples from our
@@ -17,6 +17,9 @@ There are three types of temporal data:
 
 For most data you are going to be dealing with datetime objects and occasionaly dates. It's
 rare to have only time!
+
+.. index:: 
+   pair: lubridate; R
 
 Let's get some times and dates:
 

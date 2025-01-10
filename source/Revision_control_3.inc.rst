@@ -1,5 +1,7 @@
 Our first repository
 --------------------
+.. index:: 
+   single: git; repository 
 
 Once Git is configured, we can start using it.
 
@@ -17,6 +19,8 @@ First, let's create a new directory in the :file:`Desktop/` folder for our work 
 
 Then we tell Git to make :file:`planets/` a repository -- a place where Git can store versions of our files:
 
+.. index:: 
+   single: git; init 
 
 .. code-block:: bash
    :caption: |cli|

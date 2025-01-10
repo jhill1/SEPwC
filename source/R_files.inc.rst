@@ -20,6 +20,8 @@ come into being. We'll learn a lot more in the data section.
 
 Read and write tables/csv files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: R; csv 
 
 Most of the time when using R you end up reading data from CSV
 (Comma Separated Values) or tables (the same as CSV, but separated by

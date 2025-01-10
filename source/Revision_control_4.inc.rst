@@ -1,5 +1,7 @@
 Adding files
 ------------
+.. index:: 
+   single: git; add 
 
 First let's make sure we're still in the right directory.
 You should be in the :file:`planets` directory.
@@ -97,6 +99,8 @@ and then check that the right thing happened:
 
       new file:   mars.txt
 
+.. index:: 
+   single: git; commit 
 
 Git now knows that it's supposed to keep track of ``mars.txt``,
 but it hasn't recorded these changes as a commit yet.
@@ -143,6 +147,9 @@ If we run ``git status`` now:
 
 it tells us everything is up to date. If we want to know what we've done recently,
 we can ask Git to show us the project's history using ``git log``:
+
+.. index:: 
+   single: git; log 
 
 .. code-block:: bash
    :caption: |cli|
@@ -195,6 +202,9 @@ you may use a different editor, and don't need to ``cat``.)
     Cold and dry, but everything is my favourite colour
     The two moons may be a problem for satellites
 
+.. index:: 
+   single: git; status 
+
 When we run ``git status`` now,
 it tells us that a file it already knows about has been modified:
 
@@ -221,6 +231,9 @@ So let's do that now. It is good practice to always review
 our changes before saving them. We do this using ``git diff``.
 This shows us the differences between the current state
 of the file and the most recently saved version:
+
+.. index:: 
+   single: git; diff 
 
 .. code-block:: bash
    :caption: |cli|
@@ -302,6 +315,10 @@ but *not* commit some of our work drafting the conclusion
 To allow for this, Git has a special *staging area*
 where it keeps track of things that have been added to
 the current changeset but not yet committed.
+
+.. index:: 
+   single: git; staging 
+
 
 .. admonition:: Learn more
     :class: toggle

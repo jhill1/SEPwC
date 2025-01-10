@@ -1,5 +1,7 @@
 Conflict!
 ---------
+.. index:: 
+   single: git; conflict 
 
 As soon as people can work in parallel, they'll likely step on each other's
 toes. This will even happen with a single person: if we are working on
@@ -19,8 +21,8 @@ repository:
 .. code-block:: output
 
    Cold and dry, but everything is my favourite colour
-   The two moons may be a problem for werewolves
-   But the Mummy will appreciate the lack of humidity
+   The two moons may be a problem for satellites
+   But Branston will appreciate the lack of humidity
 
 Let's add a line to the collaborator's copy only:
 
@@ -33,8 +35,8 @@ Let's add a line to the collaborator's copy only:
 .. code-block:: output
 
    Cold and dry, but everything is my favourite colour
-   The two moons may be a problem for werewolves
-   But the Mummy will appreciate the lack of humidity
+   The two moons may be a problem for satellites
+   But Branston will appreciate the lack of humidity
    This line added to one copy
 
 and then push the change to GitHub:
@@ -79,8 +81,8 @@ Now let's have the owner make a different change to their copy
 .. code-block:: output
 
    Cold and dry, but everything is my favourite colour
-   The two moons may be a problem for werewolves
-   But the Mummy will appreciate the lack of humidity
+   The two moons may be a problem for satellites
+   But Branston will appreciate the lack of humidity
    We added a different line in the other copy
 
 We can commit the change locally:
@@ -157,8 +159,8 @@ in the affected file:
 .. code-block:: output
 
    Cold and dry, but everything is my favourite colour
-   The two moons may be a problem for werewolves
-   But the Mummy will appreciate the lack of humidity
+   The two moons may be a problem for satellites
+   But Branston will appreciate the lack of humidity
    <<<<<<< HEAD
    We added a different line in the other copy
    =======
@@ -186,8 +188,8 @@ Let's replace both so that the file looks like this:
 .. code-block:: output
 
    Cold and dry, but everything is my favourite colour
-   The two moons may be a problem for werewolves
-   But the Mummy will appreciate the lack of humidity
+   The two moons may be a problem for satellites
+   But Branston will appreciate the lack of humidity
    We removed the conflict on this line
 
 To finish merging, we add ``mars.txt`` to the changes being made by the merge

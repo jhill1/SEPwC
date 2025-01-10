@@ -2,7 +2,8 @@ Introduction
 ------------
 
 .. index:: 
-   pair: revision control; version control 
+   single: revision control 
+   single: version control
 
 We'll start by exploring how version control can be used to keep track of what one person did and when.
 Even if you aren't collaborating with other people, automated version control is much better than this situation:
@@ -97,6 +98,8 @@ collaboration among different people.
 
 Installing Git
 ---------------
+.. index:: 
+   single: git; install
 
 Git is easily installed on all systems. On linux, use your package manager. On MacOS
 install `via HomeBrew <https://git-scm.com/download/mac>_`. On Windows install the

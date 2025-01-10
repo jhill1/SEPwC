@@ -71,7 +71,7 @@ repetitive, boring stuff and let the computer do that work. This is where loops 
 Python ``for`` Loops
 ~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: for loop; python
+  pair: for; python
 
 ``for`` loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
@@ -182,7 +182,7 @@ Python also has a ``while`` loop which will keep going as long as some condition
 Python ``while`` loop
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: while loop; python
+  pair: while; python
 
 A while-loop executes repeatedly a set of statements as long as a boolean condition is ``True``
 

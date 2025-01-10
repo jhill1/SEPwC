@@ -1,5 +1,7 @@
 Mini course: Sentiment Analysis
 ==================================
+.. index:: 
+   single: sentiment analysis
 
 Sentiment analysis or opinion mining is a way of extracting feelings from large amounts of text. When 
 we read text we can use our understanding of the words to derive an emotion from the text the
@@ -10,6 +12,8 @@ This section is heavily based on `"Text Mining with R" <https://www.tidytextmini
 
 The pipeline in R
 --------------------
+.. index:: 
+   pair: tidytext; R
 
 We can use R's ``tidyverse``, along with ``tidytext``, data structures to perform these kinds of analyses quite easily, 
 building a pipeline, something like this:
@@ -31,6 +35,9 @@ All of these are based on unigrams; single words, and are in English only. The `
 words in a binary fashion (i.e. yes/no) into categories of positive, negative, anger, joy, sadness, etc.
 The ``bing`` lexicon categorises words into positive or negative. The ``AFINN`` lexicon creates a score between
 -5 and 5 to show the sentiment (on a negative to positive scale). 
+
+.. index:: 
+   pair: sentiment analysis; lexicon
 
 .. note::
 

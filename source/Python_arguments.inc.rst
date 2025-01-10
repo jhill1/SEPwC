@@ -106,7 +106,7 @@ Within our script we access them as we would any other list:
 Python advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: argarse; python
+  pair: argparse; python
 
 Python has a number of modules that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``

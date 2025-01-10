@@ -1,5 +1,7 @@
 Intro to R
 -----------
+.. index::
+  single: R
 
 R is an interpreted language that has become incredibly popular, but 
 was originally designed as a free, open-source version of "S"; a statistical

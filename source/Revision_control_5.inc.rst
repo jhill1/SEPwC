@@ -1,5 +1,7 @@
 Git history
 -----------
+.. index:: 
+   single: git; history 
 
 No, not the story of how Git came to be, but how do we get at the history of our commits.
 In the previous section we see we can refer to commits by the unique identifiers. 
@@ -331,6 +333,8 @@ on the other hand, moving backward and forward in time becomes much easier.
     
     As discussed above, you are left in a *detached* `HEAD` state, and you don't want to be there.
 
+.. index:: 
+   single: git; revert 
 
 .. admonition:: Thought exercise
 

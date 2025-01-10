@@ -1,7 +1,7 @@
 R examples
 ~~~~~~~~~~
 .. index:: 
-   single: syntax errors; R
+   pair: syntax; R
 
 If we make an error in our R code we will receive a message like:
 

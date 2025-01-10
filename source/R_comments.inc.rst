@@ -1,7 +1,7 @@
 R comments
 ----------
 .. index:: 
-   single: comments; R
+   pair: comments; R
 
 All computer languages have some mechanisms to add text that is not part of the code
 itself. These are called comments. The idea of these snippets of text are to provide
@@ -15,7 +15,8 @@ Inline comments (R)
 ~~~~~~~~~~~~~~~~~~~~
 
 .. index:: 
-   single: inline comments; R
+  single: comments; inline (R)
+
 
 Inline comments occur within the line of code:
 
@@ -40,7 +41,8 @@ Block comments (R)
 ~~~~~~~~~~~~~~~~~~
 
 .. index:: 
-   single: block comments; R
+  single: comments; block (R)
+
 
 Block comments occupy one or more lines. In python they look like:
 

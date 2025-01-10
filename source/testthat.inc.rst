@@ -1,5 +1,8 @@
 R: testthat
 ~~~~~~~~~~~~
+.. index:: 
+   pair: testthat; R
+   single: testing; testthat
 
 The first thing that you need to do is install the ``testthat`` R package. This can be done from CRAN using the code below.
 

@@ -1,5 +1,7 @@
 Collaboration with Git
 ----------------------
+.. index:: 
+   pair: git; github
 
 For the next step, get into pairs.  One person will be the "Owner" and the other
 will be the "Collaborator". The goal is that the Collaborator add changes into
@@ -83,6 +85,10 @@ exactly the same way as we've been doing before:
 
     1 file changed, 1 insertion(+)
     create mode 100644 pluto.txt
+
+
+.. index:: 
+   single: git; push 
 
 Then push the change to the *Owner's repository* on GitHub:
 

@@ -1,7 +1,7 @@
 R command line arguments 
 ----------------------------
 .. index:: 
-   single: command line arguments; R
+   pair: command line arguments; R
 
 The simplest user-facing scripts/software use the Command Line Interface (CLI) to interact with a user.
 The CLI allows the user to pass options to a script as they execute. We have already used these elsewhere
@@ -27,6 +27,8 @@ advanced usage options.
 
 R and the command line
 ~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+   pair: command line; R
 
 When you run a R script via the Rscript command, with some arbitrary text after:
 
@@ -127,7 +129,7 @@ Within our script we access them as we would any other list:
 R advanced command line interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index:: 
-   single: advanced command line interface; R 
+   pair: argparse; R 
 
 R has a number of libraries that make command line parsing a lot easier and more functional. The most commonly used is
 ``argparse``
@@ -235,6 +237,8 @@ You then parse the argument and put them in variables as you see fit
 
 Getting input from a user in R
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index::
+  pair: input; R
 
 If you want to ask the user something, e.g. a file name
 or if they wish to continue, you can use the ``readLines`` function.

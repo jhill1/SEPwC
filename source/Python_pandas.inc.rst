@@ -28,7 +28,7 @@ We normally import as follows:
 Basic data structures in pandas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: pandas; structures
+  pair: pandas; dataframe
 
 pandas provides two types of classes for handling data:
 

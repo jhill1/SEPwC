@@ -1,7 +1,7 @@
 Mini course: ggplot2 tutorial
 =============================
 .. index::
-  single: ggplot2
+  pair: ggplot2; R
 
 ``ggplot2`` is a popular library for creating pretty graphs and figures in R. It
 works in a similar way to the tidyverse in terms of using dataframes as the basic data
@@ -81,6 +81,9 @@ Note that ggplot2 understand ``colour``, ``color`` and ``col`` and, of course, y
 
 Themes
 ----------
+.. index::
+  single: ggplot2; themes
+
 
 Themes allow the setting up of axes, grids, fonts etc in a consistent way. ``ggplot2`` comes with a 
 number of built-in themes.
@@ -99,6 +102,8 @@ To see which details of a ggplot theme can be modified have a `look here — and
 
 Axes
 ------
+.. index::
+  single: ggplot2; axes
 
 The default axes titles use the variable names. Let’s add some well-written labels to the axes. 
 For this, we add labs() providing a character string for each label we want to change (here x and y):
@@ -258,6 +263,8 @@ vice-versa:
 
 Plot legends
 --------------
+.. index::
+  single: ggplot2; legends
 
 We often colour code parts of our graphs, and then add a legend to show how the data are separated.
 We will ``color`` code the plot based on season. Or to phrase it in a more ``ggplot``’ish way: we map the 
@@ -423,6 +430,8 @@ It is possible to force discrete legends or binned legends too.
 
 Colours
 ~~~~~~~~
+.. index::
+  single: ggplot2; colours
 
 A key part of the plot is the colour scheme chosen. There are two main
 colour elements to alter; ``color`` and ``fill``. These can be either a single colour
@@ -509,6 +518,8 @@ pre-defined ones, especially the ``viridis`` set, which are colour-blind safe.
 
 Multiple plots
 ---------------
+.. index::
+  single: ggplot2; multiple plots
 
 In the last code I snuck in an example of adding multiple plots to a figure!
 There are two main ways to do this: using the built-in ``facet`` or using an external
@@ -560,6 +571,8 @@ If we use two variables with ``facet_wrap`` we can a slightly different view:
 
 Saving the plot
 -----------------
+.. index::
+  single: ggplot2; saving
 
 Assuming you have saved your plot into an object you can save the plot to a file using 
 the ``ggsave()`` function:

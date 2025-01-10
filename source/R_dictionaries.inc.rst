@@ -1,7 +1,7 @@
 R dictionaries
 ----------------------------
 .. index:: 
-   single: dictionaries; R
+   pair: dictionary; R
 
 Dictionaries are linked lists; rather than accessing items via a numerical index, you access via a ``key``. A dictionary therefore contains a list of keys and a list of corresponding values. The keys have to be unique, but the values do not.
 

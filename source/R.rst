@@ -1,5 +1,7 @@
 R: the fundamentals
 ====================
+.. index::
+  single: R
 
 We're now going to learn the basics of a language. If you've chosen 
 R, keep reading. If you've chosen Python :ref:`go to this section<Python: the fundamentals>`.

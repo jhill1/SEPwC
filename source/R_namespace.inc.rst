@@ -1,7 +1,7 @@
 R namespace
 ----------------------------
 .. index:: 
-   single: namespace; R
+   pair: R; namespace
 
 Namespace and scope are the section of code where your variables are valid. A namespace
 is a collection of currently defined symbolic names; basically a dictionary of variable
@@ -18,7 +18,7 @@ place.
 Special environments
 ~~~~~~~~~~~~~~~~~~~~
 .. index:: 
-   single: special environments; R
+   single: R; environments
 
 Most environments are not created by you, but by R. Each package attached
 using ``library()`` or ``require()`` becomes on of the parents of the global environment. 
@@ -133,7 +133,7 @@ get the wrong one.
 Super assignment
 ~~~~~~~~~~~~~~~~~
 .. index:: 
-   single: super assignment; R
+   single: R; super assignment
 
 In the next section, we will deal with R objects and you'll see the ``<<-`` operator for 
 assigning values. You will have already seen the `<-` assignment operator. Why

@@ -48,7 +48,7 @@ that have the same name (e.g. ``max()``)
 NumPy array fundamentals
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: numpy; array
+  single: numpy; array
 
 One way to initialize an array is using a Python sequence, such as a list.
 For example:
@@ -163,7 +163,7 @@ If we used Python lists we would use ``a[1][3]``
 Numpy array attributes
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-   pair: numpy; attributes
+   single: numpy; attributes
 
 The number of dimensions of an array is contained in the ``ndim`` attribute.
 
@@ -350,9 +350,9 @@ To read more about concatenate, see: `concatenate help <https://numpy.org/doc/st
 How do you know the shape and size of an array?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: numpy; shape
+  single: numpy; shape
 .. index::
-  pair: numpy; size
+  single: numpy; size
 
 ``ndarray.ndim`` will tell you the number of axes, or dimensions, of the array.
 
@@ -405,7 +405,7 @@ And to find the shape of your array, run:
 Can you reshape an array?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-   pair: numpy; reshape
+   single: numpy; reshape
 
 **Yes!**
 
@@ -471,7 +471,7 @@ to preserve the indexing convention or not reorder the data.
 How to convert a 1D array into a 2D array (how to add a new axis to an array)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: numpy; axis
+  single: numpy; axis
 
 You can use ``np.newaxis`` and ``np.expand_dims`` to increase the dimensions of
 your existing array.
@@ -552,8 +552,8 @@ You can add an axis at index position 0 with:
 Indexing and slicing
 ~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: numpy; index
-  pair: numpy; slice
+  single: numpy; index
+  single: numpy; slice
 
 
 You can index and slice NumPy arrays in the same ways you can slice Python
@@ -576,9 +576,6 @@ lists.
 You can visualize it this way:
 
 .. image:: ../images/np_indexing.png
-
-.. index::
-  pair: Array; Slice; Python
 
 You may want to take a section of your array or specific array elements to use
 in further analysis or additional operations. To do that, you'll need to subset,
@@ -917,8 +914,8 @@ You can sum over the axis of columns with:
 Transposing and reshaping a matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
-  pair: numpy; matrix
-  pair: numpy; transpose
+  single: numpy; matrix
+  single: numpy; transpose
 
 
 It's common to need to transpose your matrices. NumPy arrays have the property
@@ -966,9 +963,6 @@ You can transpose your array with ``arr.transpose()``.
    array([[0, 3],
           [1, 4],
           [2, 5]])
-
-.. index::
-   pair: Reshaping; Matrix; Python
 
 You can also use ``arr.T``
 

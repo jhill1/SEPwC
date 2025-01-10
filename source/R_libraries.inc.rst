@@ -1,7 +1,7 @@
 R libraries
 ------------
 .. index:: 
-   single: libraries; R
+   pair: libraries; R
 
 When writing code we want to package up functionality/code into discrete bundles. In R these are called libraries or packages. 
 You can then put this library on the internet such that other can download, install it and use it. You can also save your own code 
@@ -12,6 +12,8 @@ libraries, rather than creating them.
 
 Loading libraries
 ~~~~~~~~~~~~~~~~~~
+.. index::
+  single: R; library
 
 Libraries are loaded via either the ``library`` or ``require`` functions.
 
@@ -36,6 +38,8 @@ This can be good practice throughout your code, but requires some care and atten
 
 Sourcing other code
 ~~~~~~~~~~~~~~~~~~~~
+.. index::
+  single: R; source
 
 
 You can also include the contents of another script directly into your own using the ``source`` function.

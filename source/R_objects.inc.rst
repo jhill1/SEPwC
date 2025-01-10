@@ -1,7 +1,7 @@
 R objects
 ----------------------------
 .. index:: 
-   single: objects; R
+   pair: objects; R
 
 We discussed objects back in :ref:`Objects and classes` which are containers for both
 data and functions to manipulate that data.

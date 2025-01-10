@@ -50,7 +50,7 @@ created only exist within that function.
 Python Scope
 ~~~~~~~~~~~~~
 .. index::
-  pair: ccope; python
+  pair: scope; python
 
 These namespaces mean variables of the same name can exist at the same time. As long as they are
 in a different namespace they won't interfere with each other. But how does Python know which one

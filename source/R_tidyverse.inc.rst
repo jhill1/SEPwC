@@ -1,7 +1,7 @@
 R: tidyverse
 -------------
 .. index:: 
-   single:tidyverse (R)
+   pair: tidyverse; R
 
 This chapter is taken from the `Data Carpentary on the tidyverse
 <https://datacarpentry.org/R-ecology-lesson/03-dplyr.html>`_ under
@@ -285,6 +285,9 @@ symbol negates the result, so we're asking for every row where weight *is not* a
 
 Split-apply-combine data analysis and the ``summarize()`` function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: tidyverse; summerize
+   single: tidyverse; group_by
 
 Many data analysis tasks can be approached using the *split-apply-combine*
 paradigm: split the data into groups, apply some analysis to each group, and
@@ -743,7 +746,7 @@ in the ``cols`` argument, we omit ``plot_id`` from being reshaped
 Exporting data
 ~~~~~~~~~~~~~~~~~
 .. index:: 
-   single: tidyverse; exporting data
+   single: tidyverse; exporting
 
 Now that you have learned how to use ``dplyr`` to extract information from
 or summarize your raw data, you may want to export these new data sets to share

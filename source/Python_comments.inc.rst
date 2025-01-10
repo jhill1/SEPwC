@@ -1,7 +1,7 @@
 Python comments
 ----------------
 .. index::
-  single: comments; python
+  pair: comments; python
 
 All computer languages have some mechanisms to add text that is not part of the code
 itself. These are called comments. The idea of these snippets of text are to provide

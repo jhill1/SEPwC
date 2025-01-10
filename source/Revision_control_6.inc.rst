@@ -1,5 +1,7 @@
 Ignoring files
 --------------
+.. index:: 
+   single: git; ignore 
 
 What if we have files that we do not want Git to track for us,
 like backup files created by our editor or intermediate files created during data analysis?

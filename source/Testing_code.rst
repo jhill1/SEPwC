@@ -1,5 +1,8 @@
 Testing code
 ============
+.. index:: 
+   single: software development; testing
+   single: testing
 
 You've spend days writing the most elegant and beautiful code imaginable. It's readable, well designed and runs quickly. How do you know it runs correctly? How do you know how easy it is to break? This is where testing comes in.
 
@@ -29,14 +32,16 @@ Example of loading a data set and checking it (strip all but header and three ro
 
 Regression tests
 ------------------
+.. index:: 
+   single: testing; regression
 
 When it comes to formal testing, the first type of test is called a *regression test*. This takes a full run of the code and checks that output is what is expected. This could be based on theoretical consideration or from past executions of the code. The distinction to other kinds of tests is that the whole program is run from start to finish.
 
-Examples of theoretical and past behaviour
-
-
 Unit tests
 ------------
+.. index:: 
+   single: testingl unit test
+
 
 Whilst regression tests test the whole executable, unit tests only test a single function or object within the code. The generally check against theoretical results (or simple calculations) with strictly controlled input to the function. This is often where we test unexpected behaviour too; for example putting two strings into a function to add two numbers: do we get a sensible error message? 
 

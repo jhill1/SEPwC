@@ -1,5 +1,7 @@
 Mini course: Tidal analysis in Python
 ======================================
+.. index:: 
+   pair: uptide; python
 
 Tides are a fundamental part of a number of coastal processes. As sea levels rise, tides will change, 
 and hence our flood risk, coastal geomorphology and ecological systems will also change as a consequence.

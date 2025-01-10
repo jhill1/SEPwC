@@ -1,5 +1,9 @@
 Setting up git
 ---------------
+.. index:: 
+   single: git; setup 
+   single: git; config
+
 
 For all the command-line examples below using either the ``git bash`` application (|win|) or the terminal (|maclin|). 
 On linux you can access the terminal via the Start Menu equivalent on most systems. On Macs, the terminal may be 
