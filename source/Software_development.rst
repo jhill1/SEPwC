@@ -83,6 +83,29 @@ Refactoring is rewriting existing code into a new design or structure. Code ulti
 
 Refactoring can be done in one of two ways: starting from scratch (but with the knowledge of what has gone before) or step-by-step. The means depends on a number of factors, but regardless one should not be afraid to start again. Your code is safe in a revision control repository and refactoring, even in a minor way, can vastly improve code.
 
+Some techniques that can help
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ - pair programming: working with someone else on a problem. Take it in turns to lead (driver) and observe (navigator) 
+   and use a single computer if possible. It is possible to do this remotely too.
+ - rubber ducking: explaining the problem to someone (or a rubber duck), even if they don't know how to write code,
+   often helps you come up with a solution (AI can also help here!)
+ - code walkthrough: explain your code to someone else
+ - code review: someone else reads through your code and checks for functionality and readability
+
+These techniques are based around two things. First, verbalising your code to explain the logic helps you to figure out where the
+problem is (or might be). Second, a fresh pair of eyes can often help spot the problem; when we read we tend to skip words when we already 
+vaguely know the content. All of the above based on these to concepts.
+
+
+.. admonition:: Practical exercise
+
+    **Try either a code walkthrough/rubber ducking or a code review**
+
+    Explain one of the codes you've written to a neighbour or an inanimate object,
+    or ask your neighbour to review a code. Recipricate too
+
+
 Development processes
 ----------------------
 
