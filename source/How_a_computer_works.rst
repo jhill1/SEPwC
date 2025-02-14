@@ -141,7 +141,7 @@ ext4 or similar.
 The OS then stores files on its filesystem. Each OS has different characteristics and ways of 
 storing your files. This we do care about. As we will be writing software that will load in data from 
 files at some point, we need to understand how to access files and hence, we need to 
-understand the filesystem for he OS we're using. We'll go through each OS in turn.
+understand the filesystem for the OS we're using. We'll go through each OS in turn.
 
 Windows
 ^^^^^^^
@@ -397,7 +397,7 @@ a subfolder (we'll try this for real later; if you try this now you'll get an er
 
         cd cli_example
         dir
-        pwd
+        cd
 
     .. code-block:: bash
        :caption: |cli| |maclin|
@@ -424,7 +424,7 @@ a subfolder (we'll try this for real later; if you try this now you'll get an er
 
         cd data_files\sedimentary_data\site1
         dir
-        pwd
+        cd
 
     .. code-block:: bash
        :caption: |cli| |maclin|
@@ -440,7 +440,7 @@ a subfolder (we'll try this for real later; if you try this now you'll get an er
 
         cd ..\..\gis_data\site_locations
         dir
-        pwd
+        cd
 
     .. code-block:: bash
        :caption: |cli| |maclin|
@@ -454,7 +454,7 @@ a subfolder (we'll try this for real later; if you try this now you'll get an er
     .. image:: ../images/filesystem/filesystem_gui_ex1_4.png
        :alt: image of files and folders
 
-    Feel free to continue to explore the folders, using both the GUI and CLI to navigate. Remember to use ``pwd`` to
+    Feel free to continue to explore the folders, using both the GUI and CLI to navigate. Remember to use ``pwd`` or ``cd`` to
     find where you are if you need to.
 
     Once you've done this in Windows or Linux (or Mac), try on the other operating system as it's good to have a basic understanding
