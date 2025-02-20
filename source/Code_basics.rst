@@ -220,7 +220,7 @@ objects (we'll come to those later).
 
     * 1.0
     * 1
-    * 1 divded by 2
+    * 1 ÷ 2
     * Hello
     * 42e-45
     * @
@@ -231,7 +231,7 @@ objects (we'll come to those later).
 
     * 1.0: float
     * 1: integer
-    * 1 divided by 2: float (0.5)
+    * 1 ÷ 2: float (0.5)
     * Hello: string
     * 42e-45: float, 0.00000...42 
     * @: character
