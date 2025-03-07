@@ -38,7 +38,7 @@ When you run a R script via the Rscript command, with some arbitrary text after:
    Rscript arg_script.R arg1 arg2 arg3
 
 that text is passed to the script for you to access. On windows things are a bit different as 
-the ``Rscript.exe`` is not generally on the path, so ou have to give the full path, something 
+the ``Rscript.exe`` is not generally on the path, so you have to give the full path, something 
 like:
 
 .. code-block:: bash
@@ -47,7 +47,12 @@ like:
    "C:\Program Files\R\R-3.6.0\bin\Rscript.exe" arg_script.R arg1 arg2 arg3
 
 Replacing the R version appropriately. You'll need to do this for the rest of this
-tutorial or add the ``Rscript`` exectuable to your ``PATH`` environment variable.
+tutorial or add the ``Rscript`` exectuable to your ``PATH`` environment variable (not possible
+if you don't have admin rights). As an alternative you can create an alias. This video 
+takes you though this.
+
+.. youtube:: 0ZI-EHZWxfQ
+   :align: center
 
 Let's create this simple script, named ``arg_script.R``
 
