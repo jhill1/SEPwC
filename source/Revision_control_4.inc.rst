@@ -218,7 +218,7 @@ it tells us that a file it already knows about has been modified:
     On branch main
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
-      (use "git checkout -- <file>..." to discard changes in working directory)
+      (use "git restore <file>..." to discard changes in working directory)
      
         modified:   mars.txt
      
@@ -278,7 +278,7 @@ After reviewing our change, it's time to commit it:
     On branch main
     Changes not staged for commit:
       (use "git add <file>..." to update what will be committed)
-      (use "git checkout -- <file>..." to discard changes in working directory)
+      (use "git restore <file>..." to discard changes in working directory)
 
         modified:   mars.txt
 

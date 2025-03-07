@@ -102,6 +102,6 @@ Installing Git
    single: git; install
 
 Git is easily installed on all systems. On linux, use your package manager. On MacOS
-install `via HomeBrew <https://git-scm.com/download/mac>_`. On Windows install the
-`standalone installer <https://git-scm.com/download/win>_`, which provides
+install `via HomeBrew <https://git-scm.com/download/mac>`_. On Windows install the
+`standalone installer <https://git-scm.com/download/win>`_, which provides
 the ``git`` executable and the ``git bash`` tool. 

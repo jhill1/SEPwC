@@ -8,6 +8,8 @@ Once Git is configured, we can start using it.
 We will use a story of Muske and Branston who are investigating if it
 is possible to send a planetary lander to Mars. 
 
+On Mac or Linux (|maclin|), run the following in a terminal. On windows (|win|), run these commands in the ``git bash`` application.
+
 First, let's create a new directory in the :file:`Desktop/` folder for our work and then change the current working directory to the newly created one:
 
 .. code-block:: bash
