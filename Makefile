@@ -19,8 +19,3 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: checklinks
-%: Makefile
-	@$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(LINKCHECKDIR)
-	@echo
-	@echo "Check finished. Report is in $(LINKCHECKDIR)."
