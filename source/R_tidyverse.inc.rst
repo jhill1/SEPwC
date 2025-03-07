@@ -4,7 +4,7 @@ R: tidyverse
    pair: tidyverse; R
 
 This chapter is taken from the `Data Carpentary on the tidyverse
-<https://datacarpentry.org/R-ecology-lesson/03-dplyr.html>`_ under
+<https://datacarpentry.github.io/R-ecology-lesson/instructor/03-dplyr.html>`_ under
 CC-BY 4.0 licence. 
 
 Bracket subsetting is handy, but it can be cumbersome and difficult to read,

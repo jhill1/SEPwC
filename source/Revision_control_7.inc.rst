@@ -57,7 +57,7 @@ This effectively does the following on GitHub's servers:
    cd planets
    git init
 
-If you remember back to the earlier `episode <../04-changes/>`_ where we added and
+If you remember back to the earlier where we added and
 committed our earlier work on ``mars.txt``\ , we had a diagram of the local repository
 which looked like this:
 

@@ -36,7 +36,7 @@ another Git host server after this lesson will include this information.
 
 For this lesson, we will be interacting with `GitHub <https://github.com/>`__ and so the email address used should be the 
 same as the one used when setting up your GitHub account. If you are concerned about privacy, 
-please review `GitHub's instructions for keeping your email address private <git-privacy>`_. 
+please review `GitHub's instructions for keeping your email address private <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address>`_. 
 
 
 .. caution::
