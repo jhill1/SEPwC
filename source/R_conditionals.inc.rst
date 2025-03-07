@@ -49,10 +49,10 @@ R ``if`` statement
 
 The ``if`` statement consists of an ``if`` condition, followed by zero or more ``else if`` conditions. A final ``else``
 statement can be used to capture the situation where everything is ``FALSE``.
-In general, we can put together multiple conditions. Only the first condition that is ``TRUE`` is executed.
+In general, we can put together multiple conditions. Only the first condition that is ``TRUE`` is executed; so something like this (where ``< stuff >`` would be
+replaced by actual code in real life).
 
 .. code-block:: R
-    :caption: |R|
 
     if (condition1) {
         <block of statements, executed if condition1 is TRUE>
