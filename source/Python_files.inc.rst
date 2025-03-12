@@ -40,8 +40,9 @@ The various modes are:
  * ``r+``: To read and write data into the file. The previous data in the file will be overwritten.
  * ``w+``: To write and read data. It will overwrite existing data.
  * ``a+``: To append and read data from the file. It won’t overwrite existing data.
-    
- A file, once finished with, needs closing too.
+
+
+A file, once finished with, needs closing too.
 
  .. code-block:: python
     :caption: |python|

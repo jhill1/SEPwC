@@ -48,9 +48,9 @@ Python ``if`` statement
 The ``if`` statement consists of an ``if`` condition, followed by zero or more ``elif`` conditions. A final ``else``
 statement can be used to capture the situation where everything is ``False``.
 In general, we can put together multiple conditions. Only the first condition that is ``True`` is executed.
+The bits between the ``<`` and ``>`` is where you would add your code to run on each condition.
 
 .. code-block:: python
-   :caption: |python|
 
     if condition1:
         <block of statements, executed if condition1 is True>
@@ -89,8 +89,8 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 
    **Add an** ``else`` **block**
 
-    Amend the example above to add an ``else`` block to print a message about not understanding the input
-    if humidity is not "high"
+   Amend the example above to add an ``else`` block to print a message about not understanding the input
+   if humidity is not "high"
 
 .. admonition:: Solution
    :class: toggle
@@ -197,7 +197,7 @@ if the first one is ``False``, ``mark`` must be less than 40 or greater than 100
 
    **Test the code**
 
-    Try the code above with different values of ``mark``. Does it work as expected?
+   Try the code above with different values of ``mark``. Does it work as expected?
 
 .. admonition:: Solution
    :class: toggle
@@ -229,7 +229,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
 
 .. admonition:: Practical exercise
 
-   **Nested ``if`` version**
+   **Nested ** ``if`` ** version**
 
    Re-write the environment code using nested ``if`` statements
 

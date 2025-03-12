@@ -154,7 +154,7 @@ For loops are a really useful way of doing the same thing to each item in a list
 
    **Writing our table for conversion using a** ``for`` **loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
+   Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
 
 .. admonition:: Solution
    :class: toggle
@@ -231,7 +231,7 @@ can be any conditional statement, including key presses (but that requires some 
 
    **Writing our table for conversion using a** ``while`` **loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
+   Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
 
 .. admonition:: Solution
    :class: toggle

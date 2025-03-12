@@ -100,7 +100,7 @@ Within our script we access them as we would any other list:
         # note the 1:, I'm skipping the 0-th element!
         for arg in sys.argv[1:]:
             print(str(count) + " " + arg)
-            count =+ 1
+            count += 1
 
 
 Python advanced command line interface
