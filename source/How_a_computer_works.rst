@@ -460,8 +460,13 @@ a subfolder (we'll try this for real later; if you try this now you'll get an er
     Once you've done this in Windows or Linux (or Mac), try on the other operating system as it's good to have a basic understanding
     of both main types.
 
-..  youtube:: F2K68Wjq7qY
+.. youtube:: F2K68Wjq7qY
    :align: center
+
+
+.. youtube:: FWIkVlr3Fbk
+   :align: center
+
 
 
 .. admonition:: Thought exercise

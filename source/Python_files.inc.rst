@@ -176,6 +176,9 @@ into words (separated by spaces) and creating a list of those.
     we could iterate over and do something sensible with, e.g. opening the file in the first
     element, perhaps.
 
+.. youtube:: 5qXYpMloMsc
+    :align: center
+
 
 Writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -280,5 +283,7 @@ others, but your job is to write clear code so use whichever is clearest for you
         USA,Washington DC
         France,Paris
         Burkina Faso,Ouagadougou
-    
+ 
+.. youtube:: 1Jk1pkRi1rU
+    :align: center
 

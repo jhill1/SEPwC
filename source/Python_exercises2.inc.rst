@@ -85,3 +85,6 @@ Python Exercises 2
         print("Sorry, you had 5 goes. I win!")
 
 
+.. youtube:: 7hAlsu0JMDA
+    :align: center
+

@@ -5,9 +5,11 @@ by a number of collaborators and colleagues. Thanks to the Software Carpentry in
 and influence. The git-novice course was the influence for the Git section. Thanks to colleagues David Ham, Colin Cotter
 and Lawrence Mitchel who created courses at their institutions which influenced me greatly. Thanks to Marijan Beg at Imperial
 College London for making his Python course open. I borrowed material from there for the Python and R sections. I also
-borrowed ideas from Hadley Wickham's various R books and websites.
+borrowed ideas from Hadley Wickham's various R books and websites. A lot of sections are incspired by other courses on 
+the web under CC-BY licences. They are acknowledged in the appropriate sections. 
 
-Thanks need to go to Katie Lee and Holly Smith for recording a large number of the videos on this website; thanks both! Also thanks to Sofia Foster, an undergrad student in the first year this course ran, who inspired the current logo design.
+Thanks need to go to Jenny Cudmore, Katie Lee and Holly Smith for recording a large number of the videos on this website! 
+Also thanks to Sofia Foster, an undergrad student in the first year this course ran, who inspired the current logo design.
 
 Thanks also to the fantastic group of developers that have made all the software used here. R, Python, Sphinx, Linux, 
 matplotlib, ggplot2, numpy, gdal, etc. The list should go on, but there is simply too much. The fact that so much of this

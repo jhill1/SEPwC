@@ -166,3 +166,5 @@ is a common idiom you will see in Python code.
 
         capitals.clear()
 
+.. youtube:: 1VRrLLx_5oo
+    :align: center
