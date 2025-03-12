@@ -60,24 +60,24 @@ lot of data very efficiently, e.g. land hieght data where you need continuous me
 
 
 
-Coordinate References System (CRS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Coordinate References System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. index::
   single: CRS
   single: coordinate reference system
   single: GIS; CRS
 
 GIS is a 2D system. But the Earth is 3D; almost a sphere in fact. To display the 
-3D surface to a 2D screen you need to project into a 2D space; the CRS. Any 
-CRS required trade offs. You can preserve area or shape or distance, but not all three!
+3D surface to a 2D screen you need to project into a 2D space; the Coordinate References System
+(CRS). Any  CRS required trade offs. You can preserve area or shape or distance, but not all three!
 Compare the two projections of the Earth below; the Mollweide preserves areas, so the size of Greenland
 to Africa is shown to scale, but you could not navigate using this map; your bearings
-would be very wrong! The Mercator projection preserves areas; excellent for navigation, but
+would be very wrong! The Mercator projection preserves angles; excellent for navigation, but
 not so good for comparing areas. Greenland (2.1 million km\ :sup:`2`\ ) is not bigger than the whole of Africa
 (30.1 million km\ :sup:`2`\ )!
 
 In R and Python if you are doing operations on geospatial data they **must** be in the 
-same project space. Your operation may work, but you won't get the result you want!
+same projection space. Your operation may work, but you won't get the result you want!
 
 Common projection spaces are "mercator" and "Universal Tranverse Mercator (UTM)". For
 "regional" studies UTM is best. It's in metres (not degrees!) and covers a reasonably 

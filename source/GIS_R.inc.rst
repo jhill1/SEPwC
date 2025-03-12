@@ -23,7 +23,7 @@ Let's look at rasters first.
 .. code-block:: R
     :caption: |R|
 
-    my_raster <- raster("gis_data/tidal_range.tif")
+    my_raster <- rast("tidal_range.tif")
     my_raster
 
 R will print out some basic info on the raster. This includes the extent, the projection 
@@ -115,10 +115,14 @@ The ``terra`` library can also load vector data:
 .. code-block:: R
     :caption: |R|
 
-    tidal_gauges <- vect("gis_data/tide_gauges.shp")
+    tidal_gauges <- vect("tide_gauges.shp")
 
 The same functions as above (``crs()``, ``ext()``, ``project()``) work as expected on
 vector data.
+
+.. youtube:: bzD-DGFcxUw
+   :align: center
+
 
 The ``sf`` library
 ~~~~~~~~~~~~~~~~~~
@@ -133,7 +137,7 @@ This library has more features than ``terra`` so is worth learning.
     :caption: |R|
 
     library(sf)
-    tide_gauges <- st_read("gis_data/tide_gauges.shp")
+    tide_gauges <- st_read("tide_gauges.shp")
 
 Vector data can be points, lines or polygons. We can find out which using:
 
@@ -174,7 +178,7 @@ easy to switch a vector dataset between the two.
 .. code-block:: R
     :caption: |R|
 
-    sf::st_as_sf(terra::vect("gis_data/tide_gauges.shp"))
+    sf::st_as_sf(terra::vect("tide_gauges.shp"))
     
 Will convert a ``terra`` vector to the ``sf`` format. Normally, ``terra`` can deal with 
 ``sf`` objects, but you sometimes need to wrap the ``sf`` object in the ``st_zm`` function:
