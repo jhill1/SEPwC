@@ -60,7 +60,7 @@ where we store the length in a variable, then use it.
 
    **Nested functions**
 
-    Write a single line of code to print the length of a list (which has the variable name `my_list`)
+   Write a single line of code to print the length of a list (which has the variable name `my_list`)
 
 .. admonition:: Solution
    :class: toggle

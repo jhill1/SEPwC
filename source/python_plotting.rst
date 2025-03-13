@@ -45,6 +45,11 @@ Generating visualizations with pyplot is very quick:
     plt.ylabel('some numbers')
     plt.show()
 
+.. figure:: ../images/matplotlib_fig1.png
+    :alt: A simple line plot of numbers 1-4 on both x and y axis
+    
+    Simple line plot from the code above.
+
 You may be wondering why the x-axis ranges from 0-3 and the y-axis
 from 1-4.  If you provide a single list or array to
 ``plot``, matplotlib assumes it is a
@@ -60,6 +65,12 @@ arguments.  For example, to plot x versus y, you can write:
     :caption: |python|
 
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
+    plt.show()
+
+.. figure:: ../images/matplotlib_fig2.png
+    :alt: A simple line plot of given arrays for x and y
+    
+    Simple line plot from the code above.
 
 Formatting the style of your plot
 ----------------------------------
@@ -79,6 +90,12 @@ example, to plot the above with red circles, you would issue
     plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
     plt.axis((0, 6, 0, 20))
     plt.show()
+
+.. figure:: ../images/matplotlib_fig3.png
+    :alt: A simple scatter plot of given arrays for x and y using red circles
+    
+    Simple scatter plot from the code above.
+
 
 See the ``plot`` documentation for a complete
 list of line styles and format strings.  The
@@ -104,6 +121,12 @@ using arrays.
     # red dashes, blue squares and green triangles
     plt.plot(t, t, 'r--', t, t**2, 'bs', t, t**3, 'g^')
     plt.show()
+
+.. figure:: ../images/matplotlib_fig4.png
+    :alt: A scatter plot show different formatting in a single plot call
+
+    Scatter plot from the code above.
+
 
 
 Plotting with keyword strings
@@ -161,6 +184,49 @@ many plotting functions. For example:
     plt.plot(names, values)
     plt.suptitle('Categorical Plotting')
     plt.show()
+
+.. figure:: ../images/matplotlib_fig5.png
+    :alt: Three subplots showing display of categorical arrays
+    
+    Three plots in one graph; all of catgorical arrays
+
+In the above code, I've also introduced the idea of subplots. This allows you to
+place seperate plots in a single figure. The figure also has a size ``(9, 3)`` inches.
+Each subplot is added in the following way:
+
+ - ``subplot(131)`` means I am going to give you 1 row and 3 columns of plots; this is plot 1
+ - ``subplot(132)`` means I am going to give you 1 row and 3 columns of plots; this is plot 2
+ - ``subplot(133)`` means I am going to give you 1 row and 3 columns of plots; this is plot 3
+
+.. admonition:: Practical exercise
+
+    Repeat the above plot, but do three rows and 1 column.
+
+.. admonition:: Solution
+   :class: toggle
+
+   .. code-block:: Python
+      :caption: |python|
+
+      names = ['group_a', 'group_b', 'group_c']
+      values = [1, 10, 100]
+      plt.figure(figsize=(3, 9))
+
+      plt.subplot(311)
+      plt.bar(names, values)
+      plt.subplot(312)
+      plt.scatter(names, values)
+      plt.subplot(313)
+      plt.plot(names, values)
+      plt.suptitle('Categorical Plotting')
+      plt.show()
+
+   Note, apart from altering the order of the subplot calls, I've also switch the size of the figure.
+   
+   .. figure:: ../images/matplotlib_fig6.png
+      :alt: Three subplots showing display of categorical arrays using rows
+    
+      Three plots in one graph; all of catgorical arrays
 
 
 Controlling line properties

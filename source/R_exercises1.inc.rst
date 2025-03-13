@@ -78,14 +78,14 @@ Try the following exercises. For any of the exercises, feel free to type out the
 .. admonition:: Solution
    :class: toggle
 
-    .. code-block:: R
-        :caption: |R|
+   .. code-block:: R
+      :caption: |R|
     
-        conversion = 0.092903
-        for (sqft in seq(2,20,2)) {
-            sqm = sqft * conversion
-            print(paste(sqft, sqm))
-        }
+      conversion = 0.092903
+      for (sqft in seq(2,20,2)) {
+          sqm = sqft * conversion
+          print(paste(sqft, sqm))
+      }
 
 
 .. youtube:: nCuVHnMHRYk

@@ -91,9 +91,9 @@ Not the best of code, engineering-wise, but it will work. Try it out.
 
 .. admonition:: Practical exercise
 
-   **Add an ``else`` block**
+   **Add an** ``else`` **block**
 
-    Amend the example below to add an ``else`` block to print something if humidity is not "high"
+   Amend the example below to add an ``else`` block to print something if humidity is not "high"
 
 .. admonition:: Solution
    :class: toggle
@@ -205,7 +205,7 @@ if the first one is ``FALSE``, ``mark`` must be less than 40 or greater than 100
 
    **Test the code**
 
-    Try the code above with different values of ``mark``. Does it work as expected?
+   Try the code above with different values of ``mark``. Does it work as expected?
 
 .. admonition:: Solution
    :class: toggle
@@ -227,7 +227,7 @@ Now you've seen nested ``if`` statements in action. Try the final practical exer
 
 .. admonition:: Practical exercise
 
-   **Nested ``if`` version**
+   **Nested** ``if`` **version**
 
    Re-write the environment code using nested ``if`` statements
 

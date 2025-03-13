@@ -70,7 +70,7 @@ R ``for`` Loops
 .. index:: 
    single: for; R
 
-'for' loops work in Python using a control variable (the thing that increments each loop) and 
+``for`` loops work in Python using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
 we can iterate over a list or a counter with the same construct. This is all
 a bit abstract, so let's do some examples.
@@ -154,9 +154,9 @@ For loops are a really useful way of doing the same thing to each item in a list
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a ``for`` loop?**
+   **Writing our table for conversion using a ** ``for`` **loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
+   Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
 
 .. admonition:: Solution
    :class: toggle
@@ -232,9 +232,9 @@ can be any conditional statement, including key presses (but that requires some 
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a ``while`` loop?**
+   **Writing our table for conversion using a** ``while`` **loop?**
 
-    Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
+   Write out the Fahrenheit to Celsius conversion table using a ``while`` loop.
 
 .. admonition:: Solution
    :class: toggle
