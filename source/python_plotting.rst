@@ -389,7 +389,9 @@ as your heart desires:
     plt.subplot(211)             # make subplot(211) in the first figure
                                  # current
     plt.title('Easy as 1, 2, 3') # subplot 211 title
+    plt.show()
 
+The above code will open two figures.
 
 If you are making lots of figures, you need to be aware of one
 more thing: the memory required for a figure is not completely
@@ -421,7 +423,7 @@ text in the indicated locations
     n, bins, patches = plt.hist(x, 50, density=True, facecolor='g', alpha=0.75)
 
 
-    plt.xlabel('Smarts')
+    plt.xlabel('IQ')
     plt.ylabel('Probability')
     plt.title('Histogram of IQ')
     plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
@@ -429,6 +431,10 @@ text in the indicated locations
     plt.grid(True)
     plt.show()
 
+.. figure:: ../images/matplotlib_fig7.png
+   :alt: Histogram of IQ showing how to add text, including greek symbols
+
+   Demonstration of using the ``plt.text`` and greek letters.
 
 All of the ``text`` functions return a ``matplotlib.text.Text``
 instance.  Just as with lines above, you can customize the properties by
@@ -445,6 +451,7 @@ Using mathematical expressions in text
 .. index::
   single: pyplot; maths 
 
+In the example above I used `TeX <https://en.wikipedia.org/wiki/TeX>`_ type expressions to give Greek letters.
 Matplotlib accepts TeX equation expressions in any text expression.
 For example to write the expression :math:`\sigma_i=15` in the title,
 you can write a TeX expression surrounded by dollar signs:
@@ -456,12 +463,12 @@ you can write a TeX expression surrounded by dollar signs:
 
 The ``r`` preceding the title string is important -- it signifies
 that the string is a *raw* string and not to treat backslashes as
-python escapes.  matplotlib has a built-in TeX expression parser and
-layout engine, and ships its own math fonts.Thus, you can use mathematical text across
-platforms without requiring a TeX installation.  For those who have LaTeX
+python escapes.  ``matplotlib`` has a built-in TeX expression parser and
+layout engine, and ships its own math fonts. Thus, you can use mathematical text across
+platforms without requiring a TeX installation. For those who have LaTeX
 and dvipng installed, you can also use LaTeX to format your text and
 incorporate the output directly into your display figures or saved
-postscript. 
+postscript. This allows the creation of publication-ready images.
 
 Annotating text
 ~~~~~~~~~~~~~~~~~~
@@ -497,6 +504,11 @@ these arguments are ``(x, y)`` tuples.
 In this basic example, both the ``xy`` (arrow tip) and ``xytext``
 locations (text location) are in data coordinates.  There are a
 variety of other coordinate systems one can choose. 
+
+.. figure:: ../images/matplotlib_fig8.png
+   :alt: Using the annotate command
+
+   Demonstration of the ``annotate`` function.
 
 
 Logarithmic and other nonlinear axes
@@ -565,6 +577,13 @@ is shown below.
 
     plt.show()
 
+.. figure:: ../images/matplotlib_fig9.png
+   :alt: Example of using different scales on axes
+
+   Demonstration using different scales on the axes.
+
+
 It is also possible to add your own scale, see `matplotlib.scale <https://matplotlib.org/stable/api/scale_api.html#module-matplotlib.scale>`_ for
 details.
+
 
