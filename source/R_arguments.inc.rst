@@ -197,10 +197,10 @@ You then parse the argument and put them in variables as you see fit
      - optional output to a file
 
 .. admonition:: Solution
-   :class: toggle
+    :class: toggle
 
     .. code-block:: R
-        :caption: |cli|
+        :caption: |R|
 
         library(argparse)
 
@@ -233,10 +233,10 @@ You then parse the argument and put them in variables as you see fit
           print(answer)
         }
 
-        #if (output_file != NA) {
-        #    with open(output_file, "w") as f: 
-        #        f.write(f"The square of {square} equals {answer}\n")
-        #}
+        if (output_file != NA) {
+            with open(output_file, "w") as f: 
+                f.write(f"The square of {square} equals {answer}\n")
+        }
 
 
 
@@ -257,7 +257,7 @@ reference to the ``scan``, ``readline`` and ``readlines`` functions. They all wo
 well in an interactive environment, but not when running as a batch script via ``Rscript``.
 
 .. code-block:: R
-    :caption: |cli|
+    :caption: |R|
 
     answer <- readLines(file("stdin"),1)
     if (answer == "Y") {

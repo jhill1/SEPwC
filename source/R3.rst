@@ -3,8 +3,7 @@ R: part 3
 
 .. include:: R_namespace.inc.rst
 .. include:: R_objects.inc.rst
-.. include:: R_datetime.inc.rst
 .. include:: R_dataframes.inc.rst
 .. include:: R_tidyverse.inc.rst
-
-
+.. include:: R_datetime.inc.rst
+        

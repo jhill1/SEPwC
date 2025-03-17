@@ -77,7 +77,7 @@ out, for example, creating a duration:
 
     print(date1 - date2)
 
-However, the difftime class which is the outcome of a duration depends on what the duration is, but comes in the 
+However, the ``difftime`` class which is the outcome of a duration depends on what the duration is, but comes in the 
 form of weeks, days, seconds. Not that useful, so ``lubridate`` comes with a function to force it to seconds:
 
 .. code-block:: R

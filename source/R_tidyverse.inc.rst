@@ -552,12 +552,7 @@ We can do both these of transformations with two ``tidyr`` functions, ``pivot_wi
 and ``pivot_longer()``.
 
 These may sound like dramatically different data layouts, but there are some tools that make
-transitions between these layouts more straightforward than you might think! The animation below
-shows how these two formats relate to each other, and gives you an idea of how we can use R
-to shift from one format to the other.
-
-.. image:: ../images/tidyr-pivot_wider_longer.*
-    :alt: animation of pivot from wide to long
+transitions between these layouts more straightforward than you might think! 
 
 Pivoting from long to wide format
 ......................................
@@ -835,4 +830,58 @@ folder.
     if (!dir.exists("data")) dir.create("data")
     write_csv(surveys_complete, file = "data/surveys_complete.csv")
 
+
+.. admonition:: Practical exercise - tidyverse
+
+    Using the data that comes with the ``tidyverse`` package, 
+    carry out the following operations:
+
+     1. compute rate per 10,000 population by dividing cases by population/10,000 using table1
+     2. compute cases per year using table1
+     3. pivot table4a from wide format to long format so you have column sof ``country``, ``year`` and ``cases``
+        This matches table1, but without population data.
+
+    .. code-block:: R
+       :caption: |R|
+
+       library(tidyverse)
+
+       table1
+       > # A tibble: 6 × 4
+       >   country      year  cases population
+       >   <chr>       <dbl>  <dbl>      <dbl>
+       > 1 Afghanistan  1999    745   19987071
+       > 2 Afghanistan  2000   2666   20595360
+       > 3 Brazil       1999  37737  172006362
+       > 4 Brazil       2000  80488  174504898
+       > 5 China        1999 212258 1272915272
+       > 6 China        2000 213766 1280428583
+
+       table4a
+       > # A tibble: 3 × 3
+       >   country     `1999` `2000`
+       >   <chr>        <dbl>  <dbl>
+       > 1 Afghanistan    745   2666
+       > 2 Brazil       37737  80488
+       > 3 China       212258 213766
+
+
+.. admonition:: Solution
+    :class: toggle
+
+    .. code-block:: R
+       :caption: |R|
+
+       # 1
+       table1 %>% 
+              mutate(rate = cases / (population / 10000))
+
+       # 2
+       table1 %>% 
+              count(year, wt = cases)
+
+       # 3
+       table4a %>% 
+               pivot_longer(c(`1999`, `2000`), names_to = "year", values_to = "cases")
+       # Note: the columns names are in ` as they are numbers
 

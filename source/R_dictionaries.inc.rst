@@ -8,18 +8,21 @@ Dictionaries are linked lists; rather than accessing items via a numerical index
 R doesn't have a built-in dictionary datatype, *but* vectors, matrices, lists etc can behave like dictionaries. 
 
 .. code-block:: R
+   :caption: |R|
 
-    telephone = c('Bob'=3452345, 'Mildred'=532354)
+   telephone = c('Bob'=3452345, 'Mildred'=532354)
    
 You can then access using the keys, much like in a list:
 
 .. code-block:: R
+   :caption: |R|
 
-    telephone['Bob']
+   telephone['Bob']
 
 You can add to a dictionary by using the ``[]`` notation:
 
 .. code-block:: R
+   :caption: |R|
 
    telephone['Grenville'] <- 435353
    print(telelphone)
@@ -27,7 +30,8 @@ You can add to a dictionary by using the ``[]`` notation:
 To check if a key is used in a dictionary, you can use the ``%in%`` keyword. However, R will look in the ``values`` by default, so we have to tell it to look in the ``names()``:
 
 .. code-block:: R
-
+   :caption: |R|
+    
    'Bob' %in% names(telephone)
    'Jack' %in% names(telephone)
 
@@ -39,15 +43,17 @@ Looping with dictionaries
 Like lists, dictionaries are at their most powerful in loops. Also like lists there are a number of ways of looping over them. You can loop as you would a vector:
 
 .. code-block:: R
+   :caption: |R|
 
-    knights = c('gallahad'='the pure', 'robin'='the brave')
-    for (k in knights) {
-        print(k)
-    }
+   knights = c('gallahad'='the pure', 'robin'='the brave')
+   for (k in knights) {
+       print(k)
+   }
 
 which loops over the values. If we want to loop over the keys:
 
 .. code-block:: R
+    :caption: |R|
 
     knights = c('gallahad'='the pure', 'robin'='the brave')
     for (k in names(knights)) {
@@ -63,6 +69,7 @@ delete items and manipulate a dictionary in place. You often find yourself
 reassigning the dictionary to the same variable. For example:
 
 .. code-block:: R
+    :caption: |R|
 
     telephone[names(telephone) != "Grenville"]
     
@@ -71,6 +78,7 @@ you reassign the output back into telephone:
 
 
 .. code-block:: R
+    :caption: |R|
 
     telephone <- telephone[names(telephone) != "Grenville"]
 
@@ -89,7 +97,8 @@ If you are making heavy use of dictionaries, it may be better to use that librar
     :class: toggle
 
     .. code-block:: R
-
+        :caption: |R|
+        
         capitals = c(
             "Germany"="Berlin",
             "UK"="London",
@@ -107,9 +116,10 @@ If you are making heavy use of dictionaries, it may be better to use that librar
     :class: toggle
 
     .. code-block:: R
-
-        capitals["Italy"] <- "Rome"
-        capitals["Mexico"] <- "Mexico City"
+       :caption: |R|
+       
+       capitals["Italy"] <- "Rome"
+       capitals["Mexico"] <- "Mexico City"
 
 
 
@@ -121,8 +131,9 @@ If you are making heavy use of dictionaries, it may be better to use that librar
     :class: toggle
 
     .. code-block:: R
-
-        capitals <- capitals[names(capitals) != "UK"]
+       :caption: |R|
+       
+       capitals <- capitals[names(capitals) != "UK"]
         
 
 .. admonition:: Practical exercise - capital cities: edit
@@ -133,8 +144,9 @@ If you are making heavy use of dictionaries, it may be better to use that librar
     :class: toggle
 
     .. code-block:: R
-
-        capitals["Burkina Faso"] <- "Wagadugu"
+       :caption: |R|
+       
+       capitals["Burkina Faso"] <- "Wagadugu"
 
 .. admonition:: Practical exercise - capital cities: functions
 
@@ -149,7 +161,8 @@ If you are making heavy use of dictionaries, it may be better to use that librar
     :class: toggle
 
     .. code-block:: R
-
+        :caption: |R|
+        
         'UK' %in% names(capitals)
         
         print(length(capitals))
