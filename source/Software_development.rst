@@ -19,7 +19,7 @@ We've already learnt one of the key tools (or if you've skipped to this bit, you
 which is :ref:`revision control <Revision control with Git>`.
 Rather than keep separate versions of code in separate files (which would be a nightmare for any reasonable sized application), 
 we keep versions of files in a revision control system. In this course we've learnt about ``git``, but there are other 
-tools, jut not as popular. 
+tools, just not as popular. 
 
 However, revision control is a tool to help development; it does not solve all problems. You can use it in a number of ways depending on the project, the number of people and the aims of the code. There is no single right way to do this and any development tools helps set up a process, but it's humans that actually devise and use (or not!) any processes.
 
@@ -41,7 +41,11 @@ With teams of developers this is the preferred method and only a few individuals
 Testing
 --------
 
-How do you know your code is correct? :ref:`See this chapter <Testing code>`!
+How do you know your code is correct? We test code against known answers
+to make sure it is correct. A simple example is a calculator application. We can
+check that if we give it ``2+2`` it should return ``4``. We can also
+check the errors. In the same calculator application if we give it ``a+b``, what
+should it return? It could be an error message, it could be that it returns ``15``, which is doing hexadecimal arithmetic; that depends on you requirements capture (see below). We'll cover testing in :ref:`this future chapter <Testing code>`.
 
 
 Development process
@@ -64,13 +68,33 @@ Requirements capture
 .. index:: 
    single: software development; requirements capture
 
-If you are going to write code it is because you want to do something. You want to be able to analyse data, merge datasets together, create animations of outputs, etc., etc. Requirements capture is a process by which we lay out what code should be able to do (and perhaps what it won't be able to do). There are a number of ways this can happen including interviews, workshops, user observations, prototyping and use cases/scenarios. For the purposes of this course we're going to assume you are the developer and the user so not all of these methods will be useful (unless you want to interview yourself...).
+If you are going to write code it is because you want to do something. You want to be able to analyse data, merge datasets together, create animations of outputs, etc., etc. Requirements capture is a process by which we lay out what code should be able to do (and what it won't be able to do). There are a number of ways this can happen including interviews, workshops, user observations, prototyping and use cases/scenarios. For the purposes of this course we're going to assume you are the developer and the user so not all of these methods will be useful (unless you want to interview yourself...).
 
 Prototyping is a useful thing when you are struggling to see what a code can or cannot do. It is often helpful to write short script with hard-coded data to try and work *how* to do something. The aim here is to create a realistic, but small, dataset or set-up and write code that does a single, particular thing. You can then build on that to abstract it (e.g. take user input or a file) and develop code from there. It's often useful to then use this protype as template for a test. This way you don't get overwhelmed in designing the whole code/software in one go, but build it up bit-by-bit as you go. 
 
 Use cases or scenarios are also really useful for the lone developer. Think about how you want to use your new software. Imagine being yourself in five years' time writing some new code that uses this. How would you like to call functions; do names make sense; does the flow make sense? With experience this kind of thinking becomes more second nature, but writing this down in a document will help clarify your thoughts and help the logical flow of code before you start writing. 
 
-A useful technique it to also write psuedo-code or comments for the outline of various parts of your idea. This again helps point out any parts that could be functions or objects; where possible data issues might be, etc. 
+A useful technique it to also write pseudo-code or comments for the outline of various parts of your idea. This again helps point out any parts that could be functions or objects; where possible data issues might be, etc. As an example:
+
+.. code-block::  R
+   :caption: |R|
+
+   # Read in user data
+
+   # loop over rows in user data
+
+       # strip numbers from column 2
+
+       # add to column 3
+
+       # store in column 4
+
+   # calculate average from all of column 4 and print to screen
+
+   # create a plot of column 4/ mean of col 4 vs column 1 (time)
+   # and save to file
+
+nce you have a general plan in place you can then concentrate on the *how*. 
 
 The above takes time but helps you write better, cleaner, more readable code. Remember not to over-engineer or start optimising prematurely. Step one is to get functional code. Then move onto readable code. Then, if the code is too slow, optimise the code. Requirements capture helps the first of those steps.
 
@@ -95,7 +119,7 @@ Some techniques that can help
 
 These techniques are based around two things. First, verbalising your code to explain the logic helps you to figure out where the
 problem is (or might be). Second, a fresh pair of eyes can often help spot the problem; when we read we tend to skip words when we already 
-vaguely know the content. All of the above based on these to concepts.
+vaguely know the content. All of the above are based on these concepts of verbalising or reading.
 
 
 .. admonition:: Practical exercise
@@ -148,7 +172,7 @@ Test-driven development turns the development cycle around to put testing up-fro
  - writing code or refactoring 
  - bug fixes
 
-The tests are written immediately after requirements capture and before any code is written (so the test will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
+The tests are written immediately after requirements capture and before any code is written (so the tests will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
 
 Development tools
 -----------------
@@ -163,8 +187,9 @@ along with syntax highlighting and variable/function completion.
 
 I don't use these tools as I often write code on HPC (High Performance Computing) platforms which generally 
 don't have them or they are very slow when used over internet connections. I therefore prefer to use more
-basic tools which will be on any computer I use. However, once you know how to use them well, they can make
-ou more productive. 
+basic tools which will be on any computer I use. However, IDEs are very helpful:
+once you know how to use them well, they can make you more productive than a text
+editor and command line alone. 
 
 Spyder
 ~~~~~~
@@ -203,8 +228,8 @@ Linting your code
 
 *Linting* refers to running your code through software that checks the syntax and layout/formatting of your code. The
 term comes from the fluff shed by clothing, i.e. ``lint`` removes the extraneous fluff from your code. It often
-points our better ways of writing functions, sylistic issues with your code and, when working in a team, checks
-things are consistant across the whole team (e.g. using 4 spaces to indent, rather than some people using 3 or 2).
+points our better ways of writing functions, stylistic issues with your code and, when working in a team, checks
+things are consistent across the whole team (e.g. using 4 spaces to indent, rather than some people using 3 or 2).
 
 Both R and Python (and most other languages) have some form of lint software available. For R the 
 package is called ``lintr``, for Python it's ``pylint``. Let's deal with these in turn.
@@ -471,8 +496,8 @@ And then, let's compare to pandas:
 
    How does it differ from a pandas dataframe?
 
-Ai is a powerful tool for researching the basic concepts of new modules/libraries or ideas. It can 
-summerise these easily and quickly to give you a good overview. 
+AI is a powerful tool for researching the basic concepts of new modules/libraries or ideas. It can 
+summarise these easily and quickly to give you a good overview. 
 
 It can also help with specific questions too:
 
@@ -503,7 +528,7 @@ Try asking that? You should get something like the following code:
    # Print the first few rows of the DataFrame
    print(df.head())
 
-Which is a pretty clear simple example, with a more complex one.
+Which is a pretty clear simple example, with a more complex one added to show more features.
 
 Code generation
 ~~~~~~~~~~~~~~~
