@@ -5,7 +5,7 @@ Python: Datetimes
 
 Dates and time are a common aspect of environmental data. We often need to 
 crop date/times to a specific range and compare or take samples from our
-data every *N* minutes, for example. Python comes with a datetime module
+data every *N* minutes, for example. Python comes with a ``datetime`` module
 that helps us deal with these issues. It provides a variety of functions
 to work out duration, samples and deal with leap years and time zones.
 
@@ -18,7 +18,7 @@ to work out duration, samples and deal with leap years and time zones.
 
     print(now)
 
-This prints the current date and time based on your computers clock:
+This prints the current date and time based on your computer's clock:
 
 .. code-block:: bash
     :caption: |cli|

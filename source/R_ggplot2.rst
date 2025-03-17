@@ -79,6 +79,10 @@ Note that ggplot2 understand ``colour``, ``color`` and ``col`` and, of course, y
     g + geom_point(color = "firebrick", shape = "diamond", size = 2) +
         geom_line(color = "firebrick", linetype = "dotted", lwd = .3)
 
+
+.. youtube:: xh436DpK-pA
+   :align: center
+
 Themes
 ----------
 .. index::

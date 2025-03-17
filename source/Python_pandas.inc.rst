@@ -3,19 +3,19 @@ Python: Pandas module
 .. index::
   pair: pandas; python
 
-pandas is a Python package providing fast, flexible, and expressive data structures 
+``pandas`` is a Python package providing fast, flexible, and expressive data structures 
 designed to make working with “relational” or “labelled” data both easy and intuitive.
 It aims to be the fundamental high-level building block for doing practical, 
 real-world data analysis in Python.
 
-pandas is well suited for many different kinds of data:
+``pandas`` is well suited for many different kinds of data:
 
  - Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet
  - Ordered and unordered (not necessarily fixed-frequency) time series data.
  - Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels
- - Any other form of observational / statistical data sets. The data need not be labeled at all to be placed into a pandas data structure.
+ - Any other form of observational / statistical data sets. The data need not be labeled at all to be placed into a ``pandas`` data structure.
 
-Basically, if you are handling data, pandas is useful!
+Basically, if you are handling data, ``pandas`` is useful!
 
 We normally import as follows:
 
@@ -30,7 +30,7 @@ Basic data structures in pandas
 .. index::
   pair: pandas; dataframe
 
-pandas provides two types of classes for handling data:
+``pandas`` provides two types of classes for handling data:
 
 1. :class:`Series`: a one-dimensional labeled array holding data of any type
     such as integers, strings, Python objects etc.
@@ -42,7 +42,7 @@ Object creation
 .. index::
   pair: Pandas; Object Creation
 
-Creating a :class:`Series` by passing a list of values, letting pandas create
+Creating a :class:`Series` by passing a list of values, letting ``pandas`` create
 a default :class:`RangeIndex`.
 
 .. code-block:: python
@@ -769,4 +769,62 @@ Grouping by a categorical column with ``observed=False`` also shows empty catego
     df.groupby("grade", observed=False).size()
 
 
+.. admonition:: Exercise
+
+   Run the following code to download and load the data into ``pandas``
+
+   .. code-block:: Python
+      :caption: |python|
+
+      url = 'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv'
+      chipo = pd.read_csv(url, sep = '\t')
+
+
+   Then use ``pandas`` function to obtain the following:
+
+    1. see the first 10 entries
+    2. get the number of observations (rows)
+    3. get the number of columns
+    4. print the names of all columns
+    5. which ``item_name`` is the most ordered item?
+    6. what is the average value of an order?
+          
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+       :caption: |python|
+
+       # 1
+       chipo.head(10)
+       
+       # 2
+       chipo.shape[0]  # entries <= 4622 observation
+       # or #
+       chipo.info()
+       
+       # 3
+       chipo.shape[1]
+
+       # 4
+       chipo.columns
+
+       # 5
+       c = chipo.groupby('item_name')
+       c = c.sum()
+       c = c.sort_values(['quantity'], ascending=False)
+       c.head(1)
+
+       # 6
+       # this is hard as the price is currently in a non-numerical format
+       # so first we have to make it a number
+       # We first need to remove the $ sign and make a number
+       de_dollariser = lambda x: float(x[1:-1])
+       chipo.item_price = chipo.item_price.apply(de_dollariser)
+       # Now we can use numerical things to answer the question
+       # you should get 21.394231188658654 (or near enough)
+       chipo['revenue'] = chipo['quantity'] * chipo['item_price']
+       order_grouped = chipo.groupby(by=['order_id']).sum()
+       order_grouped.mean()['revenue']
 

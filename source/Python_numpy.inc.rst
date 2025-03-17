@@ -1074,7 +1074,73 @@ You can also reverse the column at index position 1 (the second column):
     [ 9  2 11 12]]
 
 
-*Image credits: `Jay Alammar <https://jalammar.github.io/>`_*.
+*Image credits:* `Jay Alammar <https://jalammar.github.io/>`_.
 
-Material is based on `Numpy's starter guide <https://numpy.org/doc/stable/user/absolute_beginners.html>'_.
+Material is based on `Numpy's starter guide <https://numpy.org/doc/stable/user/absolute_beginners.html>`_.
 See original `licence <https://numpy.org/doc/stable/license.html>`_
+
+For some of the exercises below you will need to look up some additional features of ``numpy``
+that are not included above. I've given hints to help.
+
+
+.. admonition:: Exercise
+
+    Create a 3x3 matrix with values ranging from 0 to 8. 
+    Hint: ``reshape`` and ``arange``
+          
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+       :caption: |python|
+
+       a = np.arange(9).reshape(3, 3)
+       print(a)
+
+.. admonition:: Exercise
+
+    Create a 3x3x3 array with random values. 
+    Hint: ``np.random.random``
+          
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+       :caption: |python|
+
+       a = np.random.random((3,3,3)
+       print(a)
+
+.. admonition:: Exercise
+
+    Create a vector of size 10 with values ranging from 0 to 1, both excluded. 
+    Hint: ``np.linspace``
+          
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+       :caption: |python|
+
+       a = np.linspace(0,1,11,endpoint=False)[1:]
+       print(a)
+
+.. admonition:: Exercise
+
+    Create a null vector (i.e. zeros) of size 10 but the fifth value which is 1. 
+    Hint: ``array[4]``
+          
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: Python
+       :caption: |python|
+
+       a = np.zeros(10)
+       a[4] = 1
+       print(a)
+

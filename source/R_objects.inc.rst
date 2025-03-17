@@ -97,7 +97,11 @@ build complex stacks of classes using base classes. Let's create a class for a G
 
             methods = list(
                 bark = function() {
-                    print("Guide dogs don't bark")
+                    if (training) {
+                        print("Guide dogs don't bark")
+                    } else {
+                        print("Woof!")
+                    }
                 },
                 complete_training = function() {
                     training <<- T
@@ -112,6 +116,8 @@ So here we've added a new function ``complete_trianing`` and overridden the ``ba
     :caption: |R|
 
     buddy <- GuideDog$new(name="Buddy",age=3,colour="tan",training=F)
+    buddy$bark()
+    buddy$training <- TRUE
     buddy$bark()
 
 There are a lot other features of objects in R, but the main reason for learning about them here is that

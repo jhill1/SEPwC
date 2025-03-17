@@ -25,7 +25,7 @@ using ``library()`` or ``require()`` becomes on of the parents of the global env
 The immediate parent of the global environment is the last package you attached, and
 the previous one is the parent to that...
 
-We can use the ``rlang`` packge to explore this.
+We can use the ``rlang`` package to explore this.
 
 .. code-block:: R
    :caption: |R|
@@ -136,7 +136,7 @@ Super assignment
    single: R; super assignment
 
 In the next section, we will deal with R objects and you'll see the ``<<-`` operator for 
-assigning values. You will have already seen the `<-` assignment operator. Why
+assigning values. You will have already seen the ``<-`` assignment operator. Why
 the two?
 
 Regular assignment, ``<-`` always creates a variable in the current environment. Super
