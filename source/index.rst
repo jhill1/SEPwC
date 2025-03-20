@@ -41,9 +41,9 @@ slip behind a little.
    * - 5
      - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2,  :ref:`Testing code<Testing code>`,
    * - 6
-     - :ref:`Software development<Software development>`, :ref:`formative exercise<Our first coding exercise>`
-   * - 7
      - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
+   * - 7
+     - :ref:`Software development<Software development>`, :ref:`formative exercise<Our first coding exercise>`
    * - 8
      - Mini-courses
    * - 9
