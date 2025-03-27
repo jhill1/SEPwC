@@ -108,6 +108,11 @@ Now let's plot these, choosing an arbitrary year to plot (rather than the whole 
     plt.show()
 
 
+.. figure:: ../images/Figure_1_tides.png
+    :alt: Line graphs of the tidal elevation of the three stations
+    
+    Plot of three tidal stations over an entire year.
+
 The plot, though busy, already shows some interesting features. Booby Island has the highest tidal 
 range and shows a clear annual signal. Freemantle has the smallest tidal range and seems fairly constant.
 
@@ -134,6 +139,11 @@ Let's now look at one month in detail:
     ax.set_xlim([datetime.date(2008, 6, 1), datetime.date(2008, 7, 1)])
     fig_june.tight_layout()
     plt.show()
+
+.. figure:: ../images/Figure_2_tides.png
+    :alt: Line graphs of the tidal elevation of the three stations for June
+    
+    Plot of three tidal stations over June.
 
 We can now see more of the tidal signals. You may notice Freemantle shows fewer wiggles 
 than the other two locations; this is because it is a diurnal tide: one tide per day. 
@@ -215,6 +225,12 @@ so we have two parameters to find: :math:`A` and :math:`C`.
     plt.ylabel("Water height (m)")
     plt.show()
 
+.. figure:: ../images/Figure_3_tides.png
+    :alt: Line graph of a single sine curve
+
+    Plot of a single sine curve
+
+
 That's the M2 curve; let's now add S2:
 
 .. code-block:: Python
@@ -230,6 +246,11 @@ That's the M2 curve; let's now add S2:
     plt.xlabel("Hours")
     plt.ylabel("Water height (m)")
     plt.show()
+
+.. figure:: ../images/Figure_4_tides.png
+    :alt: Line graph of two combined sine curves
+
+    Plot of two combined sine curves to make spring-neap cycle
 
 The above shows what in effect is spring and neap tide using just two components, with different 
 amplitudes and phases (and frequencies/periods).
