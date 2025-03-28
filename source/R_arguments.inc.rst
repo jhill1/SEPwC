@@ -51,7 +51,7 @@ tutorial or add the ``Rscript`` exectuable to your ``PATH`` environment variable
 if you don't have admin rights). As an alternative you can create an alias. This video 
 takes you though this.
 
-.. youtube:: 0ZI-EHZWxfQ
+.. youtube:: ay5wS42CXa8
    :align: center
 
 Let's create this simple script, named ``arg_script.R``
