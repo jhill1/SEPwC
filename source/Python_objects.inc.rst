@@ -34,9 +34,9 @@ Let's create the dog class we thought about previously:
 
         def __init__(self, name, age, colour):
 
-            self.name = ""
-            self.age = 0
-            self.colour = ""
+            self.name = name
+            self.age = age
+            self.colour = colour
             self.state = "clean"
 
         def bark(self):
