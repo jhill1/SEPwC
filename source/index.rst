@@ -39,11 +39,11 @@ slip behind a little.
    * - 4 
      - :ref:`Revision control<Revision control with Git>`,
    * - 5
-     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2,  :ref:`Testing code<Testing code>`,
+     - :ref:`Python<Python: part 2>` or :ref:`R<R: part 2>` 2,  :ref:`Software development<Software development>`,
    * - 6
-     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
+     - :ref:`Testing code<Testing code>`, :ref:`GitHub<Using git with Github>`, :ref:`formative exercise<Our first coding exercise>`
    * - 7
-     - :ref:`Software development<Software development>`, :ref:`formative exercise<Our first coding exercise>`
+     - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 8
      - Mini-courses
    * - 9
@@ -162,12 +162,13 @@ All psuedo-code is labelled with this symbol:
     Revision_control   
     Python2
     R2
+    github
     Software_development
+    Testing_code 
     a_first_coding_exercise    
     Python3
     R3
     Spreadsheets_data
-    Testing_code
     R_ggplot2
     python_plotting
     Sentiment_analysis

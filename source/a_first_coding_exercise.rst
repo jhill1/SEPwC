@@ -15,6 +15,9 @@ We can do this in either R or Python. This coding exercise is very similar
 to the final assignment in terms of a skeleton code, functions to complete
 and a test suite to check it's working OK.
 
+.. youtube:: _GxVIO-G958
+   :align: center
+
 What to do
 ----------
 
@@ -131,4 +134,11 @@ is a practice for the full assessment, but is not marked in any way.
 
 Once you're happy with it (and by the week 9) session, add me (``jhill1``) as a collaborator
 and I will add comments on your coding style.
+
+.. youtube:: 3ep7DQYxHVQ
+   :align: center
+
+.. youtube:: H1sxGG2GMyI
+   :align: center
+
 
