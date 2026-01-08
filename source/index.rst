@@ -45,11 +45,11 @@ slip behind a little.
    * - 7
      - :ref:`Python<Python: part 3>` or :ref:`R<R: part 3>` 3,  :ref:`Moving from spreadsheets to data<Moving from spreadsheets to data>`, 
    * - 8
-     - Mini-courses
+     - General catch-up session
    * - 9
      - Mini-courses
    * - 10
-     - Assessment
+     - Mini-courses
    * - 11
      - Assessment
 
