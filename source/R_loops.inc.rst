@@ -70,7 +70,7 @@ R ``for`` Loops
 .. index:: 
    single: for; R
 
-``for`` loops work in Python using a control variable (the thing that increments each loop) and 
+``for`` loops work in R using a control variable (the thing that increments each loop) and 
 an iterator (the thing we're iterating over). This is a really powerful concept as 
 we can iterate over a list or a counter with the same construct. This is all
 a bit abstract, so let's do some examples.
