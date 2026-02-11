@@ -174,6 +174,7 @@ All psuedo-code is labelled with this symbol:
     Sentiment_analysis
     tides_python
     GIS
+    debuggers
     genindex
 
 
