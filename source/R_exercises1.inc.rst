@@ -73,7 +73,7 @@ Try the following exercises. For any of the exercises, feel free to type out the
     Write a program to convert some old data in square feet to SI units (metres squared).
     1 foot = 0.3048 metres. So 1 foot squared is 0.092903 metres squared.
 
-    Out data goes from 2 ft sq to 20 ft sq in steps of 2, inclusive. Print your conversions.
+    Our data goes from 2 ft sq to 20 ft sq in steps of 2, inclusive. Print your conversions.
 
 .. admonition:: Solution
    :class: toggle

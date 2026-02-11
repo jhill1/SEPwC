@@ -154,7 +154,7 @@ For loops are a really useful way of doing the same thing to each item in a list
 
 .. admonition:: Practical exercise
 
-   **Writing our table for conversion using a ** ``for`` **loop?**
+   **Writing our table for conversion using a** ``for`` **loop?**
 
    Write out the Fahrenheit to Celsius conversion table using a ``for`` loop.
 
