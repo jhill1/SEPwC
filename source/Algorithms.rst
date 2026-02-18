@@ -147,6 +147,8 @@ Write down the steps to find the location (index) of a value in that list, let's
     * if the number matches the target, exit and report the index
     * if the match isn't found, exit with a negative number to indicate failure
 
+    Recall that the ``#`` indicates a comments (a note to future you or a fellow programmer).
+
     .. code-block:: 
        :caption: |pc|
     
@@ -161,7 +163,7 @@ Write down the steps to find the location (index) of a value in that list, let's
             # remember to increment the index each loop!
             index = index + 1
 
-        # we cna only get here if the number wasn't found
+        # we can only get here if the number wasn't found
         return -1
 
     The above is a linear search algorithm. Fine for small lists, but very slow for very long lists, especially if your

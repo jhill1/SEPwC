@@ -39,6 +39,9 @@ This creates a logic flow to your code and allows decisions to be made.
 create a function which we can call every time we want to run those lines. Functions take input (called arguments) and 
 return data back to the main program (where you can store it in a variable, for example).
 
+**Comments**: These are lines that are not run as code, but are notes to yourself or another programmer. They
+are often indicated by a ``#`` symbol or similar. Each language has it's own comment style(s).
+
 
 Defining a variable
 --------------------
