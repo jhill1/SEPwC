@@ -1098,6 +1098,10 @@ that are not included above. I've given hints to help.
        a = np.arange(9).reshape(3, 3)
        print(a)
 
+.. youtube:: CbFi5kQZWxM
+    :align: center
+
+
 .. admonition:: Exercise
 
     Create a 3x3x3 array with random values. 
@@ -1112,6 +1116,10 @@ that are not included above. I've given hints to help.
 
        a = np.random.random((3,3,3)
        print(a)
+
+.. youtube:: w71fqLtybx4
+    :align: center
+
 
 .. admonition:: Exercise
 
@@ -1128,6 +1136,11 @@ that are not included above. I've given hints to help.
        a = np.linspace(0,1,11,endpoint=False)[1:]
        print(a)
 
+
+.. youtube:: snnuDWlY7fY
+    :align: center
+
+
 .. admonition:: Exercise
 
     Create a null vector (i.e. zeros) of size 10 but the fifth value which is 1. 
@@ -1143,4 +1156,8 @@ that are not included above. I've given hints to help.
        a = np.zeros(10)
        a[4] = 1
        print(a)
+
+
+.. youtube:: io-hsIsBpOA
+    :align: center
 

@@ -587,3 +587,7 @@ It is also possible to add your own scale, see `matplotlib.scale <https://matplo
 details.
 
 
+.. youtube:: SZeWul7uujU
+    :align: center
+
+
