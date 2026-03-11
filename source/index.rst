@@ -162,8 +162,8 @@ All psuedo-code is labelled with this symbol:
     Revision_control   
     Python2
     R2
-    github
     Software_development
+    github
     Testing_code 
     a_first_coding_exercise    
     Python3

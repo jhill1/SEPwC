@@ -212,7 +212,7 @@ Notice the ``\n`` character - this is a newline character. So you will now have 
 .. code-block:: bash
    :caption: |cli| |python|
 
-   Hellow World!!!
+   Hello World!!!
    No, really, hello!
 
 We could achieve the same thing using ``writelines()`` but we are still responsible for adding the newlines:
