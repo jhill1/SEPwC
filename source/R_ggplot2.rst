@@ -597,4 +597,160 @@ object is the output of the ``patchwork`` call:
     final_plot <- (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
     ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")
     
+Exercises
+----------
 
+Building on the concepts covered in the tutorial, complete the following exercises using the ``chic`` dataset.
+
+.. admonition:: Exercise 1: Exploring Geometries
+
+   **Goal:** Understand how different ``geom_`` functions change the visualization.
+
+   * **Task:** Create a scatter plot of Ozone (``o3``) on the y-axis against Temperature (``temp``) on the x-axis.
+   * **Bonus:** Add a "trend line" over the points using ``geom_smooth(method = "lm")``. How does the relationship look?
+   * **Variation:** Change the points to a specific color (e.g., "darkgreen") and use a different shape (e.g., shape 17, which is a triangle).
+ 
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Basic scatter plot with a linear trend line
+       ggplot(chic, aes(x = temp, y = o3)) +
+              geom_point(color = "darkgreen", shape = 17) +
+              geom_smooth(method = "lm", color = "black")
+
+.. admonition:: Exercise 2: Theme and Label Polishing
+
+   **Goal:** Practice making a plot "publication-ready."
+
+   **Task:** Take the plot from Exercise 1 and:
+  
+   1. Add a title and subtitle using ``labs()``.
+   2. Change the overall theme to ``theme_minimal()``.
+   3. Rotate the x-axis text by 45 degrees so the labels don't overlap.
+   4. Increase the font size of the axis titles to 18 using ``element_text(size = 18)``.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Adding labels and adjusting theme elements
+       ggplot(chic, aes(x = temp, y = o3)) +
+            geom_point(color = "darkgreen", shape = 17) +
+            labs(
+                title = "Ozone Levels vs Temperature",
+                subtitle = "Data from NMMAPS Chicago (1997-2000)",
+                x = "Temperature (°F)",
+                y = "Ozone (ppb)"
+            ) +
+            theme_minimal() +
+            theme(
+                axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),
+                axis.title = element_text(size = 18)
+            )
+
+
+
+.. admonition:: Exercise 3: Legend and Color Logic
+
+   **Goal:** Master mapping variables to aesthetics versus setting them manually.
+
+   * **Task:** Create a plot of ``date`` vs ``temp``, but color the points by the ``season`` variable.
+   * **Constraint:** Use ``scale_color_manual()`` to set specific colors for the seasons (e.g., Winter = "blue", Summer = "red", etc.).
+   * **Advanced:** Move the legend to the bottom of the plot and remove the legend title.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Manual color scales and legend positioning
+       ggplot(chic, aes(x = date, y = temp, color = season)) +
+            geom_point() +
+            scale_color_manual(values = c(
+                "Winter" = "blue", 
+                "Spring" = "green", 
+                "Summer" = "red", 
+                "Autumn" = "orange"
+            )) +
+            theme(
+                legend.position = "bottom",
+                legend.title = element_blank()
+            )
+
+.. admonition:: Exercise 4: Faceting and Subsets
+
+   **Goal:** Learn how to break complex data into digestible chunks.
+
+   * **Task:** Use ``facet_wrap()`` to create a separate plot for each ``year`` in the dataset showing ``date`` vs ``temp``.
+   * **Experiment:** Use ``scales = "free_x"`` in your facet call. What happens to the x-axis of each individual plot?
+   * **Challenge:** Create a grid using ``facet_grid(year ~ season)`` to see how temperature varies across both years and seasons simultaneously.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Grid of plots using year and season
+       ggplot(chic, aes(x = date, y = temp)) +
+            geom_point(alpha = 0.3) +
+            facet_grid(year ~ season) +
+            theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+.. admonition:: Exercise 5: Critical Data Limits
+
+   **Goal:** Understand the difference between "subsetting" and "clipping" data.
+
+   * **Task:** Create a boxplot of ``temp`` for each ``season``.
+   * **The Test:** Apply ``ylim(25, 75)`` to the plot. Then, try the same plot but use ``coord_cartesian(ylim = c(25, 75))`` instead.
+
+   .. note::
+      
+      **Think about it:** Why do the boxes/medians change position in one version but not the other? Re-read the "Caution" section in the tutorial if you aren't sure!
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Comparison of scaling vs clipping
+       # Version A: ylim (removes data points outside range, affects boxplot stats)
+       p1 <- ggplot(chic, aes(x = season, y = temp)) +
+          geom_boxplot() +
+          ylim(25, 75) +
+          labs(title = "Scaling (ylim)")
+
+       # Version B: coord_cartesian (zooms in without removing data)
+       p2 <- ggplot(chic, aes(x = season, y = temp)) +
+          geom_boxplot() +
+          coord_cartesian(ylim = c(25, 75)) +
+          labs(title = "Clipping (coord_cartesian)")
+
+       # (Optional) Use patchwork to see them side-by-side
+       library(patchwork)
+       p1 + p2
+
+.. admonition:: Final Challenge: The "Perfect" Output
+
+   **Task:** Combine your favorite plot from the exercises above and save it as a high-resolution PDF with a width of 
+   200mm and height of 150mm using ``ggsave()``. Verify that the file opens and looks correct on your computer.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: r
+       :caption: |R|
+
+       # Saving the final result
+       final_plot <- ggplot(chic, aes(x = date, y = temp, color = season)) +
+       geom_point() +
+       theme_bw()
+
+       ggsave("chicago_temp_plot.pdf", plot = final_plot, width = 200, height = 150, units = "mm")
