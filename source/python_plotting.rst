@@ -590,4 +590,154 @@ details.
 .. youtube:: SZeWul7uujU
     :align: center
 
+Pyplot Exercises
+----------------
+
+These exercises are designed to test your understanding of the ``matplotlib.pyplot`` interface,
+ranging from basic plotting to advanced layout and annotation.
+
+.. admonition:: Exercise 1: Basic Line and Marker Styling
+
+   **Goal:** Practice using format strings and basic plot decoration.
+   
+   * **Task:** Create a plot using two NumPy arrays: 
+       * ``x`` should be values from 0 to 10.
+       * ``y`` should be the square of those values.
+   * **Requirements:**
+       1. Plot the data using green triangles connected by a dashed line (Hint: search format strings like ``'g^--'``).
+       2. Add a label to the x-axis called "Input Value" and the y-axis called "Square Value".
+       3. Set the axis limits so x goes from 0 to 12 and y goes from 0 to 120.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: python
+        :caption: |python|
+
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        x = np.arange(0, 11)
+        y = x**2
+
+        plt.plot(x, y, 'g^--')
+        plt.xlabel('Input Value')
+        plt.ylabel('Square Value')
+        plt.axis([0, 12, 0, 120])
+        plt.show()
+
+
+.. admonition:: Exercise 2: Categorical Subplots
+
+   **Goal:** Master the grid layout system and different plot types.
+
+   * **Task:** Given the following data:
+       * ``activities = ['Reading', 'Gaming', 'Sleeping', 'Coding']``
+       * ``hours = [2, 3, 8, 5]``
+   * **Requirements:**
+       1. Create a figure with a size of 12x4 inches.
+       2. Create two subplots side-by-side (1 row, 2 columns).
+       3. The first subplot should be a **bar chart**.
+       4. The second subplot should be a **scatter plot**.
+       5. Add a "super title" (``suptitle``) for the entire figure called "My Daily Routine".
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: python
+        :caption: |python|
+
+        import matplotlib.pyplot as plt
+
+        activities = ['Reading', 'Gaming', 'Sleeping', 'Coding']
+        hours = [2, 3, 8, 5]
+
+        plt.figure(figsize=(12, 4))
+
+        # Subplot 1: Bar
+        plt.subplot(121)
+        plt.bar(activities, hours, color='skyblue')
+        plt.ylabel('Hours')
+
+        # Subplot 2: Scatter
+        plt.subplot(122)
+        plt.scatter(activities, hours, color='red', s=100)
+        plt.ylabel('Hours')
+
+        plt.suptitle('My Daily Routine')
+        plt.show()
+
+.. admonition:: Exercise 3: Annotations and Math Text
+
+   **Goal:** Use TeX expressions and annotations to highlight data.
+
+   * **Task:** Plot a sine wave (``y = np.sin(x)``) for ``x`` values between 0 and :math:`2\pi`.
+   * **Requirements:**
+       1. Use a raw string (``r''``) to set the title to the mathematical formula: :math:`\alpha = \sin(\beta)`.
+       2. Use the ``plt.annotate`` function to point to the peak of the wave (where :math:`x = \pi/2` and :math:`y = 1`).
+       3. Set the annotation text to say "Maximum" and ensure the arrow is visible.
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: python
+        :caption: |python|
+
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        x = np.linspace(0, 2 * np.pi, 100)
+        y = np.sin(x)
+
+        plt.plot(x, y)
+        plt.title(r'$\alpha = \sin(\beta)$')
+        
+        # Annotate the peak
+        plt.annotate('Maximum', xy=(np.pi/2, 1), xytext=(np.pi, 1.2),
+                     arrowprops=dict(facecolor='black', shrink=0.05))
+
+        plt.ylim(-1.5, 1.5)
+        plt.show()
+
+
+.. admonition:: Exercise 4: Logarithmic Scaling
+
+   **Goal:** Visualize data across different magnitudes.
+
+   * **Task:** Create a plot where ``x = np.linspace(0, 10, 100)`` and ``y = np.exp(x)``.
+   * **Requirements:**
+       1. Plot ``x`` vs ``y`` on a **linear** scale.
+       2. In a second subplot (or second figure), plot the same data but change the y-axis to a **logarithmic** scale using ``plt.yscale('log')``.
+       3. Enable the grid on both plots.
+
+   .. note::
+      **Memory Tip:** If you are creating multiple figures in a script or notebook, remember to use ``plt.close()`` to release memory!
+
+..  admonition:: Solution
+    :class: toggle
+
+    .. code-block:: python
+        :caption: |python|
+        
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        x = np.linspace(0, 10, 100)
+        y = np.exp(x)
+
+        plt.figure(figsize=(10, 5))
+
+        plt.subplot(121)
+        plt.plot(x, y)
+        plt.title('Linear Scale')
+        plt.grid(True)
+
+        plt.subplot(122)
+        plt.plot(x, y)
+        plt.yscale('log')
+        plt.title('Logarithmic Scale')
+        plt.grid(True)
+
+        plt.tight_layout() # Helpful for preventing label overlap
+        plt.show()
 
