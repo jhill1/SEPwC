@@ -53,11 +53,11 @@ Development process
 
 Software development goes through a number of stages:
 
- - requirements capture; what should it do?
- - writing code or refactoring
- - testing
- - bug fixes
- - client testing/approval
+- requirements capture; what should it do?
+- writing code or refactoring
+- testing
+- bug fixes
+- client testing/approval
 
 When writing code for yourself you are both the developer and the client. If you write code for someone else, then these roles are split. 
 
@@ -110,12 +110,12 @@ Refactoring can be done in one of two ways: starting from scratch (but with the 
 Some techniques that can help
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- - pair programming: working with someone else on a problem. Take it in turns to lead (driver) and observe (navigator) 
-   and use a single computer if possible. It is possible to do this remotely too.
- - rubber ducking: explaining the problem to someone (or a rubber duck), even if they don't know how to write code,
-   often helps you come up with a solution (AI can also help here!)
- - code walkthrough: explain your code to someone else
- - code review: someone else reads through your code and checks for functionality and readability
+- pair programming: working with someone else on a problem. Take it in turns to lead (driver) and observe (navigator) 
+  and use a single computer if possible. It is possible to do this remotely too.
+- rubber ducking: explaining the problem to someone (or a rubber duck), even if they don't know how to write code,
+  often helps you come up with a solution (AI can also help here!)
+- code walkthrough: explain your code to someone else
+- code review: someone else reads through your code and checks for functionality and readability
 
 These techniques are based around two things. First, verbalising your code to explain the logic helps you to figure out where the
 problem is (or might be). Second, a fresh pair of eyes can often help spot the problem; when we read we tend to skip words when we already 
@@ -166,11 +166,11 @@ Test-driven development
 
 Test-driven development turns the development cycle around to put testing up-front:
 
- - requirements capture; what should it do?
- - testing
- - client testing/approval
- - writing code or refactoring 
- - bug fixes
+- requirements capture; what should it do?
+- testing
+- client testing/approval
+- writing code or refactoring 
+- bug fixes
 
 The tests are written immediately after requirements capture and before any code is written (so the tests will all fail!). You get approval from the client that the tests meet the requirements and then write code to pass the tests. Once done, you have met the requirements. 
 
