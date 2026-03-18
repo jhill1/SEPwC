@@ -118,7 +118,7 @@ Running something like this in the command line:
 .. code-block:: bash
    :caption: |cli|
 
-   python fibo.py
+   python3 fibo.py
 
 will set this ``__name__`` variable to ``__main__``.
 

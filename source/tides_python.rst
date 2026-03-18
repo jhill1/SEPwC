@@ -310,8 +310,8 @@ UTC/GMT. We therefore need to tell the analysis the time data is in the Sydney t
 
    **Extract the M2 component from Booby Island and Freemantle**
 
-    Write code to extract the M2 amplitude and phase for the Freementle
-    and Booby Island tidal data. Hint; remember the timezones!
+   Write code to extract the M2 amplitude and phase for the Freementle
+   and Booby Island tidal data. Hint; remember the timezones!
 
 .. admonition:: Solution
    :class: toggle
@@ -375,14 +375,14 @@ Nope! K2 is still not able to be resolved from 30 days worth of data. How many d
 
 At Fort Denison our amplitudes and phases are:
 
- - M2: 0.503 m and 4.182 radians
- - S2: 0.125 m and 4.599 radians
- - N2: 0.115 m and 3.93 radians
- - K2: 0.036 m and 4.27 radians
- - O1: 0.097 m and 1.42 radians
- - P1: 0.043 m and 1.99 radians
- - Q1: 0.020 m and 1.016 radians
- - M4: 0.003 m and 2.09 radians
+- M2: 0.503 m and 4.182 radians
+- S2: 0.125 m and 4.599 radians
+- N2: 0.115 m and 3.93 radians
+- K2: 0.036 m and 4.27 radians
+- O1: 0.097 m and 1.42 radians
+- P1: 0.043 m and 1.99 radians
+- Q1: 0.020 m and 1.016 radians
+- M4: 0.003 m and 2.09 radians
 
 We could plot those using sine curves. However, ``uptide`` also has functionality to 
 give us a total tidal signal from the amplitudes and phases.
@@ -447,8 +447,4 @@ give us a total tidal signal from the amplitudes and phases.
      ax.legend()
      fig_summary.tight_layout()
      plt.show()
-
-
-
-
 
