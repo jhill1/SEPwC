@@ -597,8 +597,8 @@ object is the output of the ``patchwork`` call:
     final_plot <- (p1 + p2 + p3 + p4) * theme(legend.position = "bottom")
     ggsave("output_filename.pdf", plot=final_plot, width=297, height=210, units="mm")
     
-Exercises
-----------
+ggplot2 Exercises
+------------------
 
 Building on the concepts covered in the tutorial, complete the following exercises using the ``chic`` dataset.
 
