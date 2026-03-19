@@ -8,9 +8,9 @@ assessment.
 
 There are three things we need to learn about first:
 
- - vector data
- - raster data
- - projection spaces or coordinate spaces
+- vector data
+- raster data
+- projection spaces or coordinate spaces
 
 Vector data
 ~~~~~~~~~~~~
@@ -21,9 +21,9 @@ Vector data represent geometries via mathematicla objects. You can zoom
 into a vector infinitely at it will remain infintely small! There are
 three types of vector data:
 
- - points
- - lines
- - polygons
+- points
+- lines
+- polygons
 
 Vectors are most commonly stored as shapefiles: ``*.shp`` files. We call then shapefiles 
 put they actually consist of a number of files. So a file called ``landslides.shp`` also

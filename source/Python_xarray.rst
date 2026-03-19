@@ -2,6 +2,10 @@
 
 Python Xarray Module
 ====================
+.. index::
+   single: xarray
+   single: python; xarray
+
 
 The **xarray** module is an open-source project and Python package that makes working with 
 labelled multi-dimensional arrays simple, efficient, and fun. Xarray introduces labels in 
@@ -28,11 +32,15 @@ Alternatively, if you are using Conda:
 
 Data Structures
 ---------------
+.. index::
+   single: xarray; Data Structures
 
 Xarray provides two primary data structures: **DataArray** and **Dataset**.
 
 1. DataArray
 ~~~~~~~~~~~~
+.. index::
+   single: xarray; DataArray
 
 A **DataArray** is xarray’s implementation of a labeled, multi-dimensional array. It 
 combines the underlying data (a NumPy or Dask array) with metadata.
@@ -64,6 +72,8 @@ combines the underlying data (a NumPy or Dask array) with metadata.
 
 2. Dataset
 ~~~~~~~~~~
+.. index::
+   single: xarray; DataSet
 
 A **Dataset** is a dict-like container of aligned **DataArray** objects. It can be 
 thought of as a multi-dimensional equivalent of a Pandas DataFrame.
@@ -87,6 +97,9 @@ thought of as a multi-dimensional equivalent of a Pandas DataFrame.
 
 Core Operations
 ---------------
+.. index::
+   single: xarray; Operations
+
 
 Xarray allows for operations using dimension names instead of axis numbers.
 

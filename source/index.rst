@@ -173,6 +173,7 @@ All psuedo-code is labelled with this symbol:
     python_plotting
     Sentiment_analysis
     tides_python
+    Python_xarray
     GIS
     debuggers
     genindex

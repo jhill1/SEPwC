@@ -108,9 +108,7 @@ Hopefully, the options used here are obvious! Use the overwrite option with caut
 ``terra`` comes with a number of useful functions, including those to calculate
 slope, proximity distance, extract data from rasters, create a stack of rasters,
 and to *rasterise* a vector (i.e. convert from vector to
-raster). 
-
-The ``terra`` library can also load vector data:
+raster). The ``terra`` library can also load vector data:
 
 .. code-block:: R
     :caption: |R|
@@ -118,7 +116,64 @@ The ``terra`` library can also load vector data:
     tidal_gauges <- vect("tide_gauges.shp")
 
 The same functions as above (``crs()``, ``ext()``, ``project()``) work as expected on
-vector data.
+vector data. Let's look at some of the other functions in detail.
+
+Rasterising a shapefile
+~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: GIS; rasterise
+   single: R; rasterize
+
+Often, you will need to convert vector data (like our tide gauges) into a grid format to perform 
+pixel-by-pixel calculations with other raster data. In ``terra``, this is done using the ``rasterize()`` function.
+
+To rasterise a vector, you always need a *template* raster. This template defines the physical grid: 
+the extent, resolution, and CRS of the output. We can use our existing ``my_raster`` as the template.
+
+.. code-block:: R
+    :caption: |R|
+
+    # First, ensure our vector data is loaded as a terra SpatVector
+    tide_gauges_vect <- vect("tide_gauges.shp")
+
+    # Rasterise the points, burning a specific column (e.g., "ID") into the pixels
+    # Any pixel that doesn't overlap a point will automatically become NA
+    gauges_raster <- rasterize(tide_gauges_vect, my_raster, field="ID")
+    
+    # Let's see what it looks like
+    plot(gauges_raster)
+
+
+Calculating proximity
+~~~~~~~~~~~~~~~~~~~~~
+.. index:: 
+   single: GIS; proximity
+   single: R; distance
+
+A very common spatial operation is finding the distance from every pixel in a landscape to a specific feature of
+interest—like a road, river, or in our case, a tide gauge. The ``terra`` package handles this elegantly with the ``distance()`` function.
+
+If you pass a raster containing ``NA`` and non-``NA`` values to ``distance()``, it calculates the distance
+from all the ``NA`` cells to the nearest non-``NA`` cell. We can use the rasterised gauges we just created to build a proximity map.
+
+.. code-block:: R
+    :caption: |R|
+
+    # Calculate distance from all empty pixels to the nearest tide gauge
+    proximity_raster <- distance(gauges_raster)
+    
+    # Plot the result to see the distance gradients
+    plot(proximity_raster)
+
+This generates a continuous surface where the value of every pixel represents the distance to the nearest 
+gauge.
+
+.. note::
+
+   The distance is calculated in the units of your Coordinate Reference System. If your CRS is in metres (like UTM), 
+   the output values are in metres. If it's in degrees (like WGS84), the output is in degrees
+   which is often less useful for distance analysis!
+
 
 .. youtube:: bzD-DGFcxUw
    :align: center
