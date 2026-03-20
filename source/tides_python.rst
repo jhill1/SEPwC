@@ -280,6 +280,8 @@ out the common consituents from our tidal data.
     
     # so let's swap our dates for seconds since midnight 1/1/2008.
     # Note the 1e9 (the int64 seconds epoch in numpy is multiplied by this for some reason)
+    # NOTE: the 1e9 might be 1e6 in later numpy versions. If you amplitudes aren't as expected, 
+    # swap 1e9 with 1e6
     seconds_since = (FD_2008.index.astype('int64').to_numpy()/1e9) - datetime.datetime(2008,1,1,0,0,0).timestamp()
     
     # We then send the elevation data (our tides) and time in seconds to uptide
@@ -447,4 +449,8 @@ give us a total tidal signal from the amplitudes and phases.
      ax.legend()
      fig_summary.tight_layout()
      plt.show()
+
+.. youtube:: pY1GFJPzZyk
+   :align: center
+
 
