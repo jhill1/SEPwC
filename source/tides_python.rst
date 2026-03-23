@@ -450,7 +450,7 @@ give us a total tidal signal from the amplitudes and phases.
      fig_summary.tight_layout()
      plt.show()
 
-.. youtube:: pY1GFJPzZyk
+.. youtube:: FRYD6nq-5tQ
    :align: center
 
 
