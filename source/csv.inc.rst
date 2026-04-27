@@ -76,6 +76,7 @@ but briefly we can load data in using code like this:
 The above reads the CSV file by row and prints out the content. The ``row`` variable is a list
 with each item containing the column data from that row.
 
+`Try it on this file. <https://raw.githubusercontent.com/jhill1/SEPwC/refs/heads/master/code_examples/eggs.csv>`_
 
 Alternatively, you can read the data as a dictionary. Here we assume the CSV has a header:
 
@@ -92,6 +93,8 @@ Alternatively, you can read the data as a dictionary. Here we assume the CSV has
 
 The ``row`` variable is now a dictionary, with the items labelled by whatever was in the first row (the header). 
 As a programmer you would need to know that information beforehand to use them correctly. 
+
+`You can try it on this file. <https://raw.githubusercontent.com/jhill1/SEPwC/refs/heads/master/code_examples/names.csv>`_
 
 Pandas, covered earlier, can also read in CSV files.
 
